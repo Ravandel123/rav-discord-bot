@@ -3,22 +3,24 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
  
+
 client.on('ready', () => {
 
     console.log('I am ready!');
 
 });
 
-client.on('message', function (user, userID, channelID, message, evt) 
-{
-  if (message == 'h!') 
-  {
-    message.reply('hey');
-  }
-		
+ 
+
+client.on('message', message => {
+
+    if (message.content == 'ping') {
+
+       message.reply('pong');
+
+       }
+
 });
-
-
 
 
 
