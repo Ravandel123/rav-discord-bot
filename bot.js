@@ -14,12 +14,12 @@ client.on('message', function (user, userID, channelID, message, evt)
   if (message == 'h!') 
   {
     client.sendMessage({
-					to: channelID,
-					message: 'hey'
-				});
+    to: channelID,
+    message: 'hey'
+    });
   }
 		
-};
+});
 
 
 
