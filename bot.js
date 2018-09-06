@@ -13,8 +13,8 @@ client.on("message", message => {
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-	var arguments = message.content.slice(prefix.length + command.length);
-	arguments = arguments.split(' ');
+  //var arguments = message.content.slice(prefix.length + command.length);
+  var arguments = arguments.split(' ');
 
   switch (command) 
   {
@@ -68,8 +68,8 @@ client.on("message", message => {
 					rollValue = Math.floor(Math.random() * afflictionsArray.length);
 					result = afflictionsArray[rollValue];
 				}
-
-				message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
+				message.channel.send(arguments[0] + ' ' + arguments[1])
+				//message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
 				break;  
           
 			
