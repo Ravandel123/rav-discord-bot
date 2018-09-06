@@ -52,7 +52,7 @@ client.on("message", message => {
 
 				if (who == 'me')
 				{
-					who = console.user;
+					who = message.author;
 				}
 
 				rollValue = Math.floor(Math.random() * 4);
