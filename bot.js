@@ -2,15 +2,11 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-
     console.log('I am ready!');
-
 });
 
 
 const prefix = "h!";
-
-
 
 client.on("message", message => {
   if (message.content.indexOf(prefix) !== 0) return;
@@ -38,7 +34,7 @@ client.on("message", message => {
 	  //------------------------------------------------------------choose----------------------------------------------------------
 	  //----------------------------------------------------------------------------------------------------------------------------
       case 'choose':
-        var clearedChoices = message.substring(9, message.length);
+        var clearedChoices = message.slice(prefix.length + command.length);
         var rollItems = clearedChoices.split('|');
 
         message.channel.send(rollItems[Math.floor(Math.random() * rollItems.length)])
