@@ -67,7 +67,7 @@ client.on("message", message => {
 					result = afflictionsArray[rollValue];
 				}
 
-				message.channel.send(message: who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
+				message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
 				break;  
           
 			
