@@ -34,7 +34,7 @@ client.on("message", message => {
 	  //------------------------------------------------------------choose----------------------------------------------------------
 	  //----------------------------------------------------------------------------------------------------------------------------
       case 'choose':
-        var clearedChoices = message.slice(prefix.length + command.length);
+        var clearedChoices = message.content.slice(prefix.length + command.length);
         var rollItems = clearedChoices.split('|');
 
         message.channel.send(rollItems[Math.floor(Math.random() * rollItems.length)])
