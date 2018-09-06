@@ -20,7 +20,9 @@ client.on("message", message => {
 
   switch (command) 
   {
-      
+      //----------------------------------------------------------------------------------------------------------------------------
+	  //------------------------------------------------------------am, is, are, will, do, does-------------------------------------
+	  //----------------------------------------------------------------------------------------------------------------------------
       case 'am':
       case 'is':
       case 'are':
@@ -32,12 +34,27 @@ client.on("message", message => {
         message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
         break;
           
-      case "ping" :
-        message.channel.send('Pong!');
+      //----------------------------------------------------------------------------------------------------------------------------
+	  //------------------------------------------------------------choose----------------------------------------------------------
+	  //----------------------------------------------------------------------------------------------------------------------------
+      case 'choose':
+        var clearedChoices = message.substring(9, message.length);
+        var rollItems = clearedChoices.split('|');
+
+        message.channel.send(rollItems[Math.floor(Math.random() * rollItems.length)])
         break;
-      case "blah" :
-        message.channel.send('Meh.');
-        break;
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
     }
 });
  
