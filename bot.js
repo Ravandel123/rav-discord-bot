@@ -13,7 +13,6 @@ client.on("message", message => {
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  //var arguments = message.content.slice(prefix.length + command.length);
   var arguments = message.content.split(' ');
 
   switch (command) 
@@ -49,7 +48,7 @@ client.on("message", message => {
 				var afflictionsArray = ['Paranoid', 'Selfish', 'Irrational', 'Fearful', 'Hopeless', 'Abusive', 'Masochistic', 'Rapturous'];
 				var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
 				var result;
-				var who = arguments[0];
+				var who = arguments[1];
 
 				if (who == 'me')
 				{
@@ -68,8 +67,8 @@ client.on("message", message => {
 					rollValue = Math.floor(Math.random() * afflictionsArray.length);
 					result = afflictionsArray[rollValue];
 				}
-				message.channel.send(arguments[0] + ' ' + arguments[1])
-				//message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
+
+				message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
 				break;  
           
 			
