@@ -8,7 +8,7 @@ client.on('ready', () => {
 });
 
 
-const prefix = "!";
+const prefix = "h!";
 
 
 
@@ -20,11 +20,14 @@ client.on("message", message => {
 
   switch (command) 
   {
+      
       case 'am':
       case 'is':
-	  case 'are':
-	  case 'will':
-	    var responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
+      case 'are':
+      case 'will':
+      case 'do':
+      case 'does':
+        var responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
       
         message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
         break;
