@@ -44,7 +44,7 @@ client.on("message", message => {
     	//------------------------------------------------------------------------------------------------------------------------------
 	  	//------------------------------------------------------------resolve-----------------------------------------------------------
 	  	//------------------------------------------------------------------------------------------------------------------------------
-		 case 'resolve':
+		  case 'resolve':
 				var afflictionsArray = ['Paranoid', 'Selfish', 'Irrational', 'Fearful', 'Hopeless', 'Abusive', 'Masochistic', 'Rapturous'];
 				var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
 				var result;
