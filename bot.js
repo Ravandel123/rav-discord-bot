@@ -7,23 +7,28 @@ client.on('ready', () => {
 
 });
 
- 
 
 const prefix = "!";
-client.on("message", (message) => {
-  // Exit and stop if it's not there
-  if (!message.content.startsWith(prefix)) return;
 
-  if (message.content.startsWith(prefix + "ping")) {
-    message.channel.send("pong!");
-  } else
-  if (message.content.startsWith(prefix + "foo")) {
-    message.channel.send("bar!");
-  }
+
+
+client.on("message", message => {
+  if (message.author.bot) return;
+  if (message.content.indexOf(prefix) !== 0) return;
+
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
+  const command = args.shift().toLowerCase();
+
+  switch (command) 
+  {
+      case "ping" :
+        message.channel.send('Pong!');
+        break;
+      case "blah" :
+        message.channel.send('Meh.');
+        break;
+    }
 });
-
-
-
  
 
 // THIS  MUST  BE  THIS  WAY
