@@ -13,7 +13,6 @@ const prefix = "!";
 
 
 client.on("message", message => {
-  if (message.author.bot) return;
   if (message.content.indexOf(prefix) !== 0) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
@@ -21,6 +20,15 @@ client.on("message", message => {
 
   switch (command) 
   {
+      case 'am':
+      case 'is':
+	  case 'are':
+	  case 'will':
+	    var responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
+      
+        message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+        break;
+          
       case "ping" :
         message.channel.send('Pong!');
         break;
