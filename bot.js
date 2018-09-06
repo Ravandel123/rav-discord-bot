@@ -13,6 +13,8 @@ client.on("message", message => {
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+	var arguments = message.content.slice(prefix.length + command.length);
+	arguments = arguments.split(' ');
 
   switch (command) 
   {
@@ -47,7 +49,7 @@ client.on("message", message => {
 				var afflictionsArray = ['Paranoid', 'Selfish', 'Irrational', 'Fearful', 'Hopeless', 'Abusive', 'Masochistic', 'Rapturous'];
 				var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
 				var result;
-				var who = args[1];
+				var who = arguments[0];
 
 				if (who == 'me')
 				{
@@ -71,14 +73,6 @@ client.on("message", message => {
 				break;  
           
 			
-			
-          case 'args':
-
-        message.channel.send(args)
-        break;
-          
-          
-          
           
           
           
