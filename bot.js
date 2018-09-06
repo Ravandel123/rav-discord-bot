@@ -12,7 +12,7 @@ client.on('ready', () => {
 
  
 
-bot.on('message', function (user, userID, channelID, message, evt) {
+client.on('message', function (user, userID, channelID, message, evt) {
     if (message.substring(0, 2) == 'h!') 
 	{
         var args = message.substring(2).split(' ');
