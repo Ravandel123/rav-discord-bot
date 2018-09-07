@@ -130,49 +130,6 @@ client.on("message", message => {
           message.channel.send(firstPartArray[Math.floor(Math.random() * firstPartArray.length)] + Math.floor(Math.random() * 14) + '/10')
         }
         break;
-        
-      //---------------------------------------------------------------------------------------------------------------------------
-      //------------------------------------------------------------roll-----------------------------------------------------------
-      //---------------------------------------------------------------------------------------------------------------------------
-      case 'roll':
-        var rollItems = arguments[1].split('d');
-        var numberOfRolls = rollItems[0];
-        var typeOfDice = rollItems[1];
-        var i;
-        var rollsIndividuals = '[';
-        var rollsTotalAmount = 0;
-          
-        if(typeOfDice == 'a')
-        {
-          var armellDiceAmount = [0, 0, 0, 0, 0, 0];
-        
-          for (i = 0; i < numberOfRolls; i++) 
-          {
-            rollValue = Math.floor(Math.random() * 6);
-            armellDiceAmount[rollValue]++;
-          }
-          
-          message.channel.send('Result: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
-          break;
-        }
-        else
-        {
-        for (i = 0; i < numberOfRolls; i++)
-        {
-          rollValue = Math.floor(Math.random() * typeOfDice + 1);
-          rollsIndividuals = rollsIndividuals + rollValue;
-          
-          if(i != numberOfRolls)
-          {
-            rollsIndividuals = rollsIndividuals + ',';
-          }
-          
-          rollsTotalAmount = rollsTotalAmount + rollValue;
-        }
-        
-        message.channel.send('Result: ' + rollsIndividuals + '] Total amount: ' + rollsTotalAmount)
-        break;
-
 
 
 
