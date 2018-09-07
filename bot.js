@@ -33,11 +33,11 @@ client.on("message", message => {
         
         if(rollValue == 0)
         {
-          message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+	  message.channel.send('No u.')
         }
         else
         {
-          message.channel.send('No u.')
+          message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
         }
 
         break;
