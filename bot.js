@@ -155,7 +155,23 @@ client.on("message", message => {
           message.channel.send('Result: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
           break;
         }
-
+        else
+        {
+          for (i = 0; i < numberOfRolls; i++)
+          {
+            rollValue = Math.floor(Math.random() * typeOfDice + 1);
+            rollsIndividuals = rollsIndividuals + rollValue;
+            
+            if(i != numberOfRolls)
+            {
+              rollsIndividuals = rollsIndividuals + ',';
+            }
+            
+            rollsTotalAmount = rollsTotalAmount + rollValue;
+          }
+        }
+        message.channel.send('Result: ' + rollsIndividuals + '] Total amount: ' + rollsTotalAmount)
+        break;
 
     }
 });
