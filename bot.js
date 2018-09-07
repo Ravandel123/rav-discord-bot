@@ -182,7 +182,7 @@ client.on("message", message => {
           return message.author;
         }
         
-        return message.content.slice(prefix.length + command.length);
+        return message.content.slice(prefix.length + command.length + 1);
     }
     
 
