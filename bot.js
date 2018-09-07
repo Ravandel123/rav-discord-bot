@@ -99,12 +99,14 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'dndalign':
         var responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
-        var who = arguments[1];
+        //var who = arguments[1];
 
-        if (who == 'me' || who == null)
-        {
-          who = message.author;
-        }
+        //if (who == 'me' || who == null)
+        //{
+          //who = message.author;
+        //}
+        who = RecognizeWho(arguments[1], message, command)
+          
         message.channel.send(who + ' is ' + responseList[Math.floor(Math.random() * responseList.length)])
         break;
         
@@ -181,18 +183,25 @@ client.on("message", message => {
       //------------------------------------------------------------invite---------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'invite':
-message.channel.send(myData())
-        //message.channel.send('https://discordapp.com/oauth2/authorize?client_id=485910048032161792&scope=bot')
+        message.channel.send('https://discordapp.com/oauth2/authorize?client_id=485910048032161792&scope=bot')
         break;
 
     }
     
     
     
-function myData() 
-{ 
-   return 123; 
-} 
+    function RecognizeWho(who, message, command)
+    {
+        if (who == 'me' || who == null)
+        {
+          return message.author;
+        }
+        
+        return message.content.slice(prefix.length + command.length);
+    }
+    
+
+    
 });
 
 
