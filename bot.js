@@ -97,7 +97,7 @@ client.on("message", message => {
         var responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
         var who = arguments[1];
 
-        if (who == 'me' || who.length == 0)
+        if (who == 'me' || who == null)
         {
           who = message.author;
         }
