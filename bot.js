@@ -153,7 +153,7 @@ client.on("message", message => {
             rollValue = Math.floor(Math.random() * typeOfDice + 1);
             rollsIndividuals = rollsIndividuals + rollValue;
             
-            if(i != numberOfRolls)
+            if(i != numberOfRolls && numberOfRolls != 1)
             {
               rollsIndividuals = rollsIndividuals + ',';
             }
