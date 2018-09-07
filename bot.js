@@ -33,11 +33,11 @@ client.on("message", message => {
         
         if(rollValue == 0)
         {
-	  message.channel.send('No u.')
+          message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
         }
         else
         {
-          message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+          message.channel.send('No u.')
         }
 
         break;
@@ -61,9 +61,13 @@ client.on("message", message => {
         var result;
         var who = arguments[1];
 
-        if (who == 'me')
+        if (who == 'me' || who == null)
         {
           who = message.author;
+        }
+        else
+        {
+          
         }
 
         rollValue = Math.floor(Math.random() * 4);
@@ -80,7 +84,7 @@ client.on("message", message => {
         }
 
         message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
-        break;  
+        break;
 
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------you-------------------------------------------------------------
@@ -113,7 +117,7 @@ client.on("message", message => {
         var specialArray = ['I think we need negative scale for that.', 'That is completely out of scale!', 'Better than Twilight.', 'Amazing!', 'Incredible!', 'Why you even wanna rate that?', 'Utter garbage.'];
         var personifiedSpecialArray = ['I think we need negative scale to rate you.', 'You are completely out of scale!', 'Better than Twilight.', ' You are amazing!', 'You are incredible!', 'Why you even wanna rate yourself?', 'You suck lol.', 'You suck.'];
 
-        if (arguments[1] == 'me')
+        if (arguments[1] == 'me' || arguments[1] == null)
         {
           firstPartArray = personifiedFirstPartArray;
           specialArray = personifiedSpecialArray;
@@ -130,7 +134,7 @@ client.on("message", message => {
           message.channel.send(firstPartArray[Math.floor(Math.random() * firstPartArray.length)] + Math.floor(Math.random() * 14) + '/10')
         }
         break;
-
+        
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------roll-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
@@ -173,15 +177,25 @@ client.on("message", message => {
         message.channel.send('Result: ' + rollsIndividuals + '] Total amount: ' + rollsTotalAmount)
         break;
 
-    //---------------------------------------------------------------------------------------------------------------------------
-    //------------------------------------------------------------invite---------------------------------------------------------
-    //---------------------------------------------------------------------------------------------------------------------------
-    case 'invite':
-      message.channel.send('https://discordapp.com/oauth2/authorize?client_id=485910048032161792&scope=bot')
-      break;
-		  
-  }
+      //---------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------invite---------------------------------------------------------
+      //---------------------------------------------------------------------------------------------------------------------------
+      case 'invite':
+message.channel.send(myData())
+        //message.channel.send('https://discordapp.com/oauth2/authorize?client_id=485910048032161792&scope=bot')
+        break;
+
+    }
+    
+    
+    
+function myData() 
+{ 
+   return 123; 
+} 
 });
+
+
 
 
 // THIS  MUST  BE  THIS  WAY
