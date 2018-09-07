@@ -33,11 +33,11 @@ client.on("message", message => {
         
         if(rollValue == 0)
         {
-          message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+          message.channel.send('No u.')
         }
         else
         {
-          message.channel.send('No u.')
+          message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
         }
 
         break;
@@ -59,16 +59,7 @@ client.on("message", message => {
         var afflictionsArray = ['Paranoid', 'Selfish', 'Irrational', 'Fearful', 'Hopeless', 'Abusive', 'Masochistic', 'Rapturous'];
         var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
         var result;
-        var who = arguments[1];
-
-        if (who == 'me' || who == null)
-        {
-          who = message.author;
-        }
-        else
-        {
-          
-        }
+        who = RecognizeWho(arguments[1], message, command)
 
         rollValue = Math.floor(Math.random() * 4);
 
@@ -99,12 +90,6 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'dndalign':
         var responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
-        //var who = arguments[1];
-
-        //if (who == 'me' || who == null)
-        //{
-          //who = message.author;
-        //}
         who = RecognizeWho(arguments[1], message, command)
           
         message.channel.send(who + ' is ' + responseList[Math.floor(Math.random() * responseList.length)])
