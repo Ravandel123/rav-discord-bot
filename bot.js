@@ -39,7 +39,7 @@ client.on("message", message => {
         }
         else
         {
-          message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+          message.channel.send(ReturnRandom(responseList))
         }
 
         break;
@@ -51,7 +51,7 @@ client.on("message", message => {
         var clearedChoices = message.content.slice(prefix.length + command.length);
         var rollItems = clearedChoices.split('|');
 
-        message.channel.send(rollItems[Math.floor(Math.random() * rollItems.length)])
+        message.channel.send(ReturnRandom(rollItems))
         break;
 
       //------------------------------------------------------------------------------------------------------------------------------
@@ -67,12 +67,12 @@ client.on("message", message => {
 
         if(rollValue == 0)
         {
-          rollValue = Math.floor(Math.random() * virtuesArray.length);
+          rollValue = ReturnRandom(virtuesArray);
           result = virtuesArray[rollValue];
         }
         else
         {
-          rollValue = Math.floor(Math.random() * afflictionsArray.length);
+          rollValue = ReturnRandom(afflictionsArray);
           result = afflictionsArray[rollValue];
         }
 
@@ -84,7 +84,7 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'you':
         responseList = ['No u', 'No you.', 'You too.'];
-        message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+        message.channel.send(ReturnRandom(responseList))
         break; 
 
       //----------------------------------------------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ client.on("message", message => {
         responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
         who = RecognizeWho(arguments[1], message, command)
           
-        message.channel.send(who + ' is ' + responseList[Math.floor(Math.random() * responseList.length)])
+        message.channel.send(who + ' is ' + ReturnRandom(responseList))
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
@@ -116,11 +116,11 @@ client.on("message", message => {
 
         if(response == 0)
         {
-          message.channel.send(specialArray[Math.floor(Math.random() * specialArray.length)])
+          message.channel.send(ReturnRandom(specialArray))
         }
         else
         {
-          message.channel.send(firstPartArray[Math.floor(Math.random() * firstPartArray.length)] + Math.floor(Math.random() * 14) + '/10')
+          message.channel.send(ReturnRandom(firstPartArray) + Math.floor(Math.random() * 14) + '/10')
         }
         break;
         
@@ -179,7 +179,6 @@ client.on("message", message => {
         responseList = ['I think you should visit a doctor.', 'Ravandel is the specialist who you want to talk with about your problems.', 'Electroshock therapy will work wonders for you.',
         'I would advise lobotomy.', 'Chill and eat something good.', 'Go outside.', 'I would advise 8h of sleep.', 'Get commission from Pumpkins. You will be happy and she will be happpy.',
         'I think you need plastic surgery.'];
-        //message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
         message.channel.send(ReturnRandom(responseList))
         break;
         
