@@ -67,12 +67,12 @@ client.on("message", message => {
 
         if(rollValue == 0)
         {
-          rollValue = ReturnRandom(virtuesArray);
+          rollValue = Math.floor(Math.random() * virtuesArray.length);
           result = virtuesArray[rollValue];
         }
         else
         {
-          rollValue = ReturnRandom(afflictionsArray);
+          rollValue = Math.floor(Math.random() * afflictionsArray.length);
           result = afflictionsArray[rollValue];
         }
 
