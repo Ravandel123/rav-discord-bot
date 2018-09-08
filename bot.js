@@ -170,22 +170,30 @@ client.on("message", message => {
       case 'invite':
         message.channel.send('https://discordapp.com/oauth2/authorize?client_id=485910048032161792&scope=bot')
         break;
-
+        
+      //---------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------help-----------------------------------------------------------
+      //---------------------------------------------------------------------------------------------------------------------------
+      case 'help':
+        var responseList = ['I think you should visit a doctor.',
+        'Ravandel is the right person to see help from.',
+        'Electroshock therapy will work wonders for you.', 'I would advise lobotomy.'];
+        message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+        break;
     }
     
     
     
     function RecognizeWho(who, message, command)
     {
-        if (who == 'me' || who == null)
-        {
-          return message.author;
-        }
+      if (who == 'me' || who == null)
+      {
+        return message.author;
+      }
         
-        return message.content.slice(prefix.length + command.length + 1);
+      return message.content.slice(prefix.length + command.length + 1);
     }
-    
-
+	
     
 });
 
