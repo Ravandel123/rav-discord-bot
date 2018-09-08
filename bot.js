@@ -176,8 +176,17 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'help':
-        responseList = ['I think you should visit a doctor.', 'Ravandel is the specialist who you want to talk with about your problems.', 'Electroshock therapy will work wonders for you.', 'I would advise lobotomy.', 'Chill and eat something good.', 'Go outside.', 'I can grant you swift and painless death if you like.', 'My sword can release you from the prison of your body, interested?'];
+        responseList = ['I think you should visit a doctor.', 'Ravandel is the specialist who you want to talk with about your problems.', 'Electroshock therapy will work wonders for you.',
+        'I would advise lobotomy.', 'Chill and eat something good.', 'Go outside.', 'I would advise 8h of sleep.', 'Get commission from Pumpkins. You will be happy and she will be happpy.',
+        'I think you need plastic surgery.'];
         message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+        break;
+        
+      //---------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------help-----------------------------------------------------------
+      //---------------------------------------------------------------------------------------------------------------------------
+      case 'version':
+        message.channel.send('Version: 1.0')
         break;
       
       //---------------------------------------------------------------------------------------------------------------------------
@@ -194,6 +203,7 @@ client.on("message", message => {
         'dndalign n - bot will give DnD alignment for [n]',
         'choose n1|n2|n3 (...) - bot will choose one item among all listed',
         'resolve n - bot will do resolve check for [n]',
+        'version - bot will send info about his current version',
         'There are other hidden commands, currently there is 1 more.',
         ];
         for (i = 0; i < responseList.length; i++) 
