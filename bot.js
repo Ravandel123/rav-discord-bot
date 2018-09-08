@@ -15,6 +15,8 @@ client.on("message", message => {
   const command = args.shift().toLowerCase();
   var arguments = message.content.split(' ');
   var rollValue;
+  var responseList;
+  var i;
 
   switch (command) 
   {
@@ -27,7 +29,7 @@ client.on("message", message => {
       case 'will':
       case 'do':
       case 'does':
-        var responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
+        responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
 
         rollValue = Math.floor(Math.random() * 10);
         
@@ -81,7 +83,7 @@ client.on("message", message => {
       //------------------------------------------------------------you-------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'you':
-        var responseList = ['No u', 'No you.', 'You too.'];
+        responseList = ['No u', 'No you.', 'You too.'];
         message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
         break; 
 
@@ -89,7 +91,7 @@ client.on("message", message => {
       //------------------------------------------------------------dndalign--------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'dndalign':
-        var responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
+        responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
         who = RecognizeWho(arguments[1], message, command)
           
         message.channel.send(who + ' is ' + responseList[Math.floor(Math.random() * responseList.length)])
@@ -129,7 +131,6 @@ client.on("message", message => {
         var rollItems = arguments[1].split('d');
         var numberOfRolls = rollItems[0];
         var typeOfDice = rollItems[1];
-        var i;
         var rollsIndividuals = '[';
         var rollsTotalAmount = 0;
           
@@ -175,11 +176,32 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'help':
-        var responseList = ['I think you should visit a doctor.',
-        'Ravandel is the right person to see help from.',
-        'Electroshock therapy will work wonders for you.', 'I would advise lobotomy.'];
+        responseList = ['I think you should visit a doctor.', 'Ravandel is the specialist who you want to talk with about your problems.', 'Electroshock therapy will work wonders for you.', 'I would advise lobotomy.', 'Chill and eat something good.', 'Go outside.', 'I can grant you swift and painless death if you like.', 'My sword can release you from the prison of your body, interested?'];
         message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
         break;
+      
+      //---------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------commands-----------------------------------------------------------
+      //---------------------------------------------------------------------------------------------------------------------------
+      case 'commands':
+        responseList = ['All commands start from h!',
+        'am, is, are, will, do, does - bot will simply answer your question',
+        'help - bot will try to help you with one of his awesome advices, but you might not like some of his responses',
+        'invite - bot will link his invite link',
+        'roll nDa - bot will roll [n] Armello dices and will show result afterwards',
+        'roll nDx - bot will roll [n] dices having [x] sides and will show result afterwards',
+        'rate n - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough',
+        'dndalign n - bot will give DnD alignment for [n]',
+        'choose n1|n2|n3 (...) - bot will choose one item among all listed',
+        'resolve n - bot will do resolve check for [n]',
+        'There are other hidden commands, currently there is 1 more.',
+        ];
+        for (i = 0; i < responseList.length; i++) 
+        {
+          message.channel.send(responseList[i])
+        }
+        break;
+        
     }
     
     
@@ -194,7 +216,7 @@ client.on("message", message => {
       return message.content.slice(prefix.length + command.length + 1);
     }
 	
-    
+
 });
 
 
