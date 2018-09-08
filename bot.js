@@ -83,7 +83,7 @@ client.on("message", message => {
       //------------------------------------------------------------you-------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'you':
-        responseList = ['No u', 'No you.', 'You too.'];
+        responseList = ['No u.', 'No you.', 'You too.', 'Stop it please!', 'Enough of that!'];
         message.channel.send(ReturnRandom(responseList))
         break; 
 
@@ -94,7 +94,7 @@ client.on("message", message => {
         responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
         who = RecognizeWho(arguments[1], message, command)
           
-        message.channel.send(who + ' is ' + ReturnRandom(responseList))
+        message.channel.send(who + ' is **' + ReturnRandom(responseList) + '**')
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
@@ -120,7 +120,7 @@ client.on("message", message => {
         }
         else
         {
-          message.channel.send(ReturnRandom(firstPartArray) + Math.floor(Math.random() * 14) + '/10')
+          message.channel.send(ReturnRandom(firstPartArray) + Math.floor(Math.random() * 14) + '/10.')
         }
         break;
         
@@ -194,18 +194,19 @@ client.on("message", message => {
       //---------------------------------------------------------------------------------------------------------------------------
       case 'commands':
         responseList = ['All commands start from h!',
-        'am, is, are, will, do, does - bot will simply answer your question',
-        'help - bot will try to help you with one of his awesome advices, but you might not like some of his responses',
-        'invite - bot will link his invite link',
-        'roll nDa - bot will roll [n] Armello dices and will show result afterwards',
-        'roll nDx - bot will roll [n] dices having [x] sides and will show result afterwards',
-        'rate n - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough',
-        'dndalign n - bot will give DnD alignment for [n]',
-        'choose n1|n2|n3 (...) - bot will choose one item among all listed',
-        'resolve n - bot will do resolve check for [n]',
-        'version - bot will send info about his current version',
+        '**am, is, are, will, do, does** - bot will simply answer your question',
+        '**help** - bot will try to help you with one of his awesome advices, but you might not like some of his responses',
+        '**invite** - bot will link his invite link',
+        '**roll nDa** - bot will roll [n] Armello dices and will show result afterwards',
+        '**roll nDx** - bot will roll [n] dices having [x] sides and will show result afterwards',
+        '**rate n** - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough',
+        '**dndalign n** - bot will give DnD alignment for [n]',
+        '**choose n1|n2|n3 (...)** - bot will choose one item among all listed',
+        '**resolve n** - bot will do resolve check for [n]',
+        '**version** - bot will send info about his current version',
         'There are other hidden commands, currently there is 1 more.',
         ];
+        
         for (i = 0; i < responseList.length; i++) 
         {
           message.channel.send(responseList[i])
