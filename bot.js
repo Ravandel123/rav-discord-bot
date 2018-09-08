@@ -179,7 +179,8 @@ client.on("message", message => {
         responseList = ['I think you should visit a doctor.', 'Ravandel is the specialist who you want to talk with about your problems.', 'Electroshock therapy will work wonders for you.',
         'I would advise lobotomy.', 'Chill and eat something good.', 'Go outside.', 'I would advise 8h of sleep.', 'Get commission from Pumpkins. You will be happy and she will be happpy.',
         'I think you need plastic surgery.'];
-        message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+        //message.channel.send(responseList[Math.floor(Math.random() * responseList.length)])
+        message.channel.send(ReturnRandom(responseList))
         break;
         
       //---------------------------------------------------------------------------------------------------------------------------
@@ -215,6 +216,10 @@ client.on("message", message => {
     }
     
     
+    function ReturnRandom(listOfElements)
+    {
+      return listOfElements[Math.floor(Math.random() * listOfElements.length)];
+    }
     
     function RecognizeWho(who, message, command)
     {
