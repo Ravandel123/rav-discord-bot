@@ -138,13 +138,7 @@ client.on("message", message => {
           
         if(typeOfDice == 'a')
         {
-          var armellDiceAmount = [0, 0, 0, 0, 0, 0];
-        
-          for (i = 0; i < numberOfRolls; i++) 
-          {
-            rollValue = Math.floor(Math.random() * 6);
-            armellDiceAmount[rollValue]++;
-          }
+          armellDiceAmount = RollArmelloDices(numberOfRolls);
           
           message.channel.send('Result: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
           break;
@@ -165,6 +159,24 @@ client.on("message", message => {
           }
         }
         message.channel.send('Result: ' + rollsIndividuals + '] Total amount: ' + rollsTotalAmount)
+        break;
+      
+      //---------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------peril----------------------------------------------------------
+      //---------------------------------------------------------------------------------------------------------------------------
+      case 'peril':
+        if (arguments[1] == null)
+        {
+          rollValue = Math.floor(Math.random() * 3);
+          rollValue = rollValue + 3;
+        }
+        else
+        {
+          rollValue = arguments[1];
+        }
+        
+        armellDiceAmount = RollArmelloDices(rollValue);
+        message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
@@ -231,6 +243,20 @@ client.on("message", message => {
       }
         
       return message.content.slice(prefix.length + command.length + 1);
+    }
+  
+    function RollArmelloDices(rolls)
+    {
+      var armellDicesAmount = [0, 0, 0, 0, 0, 0];
+      var val;
+        
+      for (i = 0; i < rolls; i++) 
+      {
+        val = Math.floor(Math.random() * 6);
+        armellDicesAmount[val]++;
+      }
+      
+      return armellDicesAmount;
     }
 	
 
