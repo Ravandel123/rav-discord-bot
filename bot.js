@@ -271,17 +271,17 @@ client.on("message", message => {
         {
           if(Math.floor(Math.random() * 10) < 3)
           {
-            finalString = finalString + 'of ' + ReturnRandom(firstPart) + ' ';
+            finalString = finalString + ' of ' + ReturnRandom(firstPart) + ' ';
             additionalString = true;
           }
           
           if(additionalString)
           {
-            finalString = finalString + ReturnRandom(lastPart) + ' ';
+            finalString = finalString + ReturnRandom(lastPart);
           }
           else
           {
-            finalString = finalString + ' of ' + ReturnRandom(lastPart) + ' ';
+            finalString = finalString + ' of ' + ReturnRandom(lastPart);
           }
         }
 
