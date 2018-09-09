@@ -214,7 +214,7 @@ client.on("message", message => {
         'Masochistic',
         'Paranoid', 'Powerful',
         'Rapturous',
-        'Sadistic', 'Selfish', 'Stalwart', 'Stupid'
+        'Sadistic', 'Selfish', 'Stalwart', 'Stupid',
         'Vigorous'
         ];
         
