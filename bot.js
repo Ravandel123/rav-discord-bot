@@ -205,21 +205,6 @@ client.on("message", message => {
         var additionalString = false;
         
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
-
-        var adjectivePart = [
-        'Abominable', 'Abusive',
-        'Courageous',
-        'Fearful', 'Focused',
-        'Greater',
-        'Hopeless', 'Horny',
-        'Idiotic', 'Irrational',
-        'Lesser',
-        'Mad', 'Masochistic',
-        'Paranoid', 'Powerful',
-        'Rapturous',
-        'Sadistic', 'Selfish', 'Stalwart', 'Stupid',
-        'Vigorous'
-        ];
         
         var firstPart = [
         'Animal', 'Anointed', 'Apprentice',
@@ -249,15 +234,9 @@ client.on("message", message => {
         'Darkness',
         'Fools',
         'Light',
-        'Ravandel'
+        'Ravandel',
+        'Shroud'
         ]
-        
-        var lastPart = ['Shroud'];
-        
-        if(Math.floor(Math.random() * 10) < 3)
-        {
-          finalString = finalString + ReturnRandom(adjectivePart) + ' ';
-        }
         
         if(Math.floor(Math.random() * 10) < 5)
         {
