@@ -31,9 +31,9 @@ client.on("message", message => {
       case 'does':
       case 'should':
 			case 'would':
-        responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
+        responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.', 'Why not?'];
 
-        rollValue = Math.floor(Math.random() * 10);
+        rollValue = RandomNumber(10);
         
         if(rollValue == 0)
         {
@@ -41,7 +41,7 @@ client.on("message", message => {
         }
         else
         {
-          message.channel.send(ReturnRandom(responseList))
+          message.channel.send(RandomElement(responseList))
         }
 
         break;
@@ -53,7 +53,7 @@ client.on("message", message => {
         var clearedChoices = message.content.slice(prefix.length + command.length);
         var rollItems = clearedChoices.split('|');
 
-        message.channel.send(ReturnRandom(rollItems))
+        message.channel.send(RandomElement(rollItems))
         break;
 
       //------------------------------------------------------------------------------------------------------------------------------
@@ -65,16 +65,16 @@ client.on("message", message => {
         var result;
         who = RecognizeWho(arguments[1], message, command)
 
-        rollValue = Math.floor(Math.random() * 4);
+        rollValue = RandomNumber(4);;
 
         if(rollValue == 0)
         {
-          rollValue = Math.floor(Math.random() * virtuesArray.length);
+          rollValue = RandomNumber(virtuesArray.length);
           result = virtuesArray[rollValue];
         }
         else
         {
-          rollValue = Math.floor(Math.random() * afflictionsArray.length);
+          rollValue = RandomNumber(afflictionsArray.length);
           result = afflictionsArray[rollValue];
         }
 
@@ -86,7 +86,7 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'you':
         responseList = ['No u.', 'No you.', 'You too.', 'Stop it please!', 'Enough of that!'];
-        message.channel.send(ReturnRandom(responseList))
+        message.channel.send(RandomElement(responseList))
         break; 
 
       //----------------------------------------------------------------------------------------------------------------------------
@@ -96,7 +96,7 @@ client.on("message", message => {
         responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
         who = RecognizeWho(arguments[1], message, command)
           
-        message.channel.send(who + ' is **' + ReturnRandom(responseList) + '**')
+        message.channel.send(who + ' is **' + RandomElement(responseList) + '**')
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
@@ -114,15 +114,15 @@ client.on("message", message => {
           specialArray = personifiedSpecialArray;
         }
         
-        var response = Math.floor(Math.random() * 10);
+        var response = RandomNumber(10);
 
         if(response == 0)
         {
-          message.channel.send(ReturnRandom(specialArray))
+          message.channel.send(RandomElement(specialArray))
         }
         else
         {
-          message.channel.send(ReturnRandom(firstPartArray) + Math.floor(Math.random() * 14) + '/10.')
+          message.channel.send(RandomElement(firstPartArray) + RandomNumber(14) + '/10.')
         }
         break;
         
@@ -138,13 +138,7 @@ client.on("message", message => {
           
         if(typeOfDice == 'a')
         {
-          var armellDiceAmount = [0, 0, 0, 0, 0, 0];
-        
-          for (i = 0; i < numberOfRolls; i++) 
-          {
-            rollValue = Math.floor(Math.random() * 6);
-            armellDiceAmount[rollValue]++;
-          }
+          armellDiceAmount = RollArmelloDices(numberOfRolls);
           
           message.channel.send('Result: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
           break;
@@ -153,7 +147,7 @@ client.on("message", message => {
         {
           for (i = 0; i < numberOfRolls; i++)
           {
-            rollValue = Math.floor(Math.random() * typeOfDice + 1);
+            rollValue = RandomNumber(typeOfDice + 1);
             rollsIndividuals = rollsIndividuals + rollValue;
             
             if(i != numberOfRolls - 1)
@@ -181,7 +175,25 @@ client.on("message", message => {
         responseList = ['I think you should visit a doctor.', 'Ravandel is the specialist who you want to talk with about your problems.', 'Electroshock therapy will work wonders for you.',
         'I would advise lobotomy.', 'Chill and eat something good.', 'Go outside.', 'I would advise 8h of sleep.', 'Get commission from Pumpkins. You will be happy and she will be happpy.',
         'I think you need plastic surgery.'];
-        message.channel.send(ReturnRandom(responseList))
+        message.channel.send(RandomElement(responseList))
+        break;
+        
+      //---------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------peril----------------------------------------------------------
+      //---------------------------------------------------------------------------------------------------------------------------
+      case 'peril':
+        if (arguments[1] == null)
+        {
+          rollValue = RandomNumber(3);
+          rollValue = rollValue + 3;
+        }
+        else
+        {
+          rollValue = arguments[1];
+        }
+        
+        armellDiceAmount = RollArmelloDices(rollValue);
+        message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
         break;
         
       //---------------------------------------------------------------------------------------------------------------------------
@@ -217,8 +229,12 @@ client.on("message", message => {
         
     }
     
+    function RandomNumber(max)
+    {
+      return Math.floor(Math.random() * max);
+    }
     
-    function ReturnRandom(listOfElements)
+    function RandomElement(listOfElements)
     {
       return listOfElements[Math.floor(Math.random() * listOfElements.length)];
     }
@@ -231,6 +247,19 @@ client.on("message", message => {
       }
         
       return message.content.slice(prefix.length + command.length + 1);
+    }
+    
+    function RollArmelloDices(numberOfRolls)
+    {
+      var armellDicesAmount = [0, 0, 0, 0, 0, 0];
+        
+      for (i = 0; i < numberOfRolls; i++) 
+      {
+        rollValue = Math.floor(Math.random() * 6);
+        armellDicesAmount[rollValue]++;
+      }
+      
+      return armellDicesAmount;
     }
 	
 
