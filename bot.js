@@ -247,6 +247,7 @@ client.on("message", message => {
           case 'U':
           case 'Y':
           basicString = basicString + 'an ';
+          break;
           
           case 'B':
           case 'C':
@@ -269,6 +270,7 @@ client.on("message", message => {
           case 'X':
           case 'Z':
           basicString = basicString + 'a ';
+          break;
         }
         
         message.channel.send(basicString + finalString)
