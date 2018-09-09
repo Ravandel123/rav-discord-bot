@@ -258,7 +258,7 @@ client.on("message", message => {
         
         var xd = responseList[0];
         
-        message.channel.send(xd[1])
+        message.channel.send(xd.charAt(0))
         
         break;
         
