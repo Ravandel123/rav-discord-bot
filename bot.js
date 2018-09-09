@@ -200,6 +200,8 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'class':
         var who = RecognizeWho(arguments[1], message, command)
+        var finalString;
+        var articleSet = false;
         
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think' + who + ' would make an excellent '];
         
@@ -219,15 +221,23 @@ client.on("message", message => {
         'Lord', 
         'Pilgrim',' Priest',
         'Ranger', 'Runesmith',
-        'Shepherd', 'Slayer', 'Surgeon',
+        'Shepherd', 'Sister', 'Slayer', 'Surgeon',
         'Tamer', 'Trainer',
         'Witch', 'Wizard'
         ];
         
         var lastPart = ['Shroud'];
         
+        finalString = ReturnRandom(basePart);
+        
+        if(Math.floor(Math.random() * 10) < 5)
+        {
+          finalString = finalString +  ReturnRandom(firstPart) + ' ';
+        }
+        
+        finalString = finalString +  ReturnRandom(basePart);
 
-        message.channel.send(ReturnRandom(basePart) + ReturnRandom(mainPart))
+        message.channel.send(finalString)
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
