@@ -203,7 +203,7 @@ client.on("message", message => {
         var basicString = '';
         var finalString = '';
         
-        var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think' + who + ' would make an excellent '];
+        var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
         
         var firstPart = [
         'Animal', 'Anointed', 'Apprentice',
@@ -238,42 +238,45 @@ client.on("message", message => {
         
         basicString = ReturnRandom(basePart);
         
-        switch(basicString.charAt(0))
+        if(basicString != basePart[3])
         {
-          case 'A':
-          case 'E':
-          case 'I':
-          case 'O':
-          case 'U':
-          case 'Y':
-          basicString = basicString + 'an ';
-          break;
-          
-          case 'B':
-          case 'C':
-          case 'D':
-          case 'F':
-          case 'G':
-          case 'H':
-          case 'J':
-          case 'K':
-          case 'L':
-          case 'M':
-          case 'N':
-          case 'Q':
-          case 'P':
-          case 'R':
-          case 'S':
-          case 'T':
-          case 'V':
-          case 'W':
-          case 'X':
-          case 'Z':
-          basicString = basicString + 'a ';
-          break;
+          switch(basicString.charAt(0))
+          {
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+            case 'Y':
+            basicString = basicString + 'an ';
+            break;
+            
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'Q':
+            case 'P':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Z':
+            basicString = basicString + 'a ';
+            break;
+          }
         }
         
-        message.channel.send(basicString + finalString)
+        message.channel.send(basicString + finalString + '.')
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
