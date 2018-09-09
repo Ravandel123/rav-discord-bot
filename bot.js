@@ -30,7 +30,7 @@ client.on("message", message => {
       case 'do':
       case 'does':
       case 'should':
-			case 'would':
+      case 'would':
         responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
 
         rollValue = Math.floor(Math.random() * 10);
@@ -194,6 +194,41 @@ client.on("message", message => {
         armellDiceAmount = RollArmelloDices(rollValue);
         message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
         break;
+        
+      //----------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------class-----------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'class':
+        var who = RecognizeWho(arguments[1], message, command)
+        
+        var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think' + who + ' would make an excellent '];
+        
+        var firstPart = [
+        'Animal', 'Anointed', 'Apprentice',
+        'Badlands', 'Battle', 'Black', 'Border', 'Bounty',
+        'Camp', 'Cloaked', 'Crime', 'Cult'
+        ];
+        
+        var mainPart = [
+        'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Artillerist', 'Artisan', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
+        'Badlander', 'Bailiff', 'Barber', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brother', 'Burgher', 'Burglar',
+        'Cadet', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader'
+        'Follower', 
+        'Guard', 
+        'Hunter',
+        'Lord', 
+        'Pilgrim',' Priest',
+        'Ranger', 'Runesmith',
+        'Shepherd', 'Slayer', 'Surgeon',
+        'Tamer', 'Trainer',
+        'Witch', 'Wizard'
+        ];
+        
+        var lastPart = ['Shroud'];
+        
+
+        message.channel.send(ReturnRandom(basePart) + ReturnRandom(mainPart))
+        break;
 
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------invite---------------------------------------------------------
@@ -212,6 +247,7 @@ client.on("message", message => {
         message.channel.send(ReturnRandom(responseList))
         break;
         
+      
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
