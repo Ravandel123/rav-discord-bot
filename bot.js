@@ -212,7 +212,7 @@ client.on("message", message => {
         var mainPart = [
         'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Artillerist', 'Artisan', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
         'Badlander', 'Bailiff', 'Barber', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brother', 'Burgher', 'Burglar',
-        'Cadet', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader'
+        'Cadet', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader',
         'Follower', 
         'Guard', 
         'Hunter',
