@@ -207,16 +207,18 @@ client.on("message", message => {
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
         
         var firstPart = [
-        'Animal', 'Anointed', 'Apprentice',
+        'Aegis', 'Animal', 'Anointed', 'Apprentice',
         'Badlands', 'Barbaric', 'Battle', 'Black', 'Border', 'Bounty',
         'Camp', 'Cloaked', 'Crime', 'Cult',
-        'Dung',
+        'Drug', 'Dung',
+        'Forest',
         'Pleasure',
-        'White'
+        'Savage',
+        'White', 'Wild',
         ];
         
         var secondPart = [
-        'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Artillerist', 'Artisan', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
+        'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Archer', 'Artillerist', 'Artisan', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
         'Badlander', 'Bailiff', 'Barbarian', 'Barber', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brother', 'Burgher', 'Burglar',
         'Cadet', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader',
         'Follower', 
@@ -231,11 +233,16 @@ client.on("message", message => {
         ];
         
         var lastPart = [
-        'Darkness',
-        'Fools',
-        'Light',
-        'Ravandel',
-        'Shroud'
+        'Darkness', 'Despair', 'Destruction',
+        'the Forest Fools', 'Fury',
+        'Honor',
+        'Immortality',
+        'Justice',
+        'the Light',
+        'Madness', 'Masks', 'the Meek', 'Mercy',
+        'Pleasure', 'Power',
+        'Retribution',
+        'Shadows', 'the Shroud'
         ]
         
         if(Math.floor(Math.random() * 10) < 5)
@@ -246,22 +253,9 @@ client.on("message", message => {
         finalString = finalString + ReturnRandom(secondPart);
         
 
-        if(Math.floor(Math.random() * 10) < 5)
+        if(Math.floor(Math.random() * 10) < 4)
         {
-          if(Math.floor(Math.random() * 10) < 3)
-          {
-            finalString = finalString + ' of ' + ReturnRandom(firstPart) + ' ';
-            additionalString = true;
-          }
-          
-          if(additionalString)
-          {
-            finalString = finalString + ReturnRandom(lastPart);
-          }
-          else
-          {
-            finalString = finalString + ' of ' + ReturnRandom(lastPart);
-          }
+          finalString = finalString + ' of ' + ReturnRandom(lastPart);
         }
 
         basicString = ReturnRandom(basePart);
