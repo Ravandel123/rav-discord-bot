@@ -135,6 +135,16 @@ client.on("message", message => {
         var typeOfDice = rollItems[1];
         var rollsIndividuals = '[';
         var rollsTotalAmount = 0;
+        
+        if(numberOfRolls == null)
+        {
+          numberOfRolls = 1;
+        }
+        
+        if(typeOfDice == null)
+        {
+          typeOfDice = 6;
+        }
           
         if(typeOfDice == 'a')
         {
