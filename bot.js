@@ -200,7 +200,7 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'class':
         var who = RecognizeWho(arguments[1], message, command)
-        var finalString;
+        var finalString = '';
         
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think' + who + ' would make an excellent '];
         
@@ -268,7 +268,7 @@ client.on("message", message => {
           basePart = basePart + 'a ';
         }
         
-        message.channel.send(basePart + finalString)
+        message.channel.send(ReturnRandom(basePart) + finalString)
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
