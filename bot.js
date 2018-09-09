@@ -144,10 +144,12 @@ client.on("message", message => {
           break;
         }
         else
-        {
+        {message.channel.send(typeOfDice);
           for (i = 0; i < numberOfRolls; i++)
           {
+            
             rollValue = RandomNumber(typeOfDice + 1);
+            message.channel.send('Roll value ' + i + ' ' + rollValue);
             rollsIndividuals = rollsIndividuals + rollValue;
             
             if(i != numberOfRolls - 1)
