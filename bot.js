@@ -315,12 +315,7 @@ client.on("message", message => {
         responseList = ['I think you should visit a doctor.', 'Ravandel is the specialist who you want to talk with about your problems.', 'Electroshock therapy will work wonders for you.',
         'I would advise lobotomy.', 'Chill and eat something good.', 'Go outside.', 'I would advise 8h of sleep.', 'Get commission from Pumpkins. You will be happy and she will be happpy.',
         'I think you need plastic surgery.'];
-        //message.channel.send(ReturnRandom(responseList))
-        
-        var xd = responseList[0];
-        
-        message.channel.send()
-        
+        message.channel.send(ReturnRandom(responseList))
         break;
         
       
