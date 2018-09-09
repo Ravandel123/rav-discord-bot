@@ -204,17 +204,31 @@ client.on("message", message => {
         var finalString = '';
         
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
+
+        var adjectivePart = [
+        'Abominable', 'Abusive',
+        'Courageous',
+        'Fearful', 'Focused',
+        'Hopeless',
+        'Irrational',
+        'Masochistic',
+        'Paranoid', 'Powerful',
+        'Rapturous',
+        'Sadistic', 'Selfish', 'Stalwart', 'Stupid'
+        'Vigorous'
+        ];
         
         var firstPart = [
         'Animal', 'Anointed', 'Apprentice',
-        'Badlands', 'Battle', 'Black', 'Border', 'Bounty',
+        'Badlands', 'Barbaric', 'Battle', 'Black', 'Border', 'Bounty',
         'Camp', 'Cloaked', 'Crime', 'Cult',
-        'Pleasure'
+        'Pleasure',
+        'White'
         ];
         
         var mainPart = [
         'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Artillerist', 'Artisan', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
-        'Badlander', 'Bailiff', 'Barber', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brother', 'Burgher', 'Burglar',
+        'Badlander', 'Bailiff', 'Barbarian', 'Barber', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brother', 'Burgher', 'Burglar',
         'Cadet', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader',
         'Follower', 
         'Guard', 
@@ -229,12 +243,22 @@ client.on("message", message => {
         
         var lastPart = ['Shroud'];
         
+        if(Math.floor(Math.random() * 10) < 3)
+        {
+          finalString = finalString +  ReturnRandom(adjectivePart) + ' ';
+        }
+        
         if(Math.floor(Math.random() * 10) < 5)
         {
           finalString = finalString +  ReturnRandom(firstPart) + ' ';
         }
         
         finalString = finalString +  ReturnRandom(mainPart);
+        
+        
+        
+        
+        
         
         basicString = ReturnRandom(basePart);
         
