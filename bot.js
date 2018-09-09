@@ -21,7 +21,7 @@ client.on("message", message => {
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
-      //----------am, is, are, will, do, does---------------------------------------------------------------------------------------
+      //----------am, is, are, will, do, does, should, would------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'am':
       case 'is':
@@ -29,6 +29,8 @@ client.on("message", message => {
       case 'will':
       case 'do':
       case 'does':
+      case 'should':
+			case 'would':
         responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
 
         rollValue = Math.floor(Math.random() * 10);
@@ -194,7 +196,7 @@ client.on("message", message => {
       //---------------------------------------------------------------------------------------------------------------------------
       case 'commands':
         responseList = ['All commands start from h!',
-        '**am, is, are, will, do, does** - bot will simply answer your question',
+        '**am, is, are, will, do, does, should, would** - bot will simply answer your question',
         '**help** - bot will try to help you with one of his awesome advices, but you might not like some of his responses',
         '**invite** - bot will link his invite link',
         '**roll nDa** - bot will roll [n] Armello dices and will show result afterwards',
