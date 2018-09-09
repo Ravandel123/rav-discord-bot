@@ -281,7 +281,7 @@ client.on("message", message => {
           }
           else
           {
-            finalString = finalString + 'of ' + ReturnRandom(lastPart) + ' ';
+            finalString = finalString + ' of ' + ReturnRandom(lastPart) + ' ';
           }
         }
 
