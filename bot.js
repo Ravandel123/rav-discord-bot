@@ -130,11 +130,17 @@ client.on("message", message => {
       //------------------------------------------------------------roll-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'roll':
+        var rollsIndividuals = '[';
+        var rollsTotalAmount = 0;
+        
+        if(arguments[1] == null)
+        {
+          arguments[1] = '1d6';
+        }
+        
         var rollItems = arguments[1].split('d');
         var numberOfRolls = rollItems[0];
         var typeOfDice = rollItems[1];
-        var rollsIndividuals = '[';
-        var rollsTotalAmount = 0;
         
         if(numberOfRolls == null)
         {
