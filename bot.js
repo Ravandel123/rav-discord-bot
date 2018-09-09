@@ -201,14 +201,14 @@ client.on("message", message => {
       case 'class':
         var who = RecognizeWho(arguments[1], message, command)
         var finalString;
-        var articleSet = false;
         
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think' + who + ' would make an excellent '];
         
         var firstPart = [
         'Animal', 'Anointed', 'Apprentice',
         'Badlands', 'Battle', 'Black', 'Border', 'Bounty',
-        'Camp', 'Cloaked', 'Crime', 'Cult'
+        'Camp', 'Cloaked', 'Crime', 'Cult',
+        'Pleasure'
         ];
         
         var mainPart = [
@@ -237,7 +237,40 @@ client.on("message", message => {
         
         finalString = finalString +  ReturnRandom(mainPart);
 
-        message.channel.send(finalString)
+        switch(finalString.charAt(0))
+        {
+          case 'A':
+          case 'E':
+          case 'I':
+          case 'O':
+          case 'U':
+          case 'Y':
+          basePart = basePart + 'an ';
+          
+          case 'B':
+          case 'C':
+          case 'D':
+          case 'F':
+          case 'G':
+          case 'H':
+          case 'J':
+          case 'K':
+          case 'L':
+          case 'M':
+          case 'N':
+          case 'Q':
+          case 'P':
+          case 'R':
+          case 'S':
+          case 'T':
+          case 'V':
+          case 'W':
+          case 'X':
+          case 'Z':
+          basePart = basePart + 'a ';
+        }
+        
+        message.channel.send(basePart + finalString)
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
@@ -258,7 +291,7 @@ client.on("message", message => {
         
         var xd = responseList[0];
         
-        message.channel.send(xd.charAt(0))
+        message.channel.send()
         
         break;
         
