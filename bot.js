@@ -235,7 +235,7 @@ client.on("message", message => {
           finalString = finalString +  ReturnRandom(firstPart) + ' ';
         }
         
-        finalString = finalString +  ReturnRandom(basePart);
+        finalString = finalString +  ReturnRandom(mainPart);
 
         message.channel.send(finalString)
         break;
