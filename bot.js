@@ -202,6 +202,7 @@ client.on("message", message => {
         var who = RecognizeWho(arguments[1], message, command)
         var basicString = '';
         var finalString = '';
+        var additionalString = false;
         
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
 
@@ -209,9 +210,11 @@ client.on("message", message => {
         'Abominable', 'Abusive',
         'Courageous',
         'Fearful', 'Focused',
-        'Hopeless',
-        'Irrational',
-        'Masochistic',
+        'Greater',
+        'Hopeless', 'Horny',
+        'Idiotic', 'Irrational',
+        'Lesser',
+        'Mad', 'Masochistic',
         'Paranoid', 'Powerful',
         'Rapturous',
         'Sadistic', 'Selfish', 'Stalwart', 'Stupid',
@@ -222,11 +225,12 @@ client.on("message", message => {
         'Animal', 'Anointed', 'Apprentice',
         'Badlands', 'Barbaric', 'Battle', 'Black', 'Border', 'Bounty',
         'Camp', 'Cloaked', 'Crime', 'Cult',
+        'Dung',
         'Pleasure',
         'White'
         ];
         
-        var mainPart = [
+        var secondPart = [
         'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Artillerist', 'Artisan', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
         'Badlander', 'Bailiff', 'Barbarian', 'Barber', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brother', 'Burgher', 'Burglar',
         'Cadet', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader',
@@ -241,25 +245,46 @@ client.on("message", message => {
         'Witch', 'Wizard'
         ];
         
+        var lastPart = [
+        'Darkness',
+        'Fools',
+        'Light',
+        'Ravandel'
+        ]
+        
         var lastPart = ['Shroud'];
         
         if(Math.floor(Math.random() * 10) < 3)
         {
-          finalString = finalString +  ReturnRandom(adjectivePart) + ' ';
+          finalString = finalString + ReturnRandom(adjectivePart) + ' ';
         }
         
         if(Math.floor(Math.random() * 10) < 5)
         {
-          finalString = finalString +  ReturnRandom(firstPart) + ' ';
+          finalString = finalString + ReturnRandom(firstPart) + ' ';
         }
         
-        finalString = finalString +  ReturnRandom(mainPart);
+        finalString = finalString + ReturnRandom(secondPart);
         
-        
-        
-        
-        
-        
+
+        if(Math.floor(Math.random() * 10) < 5)
+        {
+          if(Math.floor(Math.random() * 10) < 3)
+          {
+            finalString = finalString + 'of ' + ReturnRandom(firstPart) + ' ';
+            additionalString = true;
+          }
+          
+          if(additionalString)
+          {
+            finalString = finalString + ReturnRandom(lastPart) + ' ';
+          }
+          else
+          {
+            finalString = finalString + 'of ' + ReturnRandom(lastPart) + ' ';
+          }
+        }
+
         basicString = ReturnRandom(basePart);
         
         if(basicString != basePart[3])
