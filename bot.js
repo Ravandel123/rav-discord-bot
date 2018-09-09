@@ -249,14 +249,15 @@ client.on("message", message => {
       return message.content.slice(prefix.length + command.length + 1);
     }
     
-    function RollArmelloDices(numberOfRolls)
+    function RollArmelloDices(rolls)
     {
       var armellDicesAmount = [0, 0, 0, 0, 0, 0];
+      var val;
         
-      for (i = 0; i < numberOfRolls; i++) 
+      for (i = 0; i < rolls; i++) 
       {
-        rollValue = Math.floor(Math.random() * 6);
-        armellDicesAmount[rollValue]++;
+        val = Math.floor(Math.random() * 6);
+        armellDicesAmount[val]++;
       }
       
       return armellDicesAmount;
