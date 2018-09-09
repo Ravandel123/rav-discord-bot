@@ -228,8 +228,6 @@ client.on("message", message => {
         
         var lastPart = ['Shroud'];
         
-        finalString = ReturnRandom(basePart);
-        
         if(Math.floor(Math.random() * 10) < 5)
         {
           finalString = finalString +  ReturnRandom(firstPart) + ' ';
