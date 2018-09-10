@@ -204,7 +204,7 @@ client.on("message", message => {
         var finalString = '';
         var additionalString = false;
         
-        var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
+        var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think ' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
         
         var firstPart = [
         'Aegis', 'Animal', 'Anointed', 'Apprentice',
