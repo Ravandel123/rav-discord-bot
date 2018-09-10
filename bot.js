@@ -262,7 +262,7 @@ client.on("message", message => {
         
         if(basicString != basePart[3])
         {
-          switch(basicString.charAt(0))
+          switch(finalString.charAt(0))
           {
             case 'A':
             case 'E':
