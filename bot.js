@@ -210,7 +210,7 @@ client.on("message", message => {
         
         var firstPart = [
         'Aegis', 'Animal', 'Anointed', 'Apprentice',
-        'Badlands', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brothel',
+        'Badlands', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brothel', 'Brutal',
         'Camp', 'Cloaked', 'Crime', 'Cult',
         'Death', 'Drug', 'Dung',
         'Feral', 'Forest',
@@ -233,11 +233,11 @@ client.on("message", message => {
         'Highwayman', 'Hunter',
         'Inquisitor',
         'Jester',
-        'King', 'Knight',
+        'Kamikaze','King', 'Knight',
         'Leper', 'Lord', 'Lumberjack',
         'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
         'Necromancer', 'Ninja',
-        'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner',
+        'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
         'Queen',
         'Ranger', 'Robber', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
         'Sadist', 'Sailor','Samurai', 'Shaman', 'Shepherd', 'Sister', 'Slayer', 'Soldier', 'Sorcerer', 'Surgeon',
@@ -246,7 +246,7 @@ client.on("message", message => {
         ];
         
         var lastPart = [
-        'Darkness', 'Despair', 'Destruction', 'Doctor Pumpkins',
+        'Darkness', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom',
         'Evil',
         'the Forest Fools', 'Fury',
         'Good', 'the Grove',
