@@ -234,7 +234,9 @@ client.on("message", message => {
         
         var lastPart = [
         'Darkness', 'Despair', 'Destruction',
+	'Evil',
         'the Forest Fools', 'Fury',
+	'Good',
         'Honor',
         'Immortality',
         'Justice',
@@ -245,7 +247,7 @@ client.on("message", message => {
         'Shadows', 'the Shroud'
         ]
         
-        if(Math.floor(Math.random() * 10) < 5)
+        if(Math.floor(Math.random() * 10) < 6)
         {
           finalString = finalString + ReturnRandom(firstPart) + ' ';
         }
@@ -253,7 +255,7 @@ client.on("message", message => {
         finalString = finalString + ReturnRandom(secondPart);
         
 
-        if(Math.floor(Math.random() * 10) < 4)
+        if(Math.floor(Math.random() * 10) < 5)
         {
           finalString = finalString + ' of ' + ReturnRandom(lastPart);
         }
