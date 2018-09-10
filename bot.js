@@ -203,42 +203,49 @@ client.on("message", message => {
         var basicString = '';
         var finalString = '';
         var additionalString = false;
+        var firstWord = '';
+        var secondWord = '';
         
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think ' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
         
         var firstPart = [
         'Aegis', 'Animal', 'Anointed', 'Apprentice',
-        'Badlands', 'Barbaric', 'Battle', 'Black', 'Border', 'Bounty',
+        'Badlands', 'Barbaric', 'Battle', 'Black', 'Blood', 'Border', 'Bounty', 'Brothel',
         'Camp', 'Cloaked', 'Crime', 'Cult',
         'Drug', 'Dung',
-        'Forest',
-        'Pleasure',
-        'Savage',
+        'Feral', 'Forest',
+        'Pale', 'Pleasure',
+        'Savage', 'Spy',
         'White', 'Wild',
         ];
         
         var secondPart = [
-        'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Archer', 'Artillerist', 'Artisan', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
+        'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
         'Badlander', 'Bailiff', 'Barbarian', 'Barber', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brother', 'Burgher', 'Burglar',
-        'Cadet', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader',
+        'Cadet', 'Calligrapher', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader',
         'Follower', 
         'Guard', 
         'Hunter',
-        'Lord', 
-        'Pilgrim',' Priest',
+        'Inquisitor',
+        'King',
+        'Lord',
+        'Madman', 'Masochist', 'Messenger',
+        'Necromancer',
+        'Painter', 'Pilgrim','Priest', 'Priestess', 'Prisoner',
+        'Queen',
         'Ranger', 'Runesmith',
-        'Shepherd', 'Sister', 'Slayer', 'Surgeon',
-        'Tamer', 'Trainer',
-        'Witch', 'Wizard'
+        'Sadist', 'Shepherd', 'Sister', 'Slayer', 'Surgeon',
+        'Tamer', 'Torturer', 'Trainer', 'Troglodyte', 'Troll', 
+        'Warlock', 'Witch', 'Wizard'
         ];
         
         var lastPart = [
-        'Darkness', 'Despair', 'Destruction',
-	'Evil',
+        'Darkness', 'Despair', 'Destruction', 'Doctor Pumpkins',
+        'Evil',
         'the Forest Fools', 'Fury',
-	'Good',
+        'Good',
         'Honor',
-        'Immortality',
+        'Immorality', 'Immortality',
         'Justice',
         'the Light',
         'Madness', 'Masks', 'the Meek', 'Mercy',
@@ -249,11 +256,22 @@ client.on("message", message => {
         
         if(Math.floor(Math.random() * 10) < 6)
         {
-          finalString = finalString + ReturnRandom(firstPart) + ' ';
+          firstWord = ReturnRandom(firstPart) + ' ';
+          finalString = finalString + firstWord;
         }
         
+        if(Math.floor(Math.random() * 10) < 5)
+        {
+          secondWord = ReturnRandom(firstPart) + ' ';
+          if(firstWord != secondWord)
+          {
+            finalString = finalString + secondWord;
+          }
+        }
+
+
         finalString = finalString + ReturnRandom(secondPart);
-        
+
 
         if(Math.floor(Math.random() * 10) < 5)
         {
