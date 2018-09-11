@@ -333,7 +333,7 @@ client.on("message", message => {
 
         if(Math.floor(Math.random() * 10) < 5)
         {
-          finalString = finalString + ' of ' + ReturnRandom(lastPart);
+          finalString = finalString + 'of ' + ReturnRandom(lastPart);
         }
 
         basicString = ReturnRandom(basePart);
