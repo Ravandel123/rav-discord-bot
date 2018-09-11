@@ -247,7 +247,7 @@ client.on("message", message => {
         ];
         
         var secondPart = [
-        'Abbot', 'Admiral', 'Agitator', 'Ambassador', 'Anchorite', 'Apothecary', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
+        'Abbot', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Apothecary', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
         'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brigand', 'Brother', 'Burgher', 'Burglar',
         'Cadet', 'Calligrapher', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader',
         'Defender', 'Druid',
@@ -304,7 +304,7 @@ client.on("message", message => {
         
         if(Math.floor(Math.random() * 10) < 3)
         {
-          secondWord = ReturnRandom(firstPart3) + ' ';
+          finalString = finalString + ReturnRandom(firstPart3) + ' ';
         }
 
         finalString = finalString + ReturnRandom(secondPart);
