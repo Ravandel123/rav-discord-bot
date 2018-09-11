@@ -207,11 +207,13 @@ client.on("message", message => {
         var additionalString = false;
         var firstWord = '';
         var secondWord = '';
+        var thirdWord = '';
+        var fourthWord = '';
 
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think ' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
 
         var firstPart1 = [
-        'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
+        'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
         'Badlands', 'Barbaric', 'Brutal',
         'Cloaked',
         'Defiant', 'Drunken',
@@ -219,7 +221,7 @@ client.on("message", message => {
         'Greater',
         'High', 'Horrible',
         'Lesser',
-        'Masochistic',
+        'Masochistic', 'Monstrous',
         'Offensive',
         'Pale', 'Provocative',
         'Rapturous',
@@ -229,15 +231,16 @@ client.on("message", message => {
 
         var firstPart2 = [
         'Aegis', 'Animal',
-        'Badlands', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
+        'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
         'Camp', 'Cloaked', 'Crime',
         'Death', 'Drug', 'Dung',
         'Feral', 'Forest',
         'Grave',
-        'High',
-        'Pale', 'Pleasure',
-        'Savage', 'Spy',
-        'Wild', 'White'
+        'High', 'Hound',
+        'Monster',
+        'Pale', 'Plague', 'Pleasure',
+        'Savage', 'Shield', 'Spy',
+        'War', 'Wild', 'White'
         ];
         
         var firstPart3 = [
@@ -248,20 +251,21 @@ client.on("message", message => {
         ];
         
         var secondPart = [
-        'Abbot', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Apothecary', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
-        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brigand', 'Brother', 'Burgher', 'Burglar',
-        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Cultist', 'Courtesan', 'Courtier', 'Crusader',
-        'Defender', 'Druid',
+        'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
+        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar',
+        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Cultist', 'Courtesan', 'Courtier', 'Crusader',
+        'Defender', 'Doctor', 'Druid',
         'Executioner', 'Experiment',
         'Fighter', 'Fisherman', 'Follower', 
         'Guard', 
-        'Highwayman', 'Hunter',
+        'Hellion', 'Highwayman', 'Hunter',
         'Inquisitor',
         'Jester',
         'Kamikaze', 'Killer', 'King', 'Knight',
         'Leper', 'Lord', 'Lumberjack',
         'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
         'Necromancer', 'Ninja',
+        'Occultist',
         'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
         'Queen',
         'Ranger', 'Robber', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
@@ -286,33 +290,37 @@ client.on("message", message => {
         'Pleasure', 'Power',
         'Retribution', 'the Rot',
         'Shadows', 'the Shroud', 'Steel', 'the Sun',
-        'the Wyld'
+        'the War', 'the Weed'
         ]
         
         //---------------------------------------------------------------------------------------------------------------------------
 
         if(Math.floor(Math.random() * 10) < 5)
         {
-          firstWord = ReturnRandom(firstPart1) + ' ';
-          finalString = finalString + firstWord;
+          firstWord = ReturnRandom(firstPart1);
+          finalString = finalString + firstWord + ' ';
         }
         
         if(Math.floor(Math.random() * 10) < 5)
         {
-          secondWord = ReturnRandom(firstPart2) + ' ';
+          secondWord = ReturnRandom(firstPart2);
           if(firstWord != secondWord)
           {
-            finalString = finalString + secondWord;
+            finalString = finalString + secondWord + ' ';
           }
         }
         
         if(Math.floor(Math.random() * 10) < 3)
         {
-          finalString = finalString + ReturnRandom(firstPart3) + ' ';
+          thirdWord = ReturnRandom(firstPart3);
+          finalString = finalString + thirdWord + ' ';
         }
 
-        finalString = finalString + ReturnRandom(secondPart);
-
+        fourthWord = ReturnRandom(secondPart);
+        if(thirdWord != '' ||  thirdWord != secondWord)
+        {
+          finalString = finalString + ReturnRandom(secondPart);
+        }
 
         if(Math.floor(Math.random() * 10) < 5)
         {
