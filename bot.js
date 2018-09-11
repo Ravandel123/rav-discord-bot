@@ -211,19 +211,19 @@ client.on("message", message => {
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think ' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
 
         var firstPart1 = [
-        'Aggressive', 'Anointed', 'Apprentice',
+        'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
         'Badlands', 'Barbaric', 'Brutal',
         'Cloaked',
         'Defiant', 'Drunken',
-        'Feral',
+        'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn',
         'Greater',
-        'High',
+        'High', 'Horrible',
         'Lesser',
         'Masochistic',
         'Offensive',
         'Pale', 'Provocative',
         'Rapturous',
-        'Sadistic', 'Screwed',
+        'Sadistic', 'Screwed', 'Serial',
         'Wild'
         ];
 
@@ -248,16 +248,16 @@ client.on("message", message => {
         
         var secondPart = [
         'Abbot', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Apothecary', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
-        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brigand', 'Brother', 'Burgher', 'Burglar',
-        'Cadet', 'Calligrapher', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Courtesan', 'Courtier', 'Crusader',
+        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brigand', 'Brother', 'Burgher', 'Burglar',
+        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Courtesan', 'Courtier', 'Crusader',
         'Defender', 'Druid',
-        'Experiment',
+        'Executioner', 'Experiment',
         'Fighter', 'Fisherman', 'Follower', 
         'Guard', 
         'Highwayman', 'Hunter',
         'Inquisitor',
         'Jester',
-        'Kamikaze','King', 'Knight',
+        'Kamikaze', 'Killer', 'King', 'Knight',
         'Leper', 'Lord', 'Lumberjack',
         'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
         'Necromancer', 'Ninja',
@@ -270,8 +270,9 @@ client.on("message", message => {
         ];
         
         var lastPart = [
-        'the Booze',
-        'Darkness', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
+        'Blood', 'the Booze',
+        'the Coconut',
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
         'Evil',
         'the Forest Fools', 'Fury',
         'Good', 'the Grove',
@@ -279,10 +280,12 @@ client.on("message", message => {
         'Immorality', 'Immortality',
         'Justice',
         'the Light',
-        'Madness', 'Masks', 'the Meek', 'Mercy',
+        'Madness', 'Masks', 'the Meek', 'Mercy', 'the Moon',
+        'the Nut',
         'Pleasure', 'Power',
-        'Retribution',
-        'Shadows', 'the Shroud'
+        'Retribution', 'the Rot',
+        'Shadows', 'the Shroud', 'the Sun',
+        'the Wyld'
         ]
         
         //---------------------------------------------------------------------------------------------------------------------------
@@ -355,7 +358,15 @@ client.on("message", message => {
           }
         }
         
-        message.channel.send(basicString + '**' + finalString + '**.')
+        if(arguments[1] == 'count')
+        {
+          message.channel.send('Number of possible outcomes (approximately): ' + (firstPart1.length - 1 )* firstPart2.length * firstPart3.length * secondPart * lastPart.length)
+        }
+        else
+        {
+          message.channel.send(basicString + '**' + finalString + '**.')
+        }
+        
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
