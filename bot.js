@@ -21,7 +21,7 @@ client.on("message", message => {
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
-      //----------am, is, are, will, do, does, should, would, was, were-------------------------------------------------------------
+      //----------am, is, are, will, do, does, should, would, was, were, can, could-------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'am':
       case 'is':
@@ -33,7 +33,9 @@ client.on("message", message => {
       case 'would':
       case 'was':
       case 'were':
-        responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
+      case 'can':
+      case 'could':
+        responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.', 'Why not?', 'For sure.', 'Lol no.', 'How about no.', 'Absolutely.'];
 
         rollValue = Math.floor(Math.random() * 10);
         
@@ -90,6 +92,14 @@ client.on("message", message => {
         responseList = ['No u.', 'No you.', 'You too.', 'Stop it please!', 'Enough of that!'];
         message.channel.send(ReturnRandom(responseList))
         break; 
+        
+      //----------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------hate------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'hate':
+        responseList = ['I hate you.', 'You suck.', 'You = noob.', 'You are probably worst person in the world!', 'Uninstall discord pls.'];
+        message.channel.send(ReturnRandom(responseList))
+        break; 
 
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------dndalign--------------------------------------------------------
@@ -107,8 +117,8 @@ client.on("message", message => {
       case 'rate':
         var firstPartArray = ['', 'Hmm. I\'d rate that ', 'I\'d give that a ', 'I\'d say '];
         var personifiedFirstPartArray = ['', 'Hmm. I\'d rate you ', 'I\'d give you a ', 'I\'d say '];
-        var specialArray = ['I think we need negative scale for that.', 'That is completely out of scale!', 'Better than Twilight.', 'Amazing!', 'Incredible!', 'Why you even wanna rate that?', 'Utter garbage.'];
-        var personifiedSpecialArray = ['I think we need negative scale to rate you.', 'You are completely out of scale!', 'Better than Twilight.', ' You are amazing!', 'You are incredible!', 'Why you even wanna rate yourself?', 'You suck lol.', 'You suck.'];
+        var specialArray = ['I think we need negative scale for that.', 'That is completely out of scale!', 'Better than Twilight.', 'Amazing!', 'Incredible!', 'Why you even wanna rate that?', 'Utter garbage.', 'It\'s over 9000!'];
+        var personifiedSpecialArray = ['I think we need negative scale to rate you.', 'You are completely out of scale!', 'Better than Twilight.', ' You are amazing!', 'You are incredible!', 'Why you even wanna rate yourself?', 'You suck lol.', 'You suck.', 'You are over 9000!'];
 
         if (arguments[1] == 'me' || arguments[1] == null)
         {
@@ -402,9 +412,21 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'help':
-        responseList = ['I think you should visit a doctor.', 'Ravandel is the specialist who you want to talk with about your problems.', 'Electroshock therapy will work wonders for you.',
-        'I would advise lobotomy.', 'Chill and eat something good.', 'Go outside.', 'I would advise 8h of sleep.', 'Get commission from Pumpkins. You will be happy and she will be happpy.',
-        'I think you need plastic surgery.'];
+        responseList = ['I think you should visit a doctor.',
+        'Ravandel is the specialist who you want to talk with about your problems.',
+        'Electroshock therapy will work wonders for you.',
+        'I would advise lobotomy.',
+        'Chill and eat something good.',
+        'Go outside.',
+        'I would advise ' + Math.floor(Math.random() * 100) + ' of sleep.',
+        'Get commission from Pumpkins. You will be happy and she will be happpy.',
+        'I think you need plastic surgery.',
+        'I suggest whipping session in abbey.',
+        'Don\'t worry, be happy!',
+        'Stop wasting your time on h!help command and do something with your miserable life.',
+        'Read a book.',
+        'Draw something.'
+        ];
         message.channel.send(ReturnRandom(responseList))
         break;
         
@@ -426,12 +448,14 @@ client.on("message", message => {
         '**invite** - bot will link his invite link',
         '**roll nDa** - bot will roll [n] Armello dices and will show result afterwards',
         '**roll nDx** - bot will roll [n] dices having [x] sides and will show result afterwards',
+        '**peril n** - bot will generate random peril with [n] level of difficulty, if there is no [n] then it will generate random peril with 3-5 difficulty',
         '**rate n** - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough',
         '**dndalign n** - bot will give DnD alignment for [n]',
         '**choose n1|n2|n3 (...)** - bot will choose one item among all listed',
         '**resolve n** - bot will do resolve check for [n]',
+        '**class n** - bot will generate random class or n',
         '**version** - bot will send info about his current version',
-        'There are other hidden commands, currently there is 1 more.',
+        'There are other hidden commands, currently there is 2 more.',
         ];
         
         for (i = 0; i < responseList.length; i++) 
