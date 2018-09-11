@@ -214,7 +214,7 @@ client.on("message", message => {
         'I think ' + who + ' looks like ',
         'I think ' + who + ' would do great as ',
         'I think ' + who + ' would do well as ',
-        'I think ' + who + ' would make an excellent '
+        'I think ' + who + ' would make an excellent ',
         who + ' looks like ',
         who + ' would do great as ',
         who + ' would do well as ',
@@ -326,7 +326,7 @@ client.on("message", message => {
         }
 
         fourthWord = ReturnRandom(secondPart);
-        if(thirdWord != '' ||  fourthWord != secondWord)
+        if(thirdWord != '' || fourthWord != secondWord)
         {
           finalString = finalString + fourthWord + ' ';
         }
