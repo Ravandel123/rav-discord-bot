@@ -210,7 +210,16 @@ client.on("message", message => {
         var thirdWord = '';
         var fourthWord = '';
 
-        var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think ' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
+        var basePart = [
+        'I think ' + who + ' looks like ',
+        'I think ' + who + ' would do great as ',
+        'I think ' + who + ' would do well as ',
+        'I think ' + who + ' would make an excellent '
+        who + ' looks like ',
+        who + ' would do great as ',
+        who + ' would do well as ',
+        who + ' would make an excellent '
+        ];
 
         var firstPart1 = [
         'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
@@ -317,9 +326,9 @@ client.on("message", message => {
         }
 
         fourthWord = ReturnRandom(secondPart);
-        if(thirdWord != '' ||  thirdWord != secondWord)
+        if(thirdWord != '' ||  fourthWord != secondWord)
         {
-          finalString = finalString + ReturnRandom(secondPart);
+          finalString = finalString + fourthWord + ' ';
         }
 
         if(Math.floor(Math.random() * 10) < 5)
