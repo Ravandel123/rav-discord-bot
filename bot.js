@@ -21,7 +21,7 @@ client.on("message", message => {
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
-      //----------am, is, are, will, do, does, should, would------------------------------------------------------------------------
+      //----------am, is, are, will, do, does, should, would, was, were-------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'am':
       case 'is':
@@ -31,6 +31,8 @@ client.on("message", message => {
       case 'does':
       case 'should':
       case 'would':
+      case 'was':
+      case 'were':
         responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.'];
 
         rollValue = Math.floor(Math.random() * 10);
@@ -205,21 +207,43 @@ client.on("message", message => {
         var additionalString = false;
         var firstWord = '';
         var secondWord = '';
-        
+
         var basePart = [who + ' looks like ', 'I think ' + who + ' would do great as ', 'I think ' + who + ' would do well as ', 'I think ' + who + ' would make an excellent '];
-        
-        var firstPart = [
-        'Aegis', 'Animal', 'Anointed', 'Apprentice',
-        'Badlands', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brothel', 'Brutal',
-        'Camp', 'Cloaked', 'Crime', 'Cult',
-        'Death', 'Drug', 'Dung',
-        'Feral', 'Forest',
-        'Grave', 'Greater',
+
+        var firstPart1 = [
+        'Aggressive', 'Anointed', 'Apprentice',
+        'Badlands', 'Barbaric', 'Brutal',
+        'Cloaked',
+        'Defiant', 'Drunken',
+        'Feral',
+        'Greater',
         'High',
         'Lesser',
+        'Masochistic',
+        'Offensive',
+        'Pale', 'Provocative',
+        'Rapturous',
+        'Sadistic', 'Screwed',
+        'Wild'
+        ];
+
+        var firstPart2 = [
+        'Aegis', 'Animal',
+        'Badlands', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
+        'Camp', 'Cloaked', 'Crime',
+        'Death', 'Drug', 'Dung',
+        'Feral', 'Forest',
+        'Grave',
+        'High',
         'Pale', 'Pleasure',
         'Savage', 'Spy',
-        'White', 'Wild',
+        'Wild', 'White'
+        ];
+        
+        var firstPart3 = [
+        'Brothel', 'Brotherhood',
+        'Clan', 'Cult',
+        'Guild'
         ];
         
         var secondPart = [
@@ -240,13 +264,14 @@ client.on("message", message => {
         'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
         'Queen',
         'Ranger', 'Robber', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
-        'Sadist', 'Sailor','Samurai', 'Shaman', 'Shepherd', 'Sister', 'Slayer', 'Soldier', 'Sorcerer', 'Surgeon',
+        'Sadist', 'Sailor','Samurai', 'Shaman', 'Shepherd', 'Sister', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Surgeon',
         'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Troglodyte', 'Troll', 
         'Warlock', 'Warrior', 'Witch', 'Wizard'
         ];
         
         var lastPart = [
-        'Darkness', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom',
+        'the Booze',
+        'Darkness', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
         'Evil',
         'the Forest Fools', 'Fury',
         'Good', 'the Grove',
@@ -260,21 +285,27 @@ client.on("message", message => {
         'Shadows', 'the Shroud'
         ]
         
-        if(Math.floor(Math.random() * 10) < 6)
+        //---------------------------------------------------------------------------------------------------------------------------
+
+        if(Math.floor(Math.random() * 10) < 5)
         {
-          firstWord = ReturnRandom(firstPart) + ' ';
+          firstWord = ReturnRandom(firstPart1) + ' ';
           finalString = finalString + firstWord;
         }
         
         if(Math.floor(Math.random() * 10) < 5)
         {
-          secondWord = ReturnRandom(firstPart) + ' ';
+          secondWord = ReturnRandom(firstPart2) + ' ';
           if(firstWord != secondWord)
           {
             finalString = finalString + secondWord;
           }
         }
-
+        
+        if(Math.floor(Math.random() * 10) < 3)
+        {
+          secondWord = ReturnRandom(firstPart3) + ' ';
+        }
 
         finalString = finalString + ReturnRandom(secondPart);
 
@@ -324,7 +355,7 @@ client.on("message", message => {
           }
         }
         
-        message.channel.send(basicString + finalString + '.')
+        message.channel.send(basicString + '**' + finalString + '**.')
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
@@ -349,7 +380,7 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'version':
-        message.channel.send('Version: 1.0')
+        message.channel.send('Version: 1.01')
         break;
       
       //---------------------------------------------------------------------------------------------------------------------------
