@@ -361,8 +361,7 @@ client.on("message", message => {
         
         if(arguments[1] == 'count')
         {
-          var x = (firstPart1.length - 1 )* firstPart2.length * firstPart3.length * secondPart * lastPart.length);
-          message.channel.send('Number of possible outcomes (approximately): ' + x
+          message.channel.send('Number of possible outcomes (approximately): ' + (firstPart1.length - 1 ) * firstPart2.length * firstPart3.length * secondPart.length * lastPart.length)
         }
         else
         {
