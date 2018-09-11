@@ -118,7 +118,7 @@ client.on("message", message => {
         
         var response = Math.floor(Math.random() * 10);
 
-        if(response == 0)
+        if(response < 2)
         {
           message.channel.send(ReturnRandom(specialArray))
         }
@@ -224,31 +224,34 @@ client.on("message", message => {
         var firstPart1 = [
         'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
         'Badlands', 'Barbaric', 'Brutal',
-        'Cloaked',
+        'Cannibalistic', 'Cloaked', 'Crazy',
         'Defiant', 'Drunken',
-        'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn',
+        'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious',
         'Greater',
-        'High', 'Horrible',
-        'Lesser',
+        'High', 'Horrible', 'Huge',
+        'Immortal', 'Immortal',
+        'Leper', 'Lesser', 'Little',
         'Masochistic', 'Monstrous',
         'Offensive',
         'Pale', 'Provocative',
         'Rapturous',
         'Sadistic', 'Screwed', 'Serial',
+        'Undying',
         'Wild'
         ];
 
         var firstPart2 = [
         'Aegis', 'Animal',
-        'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
+        'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Body', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
         'Camp', 'Cloaked', 'Crime',
         'Death', 'Drug', 'Dung',
-        'Feral', 'Forest',
+        'Feral', 'Flesh', 'Forest',
         'Grave',
         'High', 'Hound',
+        'Iron',
         'Monster',
         'Pale', 'Plague', 'Pleasure',
-        'Savage', 'Shield', 'Spy',
+        'Savage', 'Shield', 'Soul', 'Spirit', 'Spy', 'Steel',
         'War', 'Wild', 'White'
         ];
         
@@ -256,31 +259,32 @@ client.on("message", message => {
         'Brothel', 'Brotherhood',
         'Clan', 'Cult',
         'Guild',
-        'Sect'
+        'Sect',
+        'Troupe'
         ];
         
         var secondPart = [
-        'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
-        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar',
-        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Cultist', 'Courtesan', 'Courtier', 'Crusader',
+        'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton',
+        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
+        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Construct', 'Courtesan', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
         'Defender', 'Doctor', 'Druid',
         'Executioner', 'Experiment',
-        'Fighter', 'Fisherman', 'Follower', 
-        'Guard', 
+        'Fighter', 'Firefighter', 'Fisherman', 'Follower', 
+        'Guard', 'Guardian', 'Gunner',
         'Hellion', 'Highwayman', 'Hunter',
         'Inquisitor',
         'Jester',
         'Kamikaze', 'Killer', 'King', 'Knight',
         'Leper', 'Lord', 'Lumberjack',
-        'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
+        'Machine', 'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
         'Necromancer', 'Ninja',
         'Occultist',
         'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
         'Queen',
-        'Ranger', 'Robber', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
-        'Sadist', 'Sailor','Samurai', 'Shaman', 'Shepherd', 'Sister', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Surgeon',
+        'Raider', 'Ranger', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
+        'Sadist', 'Sailor','Samurai', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
         'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Troglodyte', 'Troll', 
-        'Warlock', 'Warrior', 'Witch', 'Wizard'
+        'Walker', 'Warlock', 'Warrior', 'Witch', 'Wizard'
         ];
         
         var lastPart = [
@@ -299,7 +303,7 @@ client.on("message", message => {
         'Pleasure', 'Power',
         'Retribution', 'the Rot',
         'Shadows', 'the Shroud', 'Steel', 'the Sun',
-        'the War', 'the Weed'
+        'War', 'the Weed'
         ]
         
         //---------------------------------------------------------------------------------------------------------------------------
