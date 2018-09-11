@@ -97,7 +97,15 @@ client.on("message", message => {
       //------------------------------------------------------------hate------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'hate':
-        responseList = ['I hate you.', 'You suck.', 'You = noob.', 'You are probably worst person in the world!', 'Uninstall discord pls.'];
+        responseList = [
+        'I hate you.',
+        'You suck.',
+        'You = noob.',
+        'You are probably worst person in the world!',
+        'Uninstall discord pls.',
+        'I don\'t like you x' + Math.floor(Math.random() * 10000) + '.',
+        'I hate you x' + Math.floor(Math.random() * 10000) + '.'
+        ];
         message.channel.send(ReturnRandom(responseList))
         break; 
 
@@ -418,14 +426,15 @@ client.on("message", message => {
         'I would advise lobotomy.',
         'Chill and eat something good.',
         'Go outside.',
-        'I would advise ' + Math.floor(Math.random() * 100) + ' of sleep.',
+        'I would advise ' + Math.floor(Math.random() * 100) + ' hours of sleep.',
         'Get commission from Pumpkins. You will be happy and she will be happpy.',
         'I think you need plastic surgery.',
         'I suggest whipping session in abbey.',
         'Don\'t worry, be happy!',
         'Stop wasting your time on h!help command and do something with your miserable life.',
         'Read a book.',
-        'Draw something.'
+        'Draw something.',
+        'Well praying to God might be a good idea in your situation.'
         ];
         message.channel.send(ReturnRandom(responseList))
         break;
