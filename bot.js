@@ -243,13 +243,14 @@ client.on("message", message => {
         var firstPart3 = [
         'Brothel', 'Brotherhood',
         'Clan', 'Cult',
-        'Guild'
+        'Guild',
+        'Sect'
         ];
         
         var secondPart = [
         'Abbot', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Apothecary', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
         'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Boatman', 'Bodyguard', 'Bondsman', 'Bonepicker', 'Brigand', 'Brother', 'Burgher', 'Burglar',
-        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Courtesan', 'Courtier', 'Crusader',
+        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Cultist', 'Courtesan', 'Courtier', 'Crusader',
         'Defender', 'Druid',
         'Executioner', 'Experiment',
         'Fighter', 'Fisherman', 'Follower', 
@@ -284,7 +285,7 @@ client.on("message", message => {
         'the Nut',
         'Pleasure', 'Power',
         'Retribution', 'the Rot',
-        'Shadows', 'the Shroud', 'the Sun',
+        'Shadows', 'the Shroud', 'Steel', 'the Sun',
         'the Wyld'
         ]
         
@@ -360,7 +361,8 @@ client.on("message", message => {
         
         if(arguments[1] == 'count')
         {
-          message.channel.send('Number of possible outcomes (approximately): ' + (firstPart1.length - 1 )* firstPart2.length * firstPart3.length * secondPart * lastPart.length)
+          var x = (firstPart1.length - 1 )* firstPart2.length * firstPart3.length * secondPart * lastPart.length);
+          message.channel.send('Number of possible outcomes (approximately): ' + x
         }
         else
         {
