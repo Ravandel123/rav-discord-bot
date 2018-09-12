@@ -181,7 +181,7 @@ client.on("message", message => {
         who + ' is not lazy, just that the people around ' + who + ' are way too active.'
         ];
         
-        if(arguments[1] == 'me' or arguments[1] == null)
+        if(arguments[1] == 'me' || arguments[1] == null)
         {
           responseList = array1;
         }
