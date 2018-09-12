@@ -94,17 +94,30 @@ client.on("message", message => {
         break; 
         
       //----------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------rep-------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'rep':
+        message.channel.send('t!rep Ravandel')
+        break; 
+        
+      //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------hate------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'hate':
+        var charactersList = [
+        'Stalin',
+        'Hitler',
+        'Mao Zedong'
+        ];
+        
         responseList = [
         'I hate you.',
         'You suck.',
         'You = noob.',
         'You are probably worst person in the world!',
         'Uninstall discord pls.',
-        'I don\'t like you x' + Math.floor(Math.random() * 10000) + '.',
-        'I hate you x' + Math.floor(Math.random() * 10000) + '.'
+        ReturnRandom(charactersList) + ' was better than you.',
+        ':scream:  what is that?!\nAh its only your face.'
         ];
         message.channel.send(ReturnRandom(responseList))
         break; 
@@ -212,10 +225,41 @@ client.on("message", message => {
       //------------------------------------------------------------rate------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'rate':
+        var namesList = [
+        'Stalin',
+        'Hitler',
+        'Mao Zedong',
+        'Twilight',
+        ];
+        
         var firstPartArray = ['', 'Hmm. I\'d rate that ', 'I\'d give that a ', 'I\'d say '];
+        
         var personifiedFirstPartArray = ['', 'Hmm. I\'d rate you ', 'I\'d give you a ', 'I\'d say '];
-        var specialArray = ['I think we need negative scale for that.', 'That is completely out of scale!', 'Better than Twilight.', 'Amazing!', 'Incredible!', 'Why you even wanna rate that?', 'Utter garbage.', 'It\'s over 9000!'];
-        var personifiedSpecialArray = ['I think we need negative scale to rate you.', 'You are completely out of scale!', 'Better than Twilight.', ' You are amazing!', 'You are incredible!', 'Why you even wanna rate yourself?', 'You suck lol.', 'You suck.', 'You are over 9000!'];
+        
+        var specialArray = [
+        'I think we need negative scale for that.',
+        'That is completely out of scale!',
+        'Better than ' + ReturnRandom(responseList) + '.',
+        ReturnRandom(responseList) + ' was better.',
+        'Amazing!',
+        'Incredible!',
+        'Why you even wanna rate that?',
+        'Utter garbage.',
+        'It\'s over 9000!'
+        ];
+        
+        var personifiedSpecialArray = [
+        'I think we need negative scale to rate you.',
+        'You are completely out of scale!',
+        'Better than ' + ReturnRandom(responseList) + '.',
+        ReturnRandom(responseList) + ' was better than you.',
+        'You are amazing!',
+        'You are incredible!',
+        'Why you even wanna rate yourself?',
+        'You suck lol.',
+        'You suck.',
+        'You are over 9000!'
+        ];
 
         if (arguments[1] == 'me' || arguments[1] == null)
         {
@@ -534,7 +578,7 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'version':
-        message.channel.send('Version: 1.01')
+        message.channel.send('Version: 1.02')
         break;
       
       //---------------------------------------------------------------------------------------------------------------------------
@@ -554,7 +598,7 @@ client.on("message", message => {
         '**resolve n** - bot will do resolve check for [n]',
         '**class n** - bot will generate random class or n',
         '**version** - bot will send info about his current version',
-        'There are other hidden commands, currently there is 2 more.',
+        'There are other hidden commands, currently there is 3 more.',
         ];
         
         for (i = 0; i < responseList.length; i++) 
