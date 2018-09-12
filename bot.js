@@ -123,7 +123,7 @@ client.on("message", message => {
         'You = awesome.',
         'You are the coolest person I have ever seen!',
         'I think you are hot, I would rate your look 11/10.',
-        'Even if you were cloned, you'd still be one of a kind. And the better looking one.',
+        'Even if you were cloned, you\'d still be one of a kind. And the better looking one.',
         'I would love to spend every minute of every day with you, but some days I actually have to get stuff done.',
         'Your smile is proof that the best things in life are free.',
         'You\'re smarter than Google and Mary Poppins combined.',
