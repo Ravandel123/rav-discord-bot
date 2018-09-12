@@ -141,7 +141,7 @@ client.on("message", message => {
         'Did you have plastic surgery to become that attractive?',
         'Talking to you is the best part of my day, aside from when I\'m sleeping and when I\'m eating.',
         'You are awkward, in a cute way. Like an elevator ride, but with puppies.',
-        'It\'s too bad you don't see what I see, if you did you\'d smile and keep looking.',
+        'It\'s too bad you don\'t see what I see, if you did you\'d smile and keep looking.',
         'Maybe you should eat some makeup so you can be pretty on the inside too.',
         'I\'m really good at people-watching. I\'m so glad I can share that hobby on you.',
         'You make everything better. If people were more like you the world would be perfect.',
