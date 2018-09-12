@@ -181,16 +181,16 @@ client.on("message", message => {
         who + ' is not lazy, just that the people around ' + who + ' are way too active.'
         ];
         
-        //if(who == message.author)
-        //{
-        //  responseList = array1;
-        //}
-        //else
-        //{
-        //  responseList = array2;
-        //}
+        if(arguments[1] == 'me' or arguments[1] == null)
+        {
+          responseList = array1;
+        }
+        else
+        {
+          responseList = array2;
+        }
         
-        //message.channel.send(ReturnRandom(responseList))
+        message.channel.send(ReturnRandom(responseList))
         break;
         
       //------------------------------------------------------------amount------------------------------------------------------------
