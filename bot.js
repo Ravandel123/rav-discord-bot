@@ -93,6 +93,11 @@ client.on("message", message => {
         message.channel.send(ReturnRandom(responseList))
         break;
         
+      case 'img':
+        responseList = ['https://i.imgur.com/vL0G4rN.png'];
+        message.channel.send(ReturnRandom(responseList))
+        break;
+        
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------rant------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -121,6 +126,7 @@ client.on("message", message => {
         'Lol, no one cares anyway.',
         'Stop being crybaby.',
         'I think you should write a book about that.',
+        'https://i.imgur.com/vL0G4rN.png'
         ];
         
         if(arguments[1] == null)
@@ -684,6 +690,7 @@ client.on("message", message => {
         '**choose n1|n2|n3 (...)** - bot will choose one item among all listed',
         '**resolve n** - bot will do resolve check for [n]',
         '**class n** - bot will generate random class or n',
+        '**rant n** - bot will generate response to your [n] rant ',
         '**version** - bot will send info about his current version',
         'There are other hidden commands, currently there is 3 more.',
         ];
