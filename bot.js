@@ -129,7 +129,7 @@ client.on("message", message => {
         'You\'re smarter than Google and Mary Poppins combined.',
         'I think the hardest part about being your friend is pretending as though I like my other friends as much as I like you.',
         'You\'re not someone I pretend to not see in public.',
-        'I don\'t have a favourite colour, It's pretty much whatever you are wearing.',
+        'I don\'t have a favourite colour, It\'s pretty much whatever you are wearing.',
         'I can never remember my dreams, but I assume you are always in them.',
         'You inspire me and most likely strangers. Also, friends and stalkers. You are the inspiration to many.',
         'You are so beautiful I would certainly steal your photos, make a fake account and impress people online.',
