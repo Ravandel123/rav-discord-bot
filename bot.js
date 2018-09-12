@@ -162,7 +162,7 @@ client.on("message", message => {
         who + ' is smarter than Google and Mary Poppins combined.',
         'I think the hardest part about being ' + who + '\'s friend is pretending as though I like my other friends as much as I like ' + who + '.',
         who + ' is not someone I pretend to not see in public.',
-        'I don\'t have a favourite colour, It\'s pretty much whatever ' + who + is wearing.',
+        'I don\'t have a favourite colour, It\'s pretty much whatever ' + who + 'is wearing.',
         'I can never remember my dreams, but I assume ' + who + ' is always in them.',
         who + ' inspire me and most likely strangers. Also, friends and stalkers. ' + who + ' is the inspiration to many.',
         who + ' is so beautiful I would certainly steal ' + who + ' photos, make a fake account and impress people online.',
