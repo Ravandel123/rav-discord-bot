@@ -92,12 +92,7 @@ client.on("message", message => {
         responseList = ['No u.', 'No you.', 'You too.', 'Stop it please!', 'Enough of that!'];
         message.channel.send(ReturnRandom(responseList))
         break;
-        
-      case 'img':
-        responseList = ['https://i.imgur.com/vL0G4rN.png'];
-        message.channel.send(ReturnRandom(responseList))
-        break;
-        
+
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------rant------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -118,6 +113,7 @@ client.on("message", message => {
         'And what makes you think it was not deserved?',
         'I am sorry to hear that...',
         'Don\'t worry, all will be all right.',
+        'https://i.imgur.com/vL0G4rN.png',
         
         'Congratulations! You have been nominated for Drama Queen of the year!',
         'Rotfl, this is fascinating, continue and bring me popcorn.',
@@ -125,8 +121,7 @@ client.on("message", message => {
         'Am I supposed to cry or laugh at this?',
         'Lol, no one cares anyway.',
         'Stop being crybaby.',
-        'I think you should write a book about that.',
-        'https://i.imgur.com/vL0G4rN.png'
+        'I think you should write a book about that.'
         ];
         
         if(arguments[1] == null)
@@ -419,9 +414,9 @@ client.on("message", message => {
         'Badlands', 'Barbaric', 'Brutal',
         'Cannibalistic', 'Cloaked', 'Crazy',
         'Defiant', 'Drunken',
-        'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious',
+        'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious',
         'Greater',
-        'High', 'Horrible', 'Huge',
+        'High', 'Horned', 'Horrible', 'Huge',
         'Immortal', 'Immortal',
         'Leper', 'Lesser', 'Little',
         'Maniacal', 'Masochistic', 'Monstrous', 'Mutantic',
@@ -435,11 +430,11 @@ client.on("message", message => {
 
         var firstPart2 = [
         'Aegis', 'Animal',
-        'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Body', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
+        'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
         'Camp', 'Cloaked', 'Crime',
         'Death', 'Drug', 'Dung',
         'Feral', 'Flesh', 'Forest',
-        'Grave',
+        'Ghost', 'Grant', 'Grave',
         'High', 'Hound',
         'Iron',
         'Lunar',
@@ -461,12 +456,12 @@ client.on("message", message => {
         'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
         'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
         'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Construct', 'Courtesan', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
-        'Defender', 'Doctor', 'Druid',
-        'Executioner', 'Experiment',
-        'Fighter', 'Firefighter', 'Fisherman', 'Follower', 
-        'Guard', 'Guardian', 'Gunner',
-        'Hellion', 'Highwayman', 'Hunter',
-        'Inquisitor',
+        'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
+        'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
+        'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Foreman', 'Forger', 'Freeholder', 'Friar',
+        'Gambler', 'Guard', 'Guardian', 'Gunner',
+        'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
+        'Initiate', 'Inquisitor',
         'Jester',
         'Kamikaze', 'Killer', 'King', 'Knight',
         'Leper', 'Lord', 'Lumberjack',
@@ -478,7 +473,7 @@ client.on("message", message => {
         'Raider', 'Ranger', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
         'Sadist', 'Sailor','Samurai', 'Seeker', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
         'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Troglodyte', 'Troll', 
-        'Walker', 'Warlock', 'Warrior', 'Witch', 'Wizard'
+        'Walker', 'Warden', 'Warlock', 'Warrior', 'Witch', 'Wizard'
         ];
         
         var lastPart = [
@@ -506,8 +501,8 @@ client.on("message", message => {
         'Cannibalistic',
         'Dark', 'Death', 'Destructive', 'Doom', 'Dung',
         'Evil',
-        'Forest', 'Fury',
-        'Glowing', 'Good',
+        'Faceless', 'Forest', 'Fury',
+        'Ghost', 'Glowing', 'Good',
         'Honorable',
         'Immortal', 'Immoral', 'Insane',
         'Just',
@@ -525,7 +520,7 @@ client.on("message", message => {
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
         'Darkness', 'Delight', 'Destruction', 'Doom', 'Dung',
         'Fear', 'Fools', 'Forest', 'Fury',
-        'Good', 'Grove', 'Guild',
+        'Ghost', 'Good', 'Grove', 'Guild',
         'Hand', 'Honor',
         'Intellect',
         'Justice',
