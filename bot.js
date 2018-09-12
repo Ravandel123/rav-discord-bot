@@ -91,6 +91,46 @@ client.on("message", message => {
       case 'you':
         responseList = ['No u.', 'No you.', 'You too.', 'Stop it please!', 'Enough of that!'];
         message.channel.send(ReturnRandom(responseList))
+        break;
+        
+      //----------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------rant------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'rant':
+        var fakeList = [
+        'boobs of Pamela Anderson',
+        'butt of Nicki Minaj'
+        ];
+        
+        var emptyList = [
+        'I love rants about nothing, at least I don\'t need to listen to you.',
+        'How about you write something?'
+        ];
+      
+        responseList = [
+        ':cry:',
+        'Oh... This is so sad that I am thinking about formatting myself...',
+        'And what makes you think it was not deserved?',
+        'I am sorry to hear that...',
+        'Don\'t worry, all will be all right.',
+        
+        'Congratulations! You have been nominated for Drama Queen of the year!',
+        'Rotfl, this is fascinating, continue and bring me popcorn.',
+        'This is probably more fake than ' + ReturnRandom(fakeList) + '.',
+        'Am I supposed to cry or laugh at this?',
+        'Lol, no one cares anyway.',
+        'Stop being crybaby.',
+        'I think you should write a book about that.',
+        ];
+        
+        if(arguments[1] == null)
+        {
+          message.channel.send(ReturnRandom(emptyList))
+        }
+        else
+        {
+          message.channel.send(ReturnRandom(responseList))
+        }
         break; 
         
       //----------------------------------------------------------------------------------------------------------------------------
@@ -100,7 +140,8 @@ client.on("message", message => {
         var charactersList = [
         'Stalin',
         'Hitler',
-        'Mao Zedong'
+        'Mao Zedong',
+        'Kim Dzong Un'
         ];
         
         responseList = [
@@ -110,7 +151,7 @@ client.on("message", message => {
         'You are probably worst person in the world!',
         'Uninstall discord pls.',
         ReturnRandom(charactersList) + ' was better than you.',
-        ':scream:  what is that?!\nAh its only your face.'
+        'Can you just leave this server?'
         ];
         message.channel.send(ReturnRandom(responseList))
         break; 
@@ -377,9 +418,9 @@ client.on("message", message => {
         'High', 'Horrible', 'Huge',
         'Immortal', 'Immortal',
         'Leper', 'Lesser', 'Little',
-        'Maniacal', 'Masochistic', 'Monstrous',
+        'Maniacal', 'Masochistic', 'Monstrous', 'Mutantic',
         'Offensive',
-        'Pale', 'Provocative', 'Psychopathic',
+        'Pale', 'Pathethic', 'Provocative', 'Psychopathic',
         'Rapturous',
         'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic',
         'Undying',
@@ -435,7 +476,7 @@ client.on("message", message => {
         ];
         
         var lastPart = [
-        'Blood', 'the Booze',
+        'Blood', 'the Boobs', 'the Booze',
         'the Coconut',
         'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
         'Evil',
@@ -474,7 +515,7 @@ client.on("message", message => {
         ]
         
         var lastPart2 = [
-        'Booze', 'Brotherhood', 'Brothel',
+        'Boobs', 'Booze', 'Brotherhood', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
         'Darkness', 'Delight', 'Destruction', 'Doom', 'Dung',
         'Fear', 'Fools', 'Forest', 'Fury',
@@ -483,7 +524,7 @@ client.on("message", message => {
         'Intellect',
         'Justice',
         'Light',
-        'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon',
+        'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon', 'Mutantic',
         'Nut', 'Nuts',
         'Pleasure', 'Pleasures', 'Power',
         'Retribution', 'Rot',
