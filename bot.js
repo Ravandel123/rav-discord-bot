@@ -232,8 +232,8 @@ client.on("message", message => {
         var specialArray = [
         'I think we need negative scale for that.',
         'That is completely out of scale!',
-        'Better than ' + ReturnRandom(responseList) + '.',
-        ReturnRandom(responseList) + ' was better.',
+        'Better than ' + ReturnRandom(namesList) + '.',
+        ReturnRandom(namesList) + ' was better.',
         'Amazing!',
         'Incredible!',
         'Why you even wanna rate that?',
@@ -244,8 +244,8 @@ client.on("message", message => {
         var personifiedSpecialArray = [
         'I think we need negative scale to rate you.',
         'You are completely out of scale!',
-        'Better than ' + ReturnRandom(responseList) + '.',
-        ReturnRandom(responseList) + ' was better than you.',
+        'Better than ' + ReturnRandom(namesList) + '.',
+        ReturnRandom(namesList) + ' was better than you.',
         'You are amazing!',
         'You are incredible!',
         'Why you even wanna rate yourself?',
