@@ -535,7 +535,7 @@ client.on("message", message => {
             sixthWord = ReturnRandom(lastPart2);
           }
           
-          finalString = finalString + ' of the ' + fifthWord + ' ' + sixthWord + '.';
+          finalString = finalString + ' of the ' + fifthWord + ' ' + sixthWord;
         }
 
         basicString = ReturnRandom(basePart);
