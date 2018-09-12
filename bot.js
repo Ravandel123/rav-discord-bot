@@ -518,12 +518,12 @@ client.on("message", message => {
         fourthWord = ReturnRandom(secondPart);
         if(thirdWord != '' || fourthWord != secondWord)
         {
-          finalString = finalString + fourthWord + ' ';
+          finalString = finalString + fourthWord;
         }
 
         if(Math.floor(Math.random() * 10) < 3)
         {
-          finalString = finalString + 'of ' + ReturnRandom(lastPart);
+          finalString = finalString + ' of ' + ReturnRandom(lastPart);
         }
         else if(Math.floor(Math.random() * 10) < 7)
         {
@@ -535,7 +535,7 @@ client.on("message", message => {
             sixthWord = ReturnRandom(lastPart2);
           }
           
-          finalString = finalString + 'of the ' + fifthWord + ' ' + sixthWord + '.';
+          finalString = finalString + ' of the ' + fifthWord + ' ' + sixthWord + '.';
         }
 
         basicString = ReturnRandom(basePart);
