@@ -353,6 +353,8 @@ client.on("message", message => {
         var secondWord = '';
         var thirdWord = '';
         var fourthWord = '';
+        var fifthWord = '';
+        var sixthWord = '';
 
         var basePart = [
         'I think ' + who + ' looks like ',
@@ -375,11 +377,11 @@ client.on("message", message => {
         'High', 'Horrible', 'Huge',
         'Immortal', 'Immortal',
         'Leper', 'Lesser', 'Little',
-        'Masochistic', 'Monstrous',
+        'Maniacal', 'Masochistic', 'Monstrous',
         'Offensive',
-        'Pale', 'Provocative',
+        'Pale', 'Provocative', 'Psychopathic',
         'Rapturous',
-        'Sadistic', 'Screwed', 'Serial',
+        'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic',
         'Undying',
         'Wild'
         ];
@@ -409,7 +411,7 @@ client.on("message", message => {
         ];
         
         var secondPart = [
-        'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton',
+        'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
         'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
         'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Construct', 'Courtesan', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
         'Defender', 'Doctor', 'Druid',
@@ -427,7 +429,7 @@ client.on("message", message => {
         'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
         'Queen',
         'Raider', 'Ranger', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
-        'Sadist', 'Sailor','Samurai', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
+        'Sadist', 'Sailor','Samurai', Seeker', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
         'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Troglodyte', 'Troll', 
         'Walker', 'Warlock', 'Warrior', 'Witch', 'Wizard'
         ];
@@ -449,6 +451,45 @@ client.on("message", message => {
         'Retribution', 'the Rot',
         'Shadows', 'the Shroud', 'Steel', 'the Sun',
         'War', 'the Weed'
+        ]
+        
+        var lastPart1 = [
+        'Agile', 
+        'Black','Blood', 'Bloody','Brutal',
+        'Cannibalistic',
+        'Dark', 'Death', 'Destructive', 'Doom', 'Dung',
+        'Evil',
+        'Forest', 'Fury',
+        'Glowing', 'Good',
+        'Honorable',
+        'Immortal', 'Immoral', 'Insane',
+        'Just',
+        'Lunar',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek',
+        'Nut',
+        'Power', 'Psychopathic',
+        'Retribution', 'Rotten',
+        'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
+        'War', 'Weed', 'White'
+        ]
+        
+        var lastPart2 = [
+        'Booze', 'Brotherhood', 'Brothel',
+        'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
+        'Darkness', 'Delight', 'Destruction', 'Doom', 'Dung',
+        'Fear', 'Fools', 'Forest', 'Fury',
+        'Good', 'Grove', 'Guild',
+        'Hand', 'Honor',
+        'Intellect',
+        'Justice',
+        'Light',
+        'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon',
+        'Nut', 'Nuts',
+        'Pleasure', 'Pleasures', 'Power',
+        'Retribution', 'Rot',
+        'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
+        'Troupe',
+        'War', 'Weed', 'Woods'
         ]
         
         //---------------------------------------------------------------------------------------------------------------------------
@@ -480,9 +521,21 @@ client.on("message", message => {
           finalString = finalString + fourthWord + ' ';
         }
 
-        if(Math.floor(Math.random() * 10) < 5)
+        if(Math.floor(Math.random() * 10) < 3)
         {
           finalString = finalString + 'of ' + ReturnRandom(lastPart);
+        }
+        else if(Math.floor(Math.random() * 10) < 7)
+        {
+          fifthWord = ReturnRandom(lastPart1);
+          sixthWord = ReturnRandom(lastPart2);
+          
+          while(fifthWord == sixthWord || fifthWord + 's' == sixthWord)
+          {
+            sixthWord = ReturnRandom(lastPart2);
+          }
+          
+          finalString = finalString + 'of the ' + fifthWord + ' ' + sixthWord + '.';
         }
 
         basicString = ReturnRandom(basePart);
