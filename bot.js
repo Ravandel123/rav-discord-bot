@@ -459,6 +459,13 @@ client.on("message", message => {
         var basicString = '';
         var finalString = '';
 
+        if(arguments[1] == 'count'
+        {
+          finalString = GenerateRandomClass('count');
+          message.channel.send('Number of possible outcomes (approximately): ' + finalString + '.');
+          return ;
+        }
+        
         var basePart = [
         'I think ' + who + ' looks like ',
         'I think ' + who + ' would do great as ',
@@ -511,14 +518,7 @@ client.on("message", message => {
           }
         }
 
-        //if(arguments[1] == 'count')
-        //{
-        //  message.channel.send('Number of possible outcomes (approximately): ' + ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart1.length * (lastPart2.length / 2)))
-        //}
-        //else
-        //{
-          message.channel.send(basicString + '**' + GenerateRandomClass() + '**.')
-        //}
+        message.channel.send(basicString + '**' + GenerateRandomClass() + '**.')
 
         break;
 
@@ -630,7 +630,7 @@ client.on("message", message => {
     }
 
     //test------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    function GenerateRandomClass()
+    function GenerateRandomClass(var typeOfCheck)
     {
         var finalString = '';
         var firstWord = '';
@@ -772,7 +772,12 @@ client.on("message", message => {
         ]
 
         //---------------------------------------------------------------------------------------------------------------------------
-
+        if(typeOfCheck == 'count')
+        {
+          return ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart1.length * (lastPart2.length / 2));
+        }
+        
+        
         if(Math.floor(Math.random() * 10) < 5)
         {
           firstWord = ReturnRandom(firstPart1);
