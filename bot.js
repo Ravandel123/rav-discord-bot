@@ -458,13 +458,6 @@ client.on("message", message => {
         var who = RecognizeWho(arguments[1], message, command)
         var basicString = '';
         var finalString = '';
-        var additionalString = false;
-        var firstWord = '';
-        var secondWord = '';
-        var thirdWord = '';
-        var fourthWord = '';
-        var fifthWord = '';
-        var sixthWord = '';
 
         var basePart = [
         'I think ' + who + ' looks like ',
@@ -477,183 +470,7 @@ client.on("message", message => {
         who + ' would make an excellent '
         ];
 
-        var firstPart1 = [
-        'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
-        'Badlands', 'Barbaric', 'Brutal',
-        'Cannibalistic', 'Cloaked', 'Crazy',
-        'Defiant', 'Degenerate', 'Delusional', 'Drunken',
-        'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious',
-        'Greater',
-        'High', 'Horned', 'Horrible', 'Huge',
-        'Immortal', 'Immortal',
-        'Leper', 'Lesser', 'Little',
-        'Maniacal', 'Masochistic', 'Mindless', 'Monstrous', 'Mutantic',
-        'Offensive',
-        'Pale', 'Pathethic', 'Primitive', 'Provocative', 'Psychopathic',
-        'Rapturous',
-        'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic',
-        'Undying',
-        'Wild'
-        ];
-
-        var firstPart2 = [
-        'Aegis', 'Animal',
-        'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
-        'Camp', 'Cloaked', 'Crime',
-        'Death', 'Drug', 'Dung',
-        'Feral', 'Flesh', 'Forest',
-        'Ghost', 'Grant', 'Grave',
-        'High', 'Hound',
-        'Iron',
-        'Lunar',
-        'Money', 'Monster',
-        'Pale', 'Plague', 'Pleasure',
-        'Savage', 'Shield', 'Solar', 'Soul', 'Spirit', 'Spy', 'Steel',
-        'War', 'Wild', 'White'
-        ];
-
-        var firstPart3 = [
-        'Brothel', 'Brotherhood',
-        'Clan', 'Cult',
-        'Guild',
-        'Sect',
-        'Troupe'
-        ];
-
-        var secondPart = [
-        'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
-        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
-        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Construct', 'Courtesan', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
-        'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
-        'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
-        'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Foreman', 'Forger', 'Freeholder', 'Friar',
-        'Gambler', 'Guard', 'Guardian', 'Gunner',
-        'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
-        'Initiate', 'Inquisitor',
-        'Jester',
-        'Kamikaze', 'Killer', 'King', 'Knight',
-        'Leper', 'Lich', 'Lord', 'Lumberjack',
-        'Machine', 'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
-        'Necromancer', 'Ninja',
-        'Occultist',
-        'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
-        'Queen',
-        'Raider', 'Ranger', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
-        'Sadist', 'Sailor','Samurai', 'Seeker', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
-        'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Trapper', 'Troglodyte', 'Troll', 
-        'Viceroy',
-        'Walker', 'Wanderer', 'Warden', 'Warlock', 'Warrior', 'Witch', 'Wizard'
-        ];
-
-        var lastPart = [
-        'Awre',
-        'Blood', 'the Boobs', 'the Booze',
-        'the Coconut',
-        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
-        'Evil',
-        'the Forest Fools', 'Fury',
-        'Good', 'the Grove',
-        'Honor',
-        'Immorality', 'Immortality',
-        'Justice',
-        'Lemmy', 'the Light',
-        'Madness', 'Masks', 'the Meek', 'Mercy', 'the Moon',
-        'the Nut',
-        'Pleasure', 'Power',
-        'Ravandel', 'Retribution', 'the Rot',
-        'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Sun',
-        'Urutaa',
-        'Vardgo',
-        'War', 'the Weed'
-        ]
-
-        var lastPart1 = [
-        'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
-        'Black','Blood', 'Bloody','Brutal',
-        'Cannibalistic',
-        'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
-        'Evil',
-        'Faceless', 'Forest', 'Fury',
-        'Ghost', 'Glowing', 'Good',
-        'Honorable',
-        'Immortal', 'Immoral', 'Insane',
-        'Just',
-        'Lunar',
-        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
-        'Nut',
-        'Power', 'Primitive', 'Psychopathic',
-        'Rotten', 'Ruby',
-        'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
-        'Vengeful',
-        'War', 'Weed', 'White'
-        ]
-
-        var lastPart2 = [
-        'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
-        'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
-        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
-        'Fear', 'Fools', 'Forest', 'Fury',
-        'Ghost', 'Good', 'Grove', 'Guild',
-        'Hand', 'Honor',
-        'Intellect',
-        'Justice',
-        'Light',
-        'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon', 'Mutant',
-        'Nut', 'Nuts',
-        'Pleasure', 'Pleasures', 'Power', 'Psychopath',
-        'Retribution', 'Rot', 'Ruby',
-        'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
-        'Troupe',
-        'Vengeance',
-        'War', 'Weed', 'Woods'
-        ]
-
-        //---------------------------------------------------------------------------------------------------------------------------
-
-        if(Math.floor(Math.random() * 10) < 5)
-        {
-          firstWord = ReturnRandom(firstPart1);
-          finalString = finalString + firstWord + ' ';
-        }
-
-        if(Math.floor(Math.random() * 10) < 5)
-        {
-          secondWord = ReturnRandom(firstPart2);
-          if(firstWord != secondWord)
-          {
-            finalString = finalString + secondWord + ' ';
-          }
-        }
-
-        if(Math.floor(Math.random() * 10) < 3)
-        {
-          thirdWord = ReturnRandom(firstPart3);
-          finalString = finalString + thirdWord + ' ';
-        }
-
-        fourthWord = ReturnRandom(secondPart);
-        if(thirdWord != '' || fourthWord != secondWord)
-        {
-          finalString = finalString + fourthWord;
-        }
-
-        if(Math.floor(Math.random() * 10) < 3)
-        {
-          finalString = finalString + ' of ' + ReturnRandom(lastPart);
-        }
-        else if(Math.floor(Math.random() * 10) < 7)
-        {
-          fifthWord = ReturnRandom(lastPart1);
-          sixthWord = ReturnRandom(lastPart2);
-
-          while(fifthWord == sixthWord || fifthWord + 's' == sixthWord)
-          {
-            sixthWord = ReturnRandom(lastPart2);
-          }
-
-          finalString = finalString + ' of the ' + fifthWord + ' ' + sixthWord;
-        }
-
+        finalString = GenerateRandomClass();
         basicString = ReturnRandom(basePart);
 
         if(basicString != basePart[3])
@@ -694,14 +511,14 @@ client.on("message", message => {
           }
         }
 
-        if(arguments[1] == 'count')
-        {
-          message.channel.send('Number of possible outcomes (approximately): ' + ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart1.length * (lastPart2.length / 2)))
-        }
-        else
-        {
+        //if(arguments[1] == 'count')
+        //{
+        //  message.channel.send('Number of possible outcomes (approximately): ' + ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart1.length * (lastPart2.length / 2)))
+        //}
+        //else
+        //{
           message.channel.send(basicString + '**' + GenerateRandomClass() + '**.')
-        }
+        //}
 
         break;
 
