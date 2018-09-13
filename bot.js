@@ -540,7 +540,7 @@ client.on("message", message => {
         'Queen',
         'Raider', 'Ranger', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
         'Sadist', 'Sailor','Samurai', 'Seeker', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
-        'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Troglodyte', 'Troll', 
+        'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Trapper', 'Troglodyte', 'Troll', 
         'Viceroy',
         'Walker', 'Wanderer', 'Warden', 'Warlock', 'Warrior', 'Witch', 'Wizard'
         ];
