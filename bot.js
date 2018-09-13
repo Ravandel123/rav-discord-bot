@@ -561,7 +561,7 @@ client.on("message", message => {
         'Ravandel', 'Retribution', 'the Rot',
         'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Sun',
         'Urutaa',
-        'Vardgo,
+        'Vardgo',
         'War', 'the Weed'
         ]
         
