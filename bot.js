@@ -166,7 +166,7 @@ client.on("message", message => {
         'If ugly were a crime, you\'d get a life sentence.',
         'Your mind is on vacation but your mouth is working overtime.',
         'Shock me, say something intelligent.',
-        'I don\'t know what your problem is, but I\'ll bet it's hard to pronounce.',
+        'I don\'t know what your problem is, but I\'ll bet it\'s hard to pronounce.',
         'You\'re like Monday mornings, nobody likes you.',
         'All day I thought of you... I was at the zoo.',
         'To make you laugh on Saturday, I need to you joke on Wednesday.',
