@@ -558,7 +558,7 @@ client.on("message", message => {
         'Madness', 'Masks', 'the Meek', 'Mercy', 'the Moon',
         'the Nut',
         'Pleasure', 'Power',
-        'Ravandel, 'Retribution', 'the Rot',
+        'Ravandel', 'Retribution', 'the Rot',
         'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Sun',
         'Urutaa',
         'Vardgo,
