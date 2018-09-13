@@ -419,7 +419,7 @@ client.on("message", message => {
       'In ' + (Math.floor(Math.random() * 11) + 2018) + '.',
       'In ' + (Math.floor(Math.random() * 101) + 2018) + '.',
       'In ' + (Math.floor(Math.random() * 1001) + 2018) + '.',
-      'Tomorrow ' + Math.floor(Math.random() * 24) + ':' + Math.floor(Math.random() * 60) + '.',
+      'Tomorrow ' + ' + timeHours + ':' + timeMinutes + '.',
       'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
       ];
       
