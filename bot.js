@@ -292,7 +292,7 @@ client.on("message", message => {
         }
         
 
-        message.channel.send(ReturnRandom(responseList) + ambushers + \n Will ' + who + ' survive? :scream:')
+        message.channel.send(ReturnRandom(responseList) + ambushers + '\n Will ' + who + ' survive? :scream:')
         break;
 
       //----------------------------------------------------------------------------------------------------------------------------
