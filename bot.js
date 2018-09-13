@@ -152,9 +152,30 @@ client.on("message", message => {
         'Uninstall discord pls.',
         ReturnRandom(charactersList) + ' was better than you.',
         'Can you just leave this server?',
-        'I would love to chain you to a wall in my dungeon and torture you until you will start crying like a little girl.',
         'I have calculated your IQ and it is exactly ' + Math.floor(Math.random() * 40) + '.',
-        'I don\'t know how is that even possible to suck as much as you.'
+        'I don\'t know how is that even possible to suck as much as you.',
+        'If laughter is the best medicine, your face must be curing the world.',
+        'You\'re so ugly, you scared the crap out of the toilet.',
+        'It\'s better to let someone think you are an Idiot than to open your mouth and prove it.',
+        'I\’m jealous of people that don’t know you!',
+        'If I wanted to kill myself I\'d climb your ego and jump to your IQ.',
+        'Brains aren\'t everything. In your case they\'re nothing.',
+        'I don\'t know what makes you so stupid, but it really works.',
+        'I\'d slap you, but that would be animal abuse.',
+        'They say opposites attract. I hope you meet someone who is good-looking, intelligent, and cultured.',
+        'If ugly were a crime, you\'d get a life sentence.',
+        'Your mind is on vacation but your mouth is working overtime.',
+        'Shock me, say something intelligent.',
+        'I don\'t know what your problem is, but I\'ll bet it's hard to pronounce.',
+        'You\'re like Monday mornings, nobody likes you.',
+        'All day I thought of you... I was at the zoo.',
+        'To make you laugh on Saturday, I need to you joke on Wednesday.',
+        'If you really spoke your mind, you\'d be speechless.',
+        'Every time I\'m next to you, I get a fierce desire to be alone.',
+        'How did you get here? Did someone leave your cage open?',
+        'Don\'t you have a terribly empty feeling - in your skull?',
+        'As an outsider, what do you think of the human race?',
+        'Are you always this stupid or is today a special occasion?'
         ];
         message.channel.send(ReturnRandom(responseList))
         break; 
