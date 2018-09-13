@@ -39,7 +39,7 @@ client.on("message", message => {
         responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.', 'Why not?', 'For sure.', 'Lol no.', 'How about no.', 'Absolutely.'];
 
         rollValue = Math.floor(Math.random() * 10);
-        
+
         if(rollValue == 0)
         {
           message.channel.send('No u.')
@@ -102,12 +102,12 @@ client.on("message", message => {
         'boobs of Pamela Anderson',
         'butt of Nicki Minaj'
         ];
-        
+
         var emptyList = [
         'I love rants about nothing, at least I don\'t need to listen to you.',
         'How about you write something?'
         ];
-      
+
         responseList = [
         ':cry:',
         'Oh... This is so sad that I am thinking about formatting myself...',
@@ -115,7 +115,7 @@ client.on("message", message => {
         'I am sorry to hear that...',
         'Don\'t worry, all will be all right.',
         'https://i.imgur.com/vL0G4rN.png',
-        
+
         'Congratulations! You have been nominated for Drama Queen of the year!',
         'Rotfl, this is fascinating, continue and bring me popcorn.',
         'This is probably more fake than ' + ReturnRandom(fakeList) + '.',
@@ -125,7 +125,7 @@ client.on("message", message => {
         'I think you should write a book about that.',
         'Stop crying for attention like small girl.'
         ];
-        
+
         if(arguments[1] == null)
         {
           message.channel.send(ReturnRandom(emptyList))
@@ -135,7 +135,7 @@ client.on("message", message => {
           message.channel.send(ReturnRandom(responseList))
         }
         break; 
-        
+
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------hate------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -145,7 +145,7 @@ client.on("message", message => {
         'Hitler',
         'Mao Zedong'
         ];
-        
+
         responseList = [
         'I hate you.',
         'You suck.',
@@ -181,13 +181,13 @@ client.on("message", message => {
         ];
         message.channel.send(ReturnRandom(responseList))
         break; 
-        
+
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------love------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'love':
         who = RecognizeWho(arguments[1], message, command)
-        
+
         var array1 = [
         'I love you.',
         'I really, really like you. Like REALLY.',
@@ -220,7 +220,7 @@ client.on("message", message => {
         'You make everything better. If people were more like you the world would be perfect.',
         'You\'re not lazy, just that the people around you are way too active.'
         ];
-        
+
         var array2 = [
         'I love ' + who + '.',
         'I really, really like ' + who + '. Like REALLY.',
@@ -253,7 +253,7 @@ client.on("message", message => {
         who + ' makes everything better. If people were more like ' + who + ' the world would be perfect.',
         who + ' is not lazy, just that the people around ' + who + ' are way too active.'
         ];
-        
+
         if(arguments[1] == 'me' || arguments[1] == null)
         {
           responseList = array1;
@@ -262,20 +262,20 @@ client.on("message", message => {
         {
           responseList = array2;
         }
-        
+
         message.channel.send(ReturnRandom(responseList))
         break;
-        
+
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------dndalign--------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'dndalign':
         responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
         who = RecognizeWho(arguments[1], message, command)
-          
+
         message.channel.send(who + ' is **' + ReturnRandom(responseList) + '**')
         break;
-        
+
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------rate------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -286,11 +286,11 @@ client.on("message", message => {
         'Mao Zedong',
         'Twilight'
         ];
-        
+
         var firstPartArray = ['', 'Hmm. I\'d rate that ', 'I\'d give that a ', 'I\'d say '];
-        
+
         var personifiedFirstPartArray = ['', 'Hmm. I\'d rate you ', 'I\'d give you a ', 'I\'d say '];
-        
+
         var specialArray = [
         'I think we need negative scale for that.',
         'That is completely out of scale!',
@@ -302,7 +302,7 @@ client.on("message", message => {
         'Utter garbage.',
         'It\'s over 9000!'
         ];
-        
+
         var personifiedSpecialArray = [
         'I think we need negative scale to rate you.',
         'You are completely out of scale!',
@@ -321,7 +321,7 @@ client.on("message", message => {
           firstPartArray = personifiedFirstPartArray;
           specialArray = personifiedSpecialArray;
         }
-        
+
         var response = Math.floor(Math.random() * 10);
 
         if(response < 2)
@@ -333,37 +333,37 @@ client.on("message", message => {
           message.channel.send(ReturnRandom(firstPartArray) + Math.floor(Math.random() * 14) + '/10.')
         }
         break;
-        
+
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------roll-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'roll':
         var rollsIndividuals = '[';
         var rollsTotalAmount = 0;
-        
+
         if(arguments[1] == null)
         {
           arguments[1] = '1d6';
         }
-        
+
         var rollItems = arguments[1].split('d');
         var numberOfRolls = rollItems[0];
         var typeOfDice = rollItems[1];
-        
+
         if(numberOfRolls == null)
         {
           numberOfRolls = 1;
         }
-        
+
         if(typeOfDice == null)
         {
           typeOfDice = 6;
         }
-          
+
         if(typeOfDice == 'a')
         {
           armellDiceAmount = RollArmelloDices(numberOfRolls);
-          
+
           message.channel.send('Result: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
           break;
         }
@@ -373,18 +373,18 @@ client.on("message", message => {
           {
             rollValue = Math.floor(Math.random() * typeOfDice + 1);
             rollsIndividuals = rollsIndividuals + rollValue;
-            
+
             if(i != numberOfRolls - 1)
             {
               rollsIndividuals = rollsIndividuals + ',';
             }
-            
+
             rollsTotalAmount = rollsTotalAmount + rollValue;
           }
         }
         message.channel.send('Result: ' + rollsIndividuals + '] Total amount: ' + rollsTotalAmount)
         break;
-      
+
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------peril----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
@@ -398,11 +398,11 @@ client.on("message", message => {
         {
           rollValue = arguments[1];
         }
-        
+
         armellDiceAmount = RollArmelloDices(rollValue);
         message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
         break;
-        
+
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------when-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
@@ -414,20 +414,20 @@ client.on("message", message => {
       'days',
       'years'
       ];
-      
+
       var timeHours = Math.floor(Math.random() * 24);
       var timeMinutes = Math.floor(Math.random() * 60);
-      
+
       if(timeHours < 10)
       {
         timeHours = '0' + timeHours;
       }
-      
+
       if(timeMinutes < 10)
       {
         timeMinutes = '0' + timeMinutes;
       }
-      
+
       responseList = [
       'Today.',
       'Tomorrow.',
@@ -447,10 +447,10 @@ client.on("message", message => {
       'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
       'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
       ];
-      
+
       message.channel.send(ReturnRandom(responseList))
       break;
-        
+
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------class-----------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -511,7 +511,7 @@ client.on("message", message => {
         'Savage', 'Shield', 'Solar', 'Soul', 'Spirit', 'Spy', 'Steel',
         'War', 'Wild', 'White'
         ];
-        
+
         var firstPart3 = [
         'Brothel', 'Brotherhood',
         'Clan', 'Cult',
@@ -519,7 +519,7 @@ client.on("message", message => {
         'Sect',
         'Troupe'
         ];
-        
+
         var secondPart = [
         'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
         'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
@@ -544,7 +544,7 @@ client.on("message", message => {
         'Viceroy',
         'Walker', 'Wanderer', 'Warden', 'Warlock', 'Warrior', 'Witch', 'Wizard'
         ];
-        
+
         var lastPart = [
         'Awre',
         'Blood', 'the Boobs', 'the Booze',
@@ -566,7 +566,7 @@ client.on("message", message => {
         'Vardgo',
         'War', 'the Weed'
         ]
-        
+
         var lastPart1 = [
         'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
@@ -587,7 +587,7 @@ client.on("message", message => {
         'Vengeful',
         'War', 'Weed', 'White'
         ]
-        
+
         var lastPart2 = [
         'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
@@ -607,7 +607,7 @@ client.on("message", message => {
         'Vengeance',
         'War', 'Weed', 'Woods'
         ]
-        
+
         //---------------------------------------------------------------------------------------------------------------------------
 
         if(Math.floor(Math.random() * 10) < 5)
@@ -615,7 +615,7 @@ client.on("message", message => {
           firstWord = ReturnRandom(firstPart1);
           finalString = finalString + firstWord + ' ';
         }
-        
+
         if(Math.floor(Math.random() * 10) < 5)
         {
           secondWord = ReturnRandom(firstPart2);
@@ -624,7 +624,7 @@ client.on("message", message => {
             finalString = finalString + secondWord + ' ';
           }
         }
-        
+
         if(Math.floor(Math.random() * 10) < 3)
         {
           thirdWord = ReturnRandom(firstPart3);
@@ -645,17 +645,17 @@ client.on("message", message => {
         {
           fifthWord = ReturnRandom(lastPart1);
           sixthWord = ReturnRandom(lastPart2);
-          
+
           while(fifthWord == sixthWord || fifthWord + 's' == sixthWord)
           {
             sixthWord = ReturnRandom(lastPart2);
           }
-          
+
           finalString = finalString + ' of the ' + fifthWord + ' ' + sixthWord;
         }
 
         basicString = ReturnRandom(basePart);
-        
+
         if(basicString != basePart[3])
         {
           switch(finalString.charAt(0))
@@ -668,7 +668,7 @@ client.on("message", message => {
             case 'Y':
             basicString = basicString + 'an ';
             break;
-            
+
             case 'B':
             case 'C':
             case 'D':
@@ -693,7 +693,7 @@ client.on("message", message => {
             break;
           }
         }
-        
+
         if(arguments[1] == 'count')
         {
           message.channel.send('Number of possible outcomes (approximately): ' + ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart1.length * (lastPart2.length / 2)))
@@ -702,7 +702,7 @@ client.on("message", message => {
         {
           message.channel.send(basicString + '**' + finalString + '**.')
         }
-        
+
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
@@ -711,7 +711,7 @@ client.on("message", message => {
       case 'invite':
         message.channel.send('https://discordapp.com/oauth2/authorize?client_id=485910048032161792&scope=bot')
         break;
-        
+
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
@@ -734,15 +734,15 @@ client.on("message", message => {
         ];
         message.channel.send(ReturnRandom(responseList))
         break;
-        
-      
+
+
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'version':
         message.channel.send('Version: 1.03')
         break;
-      
+
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------commands-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
@@ -764,81 +764,297 @@ client.on("message", message => {
         '**version** - bot will send info about his current version',
         'There are other hidden commands, currently there is 3 more.',
         ];
-        
+
         for (i = 0; i < responseList.length; i++) 
         {
           message.channel.send(responseList[i])
         }
         break;
-        
-        
-        
-        
+
+
+
+
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------test-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'test':
-      var timeList = [
-      'seconds',
-      'minutes',
-      'hours',
-      'days',
-      'years'
-      ];
-      
-      var timeHours = Math.floor(Math.random() * 1);
-      var timeMinutes = Math.floor(Math.random() * 1);
-      
-      if(timeHours < 10)
-      {
-        timeHours = '0' + timeHours;
-      }
-      
-      if(timeMinutes < 10)
-      {
-        timeMinutes = '0' + timeMinutes;
-      }
-      
-      responseList = [
-      'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
-      'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
-      ];
-      
-      message.channel.send(ReturnRandom(responseList))
-      break;
-        
+        message.channel.send(GenerateRandomClass())
+        break;
     }
-    
-    
+
+
     function ReturnRandom(listOfElements)
     {
       return listOfElements[Math.floor(Math.random() * listOfElements.length)];
     }
-    
+
     function RecognizeWho(who, message, command)
     {
       if (who == 'me' || who == null)
       {
         return message.author;
       }
-        
+
       return message.content.slice(prefix.length + command.length + 1);
     }
-  
+
     function RollArmelloDices(rolls)
     {
       var armellDicesAmount = [0, 0, 0, 0, 0, 0];
       var val;
-        
+
       for (i = 0; i < rolls; i++) 
       {
         val = Math.floor(Math.random() * 6);
         armellDicesAmount[val]++;
       }
-      
+
       return armellDicesAmount;
     }
-	
+
+    //test------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	  Function GenerateRandomClass()
+    {
+    	var basicString = '';
+        var finalString = '';
+        var additionalString = false;
+        var firstWord = '';
+        var secondWord = '';
+        var thirdWord = '';
+        var fourthWord = '';
+        var fifthWord = '';
+        var sixthWord = '';
+
+        var basePart = [
+        'I think ' + who + ' looks like ',
+        'I think ' + who + ' would do great as ',
+        'I think ' + who + ' would do well as ',
+        'I think ' + who + ' would make an excellent ',
+        who + ' looks like ',
+        who + ' would do great as ',
+        who + ' would do well as ',
+        who + ' would make an excellent '
+        ];
+
+        var firstPart1 = [
+        'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
+        'Badlands', 'Barbaric', 'Brutal',
+        'Cannibalistic', 'Cloaked', 'Crazy',
+        'Defiant', 'Degenerate', 'Delusional', 'Drunken',
+        'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious',
+        'Greater',
+        'High', 'Horned', 'Horrible', 'Huge',
+        'Immortal', 'Immortal',
+        'Leper', 'Lesser', 'Little',
+        'Maniacal', 'Masochistic', 'Mindless', 'Monstrous', 'Mutantic',
+        'Offensive',
+        'Pale', 'Pathethic', 'Primitive', 'Provocative', 'Psychopathic',
+        'Rapturous',
+        'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic',
+        'Undying',
+        'Wild'
+        ];
+
+        var firstPart2 = [
+        'Aegis', 'Animal',
+        'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
+        'Camp', 'Cloaked', 'Crime',
+        'Death', 'Drug', 'Dung',
+        'Feral', 'Flesh', 'Forest',
+        'Ghost', 'Grant', 'Grave',
+        'High', 'Hound',
+        'Iron',
+        'Lunar',
+        'Money', 'Monster',
+        'Pale', 'Plague', 'Pleasure',
+        'Savage', 'Shield', 'Solar', 'Soul', 'Spirit', 'Spy', 'Steel',
+        'War', 'Wild', 'White'
+        ];
+
+        var firstPart3 = [
+        'Brothel', 'Brotherhood',
+        'Clan', 'Cult',
+        'Guild',
+        'Sect',
+        'Troupe'
+        ];
+
+        var secondPart = [
+        'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
+        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
+        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Construct', 'Courtesan', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
+        'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
+        'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
+        'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Foreman', 'Forger', 'Freeholder', 'Friar',
+        'Gambler', 'Guard', 'Guardian', 'Gunner',
+        'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
+        'Initiate', 'Inquisitor',
+        'Jester',
+        'Kamikaze', 'Killer', 'King', 'Knight',
+        'Leper', 'Lich', 'Lord', 'Lumberjack',
+        'Machine', 'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
+        'Necromancer', 'Ninja',
+        'Occultist',
+        'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
+        'Queen',
+        'Raider', 'Ranger', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
+        'Sadist', 'Sailor','Samurai', 'Seeker', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
+        'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Trapper', 'Troglodyte', 'Troll', 
+        'Viceroy',
+        'Walker', 'Wanderer', 'Warden', 'Warlock', 'Warrior', 'Witch', 'Wizard'
+        ];
+
+        var lastPart = [
+        'Awre',
+        'Blood', 'the Boobs', 'the Booze',
+        'the Coconut',
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
+        'Evil',
+        'the Forest Fools', 'Fury',
+        'Good', 'the Grove',
+        'Honor',
+        'Immorality', 'Immortality',
+        'Justice',
+        'Lemmy', 'the Light',
+        'Madness', 'Masks', 'the Meek', 'Mercy', 'the Moon',
+        'the Nut',
+        'Pleasure', 'Power',
+        'Ravandel', 'Retribution', 'the Rot',
+        'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Sun',
+        'Urutaa',
+        'Vardgo',
+        'War', 'the Weed'
+        ]
+
+        var lastPart1 = [
+        'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
+        'Black','Blood', 'Bloody','Brutal',
+        'Cannibalistic',
+        'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
+        'Evil',
+        'Faceless', 'Forest', 'Fury',
+        'Ghost', 'Glowing', 'Good',
+        'Honorable',
+        'Immortal', 'Immoral', 'Insane',
+        'Just',
+        'Lunar',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
+        'Nut',
+        'Power', 'Primitive', 'Psychopathic',
+        'Rotten', 'Ruby',
+        'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
+        'Vengeful',
+        'War', 'Weed', 'White'
+        ]
+
+        var lastPart2 = [
+        'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
+        'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
+        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
+        'Fear', 'Fools', 'Forest', 'Fury',
+        'Ghost', 'Good', 'Grove', 'Guild',
+        'Hand', 'Honor',
+        'Intellect',
+        'Justice',
+        'Light',
+        'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon', 'Mutant',
+        'Nut', 'Nuts',
+        'Pleasure', 'Pleasures', 'Power', 'Psychopath',
+        'Retribution', 'Rot', 'Ruby',
+        'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
+        'Troupe',
+        'Vengeance',
+        'War', 'Weed', 'Woods'
+        ]
+
+        //---------------------------------------------------------------------------------------------------------------------------
+
+        if(Math.floor(Math.random() * 10) < 5)
+        {
+          firstWord = ReturnRandom(firstPart1);
+          finalString = finalString + firstWord + ' ';
+        }
+
+        if(Math.floor(Math.random() * 10) < 5)
+        {
+          secondWord = ReturnRandom(firstPart2);
+          if(firstWord != secondWord)
+          {
+            finalString = finalString + secondWord + ' ';
+          }
+        }
+
+        if(Math.floor(Math.random() * 10) < 3)
+        {
+          thirdWord = ReturnRandom(firstPart3);
+          finalString = finalString + thirdWord + ' ';
+        }
+
+        fourthWord = ReturnRandom(secondPart);
+        if(thirdWord != '' || fourthWord != secondWord)
+        {
+          finalString = finalString + fourthWord;
+        }
+
+        if(Math.floor(Math.random() * 10) < 3)
+        {
+          finalString = finalString + ' of ' + ReturnRandom(lastPart);
+        }
+        else if(Math.floor(Math.random() * 10) < 7)
+        {
+          fifthWord = ReturnRandom(lastPart1);
+          sixthWord = ReturnRandom(lastPart2);
+
+          while(fifthWord == sixthWord || fifthWord + 's' == sixthWord)
+          {
+            sixthWord = ReturnRandom(lastPart2);
+          }
+
+          finalString = finalString + ' of the ' + fifthWord + ' ' + sixthWord;
+        }
+
+        basicString = ReturnRandom(basePart);
+
+        if(basicString != basePart[3])
+        {
+          switch(finalString.charAt(0))
+          {
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+            case 'Y':
+            basicString = basicString + 'an ';
+            break;
+
+            case 'B':
+            case 'C':
+            case 'D':
+            case 'F':
+            case 'G':
+            case 'H':
+            case 'J':
+            case 'K':
+            case 'L':
+            case 'M':
+            case 'N':
+            case 'Q':
+            case 'P':
+            case 'R':
+            case 'S':
+            case 'T':
+            case 'V':
+            case 'W':
+            case 'X':
+            case 'Z':
+            basicString = basicString + 'a ';
+            break;
+          }
+        }
+
+      return finalString;
+    }
 
 });
 
@@ -848,3 +1064,4 @@ client.on("message", message => {
 // THIS  MUST  BE  THIS  WAY
 
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
+                                                                        
