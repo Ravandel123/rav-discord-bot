@@ -390,6 +390,19 @@ client.on("message", message => {
       'years'
       ];
       
+      var timeHours = Math.floor(Math.random() * 60);
+      var timeMinutes = Math.floor(Math.random() * 60);
+      
+      if(timeHours < 10)
+      {
+        timeHours = '0' + timeHours;
+      }
+      
+      if(timeMinutes < 10)
+      {
+        timeMinutes = '0' + timeMinutes;
+      }
+      
       responseList = [
       'Today.',
       'Tomorrow.',
@@ -407,7 +420,7 @@ client.on("message", message => {
       'In ' + (Math.floor(Math.random() * 101) + 2018) + '.',
       'In ' + (Math.floor(Math.random() * 1001) + 2018) + '.',
       'Tomorrow ' + Math.floor(Math.random() * 24) + ':' + Math.floor(Math.random() * 60) + '.',
-      'Day after tomorrow ' + Math.floor(Math.random() * 24) + ':' + Math.floor(Math.random() * 60) + '.'
+      'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
       ];
       
       message.channel.send(ReturnRandom(responseList))
