@@ -398,7 +398,8 @@ client.on("message", message => {
       'Never.',
       'Never lol.',
       'Yesterday.',
-      'You don\'t understand concept of time anyway lol.'
+      'Soon.',
+      'You don\'t understand concept of time anyway lol.',
       'In ' + Math.floor(Math.random() * 11) + ' ' + ReturnRandom(timeList) + '.',
       'In ' + Math.floor(Math.random() * 101) + ' ' + ReturnRandom(timeList) + '.',
       'In ' + Math.floor(Math.random() * 1001) + ' ' + ReturnRandom(timeList) + '.',
