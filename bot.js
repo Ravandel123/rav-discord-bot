@@ -813,9 +813,9 @@ client.on("message", message => {
     }
 
     //test------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	  Function GenerateRandomClass()
+    function GenerateRandomClass()
     {
-    	var basicString = '';
+        var basicString = '';
         var finalString = '';
         var additionalString = false;
         var firstWord = '';
