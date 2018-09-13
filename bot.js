@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
-    client.user.setActivity({game: {name: "Darkest Dungeon irl", type: 0}});
 });
 
 
