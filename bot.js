@@ -141,8 +141,7 @@ client.on("message", message => {
         var charactersList = [
         'Stalin',
         'Hitler',
-        'Mao Zedong',
-        'Kim Dzong Un'
+        'Mao Zedong'
         ];
         
         responseList = [
@@ -152,7 +151,10 @@ client.on("message", message => {
         'You are probably worst person in the world!',
         'Uninstall discord pls.',
         ReturnRandom(charactersList) + ' was better than you.',
-        'Can you just leave this server?'
+        'Can you just leave this server?',
+        'I would love to chain you to a wall in my dungeon and torture you until you will start crying like a little girl.',
+        'I have calculated your IQ and it is exactly ' + Math.floor(Math.random() * 40) + '.',
+        'I don\'t know how is that even possible to suck as much as you.'
         ];
         message.channel.send(ReturnRandom(responseList))
         break; 
@@ -424,7 +426,7 @@ client.on("message", message => {
       ];
       
       message.channel.send(ReturnRandom(responseList))
-      break; 
+      break;
         
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------class-----------------------------------------------------------
@@ -710,7 +712,7 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'version':
-        message.channel.send('Version: 1.04')
+        message.channel.send('Version: 1.03')
         break;
       
       //---------------------------------------------------------------------------------------------------------------------------
@@ -740,6 +742,42 @@ client.on("message", message => {
           message.channel.send(responseList[i])
         }
         break;
+        
+        
+        
+        
+      //---------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------test-----------------------------------------------------------
+      //---------------------------------------------------------------------------------------------------------------------------
+      case 'test':
+      var timeList = [
+      'seconds',
+      'minutes',
+      'hours',
+      'days',
+      'years'
+      ];
+      
+      var timeHours = Math.floor(Math.random() * 1);
+      var timeMinutes = Math.floor(Math.random() * 1);
+      
+      if(timeHours < 10)
+      {
+        timeHours = '0' + timeHours;
+      }
+      
+      if(timeMinutes < 10)
+      {
+        timeMinutes = '0' + timeMinutes;
+      }
+      
+      responseList = [
+      'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
+      'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
+      ];
+      
+      message.channel.send(ReturnRandom(responseList))
+      break;
         
     }
     
