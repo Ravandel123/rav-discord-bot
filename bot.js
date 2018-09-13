@@ -284,7 +284,7 @@ client.on("message", message => {
         var ambushers = '';
         var ambushersNumber = Math.floor(Math.random() * 5);
         
-        responseList = ['Oh no! + who + ' has been ambushed by:'];
+        responseList = ['Oh no! ' + who + ' has been ambushed by:'];
         
         for (i = 0; i < ambushers; i++) 
         {
@@ -292,7 +292,7 @@ client.on("message", message => {
         }
         
 
-        message.channel.send(ReturnRandom(responseList) + '**' + ambushers + '**')
+        message.channel.send(ReturnRandom(responseList) + '**' + ambushers + '**\n Will ' + who + ' survive? :scream:')
         break;
 
       //----------------------------------------------------------------------------------------------------------------------------
