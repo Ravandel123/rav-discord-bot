@@ -581,7 +581,7 @@ client.on("message", message => {
         'Lunar',
         'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
         'Nut',
-        'Power', 'Primitive', Psychopathic',
+        'Power', 'Primitive', 'Psychopathic',
         'Rotten', 'Ruby',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
         'Vengeful',
