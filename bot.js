@@ -241,11 +241,6 @@ client.on("message", message => {
         message.channel.send(ReturnRandom(responseList))
         break;
         
-      //------------------------------------------------------------amount------------------------------------------------------------
-      //------------------------------------------------------------when------------------------------------------------------------
-      
-      
-      
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------dndalign--------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -383,6 +378,40 @@ client.on("message", message => {
         message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
         break;
         
+      //---------------------------------------------------------------------------------------------------------------------------
+      //------------------------------------------------------------when-----------------------------------------------------------
+      //---------------------------------------------------------------------------------------------------------------------------
+      case 'when':
+      var timeList = [
+      'seconds',
+      'minutes',
+      'hours',
+      'days',
+      'years'
+      ];
+      
+      responseList = [
+      'Today.',
+      'Tomorrow.',
+      'Soon.',
+      'Now.',
+      'Never.',
+      'Never lol.',
+      'Yesterday.',
+      'You don't understand concept of time anyway lol.'
+      'In ' + Math.floor(Math.random() * 11) + ' ' + ReturnRandom(timeList) + '.',
+      'In ' + Math.floor(Math.random() * 101) + ' ' + ReturnRandom(timeList) + '.',
+      'In ' + Math.floor(Math.random() * 1001) + ' ' + ReturnRandom(timeList) + '.',
+      'In ' + (Math.floor(Math.random() * 11) + 2018) + '.',
+      'In ' + (Math.floor(Math.random() * 101) + 2018) + '.',
+      'In ' + (Math.floor(Math.random() * 1001) + 2018) + '.',
+      'Tomorrow ' + Math.floor(Math.random() * 24) + ':' + Math.floor(Math.random() * 60) + '.',
+      'Day after tomorrow ' + Math.floor(Math.random() * 24) + ':' + Math.floor(Math.random() * 60) + '.'
+      ];
+      
+      message.channel.send(ReturnRandom(responseList))
+      break; 
+        
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------class-----------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -413,7 +442,7 @@ client.on("message", message => {
         'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
         'Badlands', 'Barbaric', 'Brutal',
         'Cannibalistic', 'Cloaked', 'Crazy',
-        'Defiant', 'Drunken',
+        'Defiant', 'Degenerate', 'Drunken',
         'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious',
         'Greater',
         'High', 'Horned', 'Horrible', 'Huge',
@@ -464,7 +493,7 @@ client.on("message", message => {
         'Initiate', 'Inquisitor',
         'Jester',
         'Kamikaze', 'Killer', 'King', 'Knight',
-        'Leper', 'Lord', 'Lumberjack',
+        'Leper', 'Lich', 'Lord', 'Lumberjack',
         'Machine', 'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
         'Necromancer', 'Ninja',
         'Occultist',
@@ -473,6 +502,7 @@ client.on("message", message => {
         'Raider', 'Ranger', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
         'Sadist', 'Sailor','Samurai', 'Seeker', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
         'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Troglodyte', 'Troll', 
+        'Viceroy',
         'Walker', 'Warden', 'Warlock', 'Warrior', 'Witch', 'Wizard'
         ];
         
@@ -499,7 +529,7 @@ client.on("message", message => {
         'Agile', 
         'Black','Blood', 'Bloody','Brutal',
         'Cannibalistic',
-        'Dark', 'Death', 'Destructive', 'Doom', 'Dung',
+        'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
         'Evil',
         'Faceless', 'Forest', 'Fury',
         'Ghost', 'Glowing', 'Good',
@@ -666,7 +696,7 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'version':
-        message.channel.send('Version: 1.02')
+        message.channel.send('Version: 1.03')
         break;
       
       //---------------------------------------------------------------------------------------------------------------------------
@@ -685,7 +715,8 @@ client.on("message", message => {
         '**choose n1|n2|n3 (...)** - bot will choose one item among all listed',
         '**resolve n** - bot will do resolve check for [n]',
         '**class n** - bot will generate random class or n',
-        '**rant n** - bot will generate response to your [n] rant ',
+        '**rant n** - bot will generate response to your [n] rant',
+        '**when n** - bot will tell you when [n] will occur',
         '**version** - bot will send info about his current version',
         'There are other hidden commands, currently there is 3 more.',
         ];
