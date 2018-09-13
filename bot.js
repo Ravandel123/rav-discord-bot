@@ -413,7 +413,7 @@ client.on("message", message => {
       'years'
       ];
       
-      var timeHours = Math.floor(Math.random() * 60);
+      var timeHours = Math.floor(Math.random() * 24);
       var timeMinutes = Math.floor(Math.random() * 60);
       
       if(timeHours < 10)
@@ -485,7 +485,7 @@ client.on("message", message => {
         'High', 'Horned', 'Horrible', 'Huge',
         'Immortal', 'Immortal',
         'Leper', 'Lesser', 'Little',
-        'Maniacal', 'Masochistic', 'Monstrous', 'Mutantic',
+        'Maniacal', 'Masochistic', 'Mindless', 'Monstrous', 'Mutantic',
         'Offensive',
         'Pale', 'Pathethic', 'Provocative', 'Psychopathic',
         'Rapturous',
@@ -566,7 +566,7 @@ client.on("message", message => {
         ]
         
         var lastPart1 = [
-        'Agile', 
+        'Abominable, 'Aggressive', 'Agile', 'Annointed', Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
         'Cannibalistic',
         'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
@@ -577,7 +577,7 @@ client.on("message", message => {
         'Immortal', 'Immoral', 'Insane',
         'Just',
         'Lunar',
-        'Mad', 'Maniacal', 'Masochistic', 'Meek',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
         'Nut',
         'Power', 'Psychopathic',
         'Rotten', 'Ruby',
