@@ -566,7 +566,7 @@ client.on("message", message => {
         'Stop wasting your time on h!help command and do something with your miserable life.',
         'Read a book.',
         'Draw something.',
-        'Well praying to God might be a good idea in your situation.'
+        'Well, praying to God might be a good idea.'
         ];
         message.channel.send(ReturnRandom(responseList))
         break;
@@ -772,7 +772,7 @@ client.on("message", message => {
         var lastPart2 = [
         'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
-        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
+        'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
         'Fear', 'Fools', 'Forest', 'Fury',
         'Ghost', 'Good', 'Grove', 'Guild',
         'Hand', 'Honor',
