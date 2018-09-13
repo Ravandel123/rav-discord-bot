@@ -459,7 +459,7 @@ client.on("message", message => {
         var basicString = '';
         var finalString = '';
 
-        if(arguments[1] == 'count'
+        if(arguments[1] == 'count')
         {
           finalString = GenerateRandomClass('count');
           message.channel.send('Number of possible outcomes (approximately): ' + finalString + '.');
