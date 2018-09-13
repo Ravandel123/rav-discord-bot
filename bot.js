@@ -282,13 +282,13 @@ client.on("message", message => {
       case 'ambush':
         who = RecognizeWho(arguments[1], message, command);
         var ambushers = '';
-        var ambushersNumber = Math.floor(Math.random() * 5);
+        var ambushersNumber = Math.floor(Math.random() * 7 + 1);
         
         responseList = ['Oh no! ' + who + ' has been ambushed by:'];
         
         for (i = 0; i < ambushersNumber; i++) 
         {
-          ambushers = ambushers + '\n' + GenerateRandomClass();
+          ambushers = ambushers + '\n**' + GenerateRandomClass() + '**';
         }
         
 
