@@ -3,6 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
+    client.user.setActivity({game: {name: "Darkest Dungeon irl", type: 0}});
 });
 
 
@@ -540,10 +541,11 @@ client.on("message", message => {
         'Sadist', 'Sailor','Samurai', 'Seeker', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
         'Tamer', 'Thief', 'Thug', 'Torturer', 'Trainer', 'Troglodyte', 'Troll', 
         'Viceroy',
-        'Walker', 'Warden', 'Warlock', 'Warrior', 'Witch', 'Wizard'
+        'Walker', 'Wanderer', 'Warden', 'Warlock', 'Warrior', 'Witch', 'Wizard'
         ];
         
         var lastPart = [
+        'Awre',
         'Blood', 'the Boobs', 'the Booze',
         'the Coconut',
         'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
@@ -553,12 +555,14 @@ client.on("message", message => {
         'Honor',
         'Immorality', 'Immortality',
         'Justice',
-        'the Light',
+        'Lemmy', 'the Light',
         'Madness', 'Masks', 'the Meek', 'Mercy', 'the Moon',
         'the Nut',
         'Pleasure', 'Power',
-        'Retribution', 'the Rot',
-        'Shadows', 'the Shroud', 'Steel', 'the Sun',
+        'Ravandel, 'Retribution', 'the Rot',
+        'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Sun',
+        'Urutaa',
+        'Vardgo,
         'War', 'the Weed'
         ]
         
@@ -577,13 +581,14 @@ client.on("message", message => {
         'Mad', 'Maniacal', 'Masochistic', 'Meek',
         'Nut',
         'Power', 'Psychopathic',
-        'Retribution', 'Rotten',
+        'Rotten', 'Ruby',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
+        'Vengeful',
         'War', 'Weed', 'White'
         ]
         
         var lastPart2 = [
-        'Boobs', 'Booze', 'Brotherhood', 'Brothel',
+        'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
         'Darkness', 'Delight', 'Destruction', 'Doom', 'Dung',
         'Fear', 'Fools', 'Forest', 'Fury',
@@ -592,12 +597,13 @@ client.on("message", message => {
         'Intellect',
         'Justice',
         'Light',
-        'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon', 'Mutantic',
+        'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon', 'Mutant',
         'Nut', 'Nuts',
         'Pleasure', 'Pleasures', 'Power',
-        'Retribution', 'Rot',
+        'Retribution', 'Rot', 'Ruby',
         'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
         'Troupe',
+        'Vengeance',
         'War', 'Weed', 'Woods'
         ]
         
@@ -744,8 +750,8 @@ client.on("message", message => {
         '**am, is, are, will, do, does, should, would** - bot will simply answer your question',
         '**help** - bot will try to help you with one of his awesome advices, but you might not like some of his responses',
         '**invite** - bot will link his invite link',
-        '**roll nDa** - bot will roll [n] Armello dices and will show result afterwards',
-        '**roll nDx** - bot will roll [n] dices having [x] sides and will show result afterwards',
+        '**roll nda** - bot will roll [n] Armello dices and will show result afterwards',
+        '**roll ndx** - bot will roll [n] dices having [x] sides and will show result afterwards',
         '**peril n** - bot will generate random peril with [n] level of difficulty, if there is no [n] then it will generate random peril with 3-5 difficulty',
         '**rate n** - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough',
         '**dndalign n** - bot will give DnD alignment for [n]',
