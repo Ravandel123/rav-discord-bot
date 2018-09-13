@@ -566,7 +566,7 @@ client.on("message", message => {
         ]
         
         var lastPart1 = [
-        'Abominable', 'Aggressive', 'Agile', 'Annointed', Awesome', 'Awful',
+        'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
         'Cannibalistic',
         'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
