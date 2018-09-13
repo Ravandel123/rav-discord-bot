@@ -630,7 +630,7 @@ client.on("message", message => {
     }
 
     //test------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-    function GenerateRandomClass(var typeOfCheck)
+    function GenerateRandomClass(typeOfCheck)
     {
         var finalString = '';
         var firstWord = '';
