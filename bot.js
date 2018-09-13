@@ -21,7 +21,7 @@ client.on("message", message => {
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
-      //----------am, is, are, will, do, does, should, would, was, were, can, could-------------------------------------------------
+      //----------am, is, are, will, do, does, should, would, was, were, can, could, did--------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'am':
       case 'is':
@@ -35,6 +35,7 @@ client.on("message", message => {
       case 'were':
       case 'can':
       case 'could':
+      case'did':
         responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.', 'Why not?', 'For sure.', 'Lol no.', 'How about no.', 'Absolutely.'];
 
         rollValue = Math.floor(Math.random() * 10);
@@ -121,7 +122,8 @@ client.on("message", message => {
         'Am I supposed to cry or laugh at this?',
         'Lol, no one cares anyway.',
         'Stop being crybaby.',
-        'I think you should write a book about that.'
+        'I think you should write a book about that.',
+        'Stop crying for attention like small girl.'
         ];
         
         if(arguments[1] == null)
@@ -479,7 +481,7 @@ client.on("message", message => {
         'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
         'Badlands', 'Barbaric', 'Brutal',
         'Cannibalistic', 'Cloaked', 'Crazy',
-        'Defiant', 'Degenerate', 'Drunken',
+        'Defiant', 'Degenerate', 'Delusional', 'Drunken',
         'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious',
         'Greater',
         'High', 'Horned', 'Horrible', 'Huge',
@@ -487,7 +489,7 @@ client.on("message", message => {
         'Leper', 'Lesser', 'Little',
         'Maniacal', 'Masochistic', 'Mindless', 'Monstrous', 'Mutantic',
         'Offensive',
-        'Pale', 'Pathethic', 'Provocative', 'Psychopathic',
+        'Pale', 'Pathethic', 'Primitive', 'Provocative', 'Psychopathic',
         'Rapturous',
         'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic',
         'Undying',
@@ -579,7 +581,7 @@ client.on("message", message => {
         'Lunar',
         'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
         'Nut',
-        'Power', 'Psychopathic',
+        'Power', 'Primitive', Psychopathic',
         'Rotten', 'Ruby',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
         'Vengeful',
@@ -589,7 +591,7 @@ client.on("message", message => {
         var lastPart2 = [
         'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
-        'Darkness', 'Delight', 'Destruction', 'Doom', 'Dung',
+        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
         'Fear', 'Fools', 'Forest', 'Fury',
         'Ghost', 'Good', 'Grove', 'Guild',
         'Hand', 'Honor',
@@ -598,7 +600,7 @@ client.on("message", message => {
         'Light',
         'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon', 'Mutant',
         'Nut', 'Nuts',
-        'Pleasure', 'Pleasures', 'Power',
+        'Pleasure', 'Pleasures', 'Power', 'Psychopath',
         'Retribution', 'Rot', 'Ruby',
         'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
         'Troupe',
