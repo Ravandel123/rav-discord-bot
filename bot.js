@@ -700,7 +700,7 @@ client.on("message", message => {
         }
         else
         {
-          message.channel.send(basicString + '**' + finalString + '**.')
+          message.channel.send(basicString + '**' + GenerateRandomClass() + '**.')
         }
 
         break;
@@ -815,26 +815,13 @@ client.on("message", message => {
     //test------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     function GenerateRandomClass()
     {
-        var basicString = '';
         var finalString = '';
-        var additionalString = false;
         var firstWord = '';
         var secondWord = '';
         var thirdWord = '';
         var fourthWord = '';
         var fifthWord = '';
         var sixthWord = '';
-
-        var basePart = [
-        'I think ' + who + ' looks like ',
-        'I think ' + who + ' would do great as ',
-        'I think ' + who + ' would do well as ',
-        'I think ' + who + ' would make an excellent ',
-        who + ' looks like ',
-        who + ' would do great as ',
-        who + ' would do well as ',
-        who + ' would make an excellent '
-        ];
 
         var firstPart1 = [
         'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
@@ -1011,46 +998,6 @@ client.on("message", message => {
           }
 
           finalString = finalString + ' of the ' + fifthWord + ' ' + sixthWord;
-        }
-
-        basicString = ReturnRandom(basePart);
-
-        if(basicString != basePart[3])
-        {
-          switch(finalString.charAt(0))
-          {
-            case 'A':
-            case 'E':
-            case 'I':
-            case 'O':
-            case 'U':
-            case 'Y':
-            basicString = basicString + 'an ';
-            break;
-
-            case 'B':
-            case 'C':
-            case 'D':
-            case 'F':
-            case 'G':
-            case 'H':
-            case 'J':
-            case 'K':
-            case 'L':
-            case 'M':
-            case 'N':
-            case 'Q':
-            case 'P':
-            case 'R':
-            case 'S':
-            case 'T':
-            case 'V':
-            case 'W':
-            case 'X':
-            case 'Z':
-            basicString = basicString + 'a ';
-            break;
-          }
         }
 
       return finalString;
