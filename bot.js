@@ -286,13 +286,13 @@ client.on("message", message => {
         
         responseList = ['Oh no! ' + who + ' has been ambushed by:'];
         
-        for (i = 0; i < ambushers; i++) 
+        for (i = 0; i < ambushersNumber; i++) 
         {
           ambushers = ambushers + '\n' + GenerateRandomClass();
         }
         
 
-        message.channel.send(ReturnRandom(responseList) + '**' + ambushers + '**\n Will ' + who + ' survive? :scream:')
+        message.channel.send(ReturnRandom(responseList) + ambushers + \n Will ' + who + ' survive? :scream:')
         break;
 
       //----------------------------------------------------------------------------------------------------------------------------
