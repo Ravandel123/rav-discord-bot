@@ -64,13 +64,13 @@ client.on("message", message => {
         who = who.toString();
         
         name = ReturnRandom(whoList);
-        n = who.search(name);
+        n = who.search('a');
         message.channel.send(who + ' ' + name + ' ' + n)
         
         while(n > -1)
         {
           name = ReturnRandom(whoList);
-          n = who.search(name);
+          n = who.search('a');
         }
         
         
