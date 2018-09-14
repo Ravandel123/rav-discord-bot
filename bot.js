@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 const prefix = "h!";
 
-//A B C D E F G H I K L M N O P Q R S T V X Y Z
+//A B C D E F G H I K L M N O P Q R S T V X Y Z 
 
 client.on("message", message => {
   if (message.content.indexOf(prefix) !== 0) return;
