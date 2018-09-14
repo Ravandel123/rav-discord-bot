@@ -109,7 +109,7 @@ client.on("message", message => {
         responseList = [
         'Because of ' + reason + '.',
         'Its caused by ' + reason + '.',
-        'The reason of that is ' + reason + ',';
+        'The reason of that is ' + reason + ','
         ];
 
         message.channel.send(ReturnRandom(responseList))
