@@ -182,7 +182,7 @@ client.on("message", message => {
         //while(n != '')
         //{
           name = ReturnRandom(whoList);
-          n = who.search(name);
+          //n = who.search(name);
         //}
         
         finalString = name
