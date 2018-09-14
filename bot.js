@@ -139,7 +139,7 @@ client.on("message", message => {
         var finalString = '';
         who = RecognizeWho(arguments[1], message, command);
         var name = '';
-        var n = 'a';
+        var n;
 
         var whoList = [
         'my',
@@ -179,17 +179,21 @@ client.on("message", message => {
         'Test Subject', 'Toy'
         ]
         
-        //while(n != '')
-        //{
+        
+        name = ReturnRandom(whoList);
+        n = who.search(name);
+        
+        while(n != -1)
+        {
           name = ReturnRandom(whoList);
-          //n = who.search(name);
-        //}
+          n = who.search(name);
+        }
         
         finalString = name + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
         
         var mainList = [
         who + ' is ' + finalString + '.',
-        who + ' is definitely' + finalString + '.',
+        who + ' is definitely ' + finalString + '.',
         who + ' looks like ' + finalString + '.'
         ];
         
