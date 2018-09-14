@@ -139,6 +139,7 @@ client.on("message", message => {
         var finalString = '';
         who = RecognizeWho(arguments[1], message, command);
         var name = '';
+        var whoHelp;
         var n;
 
         var whoList = [
@@ -179,16 +180,14 @@ client.on("message", message => {
         'Test Subject', 'Toy'
         ]
         
-        
+        who = who.toString();
         name = ReturnRandom(whoList);
-        //n = who.indexOf(name);
-        n = who.indexOf('x');
+        n = who.indexOf(name);
         
         while(n != -1)
         {
           name = ReturnRandom(whoList);
-          //n = who.indexOf(name);
-          n = who.indexOf('x');
+          n = who.indexOf(name);
         }
         
         finalString = name + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
