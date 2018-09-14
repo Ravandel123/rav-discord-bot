@@ -25,6 +25,14 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'why':
         var reason = '';
+        
+        var rareResponsesList = [
+        'Because I say so.',
+        'Because you are noob lol.',
+        'Because those are orders from the Queen.',
+        'You won\'t understand my answer with such a low IQ anyway, so I won\'t even bother explaining it to you lol.',
+        'Your small mind is unable to grasp that. XD'
+        ];
       
         var soloList = [
         'Bookmaster Awre',
@@ -89,6 +97,13 @@ client.on("message", message => {
         'War', 'Weed', 'Woods'
         ]
         
+        if(Math.floor(Math.random() * 10) == 0)
+        {
+          message.channel.send(ReturnRandom(rareResponsesList))
+          return;
+        }
+        
+        
         if(Math.floor(Math.random() * 2) == 0)
         {
           reason = '**' + ReturnRandom(soloList) + '**';
@@ -111,6 +126,8 @@ client.on("message", message => {
         'Its caused by ' + reason + '.',
         'Reason of that = ' + reason + '.'
         ];
+        
+
 
         message.channel.send(ReturnRandom(responseList))
 
