@@ -91,7 +91,7 @@ client.on("message", message => {
         
         if(Math.floor(Math.random() * 2) == 0)
         {
-          reason = ReturnRandom(soloList);
+          reason = '**' + ReturnRandom(soloList) + '**';
         }
         else
         {
