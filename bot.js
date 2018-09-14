@@ -179,11 +179,11 @@ client.on("message", message => {
         'Test Subject', 'Toy'
         ]
         
-        while(n != '')
-        {
+        //while(n != '')
+        //{
           name = ReturnRandom(whoList);
           n = who.search(name);
-        }
+        //}
         
         finalString = name
         
@@ -193,7 +193,7 @@ client.on("message", message => {
         who + ' looks like ' + finalString + '.'
         ];
         
-        message.channel.send(ReturnRandom(whoList))
+        message.channel.send(ReturnRandom(mainList))
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
