@@ -205,7 +205,8 @@ client.on("message", message => {
         responseList = [
         'By using ' + reason + '.',
         'I think ' + '\'' + reason + '\' is the answer.',
-        'Definitely ' + reason + '.'
+        'Definitely by the help of ' + reason + '.',
+        'Answer = ' + reason + '.'
         ];
 
         message.channel.send(ReturnRandom(responseList))
