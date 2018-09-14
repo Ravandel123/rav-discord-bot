@@ -204,7 +204,7 @@ client.on("message", message => {
         
         responseList = [
         'By using ' + reason + '.',
-        'I think ' + '\'' + reason + '\' is the answer.'.
+        'I think ' + '\'' + reason + '\' is the answer.',
         'Definitely ' + reason + '.'
         ];
 
