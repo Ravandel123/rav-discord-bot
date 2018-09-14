@@ -453,13 +453,13 @@ client.on("message", message => {
         who + ' is smarter than Google and Mary Poppins combined.',
         'I think the hardest part about being ' + who + '\'s friend is pretending as though I like my other friends as much as I like ' + who + '.',
         who + ' is not someone I pretend to not see in public.',
-        'I don\'t have a favourite colour, It\'s pretty much whatever ' + who + 'is wearing.',
+        'I don\'t have a favourite colour, It\'s pretty much whatever ' + who + ' is wearing.',
         'I can never remember my dreams, but I assume ' + who + ' is always in them.',
         who + ' inspire me and most likely strangers. Also, friends and stalkers. ' + who + ' is the inspiration to many.',
         who + ' is so beautiful I would certainly steal ' + who + ' photos, make a fake account and impress people online.',
         who + '\s face makes other people ugly.',
         who + ' might be the primary reason for global warming.',
-        'If there is one thing I like about ' + who +', its that I like more than one thing about + ' + who + '.',
+        'If there is one thing I like about ' + who +', its that I like more than one thing about ' + who + '.',
         who + ' has that kind of body that when others see it they realise they need to workout more.',
         who + ' is more unique and wonderful than the smell of a new book.',
         'Did ' + who + ' have plastic surgery to become that attractive?',
@@ -717,7 +717,7 @@ client.on("message", message => {
         finalString = GenerateRandomClass();
         basicString = ReturnRandom(basePart);
 
-        if(basicString != basePart[3])
+        if(basicString != basePart[3] && basicString != basePart[7])
         {
           switch(finalString.charAt(0))
           {
@@ -801,33 +801,30 @@ client.on("message", message => {
       //------------------------------------------------------------commands-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'commands':
-        responseList = ['All commands start from h!',
-        '**am, is, are, will, do, does, should, would** - bot will simply answer your question',
-        '**help** - bot will try to help you with one of his awesome advices, but you might not like some of his responses',
-        '**invite** - bot will link his invite link',
-        '**roll nda** - bot will roll [n] Armello dices and will show result afterwards',
-        '**roll ndx** - bot will roll [n] dices having [x] sides and will show result afterwards',
-        '**peril n** - bot will generate random peril with [n] level of difficulty, if there is no [n] then it will generate random peril with 3-5 difficulty',
-        '**rate n** - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough',
-        '**dndalign n** - bot will give DnD alignment for [n]',
-        '**choose n1|n2|n3 (...)** - bot will choose one item among all listed',
-        '**resolve n** - bot will do resolve check for [n]',
-        '**class n** - bot will generate random class or n',
-        '**rant n** - bot will generate response to your [n] rant',
-        '**when n** - bot will tell you when [n] will occur',
-        '**version** - bot will send info about his current version',
-        'There are other hidden commands, currently there is 3 more.',
-        ];
+        responseList = 'All commands start from h!\n
+        **am, is, are, will, do, does, should, would** - bot will simply answer your question\n
+        **help** - bot will try to help you with one of his awesome advices, but you might not like some of his responses\n
+        **invite** - bot will link his invite link\n
+        **roll nda** - bot will roll [n] Armello dices and will show result afterwards\n
+        **roll ndx** - bot will roll [n] dices having [x] sides and will show result afterwards\n
+        **peril n** - bot will generate random peril with [n] level of difficulty, if there is no [n] then it will generate random peril with 3-5 difficulty\n
+        **rate n** - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough\n
+        **dndalign n** - bot will give DnD alignment for [n]\n
+        **choose n1|n2|n3 (...)** - bot will choose one item among all listed\n
+        **resolve n** - bot will do resolve check for [n]\n
+        **class n** - bot will generate random class or n\n
+        **rant n** - bot will generate response to your [n] rant\n
+        **when n** - bot will tell you when [n] will occur\n
+        **how** - bot will answer your question about -how-\n
+        **why** - bot will answer your question about -why-\n
+        **version** - bot will send info about his current version\n
+        There are other hidden commands, currently there is 3 more.';
 
-        for (i = 0; i < responseList.length; i++) 
-        {
-          message.channel.send(responseList[i])
-        }
+        message.channel.send(responseList)
         break;
 
 
-
-
+        
       //---------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------test-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
@@ -895,7 +892,7 @@ client.on("message", message => {
         ];
 
         var firstPart2 = [
-        'Aegis', 'Animal',
+        'Aegis', 'Absolution', 'Animal',
         'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
         'Camp', 'Cloaked', 'Crime',
         'Death', 'Drug', 'Dung',
@@ -944,7 +941,7 @@ client.on("message", message => {
         ];
 
         var lastPart = [
-        'Awre',
+        'Bookmaster Awre',
         'Blood', 'the Boobs', 'the Booze',
         'the Coconut',
         'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
@@ -966,12 +963,12 @@ client.on("message", message => {
         ]
 
         var lastPart1 = [
-        'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
+        'Abominable', 'Absolute', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
         'Cannibalistic',
         'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
         'Evil',
-        'Faceless', 'Forest', 'Furious', 'Furry', 'Fury',
+        'Faceless', 'Forbidden', 'Forest', 'Forgotten', 'Furious', 'Furry', 'Fury',
         'Ghost', 'Glowing', 'Good',
         'Honorable',
         'Immortal', 'Immoral', 'Insane',
@@ -987,9 +984,10 @@ client.on("message", message => {
         ]
 
         var lastPart2 = [
+        'Absolution',
         'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
-        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
+        'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
         'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
         'Ghost', 'Good', 'Grove', 'Guild',
         'Hand', 'Honor',
