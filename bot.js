@@ -143,16 +143,7 @@ client.on("message", message => {
         var n;
 
         var whoList = [
-        'my',
-        'Pumpkin',
-        'Vardgo',
-        'Ravandel',
-        'Urutaa',
-        'Ruby',
-        'Lemmy',
-        'Shea',
-        'Seda',
-        'Izzy'
+        'Ravandel'
         ];
       
         var firstList = [
@@ -190,6 +181,7 @@ client.on("message", message => {
           name = ReturnRandom(whoList);
           n = who.indexOf(name);
         }
+        
         
         finalString = name + '\'s' + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
         
