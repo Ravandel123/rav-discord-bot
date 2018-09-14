@@ -127,10 +127,7 @@ client.on("message", message => {
         'Reason of that = ' + reason + '.'
         ];
         
-
-
         message.channel.send(ReturnRandom(responseList))
-
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
@@ -801,24 +798,24 @@ client.on("message", message => {
       //------------------------------------------------------------commands-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'commands':
-        responseList = 'All commands start from h!\n
-        **am, is, are, will, do, does, should, would** - bot will simply answer your question\n
-        **help** - bot will try to help you with one of his awesome advices, but you might not like some of his responses\n
-        **invite** - bot will link his invite link\n
-        **roll nda** - bot will roll [n] Armello dices and will show result afterwards\n
-        **roll ndx** - bot will roll [n] dices having [x] sides and will show result afterwards\n
-        **peril n** - bot will generate random peril with [n] level of difficulty, if there is no [n] then it will generate random peril with 3-5 difficulty\n
-        **rate n** - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough\n
-        **dndalign n** - bot will give DnD alignment for [n]\n
-        **choose n1|n2|n3 (...)** - bot will choose one item among all listed\n
-        **resolve n** - bot will do resolve check for [n]\n
-        **class n** - bot will generate random class or n\n
-        **rant n** - bot will generate response to your [n] rant\n
-        **when n** - bot will tell you when [n] will occur\n
-        **how** - bot will answer your question about -how-\n
-        **why** - bot will answer your question about -why-\n
-        **version** - bot will send info about his current version\n
-        There are other hidden commands, currently there is 3 more.';
+        responseList = 'All commands start from h!\n' +
+        '**am, is, are, will, do, does, should, would** - bot will simply answer your question\n'+
+        '**help** - bot will try to help you with one of his awesome advices, but you might not like some of his responses\n'+
+        '**invite** - bot will link his invite link\n'+
+        '**roll nda** - bot will roll [n] Armello dices and will show result afterwards\n'+
+        '**roll ndx** - bot will roll [n] dices having [x] sides and will show result afterwards\n'+
+        '**peril n** - bot will generate random peril with [n] level of difficulty, if there is no [n] then it will generate random peril with 3-5 difficulty\n'+
+        '**rate n** - bot will rate [n], usually on 0-10 scale, but sometimes his answers might be super kind or super rough\n'+
+        '**dndalign n** - bot will give DnD alignment for [n]\n'+
+        '**choose n1|n2|n3 (...)** - bot will choose one item among all listed\n'+
+        '**resolve n** - bot will do resolve check for [n]\n'+
+        '**class n** - bot will generate random class or n\n'+
+        '**rant n** - bot will generate response to your [n] rant\n'+
+        '**when n** - bot will tell you when [n] will occur\n'+
+        '**how** - bot will answer your question about -how-\n'+
+        '**why** - bot will answer your question about -why-\n'+
+        '**version** - bot will send info about his current version\n'+
+        'There are other hidden commands, currently there is 3 more.';
 
         message.channel.send(responseList)
         break;
