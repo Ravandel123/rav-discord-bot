@@ -138,7 +138,7 @@ client.on("message", message => {
         'the Nut', 'Nuts',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
-        'Seda', 'Shadows', 'Shea', ''Seismic Activity'', 'Steel', 'the Sun',
+        'Seda', 'Shadows', 'Shea', 'Seismic Activity', 'Steel', 'the Sun',
         'Urutaa',
         'Vardgo', 'Violence',
         'War', 'the Weed'
