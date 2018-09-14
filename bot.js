@@ -62,7 +62,7 @@ client.on("message", message => {
         ]
         
         who = who.toString();
-        
+        who = 'Ravandel'
         name = ReturnRandom(whoList);
         n = who.search('a');
         message.channel.send(who + ' ' + name + ' ' + n)
