@@ -22,6 +22,69 @@ client.on("message", message => {
 
   switch (command) 
   {
+            //----------------------------------------------------------------------------------------------------------------------------
+      //----------whois-------------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'whois':
+        var finalString = '';
+        who = RecognizeWho(arguments[1], message, command);
+        var name = '';
+        var whoHelp;
+        var n;
+
+        var whoList = [
+        'my',
+        'Ravandel'
+        ];
+      
+        var firstList = [
+        'Abominable', 'Amazing',
+        'Best',
+        'Cute', 'Cutest',
+        'Evil',
+        'Gargantuan',
+        'Interesting',
+        'Masochistic',
+        'Primitive', 'Psychopathic',
+        'Secret', 'Sadistic', 'Silly', 'Small',
+        'Useful', 'Useless',
+        'Worst'
+        ]
+
+        var secondList = [
+        'Abomination',
+        'Bodyguard',
+        'Experiment',
+        'Friend',
+        'Plaything', 'Prisoner',
+        'Servant', 'Slave',
+        'Test Subject', 'Toy'
+        ]
+        
+        who = who.toString();
+        
+        name = ReturnRandom(whoList);
+        n = who.search(name);
+        message.channel.send(who + ' ' + name + ' ' + n)
+        
+        while(n > -1)
+        {
+          name = ReturnRandom(whoList);
+          n = who.search(name);
+        }
+        
+        
+        finalString = name + '\'s' + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
+        
+        var mainList = [
+        who + ' is ' + finalString + '.',
+        who + ' is definitely ' + finalString + '.',
+        who + ' looks like ' + finalString + '.'
+        ];
+        
+        message.channel.send(ReturnRandom(mainList))
+        break; 
+       
       //----------------------------------------------------------------------------------------------------------------------------
       //----------why---------------------------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -130,70 +193,6 @@ client.on("message", message => {
         ];
         
         message.channel.send(ReturnRandom(responseList))
-        break;
-        
-      //----------------------------------------------------------------------------------------------------------------------------
-      //----------whois-------------------------------------------------------------------------------------------------------------
-      //----------------------------------------------------------------------------------------------------------------------------
-      case 'whois':
-        var finalString = '';
-        who = RecognizeWho(arguments[1], message, command);
-        var name = '';
-        var whoHelp;
-        var n;
-
-        var whoList = [
-        'my',
-        'Ravandel'
-        ];
-      
-        var firstList = [
-        'Abominable', 'Amazing',
-        'Best',
-        'Cute', 'Cutest',
-        'Evil',
-        'Gargantuan',
-        'Interesting',
-        'Masochistic',
-        'Psychopathic',
-        'Secret', 'Sadistic', 'Silly', 'Small',
-        'Useless',
-        'Worst'
-        ]
-
-        var secondList = [
-        'Abomination',
-        'Bodyguard',
-        'Experiment',
-        'Friend',
-        'Masochist',
-        'Plaything', 'Prisoner',
-        'Sadist', 'Servant', 'Slave',
-        'Test Subject', 'Toy'
-        ]
-        
-        who = who.toString();
-        
-        name = ReturnRandom(whoList);
-        n = who.indexOf(name);
-        message.channel.send(who + ' ' + name + ' ' + n)
-        
-        while(n > -1)
-        {
-          name = ReturnRandom(whoList);
-          n = who.indexOf(name);
-        }
-        
-        
-        finalString = name + '\'s' + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
-        
-        var mainList = [
-        who + ' is ' + finalString + '.',
-        who + ' is definitely ' + finalString + '.',
-        who + ' looks like ' + finalString + '.'
-        ];
-        
-        message.channel.send(ReturnRandom(mainList))
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
