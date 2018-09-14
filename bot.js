@@ -144,15 +144,15 @@ client.on("message", message => {
 
         var whoList = [
         'my',
-        'Doctor Pumpkins\'',
-        'Vardgo\'s',
-        'Ravandel\'s',
-        'Urutaa\'s',
-        'Ruby\'s',
-        'Lemmy\'s',
-        'Shea\'s',
-        'Seda\'s',
-        'Izzy\'s'
+        'Pumpkin',
+        'Vardgo',
+        'Ravandel',
+        'Urutaa',
+        'Ruby',
+        'Lemmy',
+        'Shea',
+        'Seda',
+        'Izzy'
         ];
       
         var firstList = [
@@ -191,7 +191,7 @@ client.on("message", message => {
           n = who.indexOf(name);
         }
         
-        finalString = name + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
+        finalString = name + '\'s' + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
         
         var mainList = [
         who + ' is ' + finalString + '.',
