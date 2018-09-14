@@ -21,13 +21,13 @@ client.on("message", message => {
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
-      //----------how---------------------------------------------------------------------------------------------------------------
+      //----------why---------------------------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
-      case 'how':
+      case 'why':
         var reason = '';
       
         var soloList = [
-        'Awre',
+        'Bookmaster Awre',
         'the Boobs', 'the Booze',
         'the Coconut', 'Coconuts',
         'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
@@ -38,11 +38,107 @@ client.on("message", message => {
         'Immorality', 'Immortality',
         'Justice',
         'Lemmy', 'the Light',
-        'Madness','Mercy', 'the Moon',
+        'Madness', 'Me', 'Mercy', 'the Moon',
         'the Nut', 'Nuts',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
-        'Seda', 'Shadows', 'Shea', 'Steel', 'the Sun',
+        'Seda', 'Seismic Activity', 'Shadows', 'Shea', 'Steel', 'the Sun',
+        'Urutaa',
+        'Vardgo', 'Violence',
+        'War', 'the Weed'
+        ]
+
+        var dualList1 = [
+        'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
+        'Black','Blood', 'Bloody','Brutal',
+        'Cannibalistic',
+        'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
+        'Evil',
+        'Faceless', 'Forest', 'Furious', 'Furry', 'Fury',
+        'Ghost', 'Glowing', 'Good',
+        'Honorable',
+        'Immortal', 'Immoral', 'Insane',
+        'Just',
+        'Lunar',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
+        'Nutty',
+        'Power', 'Primitive', 'Psychopathic',
+        'Rotten', 'Ruby',
+        'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
+        'Vengeful', 'Violent',
+        'War', 'Weed', 'White'
+        ]
+
+        var dualList2 = [
+        'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
+        'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
+        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
+        'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
+        'Ghost', 'Good', 'Grove', 'Guild',
+        'Hand', 'Honor',
+        'Intellect',
+        'Justice',
+        'Light',
+        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Mutant',
+        'Nut', 'Nuts',
+        'Pleasure', 'Pleasures', 'Power', 'Psychopath',
+        'Retribution', 'Rot', 'Ruby',
+        'Sadism', 'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
+        'Troupe',
+        'Vengeance', 'Violence',
+        'War', 'Weed', 'Woods'
+        ]
+        
+        if(Math.floor(Math.random() * 2) == 0)
+        {
+          reason = '**' + ReturnRandom(soloList) + '**';
+        }
+        else
+        {
+          var firstPart = ReturnRandom(dualList1);
+          var secondPart = ReturnRandom(dualList2);
+          
+          while(firstPart == secondPart || firstPart + 's' == secondPart || firstPart + 'es' == secondPart)
+          {
+            secondPart = ReturnRandom(dualList2);
+          }
+          
+          reason = 'the **' + firstPart + ' ' + secondPart + '**';
+        }
+        
+        responseList = [
+        'Because of ' + reason + '.',
+        'Its caused by ' + reason + '.',
+        'The reason of that is ' + reason + ',';
+        ];
+
+        message.channel.send(ReturnRandom(responseList))
+
+        break;
+        
+      //----------------------------------------------------------------------------------------------------------------------------
+      //----------how---------------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'how':
+        var reason = '';
+      
+        var soloList = [
+        'Bookmaster Awre',
+        'the Boobs', 'the Booze',
+        'the Coconut', 'Coconuts',
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
+        'Evil',
+        'Fury',
+        'Good', 'the Grove',
+        'Honor',
+        'Immorality', 'Immortality',
+        'Justice',
+        'Lemmy', 'the Light',
+        'Madness', 'Me', 'Mercy', 'the Moon',
+        'the Nut', 'Nuts',
+        'Pleasure', 'Power',
+        'Ravandel', 'Retribution', 'the Rot',
+        'Seda', 'Shadows', 'Shea', ''Seismic Activity'', 'Steel', 'the Sun',
         'Urutaa',
         'Vardgo', 'Violence',
         'War', 'the Weed'
@@ -108,7 +204,8 @@ client.on("message", message => {
         
         responseList = [
         'By using ' + reason + '.',
-        'I think ' + '\'' + reason + '\' is the answer.'
+        'I think ' + '\'' + reason + '\' is the answer.'.
+        'Definitely ' + reason + '.'
         ];
 
         message.channel.send(ReturnRandom(responseList))
