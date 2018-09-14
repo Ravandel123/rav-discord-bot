@@ -136,8 +136,11 @@ client.on("message", message => {
       //----------whois-------------------------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'whois':
-        var reason = '';
-        
+        var finalString = '';
+        who = RecognizeWho(arguments[1], message, command);
+        var name = '';
+        var n = 'a';
+
         var whoList = [
         'my',
         'Doctor Pumpkins\'',
@@ -147,23 +150,48 @@ client.on("message", message => {
         'Ruby\'s',
         'Lemmy\'s',
         'Shea\'s',
-        'Seda\'s'
+        'Seda\'s',
+        'Izzy\'s'
         ];
       
         var firstList = [
-        'Abominable',
-        'Cute',
-        'Sadistic', 'Silly'
+        'Abominable', 'Amazing',
+        'Best',
+        'Cute', 'Cutest',
+        'Evil',
+        'Gargantuan',
+        'Interesting',
+        'Masochistic',
+        'Psychopathic',
+        'Secret', 'Sadistic', 'Silly', 'Small',
+        'Useless',
+        'Worst'
         ]
 
         var secondList = [
         'Abomination',
         'Bodyguard',
+        'Experiment',
         'Friend',
-        'Prisoner',
-        'Sadist', 'Servant', 'Slave'
-        
+        'Masochist',
+        'Plaything', 'Prisoner',
+        'Sadist', 'Servant', 'Slave',
+        'Test Subject', 'Toy'
         ]
+        
+        while(n != '')
+        {
+          name = ReturnRandom(whoList);
+          n = who.search(name);
+        }
+        
+        finalString = name
+        
+        var mainList = [
+        who + ' is ' + finalString + '.',
+        who + ' is definitely' + finalString + '.',
+        who + ' looks like ' + finalString + '.'
+        ];
         
         message.channel.send(ReturnRandom(whoList))
         break;
@@ -479,7 +507,8 @@ client.on("message", message => {
         'You\'re not lazy, just that the people around you are way too active.',
         
         'I love fat people like you!',
-        'Usually ugly people disgust me, but you are actually cute.'
+        'Usually ugly people disgust me, but you are actually cute.',
+        'You are beatiful... On the inside.'
         ];
 
         var array2 = [
@@ -515,7 +544,8 @@ client.on("message", message => {
         who + ' is not lazy, just that the people around ' + who + ' are way too active.',
         
         'I love fat people like ' + who + '!',
-        'Usually ugly people disgust me, but' + who + 'are actually cute.'
+        'Usually ugly people disgust me, but' + who + 'are actually cute.',
+         who + ' is beatiful... On the inside.'
         ];
 
         if(arguments[1] == 'me' || arguments[1] == null)
