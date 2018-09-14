@@ -189,7 +189,7 @@ client.on("message", message => {
           n = who.search(name);
         }
         
-        finalString = name + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
+        finalString = name + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList);
         
         var mainList = [
         who + ' is ' + finalString + '.',
