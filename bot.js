@@ -181,10 +181,11 @@ client.on("message", message => {
         ]
         
         who = who.toString();
+        
         name = ReturnRandom(whoList);
         n = who.indexOf(name);
         
-        while(n != -1)
+        while(n > -1)
         {
           name = ReturnRandom(whoList);
           n = who.indexOf(name);
