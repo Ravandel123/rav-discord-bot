@@ -8,6 +8,8 @@ client.on('ready', () => {
 
 const prefix = "h!";
 
+//A B C D E F G H I K L M N O P Q R S T V X Y Z
+
 client.on("message", message => {
   if (message.content.indexOf(prefix) !== 0) return;
 
@@ -97,7 +99,7 @@ client.on("message", message => {
         'War', 'Weed', 'Woods'
         ]
         
-        if(Math.floor(Chance(15)))
+        if(Math.floor(Chance(15)) == true)
         {
           message.channel.send(ReturnRandom(rareResponsesList))
           return;
@@ -128,6 +130,42 @@ client.on("message", message => {
         ];
         
         message.channel.send(ReturnRandom(responseList))
+        break;
+        
+      //----------------------------------------------------------------------------------------------------------------------------
+      //----------whois-------------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'whois':
+        var reason = '';
+        
+        var whoList = [
+        'my',
+        'Doctor Pumpkins\'',
+        'Vardgo\'s',
+        'Ravandel\'s',
+        'Urutaa\'s',
+        'Ruby\'s',
+        'Lemmy\'s',
+        'Shea\'s',
+        'Seda\'s'
+        ];
+      
+        var firstList = [
+        'Abominable',
+        'Cute',
+        'Sadistic', 'Silly'
+        ]
+
+        var secondList = [
+        'Abomination',
+        'Bodyguard',
+        'Friend',
+        'Prisoner',
+        'Sadist', 'Servant', 'Slave'
+        
+        ]
+        
+        message.channel.send(ReturnRandom(whoList))
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
@@ -228,7 +266,7 @@ client.on("message", message => {
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
-      //----------am, is, are, will, do, does, should, would, was, were, can, could, did--------------------------------------------
+      //----------am, is, are, will, do, does, should, would, was, were, can, could, did,have, has, had-----------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'am':
       case 'is':
@@ -242,7 +280,10 @@ client.on("message", message => {
       case 'were':
       case 'can':
       case 'could':
-      case'did':
+      case 'did':
+      case 'have':
+      case 'has':
+      case 'had':
         responseList = [
         'Yes.', 'No.',
         'Definitely.', 'Definitely no.',
@@ -287,6 +328,8 @@ client.on("message", message => {
 
         rollValue = Math.floor(Math.random() * 4);
 
+        
+        
         if(rollValue == 0)
         {
           rollValue = Math.floor(Math.random() * virtuesArray.length);
@@ -433,7 +476,10 @@ client.on("message", message => {
         'Maybe you should eat some makeup so you can be pretty on the inside too.',
         'I\'m really good at people-watching. I\'m so glad I can share that hobby on you.',
         'You make everything better. If people were more like you the world would be perfect.',
-        'You\'re not lazy, just that the people around you are way too active.'
+        'You\'re not lazy, just that the people around you are way too active.',
+        
+        'I love fat people like you!',
+        'Usually ugly people disgust me, but you are actually cute.'
         ];
 
         var array2 = [
@@ -466,7 +512,10 @@ client.on("message", message => {
         'Maybe ' + who + ' should eat some makeup so ' + who + ' can be pretty on the inside too.',
         'I\'m really good at people-watching. I\'m so glad I can share that hobby on ' + who + '.',
         who + ' makes everything better. If people were more like ' + who + ' the world would be perfect.',
-        who + ' is not lazy, just that the people around ' + who + ' are way too active.'
+        who + ' is not lazy, just that the people around ' + who + ' are way too active.',
+        
+        'I love fat people like ' + who + '!',
+        'Usually ugly people disgust me, but' + who + 'are actually cute.'
         ];
 
         if(arguments[1] == 'me' || arguments[1] == null)
@@ -861,7 +910,7 @@ client.on("message", message => {
     
     function Chance(chanceOfSuccess)
     {
-      returh (Math.floor(Math.random() * 100) < chanceOfSuccess)
+      return (Math.floor(Math.random() * 100) < chanceOfSuccess)
     }
 
     function GenerateRandomClass(typeOfCheck)
