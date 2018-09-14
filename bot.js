@@ -97,7 +97,7 @@ client.on("message", message => {
         'War', 'Weed', 'Woods'
         ]
         
-        if(Math.floor(Math.random() * 10) == 0)
+        if(Math.floor(Chance(15))
         {
           message.channel.send(ReturnRandom(rareResponsesList))
           return;
@@ -857,6 +857,11 @@ client.on("message", message => {
       }
 
       return armellDicesAmount;
+    }
+    
+    function Chance(chanceOfSuccess)
+    {
+      returh (Math.floor(Math.random() * 100) < chanceOfSuccess)
     }
 
     function GenerateRandomClass(typeOfCheck)
