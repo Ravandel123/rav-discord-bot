@@ -175,7 +175,7 @@ client.on("message", message => {
         
         name = ReturnRandom(whoList);
         n = who.indexOf(name);
-        
+        message.channel.send(n)
         while(n > -1)
         {
           name = ReturnRandom(whoList);
