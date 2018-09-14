@@ -97,7 +97,7 @@ client.on("message", message => {
         'War', 'Weed', 'Woods'
         ]
         
-        if(Math.floor(Chance(15))
+        if(Math.floor(Chance(15)))
         {
           message.channel.send(ReturnRandom(rareResponsesList))
           return;
