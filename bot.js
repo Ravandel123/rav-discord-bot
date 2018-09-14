@@ -21,6 +21,101 @@ client.on("message", message => {
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
+      //----------how---------------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'how':
+        var reason = '';
+      
+        var soloList = [
+        'Awre',
+        'the Boobs', 'the Booze',
+        'the Coconut', 'Coconuts',
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
+        'Evil',
+        'Fury',
+        'Good', 'the Grove',
+        'Honor',
+        'Immorality', 'Immortality',
+        'Justice',
+        'Lemmy', 'the Light',
+        'Madness','Mercy', 'the Moon',
+        'the Nut', 'Nuts',
+        'Pleasure', 'Power',
+        'Ravandel', 'Retribution', 'the Rot',
+        'Seda', 'Shadows', 'Shea', 'Steel', 'the Sun',
+        'Urutaa',
+        'Vardgo', 'Violence',
+        'War', 'the Weed'
+        ]
+
+        var dualList1 = [
+        'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
+        'Black','Blood', 'Bloody','Brutal',
+        'Cannibalistic',
+        'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
+        'Evil',
+        'Faceless', 'Forest', 'Furious', 'Furry', 'Fury',
+        'Ghost', 'Glowing', 'Good',
+        'Honorable',
+        'Immortal', 'Immoral', 'Insane',
+        'Just',
+        'Lunar',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
+        'Nutty',
+        'Power', 'Primitive', 'Psychopathic',
+        'Rotten', 'Ruby',
+        'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
+        'Vengeful', 'Violent',
+        'War', 'Weed', 'White'
+        ]
+
+        var dualList2 = [
+        'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
+        'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
+        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
+        'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
+        'Ghost', 'Good', 'Grove', 'Guild',
+        'Hand', 'Honor',
+        'Intellect',
+        'Justice',
+        'Light',
+        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Mutant',
+        'Nut', 'Nuts',
+        'Pleasure', 'Pleasures', 'Power', 'Psychopath',
+        'Retribution', 'Rot', 'Ruby',
+        'Sadism', 'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
+        'Troupe',
+        'Vengeance', 'Violence',
+        'War', 'Weed', 'Woods'
+        ]
+        
+        if(Math.floor(Math.random() * 2) == 0)
+        {
+          reason = ReturnRandom(soloList) + '.';
+        }
+        else
+        {
+          var firstPart = ReturnRandom(dualList1);
+          var secondPart = ReturnRandom(dualList2);
+          
+          while(firstPart == secondPart || firstPart + 's' == secondPart || firstPart + 'es' == secondPart)
+          {
+            secondPart = ReturnRandom(dualList2);
+          }
+          
+          reason = 'the **' + firstPart + ' ' + secondPart + '**';
+        }
+        
+        responseList = [
+        'By using ' + reason + '.',
+        '\'' + reason + '\' is the answer.'
+        ];
+
+        message.channel.send(ReturnRandom(responseList))
+
+        break;
+        
+      //----------------------------------------------------------------------------------------------------------------------------
       //----------am, is, are, will, do, does, should, would, was, were, can, could, did--------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'am':
@@ -36,7 +131,15 @@ client.on("message", message => {
       case 'can':
       case 'could':
       case'did':
-        responseList = ['Yes.', 'No.', 'Definitely.', 'Probably.', 'Probably not.', 'Definitely no.', 'Why not?', 'For sure.', 'Lol no.', 'How about no.', 'Absolutely.'];
+        responseList = [
+        'Yes.', 'No.',
+        'Definitely.', 'Definitely no.',
+        'Probably.', 'Probably not.',
+        'For sure.', 'Lol no.',
+        'Why not?', 'How about no.',
+        'Absolutely.', 'Not at all.',
+        'It\'s a possibility.', 'Sorry, it\'s not possible.'
+        ];
 
         rollValue = Math.floor(Math.random() * 10);
 
@@ -123,7 +226,7 @@ client.on("message", message => {
         'Lol, no one cares anyway.',
         'Stop being crybaby.',
         'I think you should write a book about that.',
-        'Stop crying for attention like small girl.'
+        'Stop crying for attention like a small girl.'
         ];
 
         if(arguments[1] == null)
@@ -566,7 +669,7 @@ client.on("message", message => {
         'Stop wasting your time on h!help command and do something with your miserable life.',
         'Read a book.',
         'Draw something.',
-        'Well, praying to God might be a good idea.'
+        'Well praying to God might be a good idea in your situation.'
         ];
         message.channel.send(ReturnRandom(responseList))
         break;
@@ -618,7 +721,6 @@ client.on("message", message => {
         break;
     }
 
-
     function ReturnRandom(listOfElements)
     {
       return listOfElements[Math.floor(Math.random() * listOfElements.length)];
@@ -663,7 +765,7 @@ client.on("message", message => {
         'Badlands', 'Barbaric', 'Brutal',
         'Cannibalistic', 'Cloaked', 'Crazy',
         'Defiant', 'Degenerate', 'Delusional', 'Drunken',
-        'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious',
+        'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious', 'Furry',
         'Greater',
         'High', 'Horned', 'Horrible', 'Huge',
         'Immortal', 'Immortal',
@@ -682,7 +784,7 @@ client.on("message", message => {
         'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
         'Camp', 'Cloaked', 'Crime',
         'Death', 'Drug', 'Dung',
-        'Feral', 'Flesh', 'Forest',
+        'Feral', 'Flesh', 'Forest', 'Furry',
         'Ghost', 'Grant', 'Grave',
         'High', 'Hound',
         'Iron',
@@ -744,7 +846,7 @@ client.on("message", message => {
         'Ravandel', 'Retribution', 'the Rot',
         'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Sun',
         'Urutaa',
-        'Vardgo',
+        'Vardgo', 'Violence',
         'War', 'the Weed'
         ]
 
@@ -754,38 +856,38 @@ client.on("message", message => {
         'Cannibalistic',
         'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
         'Evil',
-        'Faceless', 'Forest', 'Fury',
+        'Faceless', 'Forest', 'Furious', 'Furry', 'Fury',
         'Ghost', 'Glowing', 'Good',
         'Honorable',
         'Immortal', 'Immoral', 'Insane',
         'Just',
         'Lunar',
         'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
-        'Nut',
+        'Nutty',
         'Power', 'Primitive', 'Psychopathic',
         'Rotten', 'Ruby',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
-        'Vengeful',
+        'Vengeful', 'Violent',
         'War', 'Weed', 'White'
         ]
 
         var lastPart2 = [
         'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
-        'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
-        'Fear', 'Fools', 'Forest', 'Fury',
+        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
+        'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
         'Ghost', 'Good', 'Grove', 'Guild',
         'Hand', 'Honor',
         'Intellect',
         'Justice',
         'Light',
-        'Madness', 'Maniac', 'Mask', 'Mercy', 'Moon', 'Mutant',
+        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Mutant',
         'Nut', 'Nuts',
         'Pleasure', 'Pleasures', 'Power', 'Psychopath',
         'Retribution', 'Rot', 'Ruby',
-        'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
+        'Sadism', 'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
         'Troupe',
-        'Vengeance',
+        'Vengeance', 'Violence',
         'War', 'Weed', 'Woods'
         ]
 
@@ -832,7 +934,7 @@ client.on("message", message => {
           fifthWord = ReturnRandom(lastPart1);
           sixthWord = ReturnRandom(lastPart2);
 
-          while(fifthWord == sixthWord || fifthWord + 's' == sixthWord)
+          while(fifthWord == sixthWord || fifthWord + 's' == sixthWord || fifthWord + 'es' == sixthWord)
           {
             sixthWord = ReturnRandom(lastPart2);
           }
