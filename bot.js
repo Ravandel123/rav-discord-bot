@@ -78,6 +78,7 @@ client.on("message", message => {
         
         var mainList = [
         who + ' is ' + finalString + '.',
+        who + ' is just ' + finalString + '.',
         who + ' is definitely ' + finalString + '.',
         who + ' looks like ' + finalString + '.'
         ];
