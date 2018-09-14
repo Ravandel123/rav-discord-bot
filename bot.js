@@ -181,12 +181,14 @@ client.on("message", message => {
         
         
         name = ReturnRandom(whoList);
-        n = who.indexOf(name);
+        //n = who.indexOf(name);
+        n = who.indexOf('x');
         
         while(n != -1)
         {
           name = ReturnRandom(whoList);
-          n = who.indexOf(name);
+          //n = who.indexOf(name);
+          n = who.indexOf('x');
         }
         
         finalString = name + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
