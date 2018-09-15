@@ -63,8 +63,9 @@ client.on("message", message => {
         
         who = who.toString();
         who = 'Ravandel'
+        var mmmm = 'Ravandel'
         name = ReturnRandom(whoList);
-        n = who.indexOf('a');
+        n = mmmm.indexOf('a');
         message.channel.send(who + ' ' + name + ' ' + n)
         
         while(n > -1)
@@ -319,7 +320,7 @@ client.on("message", message => {
         'For sure.', 'Lol no.',
         'Why not?', 'How about no.',
         'Absolutely.', 'Not at all.',
-        'It\'s a possibility.', 'Sorry, it\'s not possible.'
+        'It\'s a possibility.'
         ];
 
         rollValue = Math.floor(Math.random() * 10);
@@ -356,8 +357,6 @@ client.on("message", message => {
 
         rollValue = Math.floor(Math.random() * 4);
 
-        
-        
         if(rollValue == 0)
         {
           rollValue = Math.floor(Math.random() * virtuesArray.length);
@@ -613,7 +612,7 @@ client.on("message", message => {
         'Incredible!',
         'Why you even wanna rate that?',
         'Utter garbage.',
-        'It\'s over 9000!'
+        'Over 9000!'
         ];
 
         var personifiedSpecialArray = [
@@ -626,7 +625,7 @@ client.on("message", message => {
         'Why you even wanna rate yourself?',
         'You suck lol.',
         'You suck.',
-        'You are over 9000!'
+        'Over 9000!'
         ];
 
         if (arguments[1] == 'me' || arguments[1] == null)
