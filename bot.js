@@ -31,15 +31,7 @@ client.on("message", message => {
 
         var whoList = [
         'my',
-        'Pumpkin',
-        'Vardgo',
-        'Ravandel',
-        'Urutaa',
-        'Ruby',
-        'Lemmy',
-        'Shea',
-        'Seda',
-        'Izzy'
+        'Ravandel'
         ];
       
         var firstList = [
