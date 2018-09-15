@@ -157,7 +157,8 @@ client.on("message", message => {
         'War', 'Weed', 'Woods'
         ]
         
-        if(Math.floor(Chance(15)) == true)
+        //if(Math.floor(Chance(15)) == true)
+        if(Math.floor(Chance(15)))
         {
           message.channel.send(ReturnRandom(rareResponsesList))
           return;
@@ -536,7 +537,7 @@ client.on("message", message => {
         who + ' is not lazy, just that the people around ' + who + ' are way too active.',
         
         'I love fat people like ' + who + '!',
-        'Usually ugly people disgust me, but' + who + 'are actually cute.',
+        'Usually ugly people disgust me, but' + who + ' is actually cute.',
          who + ' is beatiful... On the inside.'
         ];
 
@@ -932,7 +933,7 @@ client.on("message", message => {
     
     function Chance(chanceOfSuccess)
     {
-      return (Math.floor(Math.random() * 100) < chanceOfSuccess)
+      return ((Math.floor(Math.random() * 100) < chanceOfSuccess) == true)
     }
 
     function GenerateRandomClass(typeOfCheck)
