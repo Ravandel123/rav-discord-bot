@@ -73,19 +73,20 @@ client.on("message", message => {
         'Lemmy\'s',
         'Shea\'s',
         'Seda\'s',
-        'Izzy\'s'
+        'Izzy\'s',
+        'Tyrrikz\'s'
         ];
       
         var firstList = [
-        'Abominable', 'Amazing',
+        'Abominable', 'Adorable', 'Amazing', 'Art',
         'Best',
         'Cute', 'Cutest',
         'Evil',
-        'Funny', 'Furry',
+        'Feisty', 'Funny', 'Furry',
         'Gargantuan',
         'Interesting',
         'Loyal',
-        'Masochistic',
+        'Masochistic', 'Murderous', 'Music',
         'Primitive', 'Psychopathic',
         'Secret', 'Sadistic', 'Silly', 'Small',
         'Useful', 'Useless',
@@ -97,12 +98,13 @@ client.on("message", message => {
         'Abomination', 'Android', 'Assassin',
         'Bandit', 'Banker', 'Bodyguard',
         'Cyborg',
+        'Device',
         'Experiment',
         'Friend', 'Furry',
         'Idiot',
         'Kidnapper',
         'Monster', 'Mutant',
-        'Plaything', 'Prisoner',
+        'Pawn', 'Plaything', 'Prisoner',
         'Robot',
         'Servant', 'Slave', 'Spy',
         'Test Subject', 'Torturer', 'Toy', 'Troglodyte', 'Troll',
@@ -166,29 +168,30 @@ client.on("message", message => {
         ];
       
         var soloList = [
+        'Animal Abuse', 'the Art',
         'Bookmaster Awre',
         'the Boobs', 'the Booze',
-        'the Coconut', 'the Coconuts',
-        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Dung',
+        'the Coconut', 'the Coconuts', 'Communism', 
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Dung', 'Duplication Device',
         'Evil',
         'Food', 'Fury',
         'Good',
-        'Honor',
+        'Hitler','Honor',
         'Immorality', 'Immortality',
         'Justice',
         'Lemmy',
-        'Madness', 'Me', 'Mercy', 'the Money',
+        'Madness', 'Mao Zedong', 'Me', 'Mercy', 'the Money', 'the Music',
         'the Nut', 'Nuts',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
-        'Seda', 'Seismic Activity', 'Shadows', 'Shea',
+        'Seda', 'Seismic Activity', 'Shadows', 'Shea', 'Stalin', 
         'Urutaa',
         'Vardgo', 'Violence',
         'War', 'the Weed'
         ]
 
         var dualList1 = [
-        'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
+        'Abominable', 'Adorable', 'Aggressive', 'Agile', 'Animate', 'Annointed', 'Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
         'Cannibalistic', 'Celestial',
         'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
@@ -198,10 +201,10 @@ client.on("message", message => {
         'Honorable',
         'Immortal', 'Immoral', 'Insane',
         'Lunar',
-        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless', 'Music',
         'Nutty',
-        'Pesimistic', 'Power', 'Primitive', 'Psychopathic',
-        'Rotten', 'Ruby',
+        'Pesimistic', 'Pleasure', 'Power', 'Primitive', 'Psychopathic',
+        'Rotten', 'Ruby', 'the Rumors',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
         'Vengeful', 'Violent',
         'War', 'Weed', 'White'
@@ -217,7 +220,7 @@ client.on("message", message => {
         'Intellect',
         'Justice',
         'Light',
-        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Money', 'Mutant',
+        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Money', 'Music', 'Mutant',
         'Nut', 'Nuts',
         'Pleasure', 'Pleasures', 'Power', 'Psychopath',
         'Retribution', 'Rot', 'Ruby',
@@ -265,10 +268,11 @@ client.on("message", message => {
         var reason = '';
 
         var soloList = [
+        'Art',
         'Bookmaster Awre',
         'the Boobs', 'the Booze',
-        'the Coconut', 'Coconuts',
-        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Drugs', 'the Dung',
+        'Cloning', 'the Coconut', 'Coconuts',
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Drugs', 'the Dung', 'Duplication Device',
         'Evil',
         'Fury',
         'Good', 'the Grove',
@@ -1098,11 +1102,12 @@ client.on("message", message => {
         var sixthWord = '';
 
         var firstPart1 = [
-        'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
+        'Abominable', 'Adorable', 'Aerial', 'Aeronaut', 'Aggressive', 'Animate', 'Anointed', 'Amateur', 'Apprentice', 'Awesome', 'Awful',
         'Badlands', 'Barbaric', 'Brutal',
-        'Cannibalistic', 'Celestial', 'Cloaked', 'Crazy',
-        'Defiant', 'Degenerate', 'Delusional', 'Drunken',
-        'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious', 'Furry',
+        'Cannibalistic', 'Celestial', 'Chittering', 'Clever', 'Cloaked', 'Crazy',
+        'Defiant', 'Degenerate', 'Delusional', 'Dirty', 'Drunken',
+        'Extremely Slow',
+        'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Feral', 'Forsworn', 'Furious', 'Furry',
         'Greater',
         'High', 'Horned', 'Horrible', 'Huge',
         'Immortal', 'Immortal',
@@ -1111,13 +1116,13 @@ client.on("message", message => {
         'Offensive',
         'Pale', 'Pathethic', 'Primitive', 'Provocative', 'Psychopathic',
         'Rapturous',
-        'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic',
+        'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic', 'Slow',
         'Undying',
         'Wild'
         ];
 
         var firstPart2 = [
-        'Aegis', 'Absolution', 'Animal',
+        'Absolution', 'Aegis', 'Aerial', 'Animal',
         'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
         'Camp', 'Celestial', 'Cloaked', 'Crime',
         'Death', 'Drug', 'Dung',
@@ -1126,9 +1131,9 @@ client.on("message", message => {
         'High', 'Hound',
         'Iron',
         'Lunar',
-        'Money', 'Monster',
+        'Money', 'Monster', 'Music', 
         'Pale', 'Plague', 'Pleasure',
-        'Savage', 'Shield', 'Solar', 'Soul', 'Spirit', 'Spy', 'Steel',
+        'Savage', 'Shield', 'Solar', 'Soul', 'Spirit', 'Spy', 'Steel', 'Storm',
         'War', 'Wild', 'White'
         ];
 
@@ -1142,8 +1147,8 @@ client.on("message", message => {
 
         var secondPart = [
         'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
-        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
-        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chimneysweep', 'Coachman', 'Collector', 'Construct', 'Courtesan', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
+        'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Baron', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
+        'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chevalier', 'Chimneysweep', 'Coachman', 'Collector', 'Construct', 'Courtesan', 'Countess', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
         'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
         'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
         'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Foreman', 'Forger', 'Freeholder', 'Friar',
@@ -1153,7 +1158,7 @@ client.on("message", message => {
         'Jester',
         'Kamikaze', 'Killer', 'King', 'Knight',
         'Leper', 'Lich', 'Lord', 'Lumberjack',
-        'Machine', 'Madman', 'Mage', 'Masochist', 'Master', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
+        'Machine', 'Madman', 'Mage', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
         'Necromancer', 'Ninja',
         'Occultist',
         'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
@@ -1177,32 +1182,32 @@ client.on("message", message => {
         'Immorality', 'Immortality',
         'Justice',
         'Lemmy', 'the Light',
-        'Madness', 'Masks', 'the Meek', 'Mercy', 'the Moon',
+        'Madness', 'Masks', 'the Meek', 'Mercy', 'the Moon', 'the Murder',
         'the Nut',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
-        'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Sun',
+        'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Storm', 'the Sun',
         'Urutaa',
         'Vardgo', 'Violence',
         'War', 'the Weed'
         ]
 
         var lastPart1 = [
-        'Abominable', 'Absolute', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
+        'Abominable', 'Absolute', 'Adorable', 'Aggressive', 'Agile', 'Animate', 'Annointed', 'Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
-        'Cannibalistic', 'Celestial',
-        'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
+        'Cannibalistic', 'Celestial', 'Chittering', 'Clever',
+        'Dark', 'Death', 'Degenerate', 'Destructive', 'Dirty', 'Doom', 'Dung',
         'Evil',
-        'Faceless', 'Forbidden', 'Forest', 'Forgotten', 'Furious', 'Furry', 'Fury',
+        'Faceless', 'Flame', 'Forbidden', 'Forest', 'Forgotten', 'Furious', 'Furry', 'Fury',
         'Ghost', 'Glowing', 'Good',
         'Honorable',
-        'Immortal', 'Immoral', 'Insane',
+        'Icy', 'Immortal', 'Immoral', 'Insane',
         'Just',
         'Lunar',
-        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless', 'Murderous',
         'Nutty',
         'Power', 'Primitive', 'Psychopathic',
-        'Rotten', 'Ruby',
+        'Rocket', 'Rotten', 'Ruby',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
         'Vengeful', 'Violent',
         'War', 'Weed', 'White'
@@ -1219,11 +1224,11 @@ client.on("message", message => {
         'Intellect',
         'Justice',
         'Light',
-        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Mutant',
+        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Murder', 'Mutant',
         'Nut', 'Nuts',
         'Pleasure', 'Pleasures', 'Power', 'Psychopath',
-        'Retribution', 'Rot', 'Ruby',
-        'Sadism', 'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
+        'Retribution', 'Rocket', 'Rot', 'Ruby',
+        'Sadism', 'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel', 'Storm',
         'Troupe',
         'Vengeance', 'Violence',
         'War', 'Weed', 'Woods'
