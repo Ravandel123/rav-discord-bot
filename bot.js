@@ -22,7 +22,7 @@ client.on("message", message => {
 
   switch (command) 
   {
-            //----------------------------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
       //----------whois-------------------------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'whois':
@@ -31,15 +31,15 @@ client.on("message", message => {
 
         var whoList = [
         'my',
-        'Doctor Pumpkins\'',
-        'Vardgo\'s',
-        'Ravandel\'s',
-        'Urutaa\'s',
-        'Ruby\'s',
-        'Lemmy\'s',
-        'Shea\'s',
-        'Seda\'s',
-        'Izzy\'s'
+        'Pumpkin',
+        'Vardgo',
+        'Ravandel',
+        'Urutaa',
+        'Ruby',
+        'Lemmy',
+        'Shea',
+        'Seda',
+        'Izzy'
         ];
       
         var firstList = [
@@ -61,12 +61,24 @@ client.on("message", message => {
         'Bodyguard',
         'Experiment',
         'Friend',
+        'Kidnapper',
         'Plaything', 'Prisoner',
         'Servant', 'Slave',
         'Test Subject', 'Toy'
         ]
 
-        finalString = ReturnRandom(whoList) + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
+        var name = ReturnRandom(whoList);
+        var xxx = who.toString();
+        var yyy = xxx.includes(name);
+        
+        while(yyy == true)
+        {
+          name = ReturnRandom(whoList);
+          yyy = xxx.includes(name);
+        }
+        
+        
+        finalString = name + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
         
         var mainList = [
         who + ' is ' + finalString + '.',
@@ -75,11 +87,7 @@ client.on("message", message => {
         who + ' looks like ' + finalString + '.'
         ];
         
-        //value.toString()
-        var xxx = mainList[0].includes('is');
-        message.channel.send(xxx)
-        
-        //message.channel.send(ReturnRandom(mainList))
+        message.channel.send(ReturnRandom(mainList))
         break; 
        
       //----------------------------------------------------------------------------------------------------------------------------
