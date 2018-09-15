@@ -77,11 +77,7 @@ client.on("message", message => {
         who + ' looks like ' + finalString + '.'
         ];
         
-        //value.toString()
-        var xxx = mainList[0].includes('is');
-        message.channel.send(xxx)
-        
-        //message.channel.send(ReturnRandom(mainList))
+        message.channel.send(ReturnRandom(mainList))
         break; 
        
       //----------------------------------------------------------------------------------------------------------------------------
