@@ -98,7 +98,7 @@ client.on("message", message => {
         'Plaything', 'Prisoner',
         'Robot',
         'Servant', 'Slave', 'Spy',
-        'Test Subject', 'Torturer', 'Toy'' Troglodyte', 'Troll'
+        'Test Subject', 'Torturer', 'Toy', 'Troglodyte', 'Troll'
         ]
         
         if(Chance(35))
