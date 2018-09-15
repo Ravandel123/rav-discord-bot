@@ -62,9 +62,10 @@ client.on("message", message => {
         ]
         
         who = who.toString();
-        who = 'Ravandel'
-        var mmmm = 'Ravandel'
+        who = 'Ravandel';
+        var mmmm = 'Ravandel';
         name = ReturnRandom(whoList);
+        message.channel.send(who + ' ' + name + ' ' + n)
         n = mmmm.indexOf('a');
         message.channel.send(who + ' ' + name + ' ' + n)
         
