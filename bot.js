@@ -20,6 +20,21 @@ client.on("message", message => {
   var responseList;
   var i;
 
+  var serialsList = [
+  'Alladin',
+  'Baywatch', 'Bloodbath in Psycho Town',
+  'Cannibal! The Musical', 'Chopper Chicks in Zombietown',
+  'Dumb & Dumber',
+  'Ferocious Female Freedom Fighters', 'Frozen',
+  'Matrix',
+  'Nymphoid Barbarian in Dinosaur Hell',
+  'Pterodactyl Woman from Beverly Hills',
+  'Rambo',
+  'Scary Movie', 'Shrek', 'Splatter University', 'Star Wars',
+  'The Toxic Avenger', 'The Toxic Avenger, Part II', 'The Toxic Avenger Part III: The Last Temptation of Toxie',
+  'Zombie Island Massacre'
+  ]
+        
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
@@ -29,19 +44,6 @@ client.on("message", message => {
         var finalString = '';
         var mainList;
         who = RecognizeWho(arguments[1], message, command);
-        
-        var serialsList = [
-        'Game of Thrones',
-        'Baywatch',
-        'Matrix',
-        'Shrek',
-        'Frozen',
-        'Alladin',
-        'Star Wars',
-        'Dumb & Dumber',
-        'Scary Movie',
-        'Rambo'
-        ]
         
         var specialList = [
         'nobody',
@@ -86,14 +88,17 @@ client.on("message", message => {
         ]
 
         var secondList = [
-        'Abomination', 'Assassin',
+        'Abomination', 'Android', 'Assassin',
         'Bandit', 'Bodyguard',
+        'Cyborg',
         'Experiment',
         'Friend',
+        'Idiot',
         'Kidnapper',
         'Plaything', 'Prisoner',
+        'Robot',
         'Servant', 'Slave', 'Spy',
-        'Test Subject', 'Torturer', 'Toy'
+        'Test Subject', 'Torturer', 'Toy'' Troglodyte', 'Troll'
         ]
         
         if(Chance(35))
@@ -894,12 +899,13 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'help':
-        responseList = ['I think you should visit a doctor.',
+        responseList = [
+        'I think you should visit a doctor.',
         'Ravandel is the specialist who you want to talk with about your problems.',
         'Electroshock therapy will work wonders for you.',
         'I would advise lobotomy.',
         'Chill and eat something good.',
-        'Go outside.',
+        'Go outside for ' + Math.floor(Math.random() * 100) + ' hours.',
         'I would advise ' + Math.floor(Math.random() * 100) + ' hours of sleep.',
         'Get commission from Pumpkins. You will be happy and she will be happpy.',
         'I think you need plastic surgery.',
@@ -908,7 +914,28 @@ client.on("message", message => {
         'Stop wasting your time on h!help command and do something with your miserable life.',
         'Read a book.',
         'Draw something.',
-        'Well praying to God might be a good idea in your situation.'
+        'Well praying to God might be a good idea in your situation.',
+        'Watch ' + ReturnRandom(serialsList) + '.',
+        'Draw me.',
+        'Educate yourself.',
+        'Take out the trash, because your home looks like garbage dump lol.',
+        'Go into woods and try to find Yeti.',
+        'Tell your bullies they\’re hurting you.',
+        'There are bigger problems than your depression.',
+        'Ignore the bullies.',
+        'Don’t trust anyone.',
+        'Get new friends.',
+        'Buy a house.',
+        'Just let it go.'
+        'Put Coconut Oil in the Pan when Cooking Kale.',
+        'If you feel alone, watch a horror movie before going to bed. You won’t feel alone anymore.',
+        'Fed up with boiling water each evening? Heat 340 fl oz (10 liters), and freeze for future use.',
+        'No flashlight on your phone? Take a photo of the sun, and use it in the dark.',
+        'No ice for drinks? Use frozen vegetables.',
+        'It\’s very expensive to eat 3 times a day. Wake up later, miss breakfast, and save money.',
+        'Having a bad day? No worries! Wear sunglasses. Now you’re having a bad evening.',
+        'If you can\’t afford virtual reality headsets, you can close your eyes and imagine everything you want.',
+        'A glove filled with warm water creates the illusion that you\’re not alone.'
         ];
         message.channel.send(ReturnRandom(responseList))
         break;
@@ -918,7 +945,7 @@ client.on("message", message => {
       //------------------------------------------------------------help-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'version':
-        message.channel.send('Version: 1.03')
+        message.channel.send('Version: 1.05')
         break;
 
       //---------------------------------------------------------------------------------------------------------------------------
@@ -941,7 +968,7 @@ client.on("message", message => {
         '**when n** - bot will tell you when [n] will occur\n'+
         '**how** - bot will answer your question about -how-\n'+
         '**why** - bot will answer your question about -why-\n'+
-        '**version** - bot will send info about his current version\n'+
+        '**whois** - bot will send info about person you ask about\n'+
         'There are other hidden commands, currently there is 3 more.';
 
         message.channel.send(responseList)
