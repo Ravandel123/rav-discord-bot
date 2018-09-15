@@ -31,7 +31,15 @@ client.on("message", message => {
 
         var whoList = [
         'my',
-        'Ravandel'
+        'Doctor Pumpkins\'',
+        'Vardgo\'s',
+        'Ravandel\'s',
+        'Urutaa\'s',
+        'Ruby\'s',
+        'Lemmy\'s',
+        'Shea\'s',
+        'Seda\'s',
+        'Izzy\'s'
         ];
       
         var firstList = [
@@ -41,6 +49,7 @@ client.on("message", message => {
         'Evil',
         'Gargantuan',
         'Interesting',
+        'Loyal',
         'Masochistic',
         'Primitive', 'Psychopathic',
         'Secret', 'Sadistic', 'Silly', 'Small',
@@ -59,20 +68,7 @@ client.on("message", message => {
         'Test Subject', 'Toy'
         ]
 
-        var name = ReturnRandom(whoList);
-        var xxx = who.toString();
-        var yyy = xxx.includes('a');
-        message.channel.send(xxx + ' ' + name + ' ' + yyy)
-        
-        while(yyy == true)
-        {
-          name = ReturnRandom(whoList);
-          yyy = xxx.includes('a');
-          message.channel.send(xxx + ' ' + name + ' ' + yyy)
-        }
-        
-        
-        finalString = name + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
+        finalString = ReturnRandom(whoList) + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
         
         var mainList = [
         who + ' is ' + finalString + '.',
@@ -81,7 +77,11 @@ client.on("message", message => {
         who + ' looks like ' + finalString + '.'
         ];
         
-        message.channel.send(ReturnRandom(mainList))
+        //value.toString()
+        var xxx = mainList[0].includes('is');
+        message.channel.send(xxx)
+        
+        //message.channel.send(ReturnRandom(mainList))
         break; 
        
       //----------------------------------------------------------------------------------------------------------------------------
