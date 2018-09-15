@@ -37,6 +37,7 @@ client.on("message", message => {
   
   var placesList = [
   'Go Go Club',
+  'Middle Earth',
   'Rainfurrest'
   ]
         
@@ -167,20 +168,20 @@ client.on("message", message => {
         var soloList = [
         'Bookmaster Awre',
         'the Boobs', 'the Booze',
-        'the Coconut', 'Coconuts',
+        'the Coconut', 'the Coconuts',
         'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Dung',
         'Evil',
-        'Fury',
-        'Good', 'the Grove',
+        'Food', 'Fury',
+        'Good',
         'Honor',
         'Immorality', 'Immortality',
         'Justice',
-        'Lemmy', 'the Light',
-        'Madness', 'Me', 'Mercy', 'the Money', 'the Moon',
+        'Lemmy',
+        'Madness', 'Me', 'Mercy', 'the Money',
         'the Nut', 'Nuts',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
-        'Seda', 'Seismic Activity', 'Shadows', 'Shea', 'Steel', 'the Sun',
+        'Seda', 'Seismic Activity', 'Shadows', 'Shea',
         'Urutaa',
         'Vardgo', 'Violence',
         'War', 'the Weed'
@@ -189,18 +190,17 @@ client.on("message", message => {
         var dualList1 = [
         'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
-        'Cannibalistic',
+        'Cannibalistic', 'Celestial',
         'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
         'Evil',
         'Faceless', 'Forest', 'Furious', 'Furry', 'Fury',
-        'Ghost', 'Glowing', 'Good',
+        'Glowing', 'Good',
         'Honorable',
         'Immortal', 'Immoral', 'Insane',
-        'Just',
         'Lunar',
-        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless', 'Money',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
         'Nutty',
-        'Power', 'Primitive', 'Psychopathic',
+        'Pesimistic', 'Power', 'Primitive', 'Psychopathic',
         'Rotten', 'Ruby',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
         'Vengeful', 'Violent',
@@ -208,23 +208,22 @@ client.on("message", message => {
         ]
 
         var dualList2 = [
-        'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
-        'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
+        'Boobs', 'Booze', 'Brothel',
+        'Cannibal', 'Cannibals','Coconut', 'Coconuts', 'Cult',
         'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
-        'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
-        'Ghost', 'Good', 'Grove', 'Guild',
+        'Fear', 'Fools', 'Furries', 'Furry', 'Fury',
+        'Ghost', 'Good',
         'Hand', 'Honor',
         'Intellect',
         'Justice',
         'Light',
-        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Mutant',
+        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Money', 'Mutant',
         'Nut', 'Nuts',
         'Pleasure', 'Pleasures', 'Power', 'Psychopath',
         'Retribution', 'Rot', 'Ruby',
-        'Sadism', 'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
-        'Troupe',
+        'Sadism', 'Shadow', 'Shadows',
         'Vengeance', 'Violence',
-        'War', 'Weed', 'Woods'
+        'War', 'Weed'
         ]
         
         if(Math.floor(Chance(15)))
@@ -253,7 +252,7 @@ client.on("message", message => {
         responseList = [
         'Because of ' + reason + '.',
         'Its caused by ' + reason + '.',
-        'Reason of that = ' + reason + '.'
+        'Reason of that is clear -  ' + reason + '.'
         ];
         
         message.channel.send(ReturnRandom(responseList))
@@ -264,12 +263,12 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'how':
         var reason = '';
-      
+
         var soloList = [
         'Bookmaster Awre',
         'the Boobs', 'the Booze',
         'the Coconut', 'Coconuts',
-        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Drugs', 'the Dung',
         'Evil',
         'Fury',
         'Good', 'the Grove',
@@ -277,7 +276,7 @@ client.on("message", message => {
         'Immorality', 'Immortality',
         'Justice',
         'Lemmy', 'the Light',
-        'Madness', 'Me', 'Mercy', 'the Moon',
+        'Madness', 'Me', 'Mercy', 'Money', 'the Moon',
         'the Nut', 'Nuts',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
@@ -288,13 +287,13 @@ client.on("message", message => {
         ]
 
         var dualList1 = [
-        'Abominable', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
+        'Abominable', 'Aggressive','Annointed', 'Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
-        'Cannibalistic',
+        'Cannibalistic', 'Celestial', 
         'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
         'Evil',
         'Faceless', 'Forest', 'Furious', 'Furry', 'Fury',
-        'Ghost', 'Glowing', 'Good',
+        'Glowing', 'Good',
         'Honorable',
         'Immortal', 'Immoral', 'Insane',
         'Just',
@@ -309,23 +308,22 @@ client.on("message", message => {
         ]
 
         var dualList2 = [
-        'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
+        'Beef', 'Boobs', 'Booze', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
-        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
+        'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Drug', 'Dung',
         'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
-        'Ghost', 'Good', 'Grove', 'Guild',
+        'Ghost',
         'Hand', 'Honor',
         'Intellect',
         'Justice',
         'Light',
-        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Mutant',
+        'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Money', 'Moon', 'Mutant',
         'Nut', 'Nuts',
         'Pleasure', 'Pleasures', 'Power', 'Psychopath',
-        'Retribution', 'Rot', 'Ruby',
-        'Sadism', 'Shadow', 'Shadows', 'Shroud', 'Sun', 'Steel',
-        'Troupe',
+        'Retribution', 'Rot',
+        'Sadism', 'Shadow', 'Shadows', 'Sun', 'Steel',
         'Vengeance', 'Violence',
-        'War', 'Weed', 'Woods'
+        'War', 'Weed'
         ]
         
         if(Math.floor(Math.random() * 2) == 0)
@@ -382,7 +380,12 @@ client.on("message", message => {
         'For sure.', 'Lol no.',
         'Why not?', 'How about no.',
         'Absolutely.', 'Not at all.',
-        'It\'s a possibility.'
+        'It\'s a possibility.', 'Nah.',
+        'Totally.', 'No way.',
+        'Affirmative.', 'Nope.',
+        'Yup.', 'Not in a million years.',
+        'Sure', 'Under no circumstances.',
+        'Likely', 'Unlikely'
         ];
 
         rollValue = Math.floor(Math.random() * 10);
@@ -1097,7 +1100,7 @@ client.on("message", message => {
         var firstPart1 = [
         'Abominable', 'Aggressive', 'Anointed', 'Apprentice', 'Awesome', 'Awful',
         'Badlands', 'Barbaric', 'Brutal',
-        'Cannibalistic', 'Cloaked', 'Crazy',
+        'Cannibalistic', 'Celestial', 'Cloaked', 'Crazy',
         'Defiant', 'Degenerate', 'Delusional', 'Drunken',
         'Faceless', 'Faded', 'Faithful', 'Fated', 'Feral', 'Forsworn', 'Furious', 'Furry',
         'Greater',
@@ -1116,7 +1119,7 @@ client.on("message", message => {
         var firstPart2 = [
         'Aegis', 'Absolution', 'Animal',
         'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
-        'Camp', 'Cloaked', 'Crime',
+        'Camp', 'Celestial', 'Cloaked', 'Crime',
         'Death', 'Drug', 'Dung',
         'Feral', 'Flesh', 'Forest', 'Furry',
         'Ghost', 'Grant', 'Grave',
@@ -1187,7 +1190,7 @@ client.on("message", message => {
         var lastPart1 = [
         'Abominable', 'Absolute', 'Aggressive', 'Agile', 'Annointed', 'Awesome', 'Awful',
         'Black','Blood', 'Bloody','Brutal',
-        'Cannibalistic',
+        'Cannibalistic', 'Celestial',
         'Dark', 'Death', 'Degenerate', 'Destructive', 'Doom', 'Dung',
         'Evil',
         'Faceless', 'Forbidden', 'Forest', 'Forgotten', 'Furious', 'Furry', 'Fury',
