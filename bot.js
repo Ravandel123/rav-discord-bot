@@ -62,11 +62,13 @@ client.on("message", message => {
         var name = ReturnRandom(whoList);
         var xxx = who.toString();
         var yyy = xxx.includes(name);
+        message.channel.send(xxx + ' ' + name + ' ' + yyy)
         
         while(yyy == true)
         {
           name = ReturnRandom(whoList);
           yyy = xxx.includes(name);
+          message.channel.send(xxx + ' ' + name + ' ' + yyy)
         }
         
         
