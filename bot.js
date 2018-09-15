@@ -655,8 +655,8 @@ client.on("message", message => {
         
         'I love fat people like ' + who + '!',
         'Usually ugly people disgust me, but' + who + ' is actually cute.',
-        who + ' is beatiful... On the inside.'
-        'I don\'t care what everyone else says. I don\'t think ' + who + ' that bad.'
+        who + ' is beatiful... On the inside.',
+        'I don\'t care what everyone else says. I don\'t think ' + who + ' is that bad.'
         ];
 
         if(arguments[1] == 'me' || arguments[1] == null)
