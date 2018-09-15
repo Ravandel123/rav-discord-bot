@@ -28,13 +28,18 @@ client.on("message", message => {
       case 'whois':
         var finalString = '';
         who = RecognizeWho(arguments[1], message, command);
-        var name = '';
-        var whoHelp;
-        var n;
 
         var whoList = [
         'my',
-        'Ravandel'
+        'Doctor Pumpkins\'',
+        'Vardgo\'s',
+        'Ravandel\'s',
+        'Urutaa\'s',
+        'Ruby\'s',
+        'Lemmy\'s',
+        'Shea\'s',
+        'Seda\'s',
+        'Izzy\'s'
         ];
       
         var firstList = [
@@ -60,23 +65,8 @@ client.on("message", message => {
         'Servant', 'Slave',
         'Test Subject', 'Toy'
         ]
-        
-        who = who.toString();
-        who = 'Ravandel';
-        var mmmm = 'Ravandel';
-        name = ReturnRandom(whoList);
-        message.channel.send(who + ' ' + name + ' ' + n)
-        n = mmmm.indexOf('a');
-        message.channel.send(who + ' ' + name + ' ' + n)
-        
-        while(n > -1)
-        {
-          name = ReturnRandom(whoList);
-          n = who.search('a');
-        }
-        
-        
-        finalString = name + '\'s' + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
+
+        finalString = ReturnRandom(whoList) + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
         
         var mainList = [
         who + ' is ' + finalString + '.',
@@ -106,7 +96,7 @@ client.on("message", message => {
         'Bookmaster Awre',
         'the Boobs', 'the Booze',
         'the Coconut', 'Coconuts',
-        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Dung',
         'Evil',
         'Fury',
         'Good', 'the Grove',
