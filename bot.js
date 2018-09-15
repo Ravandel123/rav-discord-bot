@@ -926,7 +926,7 @@ client.on("message", message => {
         'Don’t trust anyone.',
         'Get new friends.',
         'Buy a house.',
-        'Just let it go.'
+        'Just let it go.',
         'Put Coconut Oil in the Pan when Cooking Kale.',
         'If you feel alone, watch a horror movie before going to bed. You won’t feel alone anymore.',
         'Fed up with boiling water each evening? Heat 340 fl oz (10 liters), and freeze for future use.',
