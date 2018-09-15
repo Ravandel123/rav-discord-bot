@@ -429,7 +429,55 @@ client.on("message", message => {
       //------------------------------------------------------------you-------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'you':
-        responseList = ['No u.', 'No you.', 'You too.', 'Stop it please!', 'Enough of that!'];
+        responseList = [
+        'No u.',
+        'No you.',
+        'You too.',
+        'Stop it please!',
+        'Enough of that!',
+        'No point in stating the obvious.',
+        'Who told you to tell me that?',
+        'Are you a spy? Who sent you?',
+        'You\’re not the first one to tell me that today.',
+        'After hearing what you just said, I realized that honest people still do exists!',
+        'Oh, really? I think I\’m just ahead of you by one bath.',
+        'True, I couldn\’t agree more.',
+        'Coming from you, that means a lot!',
+        'Coming from you, that means a lot!',
+        'Careful, you might get burned.',
+        'You\’re welcome.',
+        'I\’m warning you, I\’m too hot for you to handle.',
+        'You mean great in bed? Thanks!',
+        'Why?',
+        'I know. Wish I could say the same about you.',
+        'Yeah...I wanted to ask you out, but my friend said I\'m now out of your league.',
+        'I\’m glad I made your day brighter.',
+        'Well, hanging around the right people really changes you.',
+        'Yeah, I\’m getting tired of being mistaken for Ravandel.',
+        'Stop it before I fall in love with you.',
+        'I love your honesty and sincerity.',
+        'It must be the meds kicking in.',
+        'Peace be with you!',
+        'Shut up baby.',
+        'Excuse me?!',
+        'It\’s extremely rare for me to hear that.',
+        'Do you really think I care about your opinion lol?',
+        'It\’s tough being such a sex symbol.',
+        'Oh sorry, what? I was too busy thinking about how gorgeous I am.',
+        'Give me a pen and I\’ll give you my autograph.',
+        'Sorry, you must have mistaken me for someone else.',
+        'Thanks, but I prefer to be noticed for my intellectual capacity.',
+        'I know.',
+        'Yeah, the genie finally granted my wish.',
+        'Look who\’s talking XD.',
+        'Is that the best you\’ve got?',
+        'You must be looking at a mirror.',
+        'Shucks, my hair!',
+        'I love you too!',
+        'Thanks, I woke up like this.',
+        'Thank you, so please vote for me in the next elections.',
+        'Thanks, fan!'
+        ];
         message.channel.send(ReturnRandom(responseList))
         break;
 
@@ -462,7 +510,10 @@ client.on("message", message => {
         'Lol, no one cares anyway.',
         'Stop being crybaby.',
         'I think you should write a book about that.',
-        'Stop crying for attention like a small girl.'
+        'Stop crying for attention like a small girl.',
+        'Please cancel my subscription to your issues.',
+        'I totally understand now why you feel that way. Thank you for letting me know.',
+        'I don\'t remember asking for your opinion.'
         ];
 
         if(arguments[1] == null)
@@ -516,7 +567,10 @@ client.on("message", message => {
         'How did you get here? Did someone leave your cage open?',
         'Don\'t you have a terribly empty feeling - in your skull?',
         'As an outsider, what do you think of the human race?',
-        'Are you always this stupid or is today a special occasion?'
+        'Are you always this stupid or is today a special occasion?',
+        'I believed in evolution until I met you.',
+        'Mirrors don\’t lie, and lucky for you, they also don\’t laugh.',
+        'No wonder everyone talks about you behind your back.'
         ];
         message.channel.send(ReturnRandom(responseList))
         break; 
@@ -558,10 +612,12 @@ client.on("message", message => {
         'I\'m really good at people-watching. I\'m so glad I can share that hobby on you.',
         'You make everything better. If people were more like you the world would be perfect.',
         'You\'re not lazy, just that the people around you are way too active.',
+        'I love your honesty and sincerity.',
         
         'I love fat people like you!',
         'Usually ugly people disgust me, but you are actually cute.',
-        'You are beatiful... On the inside.'
+        'You are beatiful... On the inside.',
+        'I don\'t care what everyone else says. I don\'t think you\'re that bad.'
         ];
 
         var array2 = [
@@ -595,10 +651,12 @@ client.on("message", message => {
         'I\'m really good at people-watching. I\'m so glad I can share that hobby on ' + who + '.',
         who + ' makes everything better. If people were more like ' + who + ' the world would be perfect.',
         who + ' is not lazy, just that the people around ' + who + ' are way too active.',
+        'I love ' + who + ' honesty and sincerity.',
         
         'I love fat people like ' + who + '!',
         'Usually ugly people disgust me, but' + who + ' is actually cute.',
-         who + ' is beatiful... On the inside.'
+        who + ' is beatiful... On the inside.'
+        'I don\'t care what everyone else says. I don\'t think ' + who + ' that bad.'
         ];
 
         if(arguments[1] == 'me' || arguments[1] == null)
