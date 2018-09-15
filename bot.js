@@ -34,6 +34,11 @@ client.on("message", message => {
   'The Toxic Avenger', 'The Toxic Avenger, Part II', 'The Toxic Avenger Part III: The Last Temptation of Toxie',
   'Zombie Island Massacre'
   ]
+  
+  var placesList = [
+  'Go Go Club',
+  'Rainfurrest'
+  ]
         
   switch (command) 
   {
@@ -75,7 +80,7 @@ client.on("message", message => {
         'Best',
         'Cute', 'Cutest',
         'Evil',
-        'Funny',
+        'Funny', 'Furry',
         'Gargantuan',
         'Interesting',
         'Loyal',
@@ -89,16 +94,18 @@ client.on("message", message => {
 
         var secondList = [
         'Abomination', 'Android', 'Assassin',
-        'Bandit', 'Bodyguard',
+        'Bandit', 'Banker', 'Bodyguard',
         'Cyborg',
         'Experiment',
-        'Friend',
+        'Friend', 'Furry',
         'Idiot',
         'Kidnapper',
+        'Monster', 'Mutant',
         'Plaything', 'Prisoner',
         'Robot',
         'Servant', 'Slave', 'Spy',
-        'Test Subject', 'Torturer', 'Toy', 'Troglodyte', 'Troll'
+        'Test Subject', 'Torturer', 'Toy', 'Troglodyte', 'Troll',
+        'Zombie'
         ]
         
         if(Chance(35))
@@ -109,7 +116,8 @@ client.on("message", message => {
           who + ' looks like my ' + ReturnRandom(firstList) + ' relative.',
           who + ' was probably with me in Baywatch.',
           'I rescued ' + who + ' in Baywatch lol.',
-          who + ' was that ' + ReturnRandom(firstList) + ' in the ' + ReturnRandom(serialsList) + '.'
+          who + ' was that ' + ReturnRandom(secondList) + ' in the ' + ReturnRandom(serialsList) + '.',
+          'I have definitely seen ' + who + ' in the ' + ReturnRandom(placesList) + '.'
           ];
         }
         else 
@@ -168,7 +176,7 @@ client.on("message", message => {
         'Immorality', 'Immortality',
         'Justice',
         'Lemmy', 'the Light',
-        'Madness', 'Me', 'Mercy', 'the Moon',
+        'Madness', 'Me', 'Mercy', 'the Money', 'the Moon',
         'the Nut', 'Nuts',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
@@ -190,7 +198,7 @@ client.on("message", message => {
         'Immortal', 'Immoral', 'Insane',
         'Just',
         'Lunar',
-        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
+        'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless', 'Money',
         'Nutty',
         'Power', 'Primitive', 'Psychopathic',
         'Rotten', 'Ruby',
@@ -202,7 +210,7 @@ client.on("message", message => {
         var dualList2 = [
         'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
-        'Darkness', 'Delight', 'Delusional', 'Destruction', 'Doom', 'Dung',
+        'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
         'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
         'Ghost', 'Good', 'Grove', 'Guild',
         'Hand', 'Honor',
