@@ -27,8 +27,34 @@ client.on("message", message => {
       //----------------------------------------------------------------------------------------------------------------------------
       case 'whois':
         var finalString = '';
+        var mainList;
         who = RecognizeWho(arguments[1], message, command);
-
+        
+        var serialsList = [
+        'Game of Thrones',
+        'Baywatch',
+        'Matrix',
+        'Shrek',
+        'Frozen',
+        'Alladin',
+        'Star Wars',
+        'Dumb & Dumber',
+        'Scary Movie',
+        'Rambo'
+        ]
+        
+        var specialList = [
+        'nobody',
+        'nobody special',
+        'a random person',
+        'VIP',
+        'someone from TV show',
+        'someone from Anime',
+        'someone funny',
+        'neo-nazi',
+        'communist'
+        ];
+        
         var whoList = [
         'my',
         'Doctor Pumpkins\'',
@@ -47,6 +73,7 @@ client.on("message", message => {
         'Best',
         'Cute', 'Cutest',
         'Evil',
+        'Funny',
         'Gargantuan',
         'Interesting',
         'Loyal',
@@ -54,28 +81,58 @@ client.on("message", message => {
         'Primitive', 'Psychopathic',
         'Secret', 'Sadistic', 'Silly', 'Small',
         'Useful', 'Useless',
-        'Worst'
+        'Most Valuable', 'Vauable',
+        'Well Trusted', 'Worst'
         ]
 
         var secondList = [
-        'Abomination',
-        'Bodyguard',
+        'Abomination', 'Assassin',
+        'Bandit', 'Bodyguard',
         'Experiment',
         'Friend',
         'Kidnapper',
         'Plaything', 'Prisoner',
-        'Servant', 'Slave',
-        'Test Subject', 'Toy'
+        'Servant', 'Slave', 'Spy',
+        'Test Subject', 'Torturer', 'Toy'
         ]
-
-        finalString = ReturnRandom(whoList) + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList)
         
-        var mainList = [
-        who + ' is ' + finalString + '.',
-        who + ' is just ' + finalString + '.',
-        who + ' is definitely ' + finalString + '.',
-        who + ' looks like ' + finalString + '.'
-        ];
+        if(Chance(35))
+        {
+          var 
+          mainList = [
+          'I think I saw ' + who + ' in the ' + ReturnRandom(serialsList) + '.',
+          who + ' looks like my ' + ReturnRandom(firstList) + ' relative.',
+          who + ' was probably with me in Baywatch.',
+          'I rescued ' + who + ' in Baywatch lol.',
+          who + ' was that ' + ReturnRandom(firstList) + ' in the ' + ReturnRandom(serialsList) + '.'
+          ];
+        }
+        else 
+        {
+          if(Chance(30))
+          {
+            finalString = ReturnRandom(specialList);
+          }
+          else
+          {
+            if(Chance(50))
+            {
+              finalString = ReturnRandom(whoList) + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList);
+            }
+            else
+            {
+              finalString = ReturnRandom(whoList) + ' ' + ReturnRandom(secondList);
+            }
+          }
+
+          mainList = [
+          who + ' is ' + finalString + '.',
+          who + ' is probably ' + finalString + '.',
+          who + ' is just ' + finalString + '.',
+          who + ' is definitely ' + finalString + '.',
+          who + ' looks like ' + finalString + '.'
+          ];
+        }       
         
         message.channel.send(ReturnRandom(mainList))
         break; 
@@ -157,13 +214,11 @@ client.on("message", message => {
         'War', 'Weed', 'Woods'
         ]
         
-        //if(Math.floor(Chance(15)) == true)
         if(Math.floor(Chance(15)))
         {
           message.channel.send(ReturnRandom(rareResponsesList))
           return;
         }
-        
         
         if(Math.floor(Math.random() * 2) == 0)
         {
