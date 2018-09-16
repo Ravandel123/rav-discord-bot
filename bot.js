@@ -37,7 +37,7 @@ client.on("message", message => {
   
   var placesList = [
   'Anthro New England', 'Arizona Fur Con', 'Anthrocon',
-  'Biggest Little Fur Con'.
+  'Biggest Little Fur Con',
   'Califur', 'ConFurence', 'Confurgence', 'Conifur Northwest',
   'Eurofurence',
   'Furry Fiesta', 'Furry Weekend Atlanta', 'Fur the \'More\'',
