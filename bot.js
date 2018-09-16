@@ -50,6 +50,23 @@ client.on("message", message => {
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
+      //----------ddcheck-----------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'ddcheck':
+        who = RecognizeWho(arguments[1], message, command);
+
+        if(Chance(67))
+        {
+          message.channel.send(who + ' survived!')
+        }
+        else
+        {
+          message.channel.send('Deathblow, sorry.')
+        }
+
+        break;
+        
+      //----------------------------------------------------------------------------------------------------------------------------
       //----------whois-------------------------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'whois':
@@ -391,7 +408,7 @@ client.on("message", message => {
       case 'has':
       case 'had':
         responseList = [
-        'Lol why you asking me about that.', 'This question is stupid lol.', 'I think the answer is obvious.', 'Do I really need to answer this?',
+        'Lol why you asking me about that.', 'This question is stupid lol.', 'I think the answer is obvious.', 'Do I really need to answer this?', 'No u.',
         'Yes.', 'No.',
         'Definitely.', 'Definitely no.',
         'Probably.', 'Probably not.',
@@ -406,17 +423,7 @@ client.on("message", message => {
         'Likely', 'Unlikely'
         ];
 
-        rollValue = Math.floor(Math.random() * 10);
-
-        if(rollValue == 0)
-        {
-          message.channel.send('No u.')
-        }
-        else
-        {
-          message.channel.send(ReturnRandom(responseList))
-        }
-
+        message.channel.send(ReturnRandom(responseList))
         break;
 
       //----------------------------------------------------------------------------------------------------------------------------
