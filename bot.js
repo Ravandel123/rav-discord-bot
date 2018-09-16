@@ -36,9 +36,15 @@ client.on("message", message => {
   ]
   
   var placesList = [
+  'Anthro New England', 'Arizona Fur Con', 'Anthrocon',
+  'Biggest Little Fur Con'.
+  'Califur', 'ConFurence', 'Confurgence', 'Conifur Northwest',
+  'Eurofurence',
+  'Furry Fiesta', 'Furry Weekend Atlanta', 'Fur the \'More\'',
   'Go Go Club',
-  'Middle Earth',
-  'Rainfurrest'
+  'Mephit Furmeet', 'Middle Earth', 'Midwest FurFest',
+  'Rainfurrest', 'Rocky Mountain Fur Con',
+  'VancouFur'
   ]
         
   switch (command) 
@@ -89,7 +95,7 @@ client.on("message", message => {
         'Masochistic', 'Murderous', 'Music',
         'Primitive', 'Psychopathic',
         'Secret', 'Sadistic', 'Silly', 'Small',
-        'Useful', 'Useless',
+        'Ugly', 'Useful', 'Useless',
         'Most Valuable', 'Vauable',
         'Well Trusted', 'Worst'
         ]
@@ -101,6 +107,7 @@ client.on("message", message => {
         'Device',
         'Experiment',
         'Friend', 'Furry',
+        'Garbage',
         'Idiot',
         'Kidnapper',
         'Monster', 'Mutant',
@@ -168,26 +175,27 @@ client.on("message", message => {
         ];
       
         var soloList = [
-        'Animal Abuse', 'the Art',
+        'Abduction', 'Animal Abuse', 'the Art',
         'Bookmaster Awre',
         'the Boobs', 'the Booze',
         'the Coconut', 'the Coconuts', 'Communism', 
         'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Dung', 'Duplication Device',
         'Evil',
-        'Food', 'Fury',
-        'Good',
-        'Hitler','Honor',
+        'Food', 'Fun', 'Fury',
+        'the Gambling', 'the Garbage', 'Good',
+        'Hitler', 'Honor',
         'Immorality', 'Immortality',
-        'Justice',
+        'Job', 'Justice',
+        'Kidnapping',
         'Lemmy',
         'Madness', 'Mao Zedong', 'Me', 'Mercy', 'the Money', 'the Music',
         'the Nut', 'Nuts',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
-        'Seda', 'Seismic Activity', 'Shadows', 'Shea', 'Stalin', 
-        'Urutaa',
+        'Seda', 'Seismic Activity', 'Shadows', 'Shea', 'Small Brain', 'Stalin', 
+        'Ugliness', 'Urutaa', 'Uselessness',
         'Vardgo', 'Violence',
-        'War', 'the Weed'
+        'War', 'the Weed', 'Whipping'
         ]
 
         var dualList1 = [
@@ -207,11 +215,12 @@ client.on("message", message => {
         'Rotten', 'Ruby', 'the Rumors',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
         'Vengeful', 'Violent',
-        'War', 'Weed', 'White'
+        'Useless',
+        'War', 'Weed'
         ]
 
         var dualList2 = [
-        'Boobs', 'Booze', 'Brothel',
+        'Boobs', 'Booze', 'Brain', 'Brothel',
         'Cannibal', 'Cannibals','Coconut', 'Coconuts', 'Cult',
         'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
         'Fear', 'Fools', 'Furries', 'Furry', 'Fury',
@@ -223,10 +232,10 @@ client.on("message", message => {
         'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Money', 'Music', 'Mutant',
         'Nut', 'Nuts',
         'Pleasure', 'Pleasures', 'Power', 'Psychopath',
-        'Retribution', 'Rot', 'Ruby',
+        'Retribution', 'Rot',
         'Sadism', 'Shadow', 'Shadows',
         'Vengeance', 'Violence',
-        'War', 'Weed'
+        'War', 'Weed', 'Whipping'
         ]
         
         if(Math.floor(Chance(15)))
@@ -235,7 +244,7 @@ client.on("message", message => {
           return;
         }
         
-        if(Math.floor(Math.random() * 2) == 0)
+        if(Chance(60))
         {
           reason = '**' + ReturnRandom(soloList) + '**';
         }
@@ -268,26 +277,27 @@ client.on("message", message => {
         var reason = '';
 
         var soloList = [
-        'Art',
-        'Bookmaster Awre',
+        'Abduction', 'Art',
+        'Bandits', 'Bookmaster Awre',
         'the Boobs', 'the Booze',
         'Cloning', 'the Coconut', 'Coconuts',
-        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Drugs', 'the Dung', 'Duplication Device',
+        'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Drugs', 'the Dung', 'Duplication Device',
         'Evil',
         'Fury',
-        'Good', 'the Grove',
+        'Gambling', 'Garbage', 'Good', 'the Grove',
         'Honor',
         'Immorality', 'Immortality',
-        'Justice',
+        'Job', 'Justice',
+        'Kidnapping',
         'Lemmy', 'the Light',
         'Madness', 'Me', 'Mercy', 'Money', 'the Moon',
         'the Nut', 'Nuts',
         'Pleasure', 'Power',
         'Ravandel', 'Retribution', 'the Rot',
         'Seda', 'Shadows', 'Shea', 'Seismic Activity', 'Steel', 'the Sun',
-        'Urutaa',
+        'Ugliness', 'Urutaa', 'Uselessness',
         'Vardgo', 'Violence',
-        'War', 'the Weed'
+        'War', 'the Weed', 'Whipping in the Abbey'
         ]
 
         var dualList1 = [
@@ -305,16 +315,17 @@ client.on("message", message => {
         'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
         'Nutty',
         'Power', 'Primitive', 'Psychopathic',
-        'Rotten', 'Ruby',
+        'Rotten'
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
         'Vengeful', 'Violent',
+        'Useless',
         'War', 'Weed', 'White'
         ]
 
         var dualList2 = [
-        'Beef', 'Boobs', 'Booze', 'Brothel',
+        'Bandits', 'Beef', 'Boobs', 'Booze', 'Brothel',
         'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
-        'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Drug', 'Dung',
+        'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Drug', 'Drugs', 'Dung',
         'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
         'Ghost',
         'Hand', 'Honor',
@@ -326,11 +337,12 @@ client.on("message", message => {
         'Pleasure', 'Pleasures', 'Power', 'Psychopath',
         'Retribution', 'Rot',
         'Sadism', 'Shadow', 'Shadows', 'Sun', 'Steel',
+        'Troglodyte', 'Troll',
         'Vengeance', 'Violence',
-        'War', 'Weed'
+        'War', 'Weed', 'Whipping'
         ]
         
-        if(Math.floor(Math.random() * 2) == 0)
+        if(Math.floor(Chance(60))
         {
           reason = '**' + ReturnRandom(soloList) + '**';
         }
@@ -378,6 +390,7 @@ client.on("message", message => {
       case 'has':
       case 'had':
         responseList = [
+        'Lol why you asking me about that.', 'This question is stupid lol.', 'I think the answer is obvious.', 'Do I really need to answer this?',
         'Yes.', 'No.',
         'Definitely.', 'Definitely no.',
         'Probably.', 'Probably not.',
@@ -421,20 +434,21 @@ client.on("message", message => {
       case 'resolve':
         var afflictionsArray = ['Paranoid', 'Selfish', 'Irrational', 'Fearful', 'Hopeless', 'Abusive', 'Masochistic', 'Rapturous'];
         var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
+        var specialArray = ['Furry', 'Degenerate', 'Deviant', 'Cannibalistic', 'Anxious', 'Depressive', 'Insane', 'Psychopathic', 'Mutantic', 'Destructive', 'Maniacal', 'Mindless', 'Lazy'];
         var result;
         who = RecognizeWho(arguments[1], message, command)
 
-        rollValue = Math.floor(Math.random() * 4);
-
-        if(rollValue == 0)
+        if(Chance(20))
         {
-          rollValue = Math.floor(Math.random() * virtuesArray.length);
-          result = virtuesArray[rollValue];
+          result = ReturnRandom(specialArray);
+        } 
+        else if (Chance(25))
+        {
+          result = ReturnRandom(virtuesArray);
         }
         else
         {
-          rollValue = Math.floor(Math.random() * afflictionsArray.length);
-          result = afflictionsArray[rollValue];
+          result = ReturnRandom(afflictionsArray);
         }
 
         message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
@@ -548,7 +562,8 @@ client.on("message", message => {
         var charactersList = [
         'Stalin',
         'Hitler',
-        'Mao Zedong'
+        'Mao Zedong',
+        'Twilight'
         ];
 
         responseList = [
