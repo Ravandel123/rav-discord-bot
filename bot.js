@@ -342,7 +342,7 @@ client.on("message", message => {
         'War', 'Weed', 'Whipping'
         ]
         
-        if(Math.floor(Chance(60))
+        if(Math.floor(Chance(60)))
         {
           reason = '**' + ReturnRandom(soloList) + '**';
         }
