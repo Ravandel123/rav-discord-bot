@@ -124,7 +124,7 @@ client.on("message", message => {
           mainList = [
           'I think I saw ' + who + ' in the ' + ReturnRandom(serialsList) + '.',
           who + ' looks like my ' + ReturnRandom(firstList) + ' relative.',
-          who + ' was probably with me in the ' + ReturnRandom(placesList) + '.'
+          who + ' was probably with me in the ' + ReturnRandom(placesList) + '.',
           'I rescued ' + who + ' from the ' + ReturnRandom(secondList) + ' in the ' + ReturnRandom(serialsList) + '.',
           who + ' was that ' + ReturnRandom(secondList) + ' in the ' + ReturnRandom(serialsList) + '.',
           'I have definitely seen ' + who + ' in the ' + ReturnRandom(placesList) + '.'
