@@ -37,7 +37,7 @@ client.on("message", message => {
   
   var placesList = [
   'Anthro New England', 'Arizona Fur Con', 'Anthrocon',
-  'Biggest Little Fur Con',
+  'Baywatch', 'Biggest Little Fur Con',
   'Califur', 'ConFurence', 'Confurgence', 'Conifur Northwest',
   'Eurofurence',
   'Furry Fiesta', 'Furry Weekend Atlanta', 'Fur the \'More\'',
@@ -124,8 +124,8 @@ client.on("message", message => {
           mainList = [
           'I think I saw ' + who + ' in the ' + ReturnRandom(serialsList) + '.',
           who + ' looks like my ' + ReturnRandom(firstList) + ' relative.',
-          who + ' was probably with me in Baywatch.',
-          'I rescued ' + who + ' in Baywatch lol.',
+          who + ' was probably with me in the ' + ReturnRandom(placesList) + '.'
+          'I rescued ' + who + ' from the ' + ReturnRandom(secondList) + ' in the ' + ReturnRandom(serialsList) + '.',
           who + ' was that ' + ReturnRandom(secondList) + ' in the ' + ReturnRandom(serialsList) + '.',
           'I have definitely seen ' + who + ' in the ' + ReturnRandom(placesList) + '.'
           ];
@@ -315,7 +315,7 @@ client.on("message", message => {
         'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless',
         'Nutty',
         'Power', 'Primitive', 'Psychopathic',
-        'Rotten'
+        'Rotten',
         'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Steel', 'Strong', 'Suicidal',
         'Vengeful', 'Violent',
         'Useless',
