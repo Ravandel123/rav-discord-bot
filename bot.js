@@ -1151,7 +1151,7 @@ client.on("message", message => {
       return ((Math.floor(Math.random() * 100) < chanceOfSuccess) == true)
     }
     
-    Function Rnd(maximum)
+    function Rnd(maximum)
     {
       return Math.floor(Math.random() * (maximum + 1))
     }
