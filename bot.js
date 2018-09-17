@@ -129,9 +129,9 @@ client.on("message", message => {
         ];
         
         responseList = [
-        'That is ' + ReturnRandom(specialList) + additionalLol + '.',
-        ReturnRandom(specialList) + additionalLol + '.',
-        'Too ' + ReturnRandom(specialList) + additionalLol + '.'
+        'That is ' + ReturnRandom(sizeList) + additionalLol + '.',
+        ReturnRandom(sizeList) + additionalLol + '.',
+        'Too ' + ReturnRandom(sizeList) + additionalLol + '.'
         ];
 
         if(Chance(15))
