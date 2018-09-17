@@ -105,7 +105,15 @@ client.on("message", message => {
         'I think its more than ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.'
         ];
 
-        message.channel.send(ReturnRandom(responseList))
+        if(Chances(20))
+        {
+          message.channel.send(ReturnRandom(specialList))
+        }
+        else
+        {
+          message.channel.send(ReturnRandom(responseList))
+        }
+        
         break;
         
       //----------------------------------------------------------------------------------------------------------------------------
