@@ -320,7 +320,7 @@ client.on("message", message => {
       
       var firstList = [
       'Abominable', 'Adorable', 'Aggressive', 'Amazing', 'Annointed', 'Art', 'Awful',
-      'Barbaric', 'Best', 'Bloody','Brutal',
+      'Barbaric', 'Best', 'Bloody', 'Brainwash', 'Brutal',
       'Cannibalistic', 'Celestial', 'Crazy', 'Cute', 'Cutest',
       'Defiant', 'Degenerate', 'Delusional', 'Destructive', 'Dirty', 'Drunken',
       'Evil', 'Extremely Slow',
@@ -417,7 +417,7 @@ client.on("message", message => {
     
       var soloList = [
       'Abduction', 'Animal Abuse', 'the Art',
-      'Bookmaster Awre',
+      'Bookmaster Awre', 'the Brainwashing',
       'the Boobs', 'the Booze',
       'the Coconut', 'the Coconuts', 'Communism', 
       'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Dung', 'Duplication Device',
@@ -521,7 +521,7 @@ client.on("message", message => {
       var soloList = [
       'Abduction', 'Art',
       'Bandits', 'Bookmaster Awre',
-      'the Boobs', 'the Booze',
+      'the Boobs', 'the Booze', 'Brainwashing',
       'Cloning', 'the Coconut', 'Coconuts',
       'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Drugs', 'the Dung', 'Duplication Device',
       'Electroshock Therapy', 'Evil',
@@ -675,7 +675,7 @@ client.on("message", message => {
     case 'resolve':
       var afflictionsArray = ['Paranoid', 'Selfish', 'Irrational', 'Fearful', 'Hopeless', 'Abusive', 'Masochistic', 'Rapturous'];
       var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
-      var specialArray = ['Furry', 'Degenerate', 'Deviant', 'Cannibalistic', 'Anxious', 'Depressive', 'Insane', 'Psychopathic', 'Mutantic', 'Destructive', 'Maniacal', 'Mindless', 'Lazy'];
+      var specialArray = ['Furry', 'Degenerate', 'Deviant', 'Cannibalistic', 'Anxious', 'Depressive', 'Insane', 'Psychopathic', 'Mutantic', 'Destructive', 'Maniacal', 'Mindless', 'Lazy', 'Brainwashed'];
       var result;
       who = RecognizeWho(arguments[1], message, command)
 
@@ -1362,7 +1362,7 @@ client.on("message", message => {
 
       var firstPart1 = [
       'Abominable', 'Adorable', 'Aerial', 'Aeronaut', 'Aggressive', 'Animate', 'Anointed', 'Amateur', 'Apprentice', 'Awesome', 'Awful',
-      'Badlands', 'Barbaric', 'Brutal',
+      'Badlands', 'Barbaric', 'Brainwashed', 'Brutal',
       'Cannibalistic', 'Celestial', 'Chittering', 'Clever', 'Cloaked', 'Crazy',
       'Defiant', 'Degenerate', 'Delusional', 'Dirty', 'Drunken',
       'Extremely Slow',
@@ -1453,7 +1453,7 @@ client.on("message", message => {
 
       var lastPart1 = [
       'Abominable', 'Absolute', 'Adorable', 'Aggressive', 'Agile', 'Animate', 'Annointed', 'Awesome', 'Awful',
-      'Black','Blood', 'Bloody','Brutal',
+      'Black', 'Blood', 'Bloody','Brutal',
       'Cannibalistic', 'Celestial', 'Chittering', 'Clever',
       'Dark', 'Death', 'Degenerate', 'Destructive', 'Dirty', 'Doom', 'Dung',
       'Evil',
