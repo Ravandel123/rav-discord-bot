@@ -1061,7 +1061,7 @@ client.on("message", message => {
         
         responseList = [
         'In ' + Rnd(multiplier) + ' ' + ReturnRandom(timeList) + '.',
-        'In ' + (Rnd(multiplier) + 2018)) + '.',
+        'In ' + (Rnd(multiplier) + 2018) + '.',
         'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
         'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
         ];
