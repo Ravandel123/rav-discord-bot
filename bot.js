@@ -18,7 +18,14 @@ client.on("message", message => {
   var arguments = message.content.split(' ');
   var rollValue;
   var responseList;
+  var specialList;
   var i;
+  
+  var additionalLol = '';
+  if(Chance(50))
+  {
+    additionalLol = ' lol';
+  }
 
   var serialsList = [
   'Alladin',
@@ -61,9 +68,9 @@ client.on("message", message => {
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
-      //----------size-----------------------------------------------------------------------------------------------------------
+      //----------length------------------------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
-      case 'size':
+      case 'length':
         var amount;
         
         switch(Rnd(2))
@@ -81,8 +88,21 @@ client.on("message", message => {
             break;
         }
 
+        specialList = [
+        'Beyond the horizon' + additionalLol + '.',
+        'It\'s so short that I don\'t even see that' + additionalLol + '.',
+        'Its too short' + additionalLol + '.',
+        'Its too long' + additionalLol + '.',
+        'Immeasurable' + additionalLol + '.',
+        'Infinite!' + additionalLol + '.',
+        ];
+        
         responseList = [
-        'Its definitely ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.'
+        'Its definitely ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + ' long.',
+        'Its around  ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + ' long.',
+        'Length of that is exactly ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.',
+        'I think its less than ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.',
+        'I think its more than ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.'
         ];
 
         message.channel.send(ReturnRandom(responseList))
