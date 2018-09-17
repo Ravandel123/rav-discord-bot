@@ -116,8 +116,8 @@ client.on("message", message => {
   
   var sizeList = [
   'Diminutive', 'Little', 'Small', 'Tiny',
-  'Big', 'Enormous', 'Gargantuan' 'Monstrous',
-  'Average', 'Medium', 
+  'Big', 'Enormous', 'Gargantuan', 'Monstrous',
+  'Average', 'Medium'
   ]
 
   switch (command) 
