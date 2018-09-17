@@ -64,13 +64,83 @@ client.on("message", message => {
   'feet',
   'miles'
   ]
+  
+  var measurementWeigh = [
+  'grams',
+  'decagrams',
+  'kilograms',
+  'tons',
+  'ounces',
+  'pounds'
+  ]
+  
+  var galaxies = [
+  'Andromeda',
+  'Messier 49',
+  'NGC 1399',
+  'NGC 4261',
+  'M60-UCD1',
+  'Markarian 335'
+  ]
         
   switch (command) 
   {
       //----------------------------------------------------------------------------------------------------------------------------
-      //----------length------------------------------------------------------------------------------------------------------------
+      //----------weight, mass, heaviness-------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'weight':
+      case 'mass':
+      case 'heaviness':
+        var amount;
+        
+        switch(Rnd(2))
+        {
+          case 0:
+            amount = 10;
+            break;
+            
+          case 1:
+            amount = 100;
+            break;
+            
+          case 2:
+            amount = 1000;
+            break;
+        }
+
+        specialList = [
+        'That is beyond the mass of supermassive black hole in ' + ReturnRandom(measurementSize) + ' Galaxy' + additionalLol + '.',
+        'Too light' + additionalLol + '.',
+        'Too heavy' + additionalLol + '.',
+        'Immeasurable' + additionalLol + '!',
+        'Infinite' + additionalLol + '!'
+        ];
+        
+        responseList = [
+        'That weigh definitely ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.',
+        'That weigh around  ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.',
+        'Weigh of that is exactly ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.',
+        'I think its less than ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.',
+        'I think its more than ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.'
+        ];
+
+        if(Chance(10))
+        {
+          message.channel.send(ReturnRandom(specialList))
+        }
+        else
+        {
+          message.channel.send(ReturnRandom(responseList))
+        }
+        
+        break;
+        
+      //----------------------------------------------------------------------------------------------------------------------------
+      //----------length, height, width---------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'length':
+      case 'height':
+      case 'width':
         var amount;
         
         switch(Rnd(2))
@@ -91,10 +161,11 @@ client.on("message", message => {
         specialList = [
         'Beyond the horizon' + additionalLol + '.',
         'It\'s so short that I don\'t even see that' + additionalLol + '.',
-        'Its too short' + additionalLol + '.',
-        'Its too long' + additionalLol + '.',
-        'Immeasurable' + additionalLol + '.',
-        'Infinite!' + additionalLol + '.',
+        'Too short' + additionalLol + '.',
+        'Too long' + additionalLol + '.',
+        'Immeasurable' + additionalLol + '!',
+        'Infinite' + additionalLol + '!',
+        'I think that soon might reach the Moon' + additionalLol + '.'
         ];
         
         responseList = [
@@ -105,7 +176,7 @@ client.on("message", message => {
         'I think its more than ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.'
         ];
 
-        if(Chance(20))
+        if(Chance(10))
         {
           message.channel.send(ReturnRandom(specialList))
         }
