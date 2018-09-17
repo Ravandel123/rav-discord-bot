@@ -334,7 +334,7 @@ client.on("message", message => {
       'Rapturous', 'Rotten',
       'Sacred', 'Sadistic', 'Savage', 'Screwed', 'Secret', 'Serial', 'Silly', 'Slow', 'Small', 'Smart', 'Strong',
       'Ugly', 'Useful', 'Useless',
-      'Most Valuable', 'Vauable', 'Vengeful', 'Violent',
+      'Most Valuable', 'Valuable', 'Vengeful', 'Violent',
       'Well Trusted', 'Worst'
       ]
       
