@@ -46,9 +46,49 @@ client.on("message", message => {
   'Rainfurrest', 'Rocky Mountain Fur Con',
   'VancouFur'
   ]
+  
+  var measurementSize = [
+  'millimeters',
+  'centimeters',
+  'decimeters',
+  'meters',
+  'kilometers',
+  'inches',
+  'feet',
+  'miles'
+  ]
         
   switch (command) 
   {
+      //----------------------------------------------------------------------------------------------------------------------------
+      //----------size-----------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'size':
+        var amount;
+        
+        switch(Rnd(2))
+        {
+          case 0:
+            amount = 10;
+            break;
+            
+          case 1:
+            amount = 100;
+            break;
+            
+          case 2:
+            amount = 1000;
+            break;
+        }
+
+        responseList = [
+        'Its definitely ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.'
+        ];
+
+        message.channel.send(ReturnRandom(responseList))
+
+        break;
+        
       //----------------------------------------------------------------------------------------------------------------------------
       //----------ddcheck-----------------------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
@@ -784,9 +824,7 @@ client.on("message", message => {
           specialArray = personifiedSpecialArray;
         }
 
-        var response = Math.floor(Math.random() * 10);
-
-        if(response < 2)
+        if(Chances(20))
         {
           message.channel.send(ReturnRandom(specialArray))
         }
@@ -1113,6 +1151,11 @@ client.on("message", message => {
     {
       return ((Math.floor(Math.random() * 100) < chanceOfSuccess) == true)
     }
+    
+    Function Rnd(maximum)
+    {
+      return Math.floor(Math.random() * (maximum + 1))
+    }
 
     function GenerateRandomClass(typeOfCheck)
     {
@@ -1313,7 +1356,7 @@ client.on("message", message => {
 
 });
 
-
+//size, weight, volume, ddquote, animal
 
 
 // THIS  MUST  BE  THIS  WAY
