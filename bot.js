@@ -315,7 +315,13 @@ client.on("message", message => {
       'Shea\'s',
       'Seda\'s',
       'Izzy\'s',
-      'Tyrrikz\'s'
+      'Tyrrikz\'s',
+      'Trump\'s',
+      'Stalin\'s',
+      'Hitler\'s',
+      'Mao Zedong\'s',
+      'Obama\'s',
+      'Putin\'s',
       ];
       
       var firstList = [
@@ -347,11 +353,10 @@ client.on("message", message => {
       'Executioner', 'Experiment',
       'Farmer', 'Flagellant', 'Friend', 'Furry',
       'Garbage',
-      'Harlot',
       'Idiot',
       'Kamikaze', 'Kid', 'Kidnapper', 'Killer',
       'Lich',
-      'Machine', 'Madman', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Mutant',
+      'Machine', 'Madman', 'Marionette', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Mutant',
       'Necromancer', 'Neo-Nazi',
       'Pawn', 'Plaything', 'Prisoner', 'Prophet',
       'Robot',
@@ -1376,7 +1381,7 @@ client.on("message", message => {
       'Pale', 'Pathethic', 'Primitive', 'Provocative', 'Psychopathic',
       'Rapturous',
       'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic', 'Slow', 'Starving',
-      'Undying',
+      'Ultra Fast', 'Undying',
       'Wild'
       ];
 
@@ -1412,12 +1417,12 @@ client.on("message", message => {
       'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
       'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Foreman', 'Forger', 'Freeholder', 'Friar',
       'Gambler', 'Guard', 'Guardian', 'Gunner',
-      'Hage', 'Harlot', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
+      'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
       'Initiate', 'Inquisitor',
       'Jester',
       'Kamikaze', 'Killer', 'King', 'Knight',
       'Leper', 'Lich', 'Lord', 'Lumberjack',
-      'Machine', 'Madman', 'Mage', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
+      'Machine', 'Madman', 'Mage', 'Marionette', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
       'Necromancer', 'Ninja',
       'Occultist',
       'Painter', 'Paladin', 'Pilgrim', 'Priest', 'Priestess', 'Prisoner', 'Prophet',
