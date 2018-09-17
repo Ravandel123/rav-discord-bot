@@ -362,8 +362,7 @@ client.on("message", message => {
       
       if(Chance(30))
       {
-        var 
-        mainList = [
+        var mainList = [
         'I think I saw ' + who + ' in the ' + ReturnRandom(serialsList) + '.',
         who + ' looks like my ' + ReturnRandom(firstList) + ' relative.',
         who + ' was probably with me in the ' + ReturnRandom(placesList) + '.',
