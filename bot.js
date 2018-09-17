@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 const prefix = "h!";
 
-//A B C D E F G H I K L M N O P Q R S T V X Y Z
+//A B C D E F G H I K L M N O P Q R S T V W X Y Z
 
 client.on("message", message => {
   if (message.content.indexOf(prefix) !== 0) return;
@@ -300,7 +300,7 @@ client.on("message", message => {
       'someone from TV show',
       'someone from Anime',
       'someone funny',
-      'neo-nazi',
+      'Neo-Nazi',
       'communist'
       ];
       
@@ -317,43 +317,49 @@ client.on("message", message => {
       'Izzy\'s',
       'Tyrrikz\'s'
       ];
-    
+      
       var firstList = [
-      'Abominable', 'Adorable', 'Amazing', 'Art',
-      'Best',
-      'Cute', 'Cutest',
-      'Evil',
-      'Feisty', 'Funny', 'Furry',
-      'Gargantuan',
-      'Interesting',
-      'Lobotomized', 'Loyal',
-      'Masochistic', 'Murderous', 'Music',
-      'Primitive', 'Psychopathic',
-      'Secret', 'Sadistic', 'Silly', 'Small',
+      'Abominable', 'Adorable', 'Aggressive', 'Amazing', 'Annointed', 'Art', 'Awful',
+      'Barbaric', 'Best', 'Bloody','Brutal',
+      'Cannibalistic', 'Celestial', 'Crazy', 'Cute', 'Cutest',
+      'Defiant', 'Degenerate', 'Delusional', 'Destructive', 'Dirty', 'Drunken',
+      'Evil', 'Extremely Slow',
+      'Faceless', 'Fast', 'Feisty', 'Feral', 'Funny', 'Furry',
+      'Gargantuan', 'Good', 'Greater',
+      'Immoral', 'Interesting', 'Insane',
+      'Lesser', 'Lobotomized', 'Loyal',
+      'Masochistic', 'Mindless', 'Monstrous', 'Murderous', 'Music',
+      'Offensive',
+      'Pathethic', 'Pleasure', 'Primitive', 'Psychopathic',
+      'Rapturous', 'Rotten',
+      'Sacred', 'Sadistic', 'Savage', 'Screwed', 'Secret', 'Serial', 'Silly', 'Slow', 'Small', 'Smart', 'Strong',
       'Ugly', 'Useful', 'Useless',
-      'Most Valuable', 'Vauable',
+      'Most Valuable', 'Vauable', 'Vengeful', 'Violent',
       'Well Trusted', 'Worst'
       ]
-
+      
       var secondList = [
-      'Abomination', 'Android', 'Assassin',
-      'Bandit', 'Banker', 'Bodyguard',
-      'Cyborg',
+      'Abomination', 'Amazon', 'Android', 'Assassin', 'Automaton', 'Avatar',
+      'Bandit', 'Banker', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Bodyguard', 'Butcher',
+      'Cannibal', 'Champion', 'Charlatan', 'Communist', 'Construct', 'Courtesan', 'Cultist','Cyborg',
       'Device',
-      'Experiment',
-      'Friend', 'Furry',
+      'Executioner', 'Experiment',
+      'Farmer', 'Flagellant', 'Friend', 'Furry',
       'Garbage',
+      'Harlot',
       'Idiot',
-      'Kidnapper',
-      'Monster', 'Mutant',
-      'Pawn', 'Plaything', 'Prisoner',
+      'Kamikaze', 'Kidnapper', 'Killer',
+      'Lich',
+      'Machine', 'Madman', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Mutant',
+      'Necromancer', 'Neo-Nazi',
+      'Pawn', 'Plaything', 'Prisoner', 'Prophet',
       'Robot',
-      'Servant', 'Slave', 'Spy',
+      'Sadist', 'Servant', 'Slaughterer', 'Slave', 'Spy',
       'Test Subject', 'Torturer', 'Toy', 'Troglodyte', 'Troll',
       'Zombie'
       ]
       
-      if(Chance(35))
+      if(Chance(30))
       {
         var 
         mainList = [
@@ -1406,7 +1412,7 @@ client.on("message", message => {
       'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
       'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Foreman', 'Forger', 'Freeholder', 'Friar',
       'Gambler', 'Guard', 'Guardian', 'Gunner',
-      'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
+      'Hage', 'Harlot', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
       'Initiate', 'Inquisitor',
       'Jester',
       'Kamikaze', 'Killer', 'King', 'Knight',
@@ -1414,7 +1420,7 @@ client.on("message", message => {
       'Machine', 'Madman', 'Mage', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
       'Necromancer', 'Ninja',
       'Occultist',
-      'Painter', 'Paladin', 'Pilgrim','Priest', 'Priestess', 'Prisoner', 'Prophet',
+      'Painter', 'Paladin', 'Pilgrim', 'Priest', 'Priestess', 'Prisoner', 'Prophet',
       'Queen',
       'Raider', 'Ranger', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runesmith',
       'Sadist', 'Sailor','Samurai', 'Seeker', 'Shaman', 'Shepherd', 'Sister', 'Slaughterer', 'Slave', 'Slayer', 'Soldier', 'Sorcerer', 'Spy', 'Surgeon',
@@ -1452,11 +1458,11 @@ client.on("message", message => {
       'Dark', 'Death', 'Degenerate', 'Destructive', 'Dirty', 'Doom', 'Dung',
       'Evil',
       'Faceless', 'Flame', 'Forbidden', 'Forest', 'Forgotten', 'Furious', 'Furry', 'Fury',
-      'Ghost', 'Glowing', 'Good',
+      'Ghost', 'Glowing', 'Good', 'Greater',
       'Honorable',
       'Icy', 'Immortal', 'Immoral', 'Insane',
       'Just',
-      'Lunar',
+      'Lesser', 'Lunar',
       'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless', 'Murderous',
       'Nutty',
       'Power', 'Primitive', 'Psychopathic',
