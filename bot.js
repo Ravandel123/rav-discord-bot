@@ -19,12 +19,28 @@ client.on("message", message => {
   var rollValue;
   var responseList;
   var specialList;
+  var multiplier;
   var i;
   
   var additionalLol = '';
-  if(Chance(50))
+  if(Chance(25))
   {
     additionalLol = ' lol';
+  }
+  
+  switch(Rnd(2))
+  {
+    case 0:
+      multiplier = 10;
+      break;
+            
+    case 1:
+      multiplier = 100;
+      break;
+            
+    case 2:
+      multiplier = 1000;
+      break;
   }
 
   var serialsList = [
@@ -82,31 +98,59 @@ client.on("message", message => {
   'M60-UCD1',
   'Markarian 335'
   ]
+  
+  var timeList = [
+  'seconds',
+  'minutes',
+  'hours',
+  'days',
+  'years'
+  ]
+  
+  var sizeList = [
+  'Little', 'Small', 'Tiny'
+  'Big', 'Enormous', 'Gargantuan',
+  'Average', 'Medium', 
+  ]
         
   switch (command) 
   {
+      //----------------------------------------------------------------------------------------------------------------------------
+      //----------size--------------------------------------------------------------------------------------------------------------
+      //----------------------------------------------------------------------------------------------------------------------------
+      case 'size':
+
+        specialList = [
+        'This is the smallest thing i have ever seen in my life' + additionalLol + '.',
+        'This is the biggest thing i have ever seen in my life' + additionalLol + '.',
+        'Immeasurable' + additionalLol + '!',
+        'Infinite' + additionalLol + '!',
+        'I fear that size' + additionalLol + '!'
+        ];
+        
+        responseList = [
+        'That is ' + ReturnRandom(specialList) + additionalLol + '.',
+        ReturnRandom(specialList) + additionalLol + '.',
+        'Too ' + ReturnRandom(specialList) + additionalLol + '.'
+        ];
+
+        if(Chance(15))
+        {
+          message.channel.send(ReturnRandom(specialList))
+        }
+        else
+        {
+          message.channel.send(ReturnRandom(responseList))
+        }
+        
+        break;
+        
       //----------------------------------------------------------------------------------------------------------------------------
       //----------weight, mass, heaviness-------------------------------------------------------------------------------------------
       //----------------------------------------------------------------------------------------------------------------------------
       case 'weight':
       case 'mass':
       case 'heaviness':
-        var amount;
-        
-        switch(Rnd(2))
-        {
-          case 0:
-            amount = 10;
-            break;
-            
-          case 1:
-            amount = 100;
-            break;
-            
-          case 2:
-            amount = 1000;
-            break;
-        }
 
         specialList = [
         'That is beyond the mass of supermassive black hole in ' + ReturnRandom(measurementSize) + ' Galaxy' + additionalLol + '.',
@@ -117,11 +161,11 @@ client.on("message", message => {
         ];
         
         responseList = [
-        'That weigh definitely ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.',
-        'That weigh around  ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.',
-        'Weigh of that is exactly ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.',
-        'I think its less than ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.',
-        'I think its more than ' + Rnd(amount) + ' ' + ReturnRandom(measurementWeigh) + '.'
+        'That weigh definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.',
+        'That weigh around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.',
+        'Weigh of that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.',
+        'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.',
+        'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.'
         ];
 
         if(Chance(10))
@@ -141,22 +185,6 @@ client.on("message", message => {
       case 'length':
       case 'height':
       case 'width':
-        var amount;
-        
-        switch(Rnd(2))
-        {
-          case 0:
-            amount = 10;
-            break;
-            
-          case 1:
-            amount = 100;
-            break;
-            
-          case 2:
-            amount = 1000;
-            break;
-        }
 
         specialList = [
         'Beyond the horizon' + additionalLol + '.',
@@ -169,11 +197,11 @@ client.on("message", message => {
         ];
         
         responseList = [
-        'Its definitely ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + ' long.',
-        'Its around  ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + ' long.',
-        'Length of that is exactly ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.',
-        'I think its less than ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.',
-        'I think its more than ' + Rnd(amount) + ' ' + ReturnRandom(measurementSize) + '.'
+        'Its definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + ' long.',
+        'Its around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + ' long.',
+        'Length of that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + '.',
+        'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + '.',
+        'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + '.'
         ];
 
         if(Chance(10))
@@ -748,6 +776,7 @@ client.on("message", message => {
         'Mirrors don\’t lie, and lucky for you, they also don\’t laugh.',
         'No wonder everyone talks about you behind your back.'
         ];
+        
         message.channel.send(ReturnRandom(responseList))
         break; 
 
@@ -1005,49 +1034,48 @@ client.on("message", message => {
       //------------------------------------------------------------when-----------------------------------------------------------
       //---------------------------------------------------------------------------------------------------------------------------
       case 'when':
-      var timeList = [
-      'seconds',
-      'minutes',
-      'hours',
-      'days',
-      'years'
-      ];
+        var timeHours = Math.floor(Math.random() * 24);
+        var timeMinutes = Math.floor(Math.random() * 60);
 
-      var timeHours = Math.floor(Math.random() * 24);
-      var timeMinutes = Math.floor(Math.random() * 60);
+        if(timeHours < 10)
+        {
+          timeHours = '0' + timeHours;
+        }
 
-      if(timeHours < 10)
-      {
-        timeHours = '0' + timeHours;
-      }
+        if(timeMinutes < 10)
+        {
+          timeMinutes = '0' + timeMinutes;
+        }
 
-      if(timeMinutes < 10)
-      {
-        timeMinutes = '0' + timeMinutes;
-      }
+        specialList = [
+        'Today.',
+        'Tomorrow.',
+        'Soon.',
+        'Now.',
+        'Never.',
+        'Never lol.',
+        'Yesterday.',
+        'Soon.',
+        'You don\'t understand concept of time anyway' + additionalLol + '.',
+        ];
+        
+        responseList = [
+        'In ' + Rnd(multiplier) + ' ' + ReturnRandom(timeList) + '.',
+        'In ' + Rnd(multiplier) + 2018) + '.',
+        'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
+        'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
+        ];
 
-      responseList = [
-      'Today.',
-      'Tomorrow.',
-      'Soon.',
-      'Now.',
-      'Never.',
-      'Never lol.',
-      'Yesterday.',
-      'Soon.',
-      'You don\'t understand concept of time anyway lol.',
-      'In ' + Math.floor(Math.random() * 11) + ' ' + ReturnRandom(timeList) + '.',
-      'In ' + Math.floor(Math.random() * 101) + ' ' + ReturnRandom(timeList) + '.',
-      'In ' + Math.floor(Math.random() * 1001) + ' ' + ReturnRandom(timeList) + '.',
-      'In ' + (Math.floor(Math.random() * 11) + 2018) + '.',
-      'In ' + (Math.floor(Math.random() * 101) + 2018) + '.',
-      'In ' + (Math.floor(Math.random() * 1001) + 2018) + '.',
-      'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
-      'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
-      ];
-
-      message.channel.send(ReturnRandom(responseList))
-      break;
+        if(Chance(50))
+        {
+          message.channel.send(ReturnRandom(responseList))
+        }
+        else
+        {
+          message.channel.send(ReturnRandom(specialList))
+        }
+        
+        break;
 
       //----------------------------------------------------------------------------------------------------------------------------
       //------------------------------------------------------------class-----------------------------------------------------------
@@ -1137,8 +1165,8 @@ client.on("message", message => {
         'Electroshock therapy will work wonders for you.',
         'I would advise lobotomy.',
         'Chill and eat something good.',
-        'Go outside for ' + Math.floor(Math.random() * 100) + ' hours.',
-        'I would advise ' + Math.floor(Math.random() * 100) + ' hours of sleep.',
+        'Go outside for ' + Rnd(100) + ' hours.',
+        'I would advise ' + Rnd(100) + ' hours of sleep.',
         'Get commission from Pumpkins. You will be happy and she will be happpy.',
         'I think you need plastic surgery.',
         'I suggest whipping session in abbey.',
