@@ -1018,7 +1018,7 @@ client.on("message", message => {
         specialArray = personifiedSpecialArray;
       }
 
-      if(Chances(20))
+      if(Chance(20))
       {
         message.channel.send(ReturnRandom(specialArray))
       }
