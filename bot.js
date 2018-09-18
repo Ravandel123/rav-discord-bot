@@ -1320,7 +1320,7 @@ client.on("message", message => {
         testString = testString + '\n' + testList[i];
       }
         
-      message.channel.send(responseList);
+      message.channel.send(testString);
       
       break;
   }
