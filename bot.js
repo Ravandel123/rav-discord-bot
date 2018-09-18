@@ -136,7 +136,7 @@ client.on("message", message => {
       else
         i = Rnd(200)
         
-      message.channel.send(who + ' is ' + Rnd(i) + '% ' + arguments[1])
+      message.channel.send(who + ' is ' + Rnd(i) + '% ' + arguments[1] + '.')
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
