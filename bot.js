@@ -131,7 +131,7 @@ client.on("message", message => {
         return;
       }
       
-      who = RecognizeWho(arguments[2], message, command);
+      who = RecognizeWho(arguments[2], message, command); 
 
       message.channel.send(arguments[0] + ' ' + arguments[1] + ' ' + arguments[2])
       //message.channel.send(who + ' is ' + Rnd(100) + '% ' + arguments[1])
