@@ -1312,7 +1312,7 @@ client.on("message", message => {
     //------------------------------------------------------------test-----------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------
     case 'test':
-      var testList = galaxies + serialsList;
+      var testList = galaxies.concat(serialsList);
       var testString = '';
       
       for (i = 0; i < testList.length; i++) 
