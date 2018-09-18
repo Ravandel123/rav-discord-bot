@@ -1312,7 +1312,16 @@ client.on("message", message => {
     //------------------------------------------------------------test-----------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------
     case 'test':
-      message.channel.send(GenerateRandomClass())
+      var testList = galaxies + serialsList;
+      var testString = '';
+      
+      for (i = 0; i < testList.length; i++) 
+      {
+        testString = testString + '\n' + testList[i];
+      }
+        
+      message.channel.send(responseList);
+      
       break;
   }
 
