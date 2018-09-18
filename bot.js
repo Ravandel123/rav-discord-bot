@@ -132,7 +132,15 @@ client.on("message", message => {
       }
       
       who = RecognizeWho(arguments[2], message, command);
-      message.channel.send(who + ' is ' + Rnd(100) + '% ' + arguments[1])
+      
+      if(Chance(10))
+        i = Rnd(200)
+      else
+      {
+        i = Rnd(100)
+      }
+        
+      message.channel.send(who + ' is ' + Rnd(i) + '% ' + arguments[1])
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
