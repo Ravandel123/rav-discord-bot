@@ -133,7 +133,7 @@ client.on("message", message => {
       
       who = RecognizeWho(arguments[2], message, command);
 
-      message.channel.send(ReturnRandom(who + ' is ' + Rnd(100) + '% ' + arguments[1])
+      message.channel.send(who + ' is ' + Rnd(100) + '% ' + arguments[1])
       
       break;
       
