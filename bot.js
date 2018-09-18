@@ -5,7 +5,6 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-
 const prefix = "h!";
 
 //A B C D E F G H I K L M N O P Q R S T V W X Y Z
