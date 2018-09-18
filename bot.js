@@ -975,6 +975,23 @@ client.on("message", message => {
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
+    //----------braindmg--------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'braindmg':
+      responseList = [
+      'https://www.youtube.com/watch?v=Mz3Mi_OZYno',
+      'https://www.youtube.com/watch?v=eh7lp9umG2I',
+      'https://www.youtube.com/watch?v=vTIIMJ9tUc8',
+      'https://www.youtube.com/watch?v=MNyG-xu-7SQ',
+      'https://www.youtube.com/watch?v=jofNR_WkoCE',
+      'https://www.youtube.com/watch?v=kffacxfA7G4'
+      ];
+      who = RecognizeWho(arguments[1], message, command)
+
+      message.channel.send(ReturnRandom(responseList))
+      break;
+      
+    //----------------------------------------------------------------------------------------------------------------------------
     //----------ambush----------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'ambush':
@@ -1339,14 +1356,15 @@ client.on("message", message => {
     return listOfElements[Math.floor(Math.random() * listOfElements.length)];
   }
 
-  function RecognizeWho(who, message, command)
+  function RecognizeWho(arg, message, command)
   {
-    if (who == 'me' || who == null)
+    if (arg == 'me' || arg == null)
     {
       return message.author;
     }
 
-    return message.content.slice(prefix.length + command.length + 1);
+    return arg;
+    //return message.content.slice(prefix.length + command.length + 1);
   }
 
   function RollArmelloDices(rolls)
