@@ -5,7 +5,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
- 
+
 const prefix = "h!";
 
 //A B C D E F G H I K L M N O P Q R S T V W X Y Z
@@ -131,9 +131,9 @@ client.on("message", message => {
         return;
       }
       
-      who = RecognizeWho(arguments[2], message, command); 
+      who = RecognizeWho(arguments[2], message, command);
 
-      message.channel.send(arguments[0] + ' ' + arguments[1] + ' ' + arguments[2])
+      message.channel.send(arguments[2])
       //message.channel.send(who + ' is ' + Rnd(100) + '% ' + arguments[1])
       
       break;
