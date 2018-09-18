@@ -127,18 +127,14 @@ client.on("message", message => {
     //----------------------------------------------------------------------------------------------------------------------------
     case '%':
       if(arguments[1] == null)
-      {
         return;
-      }
       
       who = RecognizeWho(arguments[2], message, command);
       
-      if(Chance(10))
-        i = Rnd(200)
-      else
-      {
+      if(Chance(60))
         i = Rnd(100)
-      }
+      else
+        i = Rnd(200)
         
       message.channel.send(who + ' is ' + Rnd(i) + '% ' + arguments[1])
       break;
