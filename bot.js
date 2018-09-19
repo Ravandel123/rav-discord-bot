@@ -1355,7 +1355,7 @@ client.on("message", message => {
       
       for (i = 0; i < sizeList.length; i++) 
       {
-        testString = sizeList + '\n' + sizeList[i];
+        testString = testString + '\n' + sizeList[i];
       }
         
       message.channel.send(testString);
