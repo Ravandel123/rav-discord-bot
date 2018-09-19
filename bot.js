@@ -54,7 +54,7 @@ client.on("message", message => {
   'Pterodactyl Woman from Beverly Hills',
   'Rambo',
   'Scary Movie', 'Shrek', 'Splatter University', 'Star Wars',
-  'The Toxic Avenger', 'The Toxic Avenger, Part II', 'The Toxic Avenger Part III: The Last Temptation of Toxie',
+  'The Toxic Avenger', 'The Toxic Avenger, Part II', 'The Toxic Avenger, Part III: The Last Temptation of Toxie',
   'Zombie Island Massacre'
   ]
   
@@ -114,6 +114,7 @@ client.on("message", message => {
   'years'
   ]
   
+  var sizeListBig
   var sizeList = [
   'Diminutive', 'Little', 'Small', 'Tiny',
   'Big', 'Enormous', 'Gargantuan', 'Monstrous',
@@ -122,6 +123,15 @@ client.on("message", message => {
 
   switch (command) 
   {
+  
+    case 'mtgcard':
+    message.channel.send('http://gatherer.wizards.com/Pages/Card/Details.aspx?action=random')
+    break;
+    
+    
+    
+    
+    
     //----------------------------------------------------------------------------------------------------------------------------
     //----------%--------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
@@ -347,9 +357,9 @@ client.on("message", message => {
       'Cannibalistic', 'Celestial', 'Crazy', 'Cute', 'Cutest',
       'Defiant', 'Degenerate', 'Delusional', 'Destructive', 'Dirty', 'Drunken',
       'Evil', 'Extremely Slow',
-      'Faceless', 'Fast', 'Feisty', 'Feral', 'Funny', 'Furry',
+      'Faceless', 'Fast', 'Fearsome', 'Feisty', 'Feral', 'Funny', 'Furry',
       'Gargantuan', 'Good', 'Greater',
-      'Hungry',
+      'Heartless', 'Hungry',
       'Immoral', 'Interesting', 'Insane',
       'Lesser', 'Lobotomized', 'Loyal',
       'Masochistic', 'Mindless', 'Monstrous', 'Murderous', 'Music',
@@ -365,7 +375,7 @@ client.on("message", message => {
       var secondList = [
       'Abomination', 'Amazon', 'Android', 'Assassin', 'Automaton', 'Avatar',
       'Bandit', 'Banker', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Bodyguard', 'Butcher',
-      'Cannibal', 'Champion', 'Charlatan', 'Communist', 'Construct', 'Courtesan', 'Cultist','Cyborg',
+      'Cannibal', 'Champion', 'Charlatan', 'Colossus', 'Communist', 'Construct', 'Courtesan', 'Cultist','Cyborg',
       'Device',
       'Executioner', 'Experiment',
       'Farmer', 'Flagellant', 'Friend', 'Furry',
@@ -697,7 +707,7 @@ client.on("message", message => {
     case 'resolve':
       var afflictionsArray = ['Paranoid', 'Selfish', 'Irrational', 'Fearful', 'Hopeless', 'Abusive', 'Masochistic', 'Rapturous'];
       var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
-      var specialArray = ['Furry', 'Degenerate', 'Deviant', 'Cannibalistic', 'Anxious', 'Depressive', 'Insane', 'Psychopathic', 'Mutantic', 'Destructive', 'Maniacal', 'Mindless', 'Lazy', 'Brainwashed'];
+      var specialArray = ['Furry', 'Degenerate', 'Deviant', 'Cannibalistic', 'Anxious', 'Depressive', 'Insane', 'Psychopathic', 'Mutantic', 'Destructive', 'Maniacal', 'Mindless', 'Lazy', 'Brainwashed', 'Mighty'];
       var result;
       who = RecognizeWho(arguments[1], message, command)
 
@@ -1408,12 +1418,12 @@ client.on("message", message => {
       'Cannibalistic', 'Celestial', 'Chittering', 'Clever', 'Cloaked', 'Crazy',
       'Defiant', 'Degenerate', 'Delusional', 'Dirty', 'Drunken',
       'Extremely Slow',
-      'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Feral', 'Forsworn', 'Furious', 'Furry',
+      'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Fearsome', 'Feisty', 'Feral', 'Forsworn', 'Furious', 'Furry',
       'Greater',
-      'High', 'Horned', 'Horrible', 'Huge', 'Hungry',
+      'Heartless', 'High', 'Horned', 'Horrible', 'Huge', 'Hungry',
       'Immortal', 'Immortal',
       'Leper', 'Lesser', 'Little', 'Lobotomized',
-      'Maniacal', 'Masochistic', 'Mindless', 'Monstrous', 'Mutantic',
+      'Maniacal', 'Masochistic', 'Mighty', 'Mindless', 'Monstrous', 'Mutantic',
       'Offensive',
       'Pale', 'Pathethic', 'Primitive', 'Provocative', 'Psychopathic',
       'Rapturous',
@@ -1432,7 +1442,7 @@ client.on("message", message => {
       'High', 'Hound', 'Hungry',
       'Iron',
       'Lunar',
-      'Money', 'Monster', 'Music', 
+      'Magic', 'Money', 'Monster', 'Music', 
       'Pale', 'Plague', 'Pleasure',
       'Savage', 'Shield', 'Solar', 'Soul', 'Spirit', 'Spy', 'Steel', 'Storm',
       'War', 'Wild', 'White'
@@ -1449,17 +1459,17 @@ client.on("message", message => {
       var secondPart = [
       'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
       'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Baron', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
-      'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chevalier', 'Chimneysweep', 'Coachman', 'Collector', 'Construct', 'Courtesan', 'Countess', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
+      'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chevalier', 'Chimneysweep', 'Coachman', 'Collector', 'Colossus', 'Construct', 'Courtesan', 'Countess', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
       'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
       'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
       'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Foreman', 'Forger', 'Freeholder', 'Friar',
       'Gambler', 'Guard', 'Guardian', 'Gunner',
       'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
-      'Initiate', 'Inquisitor',
+      'Illusionist', 'Initiate', 'Inquisitor',
       'Jester',
       'Kamikaze', 'Killer', 'King', 'Knight',
       'Leper', 'Lich', 'Lord', 'Lumberjack',
-      'Machine', 'Madman', 'Mage', 'Marionette', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
+      'Machine', 'Madman', 'Mage', 'Magician', 'Marionette', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Musician', 'Mutant',
       'Necromancer', 'Ninja',
       'Occultist',
       'Painter', 'Paladin', 'Pilgrim', 'Priest', 'Priestess', 'Prisoner', 'Prophet',
@@ -1483,7 +1493,7 @@ client.on("message", message => {
       'Immorality', 'Immortality',
       'Justice',
       'Lemmy', 'the Light',
-      'Madness', 'Masks', 'the Meek', 'Mercy', 'the Moon', 'the Murder',
+      'Madness', 'the Magic', 'Masks', 'the Meek', 'Mercy', 'the Moon', 'the Murder',
       'the Nut',
       'Pleasure', 'Power',
       'Ravandel', 'Retribution', 'the Rot',
@@ -1501,11 +1511,11 @@ client.on("message", message => {
       'Evil',
       'Faceless', 'Flame', 'Forbidden', 'Forest', 'Forgotten', 'Furious', 'Furry', 'Fury',
       'Ghost', 'Glowing', 'Good', 'Greater',
-      'Honorable', 'Hungry',
+      'Heartless', 'Honorable', 'Hungry',
       'Icy', 'Immortal', 'Immoral', 'Insane',
       'Just',
       'Lesser', 'Lunar',
-      'Mad', 'Maniacal', 'Masochistic', 'Meek', 'Mindless', 'Murderous',
+      'Mad', 'Magica', 'Maniacal', 'Masochistic', 'Meek', 'Mighty', 'Mindless', 'Murderous',
       'Nutty',
       'Power', 'Primitive', 'Psychopathic',
       'Rocket', 'Rotten', 'Ruby',
@@ -1519,13 +1529,13 @@ client.on("message", message => {
       'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
       'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
-      'Fear', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
+      'Fear', 'Food', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
       'Ghost', 'Good', 'Grove', 'Guild',
       'Hand', 'Honor',
       'Intellect',
       'Justice',
       'Light',
-      'Madness', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Murder', 'Mutant',
+      'Madness', 'Magic', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Murder', 'Mutant',
       'Nut', 'Nuts',
       'Pleasure', 'Pleasures', 'Power', 'Psychopath',
       'Retribution', 'Rocket', 'Rot', 'Ruby',
