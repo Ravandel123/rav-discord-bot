@@ -114,13 +114,24 @@ client.on("message", message => {
   'years'
   ]
   
-  var sizeListBig
-  var sizeList = [
-  'Diminutive', 'Little', 'Small', 'Tiny',
-  'Big', 'Enormous', 'Gargantuan', 'Monstrous',
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //size-------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  var sizeBigList = [
+  'Big', 'Enormous', 'Gargantuan', 'Monstrous'
+  ]
+  
+  var sizeSmallList = [
+  'Diminutive', 'Little', 'Small', 'Tiny'
+  ]
+  
+  var sizeAverageList = [
   'Average', 'Medium'
   ]
-
+  
+  var sizeList = sizeBigList.concat(sizeSmallList, sizeAverageList)
+  
+  
   switch (command) 
   {
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1340,12 +1351,11 @@ client.on("message", message => {
     //----------test-------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------
     case 'test':
-      var testList = galaxies.concat(serialsList);
       var testString = '';
       
-      for (i = 0; i < testList.length; i++) 
+      for (i = 0; i < sizeList.length; i++) 
       {
-        testString = testString + '\n' + testList[i];
+        testString = sizeList + '\n' + sizeList[i];
       }
         
       message.channel.send(testString);
