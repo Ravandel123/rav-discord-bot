@@ -123,17 +123,8 @@ client.on("message", message => {
 
   switch (command) 
   {
-  
-    case 'mtgcard':
-    message.channel.send('http://gatherer.wizards.com/Pages/Card/Details.aspx?action=random')
-    break;
-    
-    
-    
-    
-    
     //----------------------------------------------------------------------------------------------------------------------------
-    //----------%--------------------------------------------------------------------------------------------------
+    //----------%-----------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case '%':
       if(arguments[1] == null)
@@ -359,7 +350,7 @@ client.on("message", message => {
       'Evil', 'Extremely Slow',
       'Faceless', 'Fast', 'Fearsome', 'Feisty', 'Feral', 'Funny', 'Furry',
       'Gargantuan', 'Good', 'Greater',
-      'Heartless', 'Hungry',
+      'Heartless', 'Horny', 'Hungry',
       'Immoral', 'Interesting', 'Insane',
       'Lesser', 'Lobotomized', 'Loyal',
       'Masochistic', 'Mindless', 'Monstrous', 'Murderous', 'Music',
@@ -1420,7 +1411,7 @@ client.on("message", message => {
       'Extremely Slow',
       'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Fearsome', 'Feisty', 'Feral', 'Forsworn', 'Furious', 'Furry',
       'Greater',
-      'Heartless', 'High', 'Horned', 'Horrible', 'Huge', 'Hungry',
+      'Heartless', 'High', 'Horned', 'Horny', 'Horrible', 'Huge', 'Hungry',
       'Immortal', 'Immortal',
       'Leper', 'Lesser', 'Little', 'Lobotomized',
       'Maniacal', 'Masochistic', 'Mighty', 'Mindless', 'Monstrous', 'Mutantic',
@@ -1511,7 +1502,7 @@ client.on("message", message => {
       'Evil',
       'Faceless', 'Flame', 'Forbidden', 'Forest', 'Forgotten', 'Furious', 'Furry', 'Fury',
       'Ghost', 'Glowing', 'Good', 'Greater',
-      'Heartless', 'Honorable', 'Hungry',
+      'Heartless', 'Honorable', 'Horny', 'Hungry',
       'Icy', 'Immortal', 'Immoral', 'Insane',
       'Just',
       'Lesser', 'Lunar',
