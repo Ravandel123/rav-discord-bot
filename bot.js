@@ -115,6 +115,38 @@ client.on("message", message => {
   ]
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //darkest dungeon--------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  var ddQuotesAfflictionList = [
+  'The human mind - fragile like a robin\'s egg.',
+  'Wherefore, heroism?',
+  'The mind cannot hope to withstand such an assault.',
+  'Even the aged oak will fall to the tempest\'s winds.',
+  'Madness, our old friend!',
+  'One can sometimes find clarity in madness, but only rarely...',
+  'Madness - sublimity of the intelligence, or so it has been said.',
+  'The bulwarks of the mind have fallen!',
+  'The abyss is made manifest!',
+  'Frustration and fury, more destructive than a hundred cannons.',
+  'Fear and frailty finally claim their due.',
+  'The walls close in, the shadows whisper of conspiracy!',
+  'There can be no hope in this hell, no hope at all.',
+  'Self-preservation is paramount - at any cost!',
+  'Those who covet injury find it in no short supply.',
+  'Reeling, gasping, taken over the edge into madness!'
+  ]
+  
+  var ddQuotesVirtuesList = [
+  'A moment of valor shines brightest against a backdrop of despair.',
+  'Adversity can foster hope, and resilience.',
+  'A moment of clarity in the eye of the storm...',
+  'Anger is power - unleash it!',
+  'Many fall in the face of chaos; but not this one, not today.'
+  ]
+  
+  var ddQuotesAllList = ddQuotesAfflictionList.concat(ddQuotesVirtuesList)
+  
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //size-------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   var sizeBigList = [
@@ -146,6 +178,13 @@ client.on("message", message => {
   
   switch (command) 
   {
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------ddquote-----------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'ddquote':
+      message.channel.send(ReturnRandom(ddQuotesAllList))
+      break;
+      
     //----------------------------------------------------------------------------------------------------------------------------
     //----------%-----------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
@@ -429,8 +468,8 @@ client.on("message", message => {
         'I think I saw ' + who + ' in the ' + ReturnRandom(serialsList) + '.',
         who + ' looks like my ' + ReturnRandom(firstList) + ' relative.',
         who + ' was probably with me in the ' + ReturnRandom(placesList) + '.',
-        'I rescued ' + who + ' from the ' + ReturnRandom(secondList) + ' in the ' + ReturnRandom(serialsList) + '.',
-        who + ' was that ' + ReturnRandom(secondList) + ' in the ' + ReturnRandom(serialsList) + '.',
+        'I rescued ' + who + ' from ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
+        who + ' was that ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
         'I have definitely seen ' + who + ' in the ' + ReturnRandom(placesList) + '.'
         ];
       }
@@ -740,22 +779,20 @@ client.on("message", message => {
       var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
       var specialArray = ['Furry', 'Degenerate', 'Deviant', 'Cannibalistic', 'Anxious', 'Depressive', 'Insane', 'Psychopathic', 'Mutantic', 'Destructive', 'Maniacal', 'Mindless', 'Lazy', 'Brainwashed', 'Mighty'];
       var result;
+      var quoteList = ddQuotesAfflictionList;
       who = RecognizeWho(arguments[1], message, command)
 
       if(Chance(20))
-      {
         result = ReturnRandom(specialArray);
-      } 
       else if (Chance(25))
       {
         result = ReturnRandom(virtuesArray);
+        quoteList = ddQuotesVirtuesList;
       }
       else
-      {
         result = ReturnRandom(afflictionsArray);
-      }
 
-      message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**')
+      message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**\n\n **"' + ReturnRandom(quoteList)) + '"**'
       break;
 
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1021,12 +1058,14 @@ client.on("message", message => {
     //----------------------------------------------------------------------------------------------------------------------------
     case 'braindmg':
       responseList = [
-      'https://www.youtube.com/watch?v=Mz3Mi_OZYno',
       'https://www.youtube.com/watch?v=eh7lp9umG2I',
       'https://www.youtube.com/watch?v=vTIIMJ9tUc8',
       'https://www.youtube.com/watch?v=MNyG-xu-7SQ',
       'https://www.youtube.com/watch?v=jofNR_WkoCE',
-      'https://www.youtube.com/watch?v=kffacxfA7G4'
+      'https://www.youtube.com/watch?v=kffacxfA7G4',
+      'https://www.youtube.com/watch?v=qcFybw4mSOk',
+      'https://www.youtube.com/watch?v=3fk9Xvh32hM''
+      'https://www.youtube.com/watch?v=be1EOu7f790'
       ];
       who = RecognizeWho(arguments[1], message, command)
 
@@ -1159,23 +1198,7 @@ client.on("message", message => {
       message.channel.send('Result: ' + rollsIndividuals + '] Total amount: ' + rollsTotalAmount)
       break;
 
-    //---------------------------------------------------------------------------------------------------------------------------
-    //----------peril----------------------------------------------------------
-    //---------------------------------------------------------------------------------------------------------------------------
-    case 'peril':
-      if (arguments[1] == null)
-      {
-        rollValue = Math.floor(Math.random() * 3);
-        rollValue = rollValue + 3;
-      }
-      else
-      {
-        rollValue = arguments[1];
-      }
-
-      armellDiceAmount = RollArmelloDices(rollValue);
-      message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
-      break;
+    
 
     //---------------------------------------------------------------------------------------------------------------------------
     //----------when-----------------------------------------------------------
@@ -1296,13 +1319,6 @@ client.on("message", message => {
       break;
 
     //---------------------------------------------------------------------------------------------------------------------------
-    //----------invite-----------------------------------------------------------------------------------------------------------
-    //---------------------------------------------------------------------------------------------------------------------------
-    case 'invite':
-      message.channel.send('https://discordapp.com/oauth2/authorize?client_id=485910048032161792&scope=bot')
-      break;
-
-    //---------------------------------------------------------------------------------------------------------------------------
     //----------help-------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------
     case 'help':
@@ -1390,8 +1406,45 @@ client.on("message", message => {
       message.channel.send(testString);
       
       break;
+      
+
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //-------------------------------------------------------------------FINISHED COMMANDS---------------------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+    //---------------------------------------------------------------------------------------------------------------------------
+    //-----invite----------------------------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------
+    case 'invite':
+      message.channel.send('https://discordapp.com/oauth2/authorize?client_id=485910048032161792&scope=bot')
+      break;
+  
+    //---------------------------------------------------------------------------------------------------------------------------
+    //-----peril----------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------
+    case 'peril':
+      if (arguments[1] == null)
+      {
+        rollValue = Math.floor(Math.random() * 3);
+        rollValue = rollValue + 3;
+      }
+      else
+        rollValue = arguments[1];
+
+      armellDiceAmount = RollArmelloDices(rollValue);
+      message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
+      break;
+  
   }
 
+  //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-------------------------------------------------------------------FUNCTIONS-----------------------------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
   function ReturnRandom(listOfElements)
   {
     return listOfElements[Math.floor(Math.random() * listOfElements.length)];
