@@ -1064,7 +1064,7 @@ client.on("message", message => {
       'https://www.youtube.com/watch?v=jofNR_WkoCE',
       'https://www.youtube.com/watch?v=kffacxfA7G4',
       'https://www.youtube.com/watch?v=qcFybw4mSOk',
-      'https://www.youtube.com/watch?v=3fk9Xvh32hM''
+      'https://www.youtube.com/watch?v=3fk9Xvh32hM',
       'https://www.youtube.com/watch?v=be1EOu7f790'
       ];
       who = RecognizeWho(arguments[1], message, command)
