@@ -213,7 +213,7 @@ client.on("message", message => {
           break;
           
         case 1:
-          properSizeList = sizeSmallListList;
+          properSizeList = sizeSmallList;
           break;
         
         case 2:
