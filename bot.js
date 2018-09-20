@@ -792,7 +792,7 @@ client.on("message", message => {
       else
         result = ReturnRandom(afflictionsArray);
 
-      message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**\n\n"' + ReturnRandom(quoteList)) + '"'
+      message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**\n\n**"' + ReturnRandom(quoteList) + '"**')
       break;
 
     //----------------------------------------------------------------------------------------------------------------------------
