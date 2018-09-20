@@ -153,7 +153,7 @@ client.on("message", message => {
       if(arguments[1] == null)
         return;
       
-      who = RecognizeWho(arguments[2], message, command);
+      who = RecognizeWhoSimple(arguments[2], message, command);
       
       if(Chance(60))
         i = Rnd(100)
@@ -1404,8 +1404,17 @@ client.on("message", message => {
       return message.author;
     }
 
+    return message.content.slice(prefix.length + command.length + 1);
+  }
+  
+  function RecognizeWhoSimple(arg, message, command)
+  {
+    if (arg == 'me' || arg == null)
+    {
+      return message.author;
+    }
+
     return arg;
-    //return message.content.slice(prefix.length + command.length + 1);
   }
 
   function RollArmelloDices(rolls)
