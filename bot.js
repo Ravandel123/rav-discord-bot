@@ -477,7 +477,7 @@ client.on("message", message => {
       
       var secondList = [
       'Abomination', 'Amazon', 'Android', 'Assassin', 'Automaton', 'Avatar',
-      'Bandit', 'Banker', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Beggar', 'Berserker', 'Bodyguard', 'Butcher',
+      'Bandit', 'Banker', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Bodyguard', 'Butcher',
       'Cannibal', 'Champion', 'Charlatan', 'Colossus', 'Communist', 'Construct', 'Courtesan', 'Cultist','Cyborg',
       'Device',
       'Executioner', 'Experiment',
@@ -1423,33 +1423,28 @@ client.on("message", message => {
     //---------------------------------------------------------------------------------------------------------------------------
     case 'roll':
       var rollItems;
-      var numberOfRolls = null;
-      var typeOfDice = null;
+      var numberOfRolls;
+      var typeOfDice;
       var rollsIndividuals = '[';
       var rollsTotalAmount = 0;
-      
-      //if(arguments[1] == null)
-      //{
-      //  numberOfRolls = 1;
-      //  typeOfDice = 6;
-      //}
-      //else
-      //{
-        if (arguments[1] != null)
-        {
-          rollItems = arguments[1].split('d');
-          numberOfRolls = rollItems[0];
-          typeOfDice = rollItems[1];
-        }
-          
-        
-        
-        if(numberOfRolls == null)
-          typeOfDice = 1;
-        
-        if(typeOfDice == null)
-          typeOfDice = 6;
-      //}
+
+      if(arguments[1] == null)
+      {
+        numberOfRolls = 1;
+        typeOfDice = 6;
+      }
+      else
+      {
+        rollItems = arguments[1].split('d');
+        numberOfRolls = rollItems[0];
+        typeOfDice = rollItems[1];
+      }
+
+      if(numberOfRolls == null)
+        numberOfRolls = 1;
+
+      if(typeOfDice == null)
+        typeOfDice = 6;
 
       if(typeOfDice == 'a')
       {
@@ -1462,7 +1457,7 @@ client.on("message", message => {
       {
         for (i = 0; i < numberOfRolls; i++)
         {
-          rollValue = Math.floor(Math.random() * typeOfDice + 1);
+          rollValue = Rnd(typeOfDice);
           rollsIndividuals = rollsIndividuals + rollValue;
 
           if(i != numberOfRolls - 1)
@@ -1589,11 +1584,11 @@ client.on("message", message => {
 
       var secondPart = [
       'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
-      'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Baron', 'Beast', 'Beggar', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
+      'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Baron', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
       'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chevalier', 'Chimneysweep', 'Coachman', 'Collector', 'Colossus', 'Construct', 'Courtesan', 'Countess', 'Cultist', 'Courtier', 'Crusader', 'Cyborg',
       'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
       'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
-      'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Footpad', 'Foreman', 'Forger', 'Freeholder', 'Friar',
+      'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Foreman', 'Forger', 'Freeholder', 'Friar',
       'Gambler', 'Guard', 'Guardian', 'Gunner',
       'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
       'Illusionist', 'Initiate', 'Inquisitor',
