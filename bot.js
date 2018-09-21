@@ -777,21 +777,21 @@ client.on("message", message => {
       ]
       
       responseList = [
-      'Yes' + additionalLol + '.', 'No' + additionalLol + '.',
-      'Definitely' + additionalLol + '.', 'Definitely no' + additionalLol + '.',
-      'Probably' + additionalLol + '.', 'Probably not' + additionalLol + '.',
-      'For sure' + additionalLol + '.', 'Lol no.',
-      'Why not' + additionalLol + '?', 'How about no' + additionalLol + '.',
-      'Absolutely' + additionalLol + '.', 'Not at all' + additionalLol + '.',
-      'It\'s a possibility' + additionalLol + '.', 'Nah' + additionalLol + '.',
-      'Totally' + additionalLol + '.', 'No way' + additionalLol + '.',
-      'Affirmative' + additionalLol + '.', 'Nope' + additionalLol + '.',
-      'Yup' + additionalLol + '.', 'Not in a million years' + additionalLol + '.',
-      'Sure' + additionalLol + '.', 'Under no circumstances' + additionalLol + '.',
-      'Likely' + additionalLol + '.', 'Unlikely' + additionalLol + '.'
+      'Yes', 'No',
+      'Definitely', 'Definitely no',
+      'Probably', 'Probably not',
+      'For sure', 'Impossible.',
+      'Why not', 'How about no',
+      'Absolutely', 'Not at all',
+      'It\'s a possibility', 'Nah',
+      'Totally', 'No way',
+      'Affirmative', 'Nope',
+      'Yup', 'Not in a million years',
+      'Sure', 'Under no circumstances',
+      'Likely', 'Unlikely'
       ];
 
-      message.channel.send(ReturnRandom(responseList))
+      message.channel.send(ReturnRandom(responseList) + additionalLol + '.')
       break;
 
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1457,7 +1457,7 @@ client.on("message", message => {
       {
         for (i = 0; i < numberOfRolls; i++)
         {
-          rollValue = Rnd(typeOfDice);
+          rollValue = Rnd(typeOfDice) + 1;
           rollsIndividuals = rollsIndividuals + rollValue;
 
           if(i != numberOfRolls - 1)
