@@ -1457,7 +1457,7 @@ client.on("message", message => {
       {
         for (i = 0; i < numberOfRolls; i++)
         {
-          rollValue = Rnd(typeOfDice) + 1;
+          rollValue = RndNo0(typeOfDice);
           rollsIndividuals = rollsIndividuals + rollValue;
 
           if(i != numberOfRolls - 1)
