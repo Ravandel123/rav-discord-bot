@@ -146,11 +146,30 @@ client.on("message", message => {
   
   var ddQuotesAllList = ddQuotesAfflictionList.concat(ddQuotesVirtuesList)
   
+  
+  
+  
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  //size-------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Measurements-------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  var measurementSize = [
+  'centimeters', 'decimeters', 'feet', 'inches', 'kilometers', 'meters', 'miles', 'millimeters', 'yards'
+  ]
+  
+  var measurementVolume = [
+  'cubics', 'cups', 'gallons', 'liters', 'milliliters', 'pints', 'quarts'
+  ]
+  
+  var measurementWeigh = [
+  'decagrams', 'grams', 'kilograms', 'ounces', 'pounds', 'tons'
+  ]
+  
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Sizes-------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   var sizeBigList = [
-  'Big', 'Colossal', 'Enormous', 'Gargantuan', 'Giant', 'Gigantic', 'Huge', 'Large', 'Monstrous', 'Tremendous'
+  'Astronomical', 'Big', 'Colossal', 'Enormous', 'Gargantuan', 'Giant', 'Gigantic', 'Huge', 'Large', 'Monstrous', 'Tremendous'
   ]
   
   var sizeSmallList = [
@@ -1161,58 +1180,6 @@ client.on("message", message => {
       }
       break;
 
-    //---------------------------------------------------------------------------------------------------------------------------
-    //----------roll-----------------------------------------------------------
-    //---------------------------------------------------------------------------------------------------------------------------
-    case 'roll':
-      var rollsIndividuals = '[';
-      var rollsTotalAmount = 0;
-
-      if(arguments[1] == null)
-      {
-        arguments[1] = '1d6';
-      }
-
-      var rollItems = arguments[1].split('d');
-      var numberOfRolls = rollItems[0];
-      var typeOfDice = rollItems[1];
-
-      if(numberOfRolls == null)
-      {
-        numberOfRolls = 1;
-      }
-
-      if(typeOfDice == null)
-      {
-        typeOfDice = 6;
-      }
-
-      if(typeOfDice == 'a')
-      {
-        armellDiceAmount = RollArmelloDices(numberOfRolls);
-
-        message.channel.send('Result: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
-        break;
-      }
-      else
-      {
-        for (i = 0; i < numberOfRolls; i++)
-        {
-          rollValue = Math.floor(Math.random() * typeOfDice + 1);
-          rollsIndividuals = rollsIndividuals + rollValue;
-
-          if(i != numberOfRolls - 1)
-          {
-            rollsIndividuals = rollsIndividuals + ',';
-          }
-
-          rollsTotalAmount = rollsTotalAmount + rollValue;
-        }
-      }
-      message.channel.send('Result: ' + rollsIndividuals + '] Total amount: ' + rollsTotalAmount)
-      break;
-
-    
 
     //---------------------------------------------------------------------------------------------------------------------------
     //----------when-----------------------------------------------------------
@@ -1449,6 +1416,52 @@ client.on("message", message => {
 
       armellDiceAmount = RollArmelloDices(rollValue);
       message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
+      break;
+      
+    //---------------------------------------------------------------------------------------------------------------------------
+    //----------roll-----------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------
+    case 'roll':
+      var rollItems;
+      var numberOfRolls;
+      var typeOfDice;
+      var rollsIndividuals = '[';
+      var rollsTotalAmount = 0;
+      
+      if(arguments[1] == null)
+      {
+        numberOfRolls = 1;
+        typeOfDice = 6;
+      }
+      else
+      {
+        rollItems = arguments[1].split('d');
+        numberOfRolls = rollItems[0];
+        typeOfDice = rollItems[1];
+      }
+
+      if(typeOfDice == 'a')
+      {
+        armellDiceAmount = RollArmelloDices(numberOfRolls);
+
+        message.channel.send('Result: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
+        break;
+      }
+      else
+      {
+        for (i = 0; i < numberOfRolls; i++)
+        {
+          rollValue = Math.floor(Math.random() * typeOfDice + 1);
+          rollsIndividuals = rollsIndividuals + rollValue;
+
+          if(i != numberOfRolls - 1)
+            rollsIndividuals = rollsIndividuals + ',';
+
+          rollsTotalAmount = rollsTotalAmount + rollValue;
+        }
+      }
+      
+      message.channel.send('Result: ' + rollsIndividuals + '] Total amount: ' + rollsTotalAmount)
       break;
   
   }
