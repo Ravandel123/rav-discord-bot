@@ -397,12 +397,15 @@ client.on("message", message => {
       'someone from TV show',
       'someone from Anime',
       'someone funny',
-      'Neo-Nazi',
-      'communist'
+      'a Neo-Nazi',
+      'a communist',
+      'a marxist',
+      'a savage'
       ];
       
       var whoList = [
       'my',
+      'Ayy Fb\'s',
       'Doctor Pumpkins\'',
       'Vardgo\'s',
       'Ravandel\'s',
@@ -419,13 +422,23 @@ client.on("message", message => {
       'Mao Zedong\'s',
       'Obama\'s',
       'Putin\'s',
+      'Kim Dzong Un\'s',
+      'Osama bin Laden\'s',
+      'Saddam Hussein\'s',
+      'Caligula\'s',
+      'Bill Gates\'',
+      'Albert Einstein\'s',
+      'Lenin\'s',
+      'Robin Hood\'s',
+      'King Arthur\'s',
+      'Pope Francis\'s'
       ];
       
       var firstList = [
       'Abominable', 'Adorable', 'Aggressive', 'Amazing', 'Annointed', 'Art', 'Awful',
       'Barbaric', 'Best', 'Bloody', 'Brainwash', 'Brutal',
       'Cannibalistic', 'Celestial', 'Crazy', 'Cute', 'Cutest',
-      'Defiant', 'Degenerate', 'Delusional', 'Destructive', 'Dirty', 'Drunken',
+      'Defiant', 'Degenerate', 'Delusional', 'Destructive', 'Dirty', 'Domesticated', 'Drunken',
       'Evil', 'Extremely Slow',
       'Faceless', 'Fast', 'Fearsome', 'Feisty', 'Feral', 'Funny', 'Furry',
       'Gargantuan', 'Good', 'Greater',
@@ -437,6 +450,7 @@ client.on("message", message => {
       'Pathethic', 'Pleasure', 'Primitive', 'Psychopathic',
       'Rapturous', 'Rotten',
       'Sacred', 'Sadistic', 'Savage', 'Screwed', 'Secret', 'Serial', 'Silly', 'Slow', 'Small', 'Smart', 'Starving', 'Strong',
+      'Tamed',
       'Ugly', 'Useful', 'Useless',
       'Most Valuable', 'Valuable', 'Vengeful', 'Violent',
       'Well Trusted', 'Worst'
@@ -1508,7 +1522,7 @@ client.on("message", message => {
       'Abominable', 'Adorable', 'Aerial', 'Aeronaut', 'Aggressive', 'Animate', 'Anointed', 'Amateur', 'Apprentice', 'Awesome', 'Awful',
       'Badlands', 'Barbaric', 'Brainwashed', 'Brutal',
       'Cannibalistic', 'Celestial', 'Chittering', 'Clever', 'Cloaked', 'Crazy',
-      'Defiant', 'Degenerate', 'Delusional', 'Dirty', 'Drunken',
+      'Defiant', 'Degenerate', 'Delusional', 'Dirty', 'Domesticated', 'Drunken',
       'Extremely Slow',
       'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Fearsome', 'Feisty', 'Feral', 'Forsworn', 'Furious', 'Furry',
       'Greater',
@@ -1520,6 +1534,7 @@ client.on("message", message => {
       'Pale', 'Pathethic', 'Primitive', 'Provocative', 'Psychopathic',
       'Rapturous',
       'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic', 'Slow', 'Starving',
+      'Tamed',
       'Ultra Fast', 'Undying',
       'Wild'
       ];
