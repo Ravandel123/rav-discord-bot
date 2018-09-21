@@ -1519,12 +1519,17 @@ client.on("message", message => {
   
   function Chance(chanceOfSuccess)
   {
-    return ((Math.floor(Math.random() * 100) < chanceOfSuccess) == true)
+    return ((Math.floor(Math.random() * 100) < chanceOfSuccess) == true);
   }
   
   function Rnd(maximum)
   {
-    return Math.floor(Math.random() * (maximum + 1))
+    return Math.floor(Math.random() * (maximum + 1));
+  }
+  
+  function RndNo0(maximum)
+  {
+    return Math.floor(Math.random() * maximum) + 1;
   }
 
   function GenerateRandomClass(typeOfCheck)
