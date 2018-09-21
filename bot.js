@@ -1423,8 +1423,8 @@ client.on("message", message => {
     //---------------------------------------------------------------------------------------------------------------------------
     case 'roll':
       var rollItems;
-      var numberOfRolls;
-      var typeOfDice;
+      var numberOfRolls = null;
+      var typeOfDice = null;
       var rollsIndividuals = '[';
       var rollsTotalAmount = 0;
       
