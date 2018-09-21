@@ -1435,7 +1435,9 @@ client.on("message", message => {
       //}
       //else
       //{
-        rollItems = arguments[1].split('d');
+        if (arguments[1] != null)
+          rollItems = arguments[1].split('d');
+        
         numberOfRolls = rollItems[0];
         typeOfDice = rollItems[1];
         
