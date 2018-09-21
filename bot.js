@@ -1428,20 +1428,23 @@ client.on("message", message => {
       var rollsIndividuals = '[';
       var rollsTotalAmount = 0;
       
-      if(arguments[1] == null)
-      {
-        numberOfRolls = 1;
-        typeOfDice = 6;
-      }
-      else
-      {
+      //if(arguments[1] == null)
+      //{
+      //  numberOfRolls = 1;
+      //  typeOfDice = 6;
+      //}
+      //else
+      //{
         rollItems = arguments[1].split('d');
         numberOfRolls = rollItems[0];
         typeOfDice = rollItems[1];
         
+        if(numberOfRolls == null)
+          typeOfDice = 1;
+        
         if(typeOfDice == null)
           typeOfDice = 6;
-      }
+      //}
 
       if(typeOfDice == 'a')
       {
