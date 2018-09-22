@@ -1423,8 +1423,8 @@ client.on("message", message => {
     //---------------------------------------------------------------------------------------------------------------------------
     case 'roll':
       var rollItems;
-      var numberOfRolls = null;
-      var typeOfDice = null;
+      var numberOfRolls;
+      var typeOfDice;
       var rollsIndividuals = '[';
       var rollsTotalAmount = 0;
 
@@ -1439,7 +1439,8 @@ client.on("message", message => {
         numberOfRolls = rollItems[0];
         typeOfDice = rollItems[1];
       }
-
+       message.channel.send('Number of rolls ' + numberOfRolls)
+       message.channel.send('Number of dices ' + typeOfDice)
       if(numberOfRolls == null)
         numberOfRolls = 1;
 
