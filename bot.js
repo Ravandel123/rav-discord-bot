@@ -1444,7 +1444,7 @@ client.on("message", message => {
       if(numberOfRolls == null)
         numberOfRolls = 1;
 
-      if(typeOfDice == null)
+      if(typeOfDice == null || typeOfDice == '')
         typeOfDice = 6;
 
       if(typeOfDice == 'a')
