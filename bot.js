@@ -1447,7 +1447,7 @@ client.on("message", message => {
         typeOfDice = rollItems[1];
       }
 
-      if(numberOfRolls == null)
+      if(numberOfRolls == null || numberOfRolls == 0)
         numberOfRolls = 1;
 
       if(typeOfDice == null || typeOfDice == 0)
