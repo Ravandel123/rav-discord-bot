@@ -1444,8 +1444,11 @@ client.on("message", message => {
       if(numberOfRolls == null)
         numberOfRolls = 1;
 
-      if(typeOfDice == null || typeOfDice == '')
+      if(typeOfDice == null || typeOfDice == '' || typeOfDice == 0)
+      {
+        message.channel.send('Weszlo')
         typeOfDice = 6;
+      }
 
       if(typeOfDice == 'a')
       {
