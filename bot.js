@@ -147,21 +147,27 @@ client.on("message", message => {
   var ddQuotesAllList = ddQuotesAfflictionList.concat(ddQuotesVirtuesList)
   
   
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----D&D-------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
+  var dndAlignmentsList = [
+  'Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'
+  ];
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Measurements-------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
-  var measurementSize = [
+  var measurementLengthList = [
   'centimeters', 'decimeters', 'feet', 'inches', 'kilometers', 'meters', 'miles', 'millimeters', 'yards'
   ]
   
-  var measurementVolume = [
+  var measurementVolumeList = [
   'cubics', 'cups', 'gallons', 'liters', 'milliliters', 'pints', 'quarts'
   ]
   
-  var measurementWeigh = [
+  var measurementWeighList = [
   'decagrams', 'grams', 'kilograms', 'ounces', 'pounds', 'tons'
   ]
   
@@ -238,12 +244,12 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'Capacity of that is definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolume) + '.',
-      'Around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolume) + '.',
-      'Exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolume) + '.',
-      'Its close to ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolume) + '.',
-      'I think the capacity of that is less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolume) + '.',
-      'I think the capacity of that is more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolume) + '.'
+      'Capacity of that is definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'Around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'Exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'Its close to ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'I think the capacity of that is less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'I think the capacity of that is more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.'
       ];
 
       if(Chance(10))
@@ -315,7 +321,7 @@ client.on("message", message => {
     case 'heaviness':
 
       specialList = [
-      'That is beyond the mass of supermassive black hole in ' + ReturnRandom(measurementSize) + ' Galaxy' + additionalLol + '.',
+      'That is beyond the mass of supermassive black hole in ' + ReturnRandom(galaxies) + ' Galaxy' + additionalLol + '.',
       'Too light' + additionalLol + '.',
       'Too heavy' + additionalLol + '.',
       'Immeasurable' + additionalLol + '!',
@@ -326,11 +332,11 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'That weigh definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.',
-      'That weigh around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.',
-      'Weigh of that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.',
-      'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.',
-      'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeigh) + '.'
+      'That weigh definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'That weigh around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'Weigh of that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.'
       ];
 
       if(Chance(10))
@@ -365,11 +371,11 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'Its definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + ' long.',
-      'Its around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + ' long.',
-      'Length of that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + '.',
-      'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + '.',
-      'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementSize) + '.'
+      'Its definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + ' long.',
+      'Its around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + ' long.',
+      'Length of that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.',
+      'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.',
+      'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.'
       ];
 
       if(Chance(10))
@@ -1076,34 +1082,7 @@ client.on("message", message => {
       message.channel.send(ReturnRandom(responseList))
       break;
 
-    //----------------------------------------------------------------------------------------------------------------------------
-    //----------dndalign--------------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------
-    case 'dndalign':
-      responseList = ['Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'];
-      who = RecognizeWho(arguments[1], message, command)
-
-      message.channel.send(who + ' is **' + ReturnRandom(responseList) + '**')
-      break;
-      
-    //----------------------------------------------------------------------------------------------------------------------------
-    //----------braindmg--------------------------------------------------------
-    //----------------------------------------------------------------------------------------------------------------------------
-    case 'braindmg':
-      responseList = [
-      'https://www.youtube.com/watch?v=eh7lp9umG2I',
-      'https://www.youtube.com/watch?v=vTIIMJ9tUc8',
-      'https://www.youtube.com/watch?v=MNyG-xu-7SQ',
-      'https://www.youtube.com/watch?v=jofNR_WkoCE',
-      'https://www.youtube.com/watch?v=kffacxfA7G4',
-      'https://www.youtube.com/watch?v=qcFybw4mSOk',
-      'https://www.youtube.com/watch?v=3fk9Xvh32hM',
-      'https://www.youtube.com/watch?v=be1EOu7f790'
-      ];
-      who = RecognizeWho(arguments[1], message, command)
-
-      message.channel.send(ReturnRandom(responseList))
-      break;
+    
       
     //----------------------------------------------------------------------------------------------------------------------------
     //----------ambush----------------------------------------------------------
@@ -1394,7 +1373,35 @@ client.on("message", message => {
     //-------------------------------------------------------------------FINISHED COMMANDS---------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  
+
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------braindmg--------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'braindmg':
+      responseList = [
+      'https://www.youtube.com/watch?v=eh7lp9umG2I',
+      'https://www.youtube.com/watch?v=vTIIMJ9tUc8',
+      'https://www.youtube.com/watch?v=MNyG-xu-7SQ',
+      'https://www.youtube.com/watch?v=jofNR_WkoCE',
+      'https://www.youtube.com/watch?v=kffacxfA7G4',
+      'https://www.youtube.com/watch?v=qcFybw4mSOk',
+      'https://www.youtube.com/watch?v=3fk9Xvh32hM',
+      'https://www.youtube.com/watch?v=be1EOu7f790'
+      ];
+      who = RecognizeWho(arguments[1], message, command)
+
+      message.channel.send(ReturnRandom(responseList))
+      break;
+      
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------dndalign--------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'dndalign':
+      who = RecognizeWho(arguments[1], message, command)
+
+      message.channel.send(who + ' is **' + ReturnRandom(dndAlignmentsList) + '**')
+      break;  
+      
     //---------------------------------------------------------------------------------------------------------------------------
     //-----invite----------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------
@@ -1439,16 +1446,12 @@ client.on("message", message => {
         numberOfRolls = rollItems[0];
         typeOfDice = rollItems[1];
       }
-       message.channel.send('Number of rolls ' + numberOfRolls)
-       message.channel.send('Number of dices ' + typeOfDice)
+
       if(numberOfRolls == null)
         numberOfRolls = 1;
 
       if(typeOfDice == null || typeOfDice == 0)
-      {
-        message.channel.send('Weszlo')
         typeOfDice = 6;
-      }
 
       if(typeOfDice == 'a')
       {
