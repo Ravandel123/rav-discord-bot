@@ -1555,7 +1555,7 @@ client.on("message", message => {
       var quoteList = ddQuotesAfflictionList;
       who = RecognizeWho(arguments[1], message, command)
 
-      if(Chance(20))
+      if(Chance(100))
         if(Chance(25))
         {
           result = ReturnRandom(specialVirtuesList);
