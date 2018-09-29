@@ -1555,14 +1555,14 @@ client.on("message", message => {
       var quoteList = ddQuotesAfflictionList;
       who = RecognizeWho(arguments[1], message, command)
 
-      if(Chance(100))
+      if(Chance(20))
         if(Chance(25))
         {
           result = ReturnRandom(specialVirtuesList);
           quoteList = ddQuotesVirtuesList;
         }
         else
-          ReturnRandom(specialAfflictionsList);
+          result = ReturnRandom(specialAfflictionsList);
       else if (Chance(25))
       {
         result = ReturnRandom(virtuesList);
