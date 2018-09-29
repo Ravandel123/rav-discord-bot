@@ -231,7 +231,35 @@ client.on("message", message => {
   'A dizzying blow to body and brain!'
   ]
   
-  var ddQuotesAllList = ddQuotesAfflictionList.concat(ddQuotesVirtuesList, ddQuotesStrikingCriticalHitList, ddQuotesReceivingCriticalHitList)
+  var ddQuotesDeathDoorList = [
+  'Perched at the very precipice of oblivion...',
+  'A hand-breadth from becoming unwound...',
+  'Teetering on the brink, facing the abyss...',
+  'And now the true test... hold fast, or expire?',
+  'As life ebbs, terrible vistas of emptiness reveal themselves.'
+  ]
+  var ddQuotesDeathblowList = [
+  'Survival is a tenuous proposition in this sprawling tomb.',
+  'More blood soaks the soil, feeding the evil therein.',
+  'Another life wasted in the pursuit of glory and gold.',
+  'This is no place for the weak, or the foolhardy.',
+  'This is no place for the weak, or foolhardy.',
+  'More dust, more ashes, more disappointment.'
+  ]
+  
+  var ddQuotesWinningBattleList = [
+  'These nightmarish creatures can be felled! They can be beaten!',
+  'Seize this momentum! Push on to the task\'s end!',
+  'This expedition, at least, promises success.',
+  'As victories mount, so too will resistance.',
+  'Success so clearly in view... or is it merely a trick of the light?',
+  'Remind yourself that overconfidence is a slow and insidious killer.',
+  'A trifling victory, but a victory nonetheless.',
+  'Be wary - triumphant pride precipitates a dizzying fall...',
+  'Ghoulish horrors - brought low and driven into the mud!'
+  ]
+  
+  var ddQuotesAllList = ddQuotesAfflictionList.concat(ddQuotesVirtuesList, ddQuotesStrikingCriticalHitList, ddQuotesReceivingCriticalHitList, ddQuotesDeathDoorList, ddQuotesDeathblowList, ddQuotesWinningBattleList)
   
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -296,21 +324,33 @@ client.on("message", message => {
     case 'ddquote':
       switch(arguments[1])
       {
-        case 1:
+        case '1':
           message.channel.send('**"' + ReturnRandom(ddQuotesAfflictionList) + '"**')
           break;
           
-        case 2:
+        case '2':
           message.channel.send('**"' + ReturnRandom(ddQuotesVirtuesList) + '"**')
           break;
 
-        case 3:
+        case '3':
           message.channel.send('**"' + ReturnRandom(ddQuotesStrikingCriticalHitList) + '"**')
           break;            
           
-        case 4:
+        case '4':
           message.channel.send('**"' + ReturnRandom(ddQuotesReceivingCriticalHitList) + '"**')
-          break;        
+          break;    
+
+        case '5':
+          message.channel.send('**"' + ReturnRandom(ddQuotesDeathDoorList) + '"**')
+          break; 
+        
+        case '6':
+          message.channel.send('**"' + ReturnRandom(ddQuotesWinningBattleList) + '"**')
+          break; 
+          
+        case '7':
+          message.channel.send('**"' + ReturnRandom(ddQuotesDeathblowList) + '"**')
+          break; 
 
         default:
           message.channel.send('**"' + ReturnRandom(ddQuotesAllList) + '"**')
@@ -504,11 +544,11 @@ client.on("message", message => {
 
       if(Chance(67))
       {
-        message.channel.send(who + ' survived!')
+        message.channel.send(who + ' survived!.\n\n**' + ReturnRandom(ddQuotesWinningBattleList) + '**')
       }
       else
       {
-        message.channel.send('Deathblow, sorry.')
+        message.channel.send('Deathblow, sorry.\n\n**' + ReturnRandom(ddQuotesDeathblowList) + '**')
       }
 
       break;
