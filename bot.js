@@ -115,6 +115,67 @@ client.on("message", message => {
   ]
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Adjectives--------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  var afflictionsList = ['Abusive', 'Fearful', 'Hopeless', 'Irrational', 'Masochistic', 'Paranoid', 'Rapturous', 'Selfish'];
+  
+  var virtuesList = ['Courageous', 'Focused', 'Powerful', 'Stalwart', 'Vigorous', ];
+  
+  var specialAfflictionsList = [
+  'Aggressive', 'Anxious', 
+  'Barbaric', 'Brainwashed', 
+  'Cannibalistic', 'Crazy',
+  'Degenerate', 'Delusional', 'Depressive', 'Destructive', 'Deviant', 
+  'Feral', 'Furious', 'Furry',
+  'Heartless', 'Horny', 
+  'Insane', 
+  'Lazy', 
+  'Maniacal', 'Mindless', 'Mutantic', 
+  'Pathethic', 'Psychopathic', 'Sadistic'
+  ];
+  
+  var specialVirtuesList = [
+  'Clever', 
+  'Fearsome', 
+  'Mighty', 
+  'Relentless', 
+  'Undying'
+  ];
+  
+  var adjectivesNormalList = [
+  'Aerial', 'Aeronaut', 'Animate', 'Anointed', 'Amateur', 'Apprentice', 
+  'Badlands', 
+  'Celestial', 'Chittering', 'Cloaked', 
+  'Defiant', 'Dirty', 
+  'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Forsworn',
+  'Greater',
+  'High', 'Horned', 'Horrible', 'Huge', 
+  'Immortal', 
+  'Leper', 'Lesser', 'Little', 
+  'Pale', 
+  'Sacred', 'Shamanistic', 
+  'Wild'
+  ];
+  
+  var adjectivesFunnyList = [
+  'Abominable', 'Adorable', 'Awesome', 'Awful',
+  'Brainwashed', 'Brutal',
+  'Domesticated', 'Drunken',
+  'Extremely Slow',
+  'Hungry',
+  'Immortal',
+  'Lobotomized',
+  'Monstrous',
+  'Offensive',
+  'Primitive', 'Provocative',
+  'Screwed', 'Serial', 'Slow', 'Starving',
+  'Tamed',
+  'Ultra Fast'
+  ];
+  
+  var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
+  
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Darkest Dungeon--------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   var ddQuotesAfflictionList = [
@@ -144,16 +205,42 @@ client.on("message", message => {
   'Many fall in the face of chaos; but not this one, not today.'
   ]
   
-  var ddQuotesAllList = ddQuotesAfflictionList.concat(ddQuotesVirtuesList)
+  var ddQuotesStrikingCriticalHitList = [
+  'A decisive pummelling!',
+  'A powerful blow!',
+  'A devastating blow!',
+  'Impressive!',
+  'The ground quakes!',
+  'A singular strike!',
+  'Well struck!',
+  'Precision and power!',
+  'Unnerved, unbalanced...',
+  'Precision and power!	'
+  ]
   
+  var ddQuotesReceivingCriticalHitList = [
+  'How quickly the tide turns!',
+  'How quickly the tide turns!',
+  'Grievous injury, palpable fear...',
+  'Such a terrible assault cannot be left unanswered!',
+  'Death waits for the slightest lapse in concentration.',
+  'Exposed to a killing blow!',
+  'Ringing ears, blurred vision - the end approaches...',
+  'Dazed, reeling, about to break...',
+  'Unnerved, unbalanced...',
+  'A dizzying blow to body and brain!'
+  ]
   
+  var ddQuotesAllList = ddQuotesAfflictionList.concat(ddQuotesVirtuesList, ddQuotesStrikingCriticalHitList, ddQuotesReceivingCriticalHitList)
+  
+
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  //-----D&D-------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----D&D---------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var dndAlignmentsList = [
   'Lawful Good.', 'Lawful Neutral.', 'Lawful Evil.', 'Neutral Good.', 'True Neutral.', 'Neutral Evil.', 'Chaotic Evil.', 'Chaotic Neutral.', 'Chaotic Good.'
-  ];
+  ]
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Measurements-------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -207,7 +294,27 @@ client.on("message", message => {
     //----------ddquote-----------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'ddquote':
-      message.channel.send('"' + ReturnRandom(ddQuotesAllList) + '"')
+      switch(arguments[1])
+      {
+        case 1:
+          message.channel.send('**"' + ReturnRandom(ddQuotesAfflictionList) + '"**')
+          break;
+          
+        case 2:
+          message.channel.send('**"' + ReturnRandom(ddQuotesVirtuesList) + '"**')
+          break;
+
+        case 3:
+          message.channel.send('**"' + ReturnRandom(ddQuotesStrikingCriticalHitList) + '"**')
+          break;            
+          
+        case 4:
+          message.channel.send('**"' + ReturnRandom(ddQuotesReceivingCriticalHitList) + '"**')
+          break;        
+
+        default:
+          message.channel.send('**"' + ReturnRandom(ddQuotesAllList) + '"**')
+      }
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -810,30 +917,6 @@ client.on("message", message => {
       message.channel.send(ReturnRandom(rollItems))
       break;
 
-    //------------------------------------------------------------------------------------------------------------------------------
-    //----------resolve-----------------------------------------------------------
-    //------------------------------------------------------------------------------------------------------------------------------
-    case 'resolve':
-      var afflictionsArray = ['Paranoid', 'Selfish', 'Irrational', 'Fearful', 'Hopeless', 'Abusive', 'Masochistic', 'Rapturous'];
-      var virtuesArray = ['Powerful', 'Courageous', 'Stalwart', 'Vigorous', 'Focused'];
-      var specialArray = ['Furry', 'Degenerate', 'Deviant', 'Cannibalistic', 'Anxious', 'Depressive', 'Insane', 'Psychopathic', 'Mutantic', 'Destructive', 'Maniacal', 'Mindless', 'Lazy', 'Brainwashed', 'Mighty'];
-      var result;
-      var quoteList = ddQuotesAfflictionList;
-      who = RecognizeWho(arguments[1], message, command)
-
-      if(Chance(20))
-        result = ReturnRandom(specialArray);
-      else if (Chance(25))
-      {
-        result = ReturnRandom(virtuesArray);
-        quoteList = ddQuotesVirtuesList;
-      }
-      else
-        result = ReturnRandom(afflictionsArray);
-
-      message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**\n\n**"' + ReturnRandom(quoteList) + '"**')
-      break;
-
     //----------------------------------------------------------------------------------------------------------------------------
     //----------you---------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1367,7 +1450,6 @@ client.on("message", message => {
       
       break;
       
-
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //-------------------------------------------------------------------FINISHED COMMANDS---------------------------------------------------------------------------------------------------------
@@ -1423,6 +1505,33 @@ client.on("message", message => {
 
       armellDiceAmount = RollArmelloDices(rollValue);
       message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
+      break;
+      
+    //------------------------------------------------------------------------------------------------------------------------------
+    //----------resolve-----------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------------------------
+    case 'resolve':
+      var result;
+      var quoteList = ddQuotesAfflictionList;
+      who = RecognizeWho(arguments[1], message, command)
+
+      if(Chance(20))
+        if(Chance(25))
+        {
+          result = ReturnRandom(specialVirtuesList);
+          quoteList = ddQuotesVirtuesList;
+        }
+        else
+          ReturnRandom(specialAfflictionsList);
+      else if (Chance(25))
+      {
+        result = ReturnRandom(virtuesList);
+        quoteList = ddQuotesVirtuesList;
+      }
+      else
+        result = ReturnRandom(afflictionsList);
+
+      message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**\n\n**"' + ReturnRandom(quoteList) + '"**')
       break;
       
     //---------------------------------------------------------------------------------------------------------------------------
