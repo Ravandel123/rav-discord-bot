@@ -296,7 +296,7 @@ client.on("message", message => {
   ]
   
   var dictatorsPeopleList = [
-  'Fidel Castro', 'Hitler', 'Mao Zedong', 'Stalin'
+  'Caligula', 'Fidel Castro', 'Hitler', 'Mao Zedong', 'Stalin'
   ]
   
   var peopleAllList = serverPeopleList.concat(dictatorsPeopleList)
@@ -957,7 +957,7 @@ client.on("message", message => {
       'Yes', 'No',
       'Definitely', 'Definitely no',
       'Probably', 'Probably not',
-      'For sure', 'Impossible.',
+      'For sure', 'Impossible',
       'Why not', 'How about no',
       'Absolutely', 'Not at all',
       'It\'s a possibility', 'Nah',
@@ -1118,7 +1118,7 @@ client.on("message", message => {
       'I don\'t know what your problem is, but I\'ll bet it\'s hard to pronounce.',
       'You\'re like Monday mornings, nobody likes you.',
       'All day I thought of you... I was at the zoo.',
-      'To make you laugh on Saturday, I need to you joke on Wednesday.',
+      'To make you laugh on Saturday, I need to tell you a joke on Wednesday.',
       'If you really spoke your mind, you\'d be speechless.',
       'Every time I\'m next to you, I get a fierce desire to be alone.',
       'How did you get here? Did someone leave your cage open?',
