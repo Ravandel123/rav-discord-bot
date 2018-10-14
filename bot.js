@@ -302,6 +302,44 @@ client.on("message", message => {
   var peopleAllList = serverPeopleList.concat(dictatorsPeopleList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Places------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  var placeAdjectiveList = [
+  'Bloody',
+  'Dark',
+  'Pleasure',
+  'Sacrifical',
+  'Weed'
+  ]
+  
+  var placeMainList = [
+  'Altar',
+  'Basement', 'Brothel',
+  'City',
+  'Dungeon',
+  'Forest',
+  'Island',
+  'Mountain', 'Mountains',
+  'Ocean',
+  'Planet',
+  'Ruins',
+  'Sea'
+  ]
+  
+  var placeSinglePartList = [
+  'Coconut',
+  'Darkness',
+  'Nut',
+  'Pleasure',
+  'the Weed'
+  ]
+  
+  
+  placeSinglePartList = placeSinglePartList.concat(peopleAllList)
+  
+  
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Sizes-------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
@@ -388,6 +426,33 @@ client.on("message", message => {
         i = Rnd(200)
         
       message.channel.send(who + ' is ' + Rnd(i) + '% ' + arguments[1] + '.')
+      break;
+      
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------where-------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'where':
+      var finalString = '';
+      var firstWord = '';
+      var secondWord = '';
+      var thirdWord = '';
+      
+      if(Rnd(50))
+      {
+        firstWord = ReturnRandom(placeAdjectiveList);
+        finalString = firstWord;
+      }
+      
+      secondWord = ReturnRandom(placeMainList);
+      finalString = finalString + secondWord
+      
+      if(Rnd(30))
+      {
+        thirdWord = ReturnRandom(placeSinglePartList);
+        finalString = finalString + ' of ' + thirdWord;
+      }
+    
+      message.channel.send(finalString)
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1838,7 +1903,7 @@ client.on("message", message => {
       var lastPart2 = [
       'Absolution',
       'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
-      'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
+      'Cacao-Tree', 'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
       'Fear', 'Food', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
       'Ghost', 'Good', 'Grove', 'Guild',
@@ -1861,7 +1926,6 @@ client.on("message", message => {
       {
         return ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart1.length * (lastPart2.length / 2));
       }
-      
       
       if(Math.floor(Math.random() * 10) < 5)
       {
