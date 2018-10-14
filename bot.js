@@ -444,15 +444,19 @@ client.on("message", message => {
       }
       
       secondWord = ReturnRandom(placeMainList);
-      finalString = finalString + secondWord
+      finalString = finalString + ' ' + secondWord
       
       if(Rnd(30))
       {
         thirdWord = ReturnRandom(placeSinglePartList);
         finalString = finalString + ' of ' + thirdWord;
       }
+      
+      var specialVirtuesList = [
+      'I think the right place for that will be ' + finalString + '.', 
+      ];
     
-      message.channel.send(finalString)
+      message.channel.send(specialVirtuesList)
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -788,8 +792,8 @@ client.on("message", message => {
       'Because I say so.',
       'Because you are noob lol.',
       'Because those are orders from the Queen.',
-      'You won\'t understand my answer with such a low IQ anyway, so I won\'t even bother explaining it to you lol.',
-      'Your small mind is unable to grasp that. XD'
+      'You won\'t understand my answer with such a low IQ anyway, so I won\'t even bother explaining it to you.',
+      'Your small mind is unable to grasp that.'
       ];
     
       var soloList = [
