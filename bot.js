@@ -444,7 +444,7 @@ client.on("message", message => {
       }
       
       secondWord = ReturnRandom(placeMainList);
-      if(secondWord != '')
+      if(firstWord != '')
         finalString = finalString + ' ' + secondWord
       else
         finalString = secondWord
@@ -454,12 +454,8 @@ client.on("message", message => {
         thirdWord = ReturnRandom(placeSinglePartList);
         finalString = finalString + ' of ' + thirdWord;
       }
-      
-      var specialVirtuesList = [
-      'I think the right place for that will be ' + finalString + '.', 
-      ];
     
-      message.channel.send(specialVirtuesList)
+      message.channel.send('*' + finalString + '*')
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
