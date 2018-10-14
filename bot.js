@@ -455,7 +455,7 @@ client.on("message", message => {
         finalString = finalString + ' of ' + thirdWord;
       }
     
-      message.channel.send('*' + finalString + '*')
+      message.channel.send('**' + finalString + '**')
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
