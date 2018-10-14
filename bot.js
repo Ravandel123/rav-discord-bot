@@ -328,9 +328,9 @@ client.on("message", message => {
   ]
   
   var placeSinglePartList = [
-  'Coconut',
-  'Darkness',
-  'Nut',
+  'the Coconut',
+  'the Darkness',
+  'the Nut',
   'Pleasure',
   'the Weed'
   ]
@@ -437,16 +437,19 @@ client.on("message", message => {
       var secondWord = '';
       var thirdWord = '';
       
-      if(Rnd(50))
+      if(Chance(50))
       {
         firstWord = ReturnRandom(placeAdjectiveList);
         finalString = firstWord;
       }
       
       secondWord = ReturnRandom(placeMainList);
-      finalString = finalString + ' ' + secondWord
+      if(secondWord != '')
+        finalString = finalString + ' ' + secondWord
+      else
+        finalString = secondWord
       
-      if(Rnd(30))
+      if(Chance(30))
       {
         thirdWord = ReturnRandom(placeSinglePartList);
         finalString = finalString + ' of ' + thirdWord;
