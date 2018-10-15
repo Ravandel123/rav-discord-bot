@@ -449,19 +449,19 @@ client.on("message", message => {
       var secondWord = '';
       var thirdWord = '';
       
-      if(Chance(60))
+      if(Chance(70))
       {
         firstWord = ReturnRandom(placeAdjectiveList);
         finalString = firstWord;
       }
       
-      secondWord = ReturnRandom(placeMainList);
+      secondWord = ReturnRandoam(placeMainList);
       if(firstWord != '')
         finalString = finalString + ' ' + secondWord
       else
         finalString = secondWord
       
-      if(Chance(50))
+      if(Chance(70))
       {
         thirdWord = ReturnRandom(placeSinglePartList);
         finalString = finalString + ' of ' + thirdWord;
