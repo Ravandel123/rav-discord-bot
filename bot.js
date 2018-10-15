@@ -455,7 +455,7 @@ client.on("message", message => {
         finalString = firstWord;
       }
       
-      secondWord = ReturnRandoam(placeMainList);
+      secondWord = ReturnRandom(placeMainList);
       if(firstWord != '')
         finalString = finalString + ' ' + secondWord
       else
