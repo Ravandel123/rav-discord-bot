@@ -307,8 +307,13 @@ client.on("message", message => {
   
   var placeAdjectiveList = [
   'Bloody',
-  'Dark',
+  'Coconut',
+  'Dark', 'Darkest', 'Doom', 'Drugs',
+  'Evil',
+  'Good',
+  'Nut',
   'Pleasure',
+  'Raven',
   'Sacrifical',
   'Weed'
   ]
@@ -316,22 +321,29 @@ client.on("message", message => {
   var placeMainList = [
   'Altar',
   'Basement', 'Brothel',
-  'City',
-  'Dungeon',
+  'Cartel', 'City',
+  'Dojo', 'Dungeon',
   'Forest',
+  'Grove', 'Guild',
   'Island',
+  'Jail',
   'Mountain', 'Mountains',
   'Ocean',
   'Planet',
   'Ruins',
-  'Sea'
+  'Temple', 'Town', 'Treetops',
+  'Sea', Space'
   ]
   
   var placeSinglePartList = [
-  'the Coconut',
+  'the Birds',
+  'the Coconut', 'the Coconuts',
   'the Darkness',
-  'the Nut',
-  'Pleasure',
+  'Insanity',
+  'Madness', 'Masochism',
+  'the Nut', 'the Nuts',
+  'Pleasure', 'Pleasures',
+  'Sadism', 'Sorrow',
   'the Weed'
   ]
   
@@ -388,11 +400,11 @@ client.on("message", message => {
 
         case '3':
           message.channel.send('**"' + ReturnRandom(ddQuotesStrikingCriticalHitList) + '"**')
-          break;            
+          break;
           
         case '4':
           message.channel.send('**"' + ReturnRandom(ddQuotesReceivingCriticalHitList) + '"**')
-          break;    
+          break;
 
         case '5':
           message.channel.send('**"' + ReturnRandom(ddQuotesDeathDoorList) + '"**')
@@ -437,7 +449,7 @@ client.on("message", message => {
       var secondWord = '';
       var thirdWord = '';
       
-      if(Chance(50))
+      if(Chance(60))
       {
         firstWord = ReturnRandom(placeAdjectiveList);
         finalString = firstWord;
@@ -449,7 +461,7 @@ client.on("message", message => {
       else
         finalString = secondWord
       
-      if(Chance(30))
+      if(Chance(50))
       {
         thirdWord = ReturnRandom(placeSinglePartList);
         finalString = finalString + ' of ' + thirdWord;
