@@ -337,7 +337,8 @@ client.on("message", message => {
   'Ruins',
   'School',
   'Temple', 'Town', 'Treetops',
-  'Sea', 'Space'
+  'Sea', 'Space',
+  'Village'
   ]
   
   var placeSinglePartList = [
