@@ -296,7 +296,7 @@ client.on("message", message => {
   ]
   
   var dictatorsPeopleList = [
-  'Caligula', 'Fidel Castro', 'Hitler', 'Mao Zedong', 'Stalin'
+  'Caligula', 'Fidel Castro', 'Hitler', 'Kim Dzong Un', 'Mao Zedong', 'Putin', 'Stalin'
   ]
   
   var peopleAllList = serverPeopleList.concat(dictatorsPeopleList)
@@ -307,30 +307,35 @@ client.on("message", message => {
   
   var placeAdjectiveList = [
   'Bloody',
-  'Coconut',
-  'Dark', 'Darkest', 'Doom', 'Drugs',
+  'Coconut', 'Creepy',
+  'Dark', 'Darkest', 'Dead', 'Doom', 'Drug',
   'Evil',
   'Good',
-  'Nut',
+  'Haunted',
+  'Masochistic',
+  'Nipple', 'Nut',
   'Pleasure',
   'Raven',
-  'Sacrifical',
+  'Sacrifical', 'Sadistic', 'Scary',
+  'Tentacle', 'Torture',
   'Weed'
   ]
   
   var placeMainList = [
   'Altar',
   'Basement', 'Brothel',
-  'Cartel', 'City',
+  'Cartel', 'City', 'Chamber',
   'Dojo', 'Dungeon',
   'Forest',
   'Grove', 'Guild',
+  'Home', 'House',
   'Island',
   'Jail',
   'Mountain', 'Mountains',
   'Ocean',
   'Planet',
   'Ruins',
+  'School',
   'Temple', 'Town', 'Treetops',
   'Sea', 'Space'
   ]
@@ -338,12 +343,13 @@ client.on("message", message => {
   var placeSinglePartList = [
   'the Birds',
   'the Coconut', 'the Coconuts',
-  'the Darkness',
+  'the Darkness', 'the Dead',
   'Insanity',
   'Madness', 'Masochism',
-  'the Nut', 'the Nuts',
+  'the Nipples', 'the Nut', 'the Nuts',
   'Pleasure', 'Pleasures',
   'Sadism', 'Sorrow',
+  'Tentacles',
   'the Weed'
   ]
   
@@ -1836,6 +1842,7 @@ client.on("message", message => {
       'Magic', 'Money', 'Monster', 'Music', 
       'Pale', 'Plague', 'Pleasure',
       'Savage', 'Shield', 'Solar', 'Soul', 'Spirit', 'Spy', 'Steel', 'Storm',
+      'Tentacle',
       'War', 'Wild', 'White'
       ];
 
@@ -1885,10 +1892,12 @@ client.on("message", message => {
       'Justice',
       'Lemmy', 'the Light',
       'Madness', 'the Magic', 'Masks', 'the Meek', 'Mercy', 'the Moon', 'the Murder',
+      'the Nipples'
       'the Nut',
       'Pleasure', 'Power',
       'Ravandel', 'Retribution', 'the Rot',
       'Seda', 'Shadows', 'Shea', 'the Shroud', 'Steel', 'the Storm', 'the Sun',
+      'Tentacles',
       'Urutaa',
       'Vardgo', 'Violence',
       'War', 'the Weed'
@@ -1927,11 +1936,11 @@ client.on("message", message => {
       'Justice',
       'Light',
       'Madness', 'Magic', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Murder', 'Mutant',
-      'Nut', 'Nuts',
+      'Nipple', 'Nipples', 'Nut', 'Nuts',
       'Pleasure', 'Pleasures', 'Power', 'Psychopath',
       'Retribution', 'Rocket', 'Rot', 'Ruby',
       'Sadism', 'Shadow', 'Shadows', 'Shroud', 'Sun', 'Starvation', 'Steel', 'Storm',
-      'Troupe',
+      'Tentacle', 'Tentacles', 'Troupe',
       'Vengeance', 'Violence',
       'War', 'Weed', 'Woods'
       ]
