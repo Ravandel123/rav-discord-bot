@@ -1893,7 +1893,7 @@ client.on("message", message => {
       'Justice',
       'Lemmy', 'the Light',
       'Madness', 'the Magic', 'Masks', 'the Meek', 'Mercy', 'the Moon', 'the Murder',
-      'the Nipples'
+      'the Nipples',
       'the Nut',
       'Pleasure', 'Power',
       'Ravandel', 'Retribution', 'the Rot',
