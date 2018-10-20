@@ -1140,7 +1140,7 @@ client.on("message", message => {
       if(Chance(20))
         message.channel.send(ReturnRandom(specialArray))
       else
-        (ReturnRandom(firstPartArray) + Math.floor(Math.random() * 14) + '/10.')
+        message.channel.send(ReturnRandom(firstPartArray) + Math.floor(Math.random() * 14) + '/10.')
       break;
       
     //------------------------------------------------------------------------------------------------------------------------------
