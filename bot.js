@@ -1034,7 +1034,7 @@ client.on("message", message => {
       ];
 
       if(arguments[1] == 'me' || arguments[1] == null)
-        ;
+        responseList = array1;
       else
         responseList = array2;
 
