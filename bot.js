@@ -64,9 +64,10 @@ client.on("message", message => {
   'Califur', 'ConFurence', 'Confurgence', 'Conifur Northwest',
   'Eurofurence',
   'Furry Fiesta', 'Furry Weekend Atlanta', 'Fur the \'More\'',
-  'Go Go Club',
+  'Go Go Club', 'Gym',
   'Mephit Furmeet', 'Middle Earth', 'Midwest FurFest',
   'Rainfurrest', 'Rocky Mountain Fur Con',
+  'Tower',
   'VancouFur'
   ]
   
@@ -163,7 +164,7 @@ client.on("message", message => {
   'Domesticated', 'Drunken',
   'Extremely Slow',
   'Hungry',
-  'Immortal',
+  'Immoral',
   'Lobotomized',
   'Monstrous',
   'Offensive',
@@ -173,6 +174,20 @@ client.on("message", message => {
   'Ultra Fast'
   ];
   
+  var adjectivesEndingSinglePartList = [
+  'the Birds',
+  'the Coconut', 'the Coconuts',
+  'the Darkness', 'the Dead',
+  'Insanity',
+  'Madness', 'Masochism',
+  'the Nipples', 'the Nut', 'the Nuts',
+  'Pleasure', 'Pleasures',
+  'Sadism', 'Sorrow',
+  'Tentacles',
+  'the Weed'
+  ]
+  
+  var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList)
   var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -271,6 +286,26 @@ client.on("message", message => {
   ]
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Items-------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  var itemsWeaponsList = [
+  'Axe',
+  'Bow', 'Broadsword',
+  'Claymore', 'Club', 'Crossbow',
+  'Dagger',
+  'Flail',
+  'Gladius', 'Greatsword',
+  'Halberd', 'Hammer',
+  'Kama', 'Katana', 'Knife',
+  'Longsword',
+  'Mace',
+  'Polearm', 'Poleaxe',
+  'Rapier',
+  'Sabre', 'Scimitar', 'Shortsword', 'Sickle', 'Sling', 'Spear', 'Staff', 'Stick', 'Sword',
+  'Wakizashi', 'Wand', 'Warhammer'
+  ];
+  
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Measurements-------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
@@ -327,7 +362,7 @@ client.on("message", message => {
   'Cartel', 'City', 'Chamber',
   'Dojo', 'Dungeon',
   'Forest',
-  'Grove', 'Guild',
+  'Grove', 'Guild', 'Gym',
   'Home', 'House',
   'Island',
   'Jail',
@@ -336,7 +371,7 @@ client.on("message", message => {
   'Planet',
   'Ruins',
   'School',
-  'Temple', 'Town', 'Treetops',
+  'Temple', 'Tower', 'Town', 'Treetops',
   'Sea', 'Space',
   'Village'
   ]
@@ -391,6 +426,40 @@ client.on("message", message => {
   
   switch (command) 
   {
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------ddquote-----------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'weapon':
+      var finalString = '';
+      var firstWord = '';
+      var secondWord = '';
+      var thirdWord = '';
+      
+      if(Chance(70))
+      {
+        firstWord = ReturnRandom(adjectivesStandardList);
+        finalString = firstWord;
+      }
+      
+      secondWord = ReturnRandom(itemsWeaponsList);
+      if(firstWord != '')
+        finalString = finalString + ' ' + secondWord
+      else
+        finalString = secondWord
+      
+      if(Chance(70))
+      {
+        thirdWord = ReturnRandom(adjectivesEndingSinglePartList);
+        finalString = finalString + ' of ' + thirdWord;
+      }
+    
+      message.channel.send('**' + finalString + '**')
+    
+      break;
+  
+  
+  
+  
     //----------------------------------------------------------------------------------------------------------------------------
     //----------ddquote-----------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
@@ -621,9 +690,9 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'Its definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + ' long.',
-      'Its around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + ' long.',
-      'Length of that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.',
+      'Its definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + ' .',
+      'Its around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + ' .',
+      'That is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.',
       'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.',
       'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.'
       ];
@@ -651,7 +720,7 @@ client.on("message", message => {
       }
       else
       {
-        message.channel.send('Deathblow, sorry.\n\n**' + ReturnRandom(ddQuotesDeathblowList) + '**')
+        message.channel.send('Deathblow, sorry.\n\n**"' + ReturnRandom(ddQuotesDeathblowList) + '"**')
       }
 
       break;
@@ -680,12 +749,11 @@ client.on("message", message => {
       
       var whoList = [
       'my',
-      'Ayy Fb\'s',
       'Doctor Pumpkins\'',
       'Vardgo\'s',
       'Ravandel\'s',
       'Urutaa\'s',
-      'Ruby\'s',
+      'Radian\'s', 'Ruby\'s',
       'Lemmy\'s',
       'Shea\'s',
       'Seda\'s',
