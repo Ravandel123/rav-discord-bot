@@ -1323,7 +1323,7 @@ client.on("message", message => {
     //----------who---------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'who':
-      if(Chance(65)
+      if(Chance(65))
         message.channel.send(ReturnRandom(serverPeopleList))
        else
         message.channel.send(ReturnRandom(dictatorsPeopleList))
