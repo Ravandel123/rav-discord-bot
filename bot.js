@@ -457,7 +457,7 @@ client.on("message", message => {
     case 'have':
     case 'had':
     case 'has':
-    case 'shall'
+    case 'shall':
     case 'should':
     case 'was':
     case 'were':
