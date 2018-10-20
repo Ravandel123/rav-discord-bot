@@ -1653,7 +1653,7 @@ client.on("message", message => {
       '**who**\n'+
       '**whois**\n'+
       '**why**\n'+
-      '**you**\n'+
+      '**you**\n'
       ;
 
       message.channel.send(responseList)
