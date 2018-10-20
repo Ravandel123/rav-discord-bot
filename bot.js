@@ -1626,7 +1626,7 @@ client.on("message", message => {
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     case 'commands':
       responseList = 'All commands start from h!\n' +
-      '**% [x] [y]**\n'+
+      '**% [x] [y] : [y]is % [x]**\n'+
       '**am, are, can, could, did, do, does, is, have, had, has, shall, should, was, were, will, would**\n'+
       '**braindmg**\n'+
       '**capacity, volume**\n'+
