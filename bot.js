@@ -175,7 +175,7 @@ client.on("message", message => {
   ];
   
   var adjectivesEndingSinglePartList = [
-  'the Birds',
+  'the Birds', 'the Boobs',
   'the Coconut', 'the Coconuts',
   'the Darkness', 'the Dead',
   'Insanity',
@@ -1842,8 +1842,7 @@ client.on("message", message => {
       finalString = finalString + ' of ' + thirdWord;
     }
   
-    message.channel.send('**' + finalString + '**')
-    break;
+    return finalString;
   }
 
   function GenerateRandomClass(typeOfCheck)
