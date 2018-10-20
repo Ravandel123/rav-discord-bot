@@ -427,39 +427,12 @@ client.on("message", message => {
   switch (command) 
   {
     //----------------------------------------------------------------------------------------------------------------------------
-    //----------ddquote-----------------------------------------------------------------------------------------------------------
+    //----------weapon------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'weapon':
-      var finalString = '';
-      var firstWord = '';
-      var secondWord = '';
-      var thirdWord = '';
-      
-      if(Chance(70))
-      {
-        firstWord = ReturnRandom(adjectivesStandardList);
-        finalString = firstWord;
-      }
-      
-      secondWord = ReturnRandom(itemsWeaponsList);
-      if(firstWord != '')
-        finalString = finalString + ' ' + secondWord
-      else
-        finalString = secondWord
-      
-      if(Chance(70))
-      {
-        thirdWord = ReturnRandom(adjectivesEndingSinglePartList);
-        finalString = finalString + ' of ' + thirdWord;
-      }
-    
-      message.channel.send('**' + finalString + '**')
-    
+      message.channel.send('**' + GenerateRandomString3(adjectivesStandardList, itemsWeaponsList, adjectivesEndingSinglePartList) + '**')
       break;
-  
-  
-  
-  
+
     //----------------------------------------------------------------------------------------------------------------------------
     //----------ddquote-----------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
@@ -520,30 +493,7 @@ client.on("message", message => {
     //----------where-------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'where':
-      var finalString = '';
-      var firstWord = '';
-      var secondWord = '';
-      var thirdWord = '';
-      
-      if(Chance(70))
-      {
-        firstWord = ReturnRandom(placeAdjectiveList);
-        finalString = firstWord;
-      }
-      
-      secondWord = ReturnRandom(placeMainList);
-      if(firstWord != '')
-        finalString = finalString + ' ' + secondWord
-      else
-        finalString = secondWord
-      
-      if(Chance(70))
-      {
-        thirdWord = ReturnRandom(placeSinglePartList);
-        finalString = finalString + ' of ' + thirdWord;
-      }
-    
-      message.channel.send('**' + finalString + '**')
+      message.channel.send('**' + GenerateRandomString3(placeAdjectiveList, placeMainList, placeSinglePartList) + '**')
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1865,6 +1815,35 @@ client.on("message", message => {
   function RndNo0(maximum)
   {
     return Math.floor(Math.random() * maximum) + 1;
+  }
+  
+  function GenerateRandomString3(firstList, secondList, thirdList)
+  {
+    var finalString = '';
+    var firstWord = '';
+    var secondWord = '';
+    var thirdWord = '';
+    
+    if(Chance(70))
+    {
+      firstWord = ReturnRandom(firstList);
+      finalString = firstWord;
+    }
+    
+    secondWord = ReturnRandom(secondList);
+    if(firstWord != '')
+      finalString = finalString + ' ' + secondWord
+    else
+      finalString = secondWord
+    
+    if(Chance(70))
+    {
+      thirdWord = ReturnRandom(thirdList);
+      finalString = finalString + ' of ' + thirdWord;
+    }
+  
+    message.channel.send('**' + finalString + '**')
+    break;
   }
 
   function GenerateRandomClass(typeOfCheck)
