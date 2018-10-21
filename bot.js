@@ -1090,7 +1090,7 @@ client.on("message", message => {
       'I bet ' + who + ' tastes great.',
       who + ' is hot for whatever race you are.',
       who + ' looks like a sexy sausage.',
-      who + ' is so small and cute. I want to pick ' + who + up and put ' + who + in my pocket.',
+      who + ' is so small and cute. I want to pick ' + who + ' up and put ' + who + ' in my pocket.',
       
       'I love fat people like ' + who + '!',
       'I love how ugly ' + who + ' is.',
