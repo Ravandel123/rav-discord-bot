@@ -120,7 +120,15 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   var afflictionsList = ['Abusive', 'Fearful', 'Hopeless', 'Irrational', 'Masochistic', 'Paranoid', 'Rapturous', 'Selfish'];
   
-  var virtuesList = ['Courageous', 'Focused', 'Powerful', 'Stalwart', 'Vigorous', ];
+  var virtuesList = ['Courageous', 'Focused', 'Powerful', 'Stalwart', 'Vigorous'];
+  
+  var baseAdjectivesList = [
+  'Extremely',
+  'Hiper',
+  'Mega',
+  'Super',
+  'Ultra'
+  ];
   
   var specialAfflictionsList = [
   'Aggressive', 'Anxious', 
@@ -132,7 +140,7 @@ client.on("message", message => {
   'Insane', 
   'Lazy', 
   'Maniacal', 'Mindless', 'Mutantic', 
-  'Pathethic', 'Psychopathic', 'Sadistic'
+  'Pathethic', 'Pervert', 'Psychopathic', 'Sadistic'
   ];
   
   var specialVirtuesList = [
@@ -150,7 +158,7 @@ client.on("message", message => {
   'Defiant', 'Dirty', 
   'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Forsworn',
   'Greater',
-  'High', 'Horned', 'Horrible', 'Huge', 
+  'Haunted', 'High', 'Horned', 'Horrible', 'Huge', 
   'Immortal', 
   'Leper', 'Lesser', 'Little', 
   'Pale', 
@@ -161,8 +169,8 @@ client.on("message", message => {
   var adjectivesFunnyList = [
   'Abominable', 'Adorable', 'Awesome', 'Awful',
   'Brainwashed', 'Brutal',
-  'Domesticated', 'Drunken',
-  'Extremely Slow',
+  'Domesticated', 'Drunken', 'Dung',
+  'Fast'
   'Hungry',
   'Immoral',
   'Lobotomized',
@@ -170,14 +178,13 @@ client.on("message", message => {
   'Offensive',
   'Primitive', 'Provocative',
   'Screwed', 'Serial', 'Slow', 'Starving',
-  'Tamed',
-  'Ultra Fast'
+  'Tamed'
   ];
   
   var adjectivesEndingSinglePartList = [
   'the Birds', 'the Boobs',
   'the Coconut', 'the Coconuts',
-  'the Darkness', 'the Dead',
+  'the Darkness', 'the Dead', 'Dung',
   'Insanity',
   'Madness', 'Masochism',
   'the Nipples', 'the Nut', 'the Nuts',
@@ -291,18 +298,18 @@ client.on("message", message => {
   var itemsWeaponsList = [
   'Axe',
   'Bow', 'Broadsword',
-  'Claymore', 'Club', 'Crossbow',
+  'Chain', 'Claymore', 'Club', 'Crossbow',
   'Dagger',
   'Flail',
   'Gladius', 'Greatsword',
   'Halberd', 'Hammer',
   'Kama', 'Katana', 'Knife',
   'Longsword',
-  'Mace',
+  'Mace', 'Minigun',
   'Polearm', 'Poleaxe',
-  'Rapier',
+  'Rapier', 'Revolver',
   'Sabre', 'Scimitar', 'Shortsword', 'Sickle', 'Sling', 'Spear', 'Staff', 'Stick', 'Sword',
-  'Wakizashi', 'Wand', 'Warhammer'
+  'Wakizashi', 'Wand', 'Warhammer', 'Whip'
   ];
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -331,7 +338,7 @@ client.on("message", message => {
   ]
   
   var dictatorsPeopleList = [
-  'Caligula', 'Fidel Castro', 'Hitler', 'Kim Dzong Un', 'Mao Zedong', 'Putin', 'Stalin'
+  'Caligula', 'Fidel Castro', 'Hitler', 'Kim Dzong Un', 'Mao Zedong', 'Obama', 'Putin', 'Stalin'
   ]
   
   var peopleAllList = serverPeopleList.concat(dictatorsPeopleList)
@@ -342,13 +349,13 @@ client.on("message", message => {
   
   var placeAdjectiveList = [
   'Bloody',
-  'Coconut', 'Creepy',
+  'Coconutty', 'Creepy',
   'Dark', 'Darkest', 'Dead', 'Doom', 'Drug',
   'Evil',
   'Good',
   'Haunted',
   'Masochistic',
-  'Nipple', 'Nut',
+  'Nipple', 'Nutty',
   'Pleasure',
   'Raven',
   'Sacrifical', 'Sadistic', 'Scary',
@@ -389,9 +396,7 @@ client.on("message", message => {
   'the Weed'
   ]
   
-  
   placeSinglePartList = placeSinglePartList.concat(peopleAllList)
-  
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Sizes-------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -525,6 +530,7 @@ client.on("message", message => {
 
       message.channel.send(ReturnRandom(responseList))
       break;
+      
     //----------------------------------------------------------------------------------------------------------------------------
     //----------capacity, volume--------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
@@ -698,9 +704,10 @@ client.on("message", message => {
       break;  
       
     //----------------------------------------------------------------------------------------------------------------------------
-    //----------hate------------------------------------------------------------
+    //----------hate, insult------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'hate':
+    case 'insult':
       responseList = [
       'I hate you.',
       'You suck.',
@@ -735,7 +742,36 @@ client.on("message", message => {
       'Are you always this stupid or is today a special occasion?',
       'I believed in evolution until I met you.',
       'Mirrors don\’t lie, and lucky for you, they also don\’t laugh.',
-      'No wonder everyone talks about you behind your back.'
+      'No wonder everyone talks about you behind your back.',
+      
+      'Your face makes onions cry.',
+      'If you were twice as smart, you'd still be stupid.',
+      'I'm not saying that I hate you, but I\'d unplug your life support machine to charge my mobile.',
+      'I wasn\'t born with enough middle fingers to let you know how I feel about you.',
+      'I heard your parents took you to a dog show and you won.',
+      'You look like something I\'d draw with my left hand.',
+      'You\'re so fake, Barbie is jealous.',
+      'Of course I talk like an idiot... How else would you understand me?',
+      'What are you doing here? Did someone leave your cage open?',
+      'I could eat a bowl of alphabet soup and crap out a smarter comeback than what you just said.',
+      'I\'d love to insult you, but I won\'t do as well as nature did.',
+      'You\'re living proof that evolution can go in reverse.',
+      'You\'re so ugly, Hello Kitty said goodbye to you.',
+      'You\'re so ugly the only dates you get are on a calendar.',
+      'You\'re the reason they invented double doors.',
+      'You\'re so dumb, I bet your dog teaches you tricks.',
+      'If you were on fire and I had water, I\'d drink it.',
+      'You\'ve got a great face for make up.',
+      'You didn\'t just fall out of the stupid tree, you were dragged through dumbass forest.',
+      'Shut up, you\'ll never be the man your mother is.',
+      'Keep rolling your eyes, maybe you\'ll find a brain back there.',
+      'Fake hair, fake nails, fake smile. Are you sure you weren\'t made in China?',
+      'I\'m not saying you\'re stupid, I\'m just saying you've got bad luck when it comes to thinking.',
+      'There\'s only one problem with your face... I can see it.',
+      'You\'re so fat you could sell shade.',
+      'I bet your brain feels good as new, seeing that you've never used it.',
+      'Do you still love nature, despite what it did to you?',
+      'What are you going to do for a face when the baboon wants his butt back?'
       ];
       
       message.channel.send(ReturnRandom(responseList))
@@ -848,6 +884,7 @@ client.on("message", message => {
       'If you can\’t afford virtual reality headsets, you can close your eyes and imagine everything you want.',
       'A glove filled with warm water creates the illusion that you\’re not alone.'
       ];
+      
       message.channel.send(ReturnRandom(responseList))
       break;
       
@@ -918,7 +955,9 @@ client.on("message", message => {
       'War', 'Weed', 'Whipping'
       ]
       
-      if(Math.floor(Chance(60)))
+      if(Chance(15))
+        reason = '**' + GenerateRandomItem() + '**';
+      else if(Chance(60))
         reason = '**' + ReturnRandom(soloList) + '**';
       else
       {
@@ -989,6 +1028,7 @@ client.on("message", message => {
       'I love your honesty and sincerity.',
       
       'I love fat people like you!',
+      'I love how ugly you are.',
       'Usually ugly people disgust me, but you are actually cute.',
       'You are beatiful... On the inside.',
       'I don\'t care what everyone else says. I don\'t think you\'re that bad.'
@@ -1028,6 +1068,7 @@ client.on("message", message => {
       'I love ' + who + ' honesty and sincerity.',
       
       'I love fat people like ' + who + '!',
+      'I love how ugly ' + who + ' is.',
       'Usually ugly people disgust me, but' + who + ' is actually cute.',
       who + ' is beatiful... On the inside.',
       'I don\'t care what everyone else says. I don\'t think ' + who + ' is that bad.'
@@ -1089,6 +1130,7 @@ client.on("message", message => {
       'I think you should write a book about that.',
       'Stop crying for attention like a small girl.',
       'Please cancel my subscription to your issues.',
+      'Pleas stop this BS.',
       'I totally understand now why you feel that way. Thank you for letting me know.',
       'I don\'t remember asking for your opinion.'
       ];
@@ -1137,7 +1179,7 @@ client.on("message", message => {
         specialArray = personifiedSpecialArray;
       }
 
-      if(Chance(20))
+      if(Chance(15))
         message.channel.send(ReturnRandom(specialArray))
       else
         message.channel.send(ReturnRandom(firstPartArray) + Math.floor(Math.random() * 14) + '/10.')
@@ -1270,7 +1312,7 @@ client.on("message", message => {
     //----------weapon------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'weapon':
-      message.channel.send('**' + GenerateRandomString3(adjectivesStandardList, itemsWeaponsList, adjectivesEndingSinglePartList) + '**')
+      message.channel.send('**' + GenerateRandomWeapon() + '**')
       break;
       
     //---------------------------------------------------------------------------------------------------------------------------
@@ -1618,9 +1660,6 @@ client.on("message", message => {
       message.channel.send(ReturnRandom(responseList))
       break;
       
-      
-      
-      
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //----------commands------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1635,7 +1674,7 @@ client.on("message", message => {
       '**ddcheck [x] : [x] = person**\n'+
       '**ddquote [x] : [x] = number**\n'+
       '**dndalign [x] : [x] = person**\n'+
-      '**hate**\n'+
+      '**hate, insult**\n'+
       '**heaviness, mass, weight**\n'+
       '**height, length, widtht**\n'+
       '**help**\n'+
@@ -1674,9 +1713,7 @@ client.on("message", message => {
   function RecognizeWho(arg, message, command)
   {
     if (arg == 'me' || arg == null)
-    {
       return message.author;
-    }
 
     return message.content.slice(prefix.length + command.length + 1);
   }
@@ -1684,9 +1721,7 @@ client.on("message", message => {
   function RecognizeWhoSimple(arg, message, command)
   {
     if (arg == 'me' || arg == null)
-    {
       return message.author;
-    }
 
     return arg;
   }
@@ -1722,7 +1757,17 @@ client.on("message", message => {
   
   function GenerateRandomPlace()
   {
-    return GenerateRandomString3(placeAdjectiveList, placeMainList, placeSinglePartList);
+    return GenerateRandomString4(baseAdjectivesList, placeAdjectiveList, placeMainList, placeSinglePartList);
+  }
+  
+  function GenerateRandomWeapon()
+  {
+    return GenerateRandomString4(baseAdjectivesList, adjectivesStandardList, itemsWeaponsList, adjectivesEndingSinglePartList);
+  }
+  
+  function GenerateRandomItem()
+  {
+    return GenerateRandomWeapon();
   }
   
   function GenerateRandomString3(firstList, secondList, thirdList)
@@ -1748,6 +1793,38 @@ client.on("message", message => {
     {
       thirdWord = ReturnRandom(thirdList);
       finalString = finalString + ' of ' + thirdWord;
+    }
+  
+    return finalString;
+  }
+  
+  function GenerateRandomString4(firstList, secondList, thirdList, fourthList)
+  {
+    var finalString = '';
+    var firstWord = '';
+    var secondWord = '';
+    var thirdWord = '';
+    var fourthWord = '';
+    
+    if(Chance(70))
+    {
+      if(Chance(30))
+        finalString = ReturnRandom(firstList) + ' ';
+        
+      secondWord = ReturnRandom(secondList);
+      finalString = finalString + secondWord;
+    }
+    
+    thirdWord = ReturnRandom(thirdList);
+    if(secondWord != '')
+      finalString = finalString + ' ' + thirdWord
+    else
+      finalString = thirdWord
+    
+    if(Chance(70))
+    {
+      fourthWord = ReturnRandom(fourthList);
+      finalString = finalString + ' of ' + fourthWord;
     }
   
     return finalString;
@@ -1805,6 +1882,7 @@ client.on("message", message => {
       'Brothel', 'Brotherhood',
       'Clan', 'Cult',
       'Guild',
+      'Pact',
       'Sect',
       'Troupe'
       ];
@@ -1916,9 +1994,7 @@ client.on("message", message => {
       {
         secondWord = ReturnRandom(firstPart2);
         if(firstWord != secondWord)
-        {
           finalString = finalString + secondWord + ' ';
-        }
       }
 
       if(Math.floor(Math.random() * 10) < 3)
@@ -1929,23 +2005,17 @@ client.on("message", message => {
 
       fourthWord = ReturnRandom(secondPart);
       if(thirdWord != '' || fourthWord != secondWord)
-      {
         finalString = finalString + fourthWord;
-      }
 
-      if(Math.floor(Math.random() * 10) < 3)
-      {
+      if(Math.floor(Chance(30))
         finalString = finalString + ' of ' + ReturnRandom(lastPart);
-      }
-      else if(Math.floor(Math.random() * 10) < 7)
+      else if(Chance(70))
       {
         fifthWord = ReturnRandom(lastPart1);
         sixthWord = ReturnRandom(lastPart2);
 
         while(fifthWord == sixthWord || fifthWord + 's' == sixthWord || fifthWord + 'es' == sixthWord)
-        {
           sixthWord = ReturnRandom(lastPart2);
-        }
 
         finalString = finalString + ' of the ' + fifthWord + ' ' + sixthWord;
       }
