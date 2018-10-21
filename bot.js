@@ -991,49 +991,9 @@ client.on("message", message => {
     //----------love------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'love':
-      who = RecognizeWho(arguments[1], message, command)
+      who = RecognizeWhoSimpler(arguments[1], message, command)
 
-      var array1 = [
-      'I love you.',
-      'I really, really like you. Like REALLY.',
-      'You are amazing!',
-      'You are probably best person in the world!',
-      'You = awesome.',
-      'You are the coolest person I have ever seen!',
-      'I think you are hot, I would rate your look 11/10.',
-      'Even if you were cloned, you\'d still be one of a kind. And the better looking one.',
-      'I would love to spend every minute of every day with you, but some days I actually have to get stuff done.',
-      'Your smile is proof that the best things in life are free.',
-      'You\'re smarter than Google and Mary Poppins combined.',
-      'I think the hardest part about being your friend is pretending as though I like my other friends as much as I like you.',
-      'You\'re not someone I pretend to not see in public.',
-      'I don\'t have a favourite colour, It\'s pretty much whatever you are wearing.',
-      'I can never remember my dreams, but I assume you are always in them.',
-      'You inspire me and most likely strangers. Also, friends and stalkers. You are the inspiration to many.',
-      'You are so beautiful I would certainly steal your photos, make a fake account and impress people online.',
-      'Your face makes other people ugly.',
-      'You might be the primary reason for global warming.',
-      'If there is one thing I like about you, its that I like more than one thing about you.',
-      'You have that kind of body that when others see it they realise they need to workout more.',
-      'You are more unique and wonderful than the smell of a new book.',
-      'Did you have plastic surgery to become that attractive?',
-      'Talking to you is the best part of my day, aside from when I\'m sleeping and when I\'m eating.',
-      'You are awkward, in a cute way. Like an elevator ride, but with puppies.',
-      'It\'s too bad you don\'t see what I see, if you did you\'d smile and keep looking.',
-      'Maybe you should eat some makeup so you can be pretty on the inside too.',
-      'I\'m really good at people-watching. I\'m so glad I can share that hobby on you.',
-      'You make everything better. If people were more like you the world would be perfect.',
-      'You\'re not lazy, just that the people around you are way too active.',
-      'I love your honesty and sincerity.',
-      
-      'I love fat people like you!',
-      'I love how ugly you are.',
-      'Usually ugly people disgust me, but you are actually cute.',
-      'You are beatiful... On the inside.',
-      'I don\'t care what everyone else says. I don\'t think you\'re that bad.'
-      ];
-
-      var array2 = [
+      var responseList = [
       'I love ' + who + '.',
       'I really, really like ' + who + '. Like REALLY.',
       who + ' is amazing!',
@@ -1066,17 +1026,16 @@ client.on("message", message => {
       who + ' is not lazy, just that the people around ' + who + ' are way too active.',
       'I love ' + who + ' honesty and sincerity.',
       
+      'I would hang out with ' + who + ' even if you hadn\’t showered for a couple days.',
+      'I would be really okay with ' + who + ' seeing me without makeup, that\’s how much I like ' + who + '.',
+      
+      
       'I love fat people like ' + who + '!',
       'I love how ugly ' + who + ' is.',
       'Usually ugly people disgust me, but' + who + ' is actually cute.',
       who + ' is beatiful... On the inside.',
       'I don\'t care what everyone else says. I don\'t think ' + who + ' is that bad.'
       ];
-
-      if(arguments[1] == 'me' || arguments[1] == null)
-        responseList = array1;
-      else
-        responseList = array2;
 
       message.channel.send(ReturnRandom(responseList))
       break;
@@ -1723,6 +1682,14 @@ client.on("message", message => {
       return message.author;
 
     return arg;
+  }
+  
+  function RecognizeWhoSimpler(arg, message, command)
+  {
+    if (arg == 'me' || arg == null)
+      return 'you';
+
+    return message.content.slice(prefix.length + command.length + 1);
   }
 
   function RollArmelloDices(rolls)
