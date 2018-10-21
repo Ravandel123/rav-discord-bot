@@ -2006,7 +2006,7 @@ client.on("message", message => {
       if(thirdWord != '' || fourthWord != secondWord)
         finalString = finalString + fourthWord;
 
-      if(Math.floor(Chance(30))
+      if(Math.floor(Chance(30)))
         finalString = finalString + ' of ' + ReturnRandom(lastPart);
       else if(Chance(70))
       {
