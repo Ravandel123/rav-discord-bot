@@ -644,7 +644,7 @@ client.on("message", message => {
       who = RecognizeWho(arguments[1], message, command);
 
       if(Chance(67))
-        (who + ' survived!.\n\n**' + ReturnRandom(ddQuotesWinningBattleList) + '**')
+        message.channel.send(who + ' survived!.\n\n**' + ReturnRandom(ddQuotesWinningBattleList) + '**')
       else
         message.channel.send('Deathblow, sorry.\n\n**"' + ReturnRandom(ddQuotesDeathblowList) + '"**')
       break;
