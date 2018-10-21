@@ -745,7 +745,7 @@ client.on("message", message => {
       'No wonder everyone talks about you behind your back.',
       'Your face makes onions cry.',
       'If you were twice as smart, you\'d still be stupid.',
-      'I'm not saying that I hate you, but I\'d unplug your life support machine to charge my mobile.',
+      'I\'m not saying that I hate you, but I\'d unplug your life support machine to charge my mobile.',
       'I wasn\'t born with enough middle fingers to let you know how I feel about you.',
       'I heard your parents took you to a dog show and you won.',
       'You look like something I\'d draw with my left hand.',
