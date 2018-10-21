@@ -768,7 +768,7 @@ client.on("message", message => {
       'I\'m not saying you\'re stupid, I\'m just saying you\'ve got bad luck when it comes to thinking.',
       'There\'s only one problem with your face... I can see it.',
       'You\'re so fat you could sell shade.',
-      'I bet your brain feels good as new, seeing that you've never used it.',
+      'I bet your brain feels good as new, seeing that you\'ve never used it.',
       'Do you still love nature, despite what it did to you?',
       'What are you going to do for a face when the baboon wants his butt back?'
       ];
