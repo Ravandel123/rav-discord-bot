@@ -765,7 +765,7 @@ client.on("message", message => {
       'Shut up, you\'ll never be the man your mother is.',
       'Keep rolling your eyes, maybe you\'ll find a brain back there.',
       'Fake hair, fake nails, fake smile. Are you sure you weren\'t made in China?',
-      'I\'m not saying you\'re stupid, I\'m just saying you've got bad luck when it comes to thinking.',
+      'I\'m not saying you\'re stupid, I\'m just saying you\'ve got bad luck when it comes to thinking.',
       'There\'s only one problem with your face... I can see it.',
       'You\'re so fat you could sell shade.',
       'I bet your brain feels good as new, seeing that you've never used it.',
