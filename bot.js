@@ -170,7 +170,7 @@ client.on("message", message => {
   'Abominable', 'Adorable', 'Awesome', 'Awful',
   'Brainwashed', 'Brutal',
   'Domesticated', 'Drunken', 'Dung',
-  'Fast'
+  'Fast',
   'Hungry',
   'Immoral',
   'Lobotomized',
@@ -743,7 +743,6 @@ client.on("message", message => {
       'I believed in evolution until I met you.',
       'Mirrors don\’t lie, and lucky for you, they also don\’t laugh.',
       'No wonder everyone talks about you behind your back.',
-      
       'Your face makes onions cry.',
       'If you were twice as smart, you'd still be stupid.',
       'I'm not saying that I hate you, but I\'d unplug your life support machine to charge my mobile.',
