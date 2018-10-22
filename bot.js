@@ -200,7 +200,7 @@ client.on("message", message => {
   var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  //-----Darkest Dungeon--------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Darkest Dungeon---------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   var ddQuotesAfflictionList = [
   'The human mind - fragile like a robin\'s egg.',
@@ -1339,7 +1339,15 @@ client.on("message", message => {
     //----------weapon------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'weapon':
-      message.channel.send('**' + GenerateRandomWeapon() + '**')
+      var numberOfWeapons;
+      
+      if(arguments[1] == null)
+        numberOfWeapons = 1;
+      else
+        numberOfWeapons = arguments[1];
+    
+      for (i = 0; i < numberOfWeapons; i++)
+        message.channel.send('**' + GenerateRandomWeapon() + '**')
       break;
       
     //---------------------------------------------------------------------------------------------------------------------------
@@ -1713,7 +1721,7 @@ client.on("message", message => {
       '**resolve [x] : [x] = person**\n'+
       '**roll [x]d[y] : [x] = number of rolls, [y] = number of sides, "a" for armello dice**\n'+
       '**size**\n'+
-      '**weapon**\n'+
+      '**weapon [x] : [x] = number**\n'+
       '**when**\n'+
       '**where**\n'+
       '**who**\n'+
