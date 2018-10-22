@@ -124,7 +124,7 @@ client.on("message", message => {
   
   var baseAdjectivesList = [
   'Extremely',
-  'Hiper',
+  'Hyper',
   'Mega',
   'Super',
   'Ultra'
@@ -140,7 +140,8 @@ client.on("message", message => {
   'Insane', 
   'Lazy', 
   'Maniacal', 'Mindless', 'Mutantic', 
-  'Pathethic', 'Pervert', 'Psychopathic', 'Sadistic'
+  'Pathethic', 'Pervert', 'Primitive', 'Psychopathic',
+  'Sadistic'
   ];
   
   var specialVirtuesList = [
@@ -168,8 +169,8 @@ client.on("message", message => {
   
   var adjectivesFunnyList = [
   'Abominable', 'Adorable', 'Awesome', 'Awful',
-  'Brainwashed', 'Brutal',
-  'Dirty', 'Disgusting', 'Domesticated', 'Drunken', 'Dung',
+  'Brutal',
+  'Dirty', 'Disgusting', 'Domesticated', 'Drunken', 'Dungy',
   'Foul',
   'Gross',
   'Hungry',
@@ -177,7 +178,7 @@ client.on("message", message => {
   'Lobotomized',
   'Monstrous',
   'Offensive',
-  'Primitive', 'Provocative',
+  'Provocative',
   'Screwed', 'Serial', 'Slow', 'Starving',
   'Tamed'
   ];
@@ -195,7 +196,7 @@ client.on("message", message => {
   'the Weed'
   ]
   
-  var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList)
+  var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList, specialAfflictionsList, specialVirtuesList)
   var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
