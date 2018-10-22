@@ -155,7 +155,7 @@ client.on("message", message => {
   'Aerial', 'Aeronaut', 'Animate', 'Anointed', 'Amateur', 'Apprentice', 
   'Badlands', 
   'Celestial', 'Chittering', 'Cloaked', 
-  'Defiant', 'Dirty', 
+  'Dark', 'Defiant', 
   'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Forsworn',
   'Greater',
   'Haunted', 'High', 'Horned', 'Horrible', 'Huge', 
@@ -169,8 +169,9 @@ client.on("message", message => {
   var adjectivesFunnyList = [
   'Abominable', 'Adorable', 'Awesome', 'Awful',
   'Brainwashed', 'Brutal',
-  'Domesticated', 'Drunken', 'Dung',
-  'Fast',
+  'Dirty', 'Disgusting', 'Domesticated', 'Drunken', 'Dung',
+  'Foul',
+  'Gross',
   'Hungry',
   'Immoral',
   'Lobotomized',
@@ -334,7 +335,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
    var serverPeopleList = [
-  'Awre', 'Doctor Pumpkins', 'Izzy', 'Lemmy', 'Me', 'Ravandel', 'Ruby', 'Seda', 'Tyrrikz', 'Urutaa', 'Vardgo'
+  'Awre', 'Doctor Pumpkins', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Tyrrikz', 'Urutaa', 'Vardgo'
   ]
   
   var dictatorsPeopleList = [
@@ -1375,7 +1376,7 @@ client.on("message", message => {
       if(Chance(50))
         message.channel.send(ReturnRandom(responseList))
       else
-        (ReturnRandom(specialList))
+        message.channel.send(ReturnRandom(specialList))
         
       break;
       
