@@ -24,9 +24,7 @@ client.on("message", message => {
   
   var additionalLol = '';
   if(Chance(25))
-  {
     additionalLol = ' lol';
-  }
   
   switch(Rnd(2))
   {
