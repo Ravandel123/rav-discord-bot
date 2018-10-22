@@ -351,7 +351,7 @@ client.on("message", message => {
   var placeAdjectiveList = [
   'Bloody',
   'Coconutty', 'Creepy',
-  'Dark', 'Darkest', 'Dead', 'Doom', 'Drug',
+  'Dark', 'Dead', 'Doom', 'Drug',
   'Evil',
   'Good',
   'Haunted',
