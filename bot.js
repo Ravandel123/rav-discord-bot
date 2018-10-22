@@ -1339,13 +1339,15 @@ client.on("message", message => {
     //----------weapon------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'weapon':
-      var numberOfWeapons;
+      message.channel.send('**' + GenerateRandomWeapon() + '**')
+      break;
       
-      if(arguments[1] == null)
-        numberOfWeapons = 1;
-      else
-        numberOfWeapons = arguments[1];
-    
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------weapons-----------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'weapons':
+      var numberOfWeapons = Rnd(5) + 3;
+
       for (i = 0; i < numberOfWeapons; i++)
         message.channel.send('**' + GenerateRandomWeapon() + '**')
       break;
@@ -1721,7 +1723,8 @@ client.on("message", message => {
       '**resolve [x] : [x] = person**\n'+
       '**roll [x]d[y] : [x] = number of rolls, [y] = number of sides, "a" for armello dice**\n'+
       '**size**\n'+
-      '**weapon [x] : [x] = number**\n'+
+      '**weapon**\n'+
+      '**weapons**\n'+
       '**when**\n'+
       '**where**\n'+
       '**who**\n'+
