@@ -2025,6 +2025,7 @@ client.on("message", message => {
       ]
 
       //---------------------------------------------------------------------------------------------------------------------------
+      
       if(typeOfCheck == 'count')
       {
         return ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart1.length * (lastPart2.length / 2));
