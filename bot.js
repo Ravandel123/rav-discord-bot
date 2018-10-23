@@ -129,7 +129,7 @@ client.on("message", message => {
   ];
   
   var specialAfflictionsList = [
-  'Aggressive', 'Anxious', 
+  'Aberrant', 'Aggressive', 'Anxious', 
   'Barbaric', 'Brainwashed', 
   'Cannibalistic', 'Crazy',
   'Degenerate', 'Delusional', 'Depressive', 'Destructive', 'Deviant', 
@@ -138,7 +138,7 @@ client.on("message", message => {
   'Insane', 
   'Lazy', 
   'Maniacal', 'Mindless', 'Mutantic', 
-  'Pathethic', 'Pervert', 'Primitive', 'Psychopathic',
+  'Pathethic', 'Perverse', 'Primitive', 'Psychopathic',
   'Ravenous',
   'Sadistic'
   ];
