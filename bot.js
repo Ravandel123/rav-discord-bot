@@ -155,7 +155,7 @@ client.on("message", message => {
   'Aerial', 'Animate', 'Anointed', 'Amateur',
   'Bloody',
   'Celestial', 'Chittering', 'Cloaked',
-  'Dark', 'Defiant', 'Doomed' 'Drugged',
+  'Dark', 'Defiant', 'Doomed', 'Drugged',
   'Evil',
   'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Forsworn',
   'Good', 'Greater',
