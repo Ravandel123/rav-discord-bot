@@ -139,6 +139,7 @@ client.on("message", message => {
   'Lazy', 
   'Maniacal', 'Mindless', 'Mutantic', 
   'Pathethic', 'Pervert', 'Primitive', 'Psychopathic',
+  'Ravenous',
   'Sadistic'
   ];
   
@@ -151,23 +152,25 @@ client.on("message", message => {
   ];
   
   var adjectivesNormalList = [
-  'Aerial', 'Aeronaut', 'Animate', 'Anointed', 'Amateur', 'Apprentice', 
-  'Badlands', 
-  'Celestial', 'Chittering', 'Cloaked', 
-  'Dark', 'Defiant', 
+  'Aerial', 'Animate', 'Anointed', 'Amateur',
+  'Bloody',
+  'Celestial', 'Chittering', 'Cloaked',
+  'Dark', 'Defiant', 'Doomed' 'Drugged',
+  'Evil',
   'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Forsworn',
-  'Greater',
+  'Good', 'Greater',
   'Haunted', 'High', 'Horned', 'Horrible', 'Huge', 
   'Immortal', 
   'Leper', 'Lesser', 'Little', 
   'Pale', 
-  'Sacred', 'Shamanistic', 
+  'Sacred', 'Sacrifical', 'Scary', 'Shamanistic', 
   'Wild'
   ];
-  
+
   var adjectivesFunnyList = [
   'Abominable', 'Adorable', 'Awesome', 'Awful',
   'Brutal',
+  'Coconutty', 'Corvid', 'Creepy',
   'Dirty', 'Disgusting', 'Domesticated', 'Drunken', 'Dungy',
   'Foul',
   'Gross',
@@ -175,10 +178,12 @@ client.on("message", message => {
   'Immoral',
   'Lobotomized',
   'Monstrous',
+  'Nippled', 'Nutty',
   'Offensive',
-  'Provocative',
+  'Pleasurable', 'Provocative',
   'Screwed', 'Serial', 'Slow', 'Starving',
-  'Tamed'
+  'Tamed', 'Tentacled', 'Torturous',
+  'Weedy'
   ];
   
   var adjectivesEndingSinglePartList = [
@@ -346,41 +351,27 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Places------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  
-  var placeAdjectiveList = [
-  'Bloody',
-  'Coconutty', 'Creepy',
-  'Dark', 'Dead', 'Doom', 'Drug',
-  'Evil',
-  'Good',
-  'Haunted',
-  'Masochistic',
-  'Nipple', 'Nutty',
-  'Pleasure',
-  'Raven',
-  'Sacrifical', 'Sadistic', 'Scary',
-  'Tentacle', 'Torture',
-  'Weed'
-  ]
-  
+
   var placeMainList = [
   'Altar',
   'Basement', 'Brothel',
-  'Cartel', 'City', 'Chamber',
+  'Cartel', 'Cave', 'City', 'Chamber',
   'Dojo', 'Dungeon',
-  'Forest',
-  'Grove', 'Guild', 'Gym',
+  'Forest', 'Fountain',
+  'Galaxy', 'Garrison', 'Grove', 'Guild', 'Gym',
   'Home', 'House',
   'Island',
   'Jail',
+  'Lake',
   'Mountain', 'Mountains',
   'Ocean',
-  'Planet',
-  'Ruins',
+  'Planet', 'Prison',
+  'River', 'Ruins',
   'School',
   'Temple', 'Tower', 'Town', 'Treetops',
   'Sea', 'Space',
-  'Village'
+  'Village',
+  'Waterfall'
   ]
   
   var placeSinglePartList = [
@@ -440,7 +431,7 @@ client.on("message", message => {
       
       who = RecognizeWhoSimple(arguments[2], message, command);
       
-      if(Chance(60))
+      if(Chance(50))
         i = Rnd(100)
       else
         i = Rnd(200)
@@ -1801,7 +1792,7 @@ client.on("message", message => {
   
   function GenerateRandomPlace()
   {
-    return GenerateRandomString4(baseAdjectivesList, placeAdjectiveList, placeMainList, placeSinglePartList);
+    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, placeMainList, placeSinglePartList);
   }
   
   function GenerateRandomWeapon()
