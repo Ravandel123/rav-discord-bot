@@ -566,7 +566,7 @@ client.on("message", message => {
       else
         i = Rnd(200)
         
-      message.channel.send(Chance for this: ' + Rnd(i) + '%.')
+      message.channel.send('Chance for this: ' + Rnd(i) + '%.')
       break;
     
     //----------------------------------------------------------------------------------------------------------------------------
