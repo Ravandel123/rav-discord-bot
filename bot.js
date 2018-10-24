@@ -550,7 +550,7 @@ client.on("message", message => {
       if(Chance(15))
         message.channel.send(ReturnRandom(specialList))
       else
-        message.channel.send(ReturnRandom(responseList))      
+        message.channel.send(ReturnRandom(responseList))
       break;
     
     //----------------------------------------------------------------------------------------------------------------------------
@@ -565,8 +565,15 @@ client.on("message", message => {
         i = Rnd(100)
       else
         i = Rnd(200)
-        
-      message.channel.send('Chance for this: ' + Rnd(i) + '%.')
+
+      responseList = [
+      'Chance for this: ' + Rnd(i) + '%.',
+      'Chance for that: ' + Rnd(i) + '%.',
+      'Exactly ' + Rnd(i) + '%.',
+      'Definitely ' + Rnd(i) + '%.'
+      ];
+
+      message.channel.send(ReturnRandom(responseList))
       break;
     
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1368,7 +1375,7 @@ client.on("message", message => {
         timeHours = '0' + timeHours;
 
       if(timeMinutes < 10)
-        timeMinutes;
+        timeMinutes = '0' + timeMinutes;
 
       specialList = [
       'Today.',
