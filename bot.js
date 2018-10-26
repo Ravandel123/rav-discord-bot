@@ -908,10 +908,10 @@ client.on("message", message => {
       var reason = '';
 
       var soloList = [
-      'Abduction', 'Art',
-      'Bandits', 'Bookmaster Awre',
+      'Abduction', 'Abomination', 'Acid', 'Art', 'Atomic Bomb',
+      'Ballista', 'Bandits', 'Battering Ram', 'Bookmaster Awre',
       'the Boobs', 'the Booze', 'Brainwashing',
-      'Cloning', 'the Coconut', 'Coconuts',
+      'C4', 'Catapult', 'Cloning', 'the Coconut', 'Coconuts',
       'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Drugs', 'the Dung', 'Duplication Device',
       'Electroshock Therapy', 'Evil',
       'Fury',
@@ -921,10 +921,11 @@ client.on("message", message => {
       'Kidnapping',
       'Lemmy','Lobotomy',
       'Madness', 'Me', 'Money',
-      'the Nut', 'Nuts',
+      'Nuclear Missle', 'the Nut', 'Nuts',
       'Pleasure', 'Power',
       'Ravandel','the Rot',
       'Seda','Shea', 'Seismic Activity', 
+      'Trebuchet', 'Troglodyte',
       'Ugliness', 'Urutaa', 'Uselessness',
       'Vardgo', 'Violence',
       'War', 'the Weed', 'Whipping in the Abbey'
