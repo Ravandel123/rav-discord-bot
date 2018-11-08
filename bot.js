@@ -45,43 +45,43 @@ client.on("message", message => {
   switch(Rnd(9))
   {
     case 0:
-      multiplier = 10;
+      multiplierBig = 10;
       break;
             
     case 1:
-      multiplier = 100;
+      multiplierBig = 100;
       break;
             
     case 2:
-      multiplier = 1000;
+      multiplierBig = 1000;
       break;
       
     case 3:
-      multiplier = 1000;
+      multiplierBig = 1000;
       break;
       
     case 4:
-      multiplier = 100000;
+      multiplierBig = 100000;
       break;
       
     case 5:
-      multiplier = 1000000;
+      multiplierBig = 1000000;
       break;
       
     case 6:
-      multiplier = 10000000;
+      multiplierBig = 10000000;
       break;
       
     case 7:
-      multiplier = 10000000;
+      multiplierBig = 10000000;
       break;
       
     case 8:
-      multiplier = 10000000;
+      multiplierBig = 10000000;
       break;
       
     case 9:
-      multiplier = 100000000;
+      multiplierBig = 100000000;
       break;
   }
   
