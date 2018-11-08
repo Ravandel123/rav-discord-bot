@@ -739,7 +739,7 @@ client.on("message", message => {
       ]
         
       responseList = [
-      'Rnd(multiplier) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      Rnd(multiplier) + ' ' + ReturnRandom(valuesStandardList) + '.',
       'That costs ' + Rnd(multiplierBig) + ' ' + ReturnRandom(valuesStandardList) + '.',
       'That is worth ' + Rnd(multiplierBig) + ' ' + ReturnRandom(valuesStandardList) + '.',
       'Price for that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(valuesStandardList) + '.'
