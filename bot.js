@@ -20,6 +20,7 @@ client.on("message", message => {
   var responseList;
   var specialList;
   var multiplier;
+  var multiplierBig;
   var i;
   
   var additionalLol = '';
@@ -40,6 +41,50 @@ client.on("message", message => {
       multiplier = 1000;
       break;
   }
+  
+  switch(Rnd(9))
+  {
+    case 0:
+      multiplier = 10;
+      break;
+            
+    case 1:
+      multiplier = 100;
+      break;
+            
+    case 2:
+      multiplier = 1000;
+      break;
+      
+    case 3:
+      multiplier = 1000;
+      break;
+      
+    case 4:
+      multiplier = 100000;
+      break;
+      
+    case 5:
+      multiplier = 1000000;
+      break;
+      
+    case 6:
+      multiplier = 10000000;
+      break;
+      
+    case 7:
+      multiplier = 10000000;
+      break;
+      
+    case 8:
+      multiplier = 10000000;
+      break;
+      
+    case 9:
+      multiplier = 100000000;
+      break;
+  }
+  
 
   var serialsList = [
   'Alladin',
@@ -201,7 +246,7 @@ client.on("message", message => {
   
   var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList, specialAfflictionsList, specialVirtuesList)
   var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
-  
+
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Darkest Dungeon---------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -406,6 +451,30 @@ client.on("message", message => {
   ]
   
   var sizeList = sizeBigList.concat(sizeSmallList, sizeAverageList)
+  
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Values------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  var valuesIRLCurrencies = [
+  'Bucks',
+  'Dollars',
+  'Euros',
+  'Pounds'
+  ]
+  
+  var valuesFantasy = [
+  'Copper',
+  'Silver',
+  'Gold'
+  ]
+  
+  var valuesTroll = [
+  'Priceless',
+  'Worthless'
+  ]
+  
+  var valuesStandardList = valuesIRLCurrencies.concat(valuesFantasy)
   
   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -658,6 +727,32 @@ client.on("message", message => {
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
+    //----------cost, price-------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'cost':
+    case 'price':
+      specialList = [
+      'That is worthless.',
+      'That is priceless.',
+      'You need to give + GenerateRandomWeapon() + ' for that.'
+      'Only acceptable payment for that is ' + ReturnRandom(serverPeopleList) + '.'
+      ]
+        
+      responseList = [
+      'Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'That costs ' + Rnd(multiplierBig) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'That is worth ' + Rnd(multiplierBig) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'Price for that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.'
+      ];
+
+      if(Chance(15))
+        message.channel.send(ReturnRandom(specialList))
+      else
+        message.channel.send(ReturnRandom(responseList))
+      
+      break;
+      
+    //----------------------------------------------------------------------------------------------------------------------------
     //----------ddcheck-----------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'ddcheck':
@@ -668,7 +763,7 @@ client.on("message", message => {
       else
         message.channel.send('Deathblow, sorry.\n\n**"' + ReturnRandom(ddQuotesDeathblowList) + '"**')
       break;
-      
+    
     //----------------------------------------------------------------------------------------------------------------------------
     //----------ddquote-----------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1008,7 +1103,7 @@ client.on("message", message => {
     case 'love':
       who = RecognizeWhoSimpler(arguments[1], message, command)
 
-          var array1 = [
+      var array1 = [
       'I love you.',
       'I really, really like you. Like REALLY.',
       'You are amazing!',
@@ -1722,6 +1817,7 @@ client.on("message", message => {
       '**chance, chances**\n'+
       '**choose [x]|[y]|[z][...] : [x], [y], [z] = choices**\n'+
       '**class [x] : [x] = person**\n'+
+      '**cost, price**\n'+
       '**ddcheck [x] : [x] = person**\n'+
       '**ddquote [x] : [x] = number**\n'+
       '**dndalign [x] : [x] = person**\n'+
