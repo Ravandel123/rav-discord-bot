@@ -734,7 +734,7 @@ client.on("message", message => {
       specialList = [
       'That is worthless.',
       'That is priceless.',
-      'You need to give ' + GenerateRandomWeapon() + ' for that.'
+      'You need to give ' + GenerateRandomWeapon() + ' for that.',
       'Only acceptable payment for that is ' + ReturnRandom(serverPeopleList) + '.'
       ]
         
