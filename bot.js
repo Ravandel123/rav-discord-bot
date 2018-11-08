@@ -1429,7 +1429,7 @@ client.on("message", message => {
       
       responseList = [
       'In ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(timeList) + '.',
-      'In ' + (Rnd(GenerateMultiplier(1000))) + 2018) + '.',
+      'In ' + (Rnd(GenerateMultiplier(1000)) + 2018) + '.',
       'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
       'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
       ];
