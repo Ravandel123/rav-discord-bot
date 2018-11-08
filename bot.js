@@ -27,64 +27,6 @@ client.on("message", message => {
   if(Chance(25))
     additionalLol = ' lol';
   
-  switch(Rnd(2))
-  {
-    case 0:
-      multiplier = 10;
-      break;
-            
-    case 1:
-      multiplier = 100;
-      break;
-            
-    case 2:
-      multiplier = 1000;
-      break;
-  }
-  
-  switch(Rnd(9))
-  {
-    case 0:
-      multiplierBig = 10;
-      break;
-            
-    case 1:
-      multiplierBig = 100;
-      break;
-            
-    case 2:
-      multiplierBig = 1000;
-      break;
-      
-    case 3:
-      multiplierBig = 1000;
-      break;
-      
-    case 4:
-      multiplierBig = 100000;
-      break;
-      
-    case 5:
-      multiplierBig = 1000000;
-      break;
-      
-    case 6:
-      multiplierBig = 10000000;
-      break;
-      
-    case 7:
-      multiplierBig = 10000000;
-      break;
-      
-    case 8:
-      multiplierBig = 10000000;
-      break;
-      
-    case 9:
-      multiplierBig = 100000000;
-      break;
-  }
-  
 
   var serialsList = [
   'Alladin',
@@ -608,12 +550,12 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'Capacity of that is definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'Around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'Exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'Its close to ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'I think the capacity of that is less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'I think the capacity of that is more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementVolumeList) + '.'
+      'Capacity of that is definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'Around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'Exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'Its close to ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'I think the capacity of that is less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'I think the capacity of that is more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.'
       ];
 
       if(Chance(15))
@@ -739,10 +681,10 @@ client.on("message", message => {
       ]
         
       responseList = [
-      Rnd(multiplier) + ' ' + ReturnRandom(valuesStandardList) + '.',
-      'That costs ' + Rnd(multiplierBig) + ' ' + ReturnRandom(valuesStandardList) + '.',
-      'That is worth ' + Rnd(multiplierBig) + ' ' + ReturnRandom(valuesStandardList) + '.',
-      'Price for that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(valuesStandardList) + '.'
+      Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'That costs ' + Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'That is worth ' + Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'Price for that is exactly ' + Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.'
       ];
 
       if(Chance(15))
@@ -903,11 +845,11 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'That weigh definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'That weigh around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'Weigh of that is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementWeighList) + '.'
+      'That weigh definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'That weigh around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'Weigh of that is exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'I think its less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'I think its more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.'
       ];
 
       if(Chance(15))
@@ -937,11 +879,11 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'Its definitely ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + ' .',
-      'Its around ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + ' .',
-      'That is exactly ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.',
-      'I think its less than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.',
-      'I think its more than ' + Rnd(multiplier) + ' ' + ReturnRandom(measurementLengthList) + '.'
+      'Its definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
+      'Its around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
+      'That is exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.',
+      'I think its less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.',
+      'I think its more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.'
       ];
 
       if(Chance(15))
@@ -1486,8 +1428,8 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'In ' + Rnd(multiplier) + ' ' + ReturnRandom(timeList) + '.',
-      'In ' + (Rnd(multiplier) + 2018) + '.',
+      'In ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(timeList) + '.',
+      'In ' + (Rnd(GenerateMultiplier(1000))) + 2018) + '.',
       'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
       'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
       ];
@@ -1924,6 +1866,20 @@ client.on("message", message => {
   function GenerateRandomItem()
   {
     return GenerateRandomWeapon();
+  }
+  
+  function GenerateMultiplier(maximum)
+  {
+    var multiplier = 10;
+    
+    for (i = 0; i < RndNo0(maximum); i++) 
+    {
+      multiplier = multiplier * 10;
+      if(Chance(50))
+        break;
+    }
+    
+    return multiplier;
   }
   
   function GenerateRandomString3(firstList, secondList, thirdList)
