@@ -1614,7 +1614,7 @@ client.on("message", message => {
           '**summon**\n'+
           '**shotgun**\n'+
           '**barbaric**\n'+
-          '**justdoit**\n'+
+          '**justdoit**\n'
           ;
           break;
       }
