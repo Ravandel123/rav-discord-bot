@@ -1175,6 +1175,22 @@ client.on("message", message => {
       message.channel.send('Peril: [Rot: ' + armellDiceAmount[0] + ', Sword: ' + armellDiceAmount[1] + ', Sun: ' + armellDiceAmount[2] + ', Moon: ' + armellDiceAmount[3] + ', Shield: ' + armellDiceAmount[4] + ', Wyld: ' + armellDiceAmount[5] + ']')
       break;
       
+    //---------------------------------------------------------------------------------------------------------------------------
+    //-----pic----------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------
+    case 'pic':
+      var linkToPic;
+      
+      switch(arguments[1])
+      {
+        case 'kidding':
+          linkToPic = 'https://i.imgur.com/8lJPYe4.png';
+          break;
+      }
+  
+      message.channel.send(linkToPic)
+      break;
+      
     
     //----------------------------------------------------------------------------------------------------------------------------
     //----------rant------------------------------------------------------------
