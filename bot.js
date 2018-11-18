@@ -499,7 +499,7 @@ client.on("message", message => {
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
-    //----------ambush----------------------------------------------------------
+    //----------ambush------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'ambush':
       who = RecognizeWho(arguments[1], message, command);
@@ -515,7 +515,31 @@ client.on("message", message => {
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
-    //----------braindmg--------------------------------------------------------
+    //----------amount------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+      case 'amount': 
+      additionalList = [
+      ' more than ',
+      ' less than ',
+      ' exactly ',
+      ' below ',
+      ' over ',
+      ' definitely ',
+      ' probably '
+      ];
+      
+      responseList = [
+      Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'This is' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + '.',
+      'My calculations shows that this will be' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + '.',
+      'I think it\'s ' + Rnd(GenerateMultiplier(1000000000)) + '.'
+      ];
+
+      message.channel.send(ReturnRandom(responseList))
+      break;
+
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------braindmg----------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'braindmg':
       responseList = [
@@ -669,10 +693,11 @@ client.on("message", message => {
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
-    //----------cost, price-------------------------------------------------------------------------------------------------------
+    //----------cost, price, value------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'cost':
     case 'price':
+    case 'value':
       specialList = [
       'That is worthless.',
       'That is priceless.',
@@ -821,7 +846,8 @@ client.on("message", message => {
       'You\'re so fat you could sell shade.',
       'I bet your brain feels good as new, seeing that you\'ve never used it.',
       'Do you still love nature, despite what it did to you?',
-      'What are you going to do for a face when the baboon wants his butt back?'
+      'What are you going to do for a face when the baboon wants his butt back?',
+      'Those clothes don\'t make you look stupid. You make you look stupid.'
       ];
       
       message.channel.send(ReturnRandom(responseList))
@@ -1105,7 +1131,7 @@ client.on("message", message => {
       who + ' is probably best person in the world!',
       who + ' = awesome.',
       who + ' is the coolest person I have ever seen!',
-      'I think + who + is hot, I would rate your look 11/10.',
+      'I think ' + who + ' is hot, I would rate your look 11/10.',
       'Even if ' + who + ' was cloned, ' + who + ' would still be one of a kind. And the better looking one.',
       'I would love to spend every minute of every day with ' + who + ' , but some days I actually have to get stuff done.',
       who + '\'s smile is proof that the best things in life are free.',
@@ -1898,7 +1924,7 @@ client.on("message", message => {
     //----------who---------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'who':
-      if(Chance(65))
+      if(Chance(75))
         message.channel.send(ReturnRandom(serverPeopleList))
        else
         message.channel.send(ReturnRandom(dictatorsPeopleList))
@@ -2050,9 +2076,8 @@ client.on("message", message => {
     
       var soloList = [
       'Abduction', 'Animal Abuse', 'the Art',
-      'Bookmaster Awre', 'the Brainwashing',
-      'the Boobs', 'the Booze',
-      'the Coconut', 'the Coconuts', 'Communism', 
+      'Bookmaster Awre', 'the Boobs', 'the Booze', 'the Brainwashing',
+      'Chloroform', 'the Coconut', 'the Coconuts', 'Communism', 
       'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Dung', 'Duplication Device',
       'Evil',
       'Famine', 'Food', 'Fun', 'Fury',
@@ -2200,12 +2225,14 @@ client.on("message", message => {
       responseList = 'All commands start from h!\n' +
       '**% [x] [y] : [y]is % [x]**\n'+
       '**am, are, can, could, did, do, does, is, have, had, has, shall, should, was, were, will, would**\n'+
+      '**ambush**\n'+
+      '**amount**\n'+
       '**braindmg**\n'+
       '**capacity, volume**\n'+
       '**chance, chances**\n'+
       '**choose [x]|[y]|[z][...] : [x], [y], [z] = choices**\n'+
       '**class [x] : [x] = person**\n'+
-      '**cost, price**\n'+
+      '**cost, price, value**\n'+
       '**ddcheck [x] : [x] = person**\n'+
       '**ddquote [x] : [x] = number**\n'+
       '**dndalign [x] : [x] = person**\n'+
