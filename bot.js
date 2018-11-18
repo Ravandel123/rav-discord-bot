@@ -2552,7 +2552,7 @@ client.on("message", message => {
 
       var lastPart2 = [
       'Absolution',
-      'BDSM', 'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
+      'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
       'Cacao-Tree', 'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
       'Fear', 'Food', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
