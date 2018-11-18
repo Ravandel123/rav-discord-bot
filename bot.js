@@ -529,7 +529,7 @@ client.on("message", message => {
       ];
       
       responseList = [
-      Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      Rnd(GenerateMultiplier(1000000000)) + '.',
       'This is' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + '.',
       'My calculations shows that this will be' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + '.',
       'I think it\'s ' + Rnd(GenerateMultiplier(1000000000)) + '.'
