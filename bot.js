@@ -177,6 +177,7 @@ client.on("message", message => {
   'the Birds', 'the Boobs',
   'the Coconut', 'the Coconuts',
   'the Darkness', 'the Dead', 'Dung',
+  'the Hazelnut', 'the Hazelnuts',
   'Insanity',
   'Madness', 'Masochism',
   'the Nipples', 'the Nut', 'the Nuts',
@@ -288,19 +289,22 @@ client.on("message", message => {
   //-----Items-------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   var itemsWeaponsList = [
-  'Axe',
-  'Bow', 'Broadsword',
-  'Chain', 'Claymore', 'Club', 'Crossbow',
-  'Dagger',
-  'Flail',
-  'Gladius', 'Greatsword',
+  'Arbalest', 'Atomic Bomb', 'Axe',
+  'Bardiche', 'Bazooka', 'Bludgeon', 'Bomb', 'Bow', 'Broadsword',
+  'Chain', 'Chainsaw', 'Claymore', 'Club', 'Coconut', 'Crossbow',
+  'Dagger', 'Disintegrator',
+  'Estoc',
+  'Falchion', 'Flail', 'Fork',
+  'Gladius', 'Glaive', 'Greatsword',
   'Halberd', 'Hammer',
   'Kama', 'Katana', 'Knife',
-  'Longsword',
-  'Mace', 'Minigun',
-  'Polearm', 'Poleaxe',
-  'Rapier', 'Revolver',
-  'Sabre', 'Scimitar', 'Shortsword', 'Sickle', 'Sling', 'Spear', 'Staff', 'Stick', 'Sword',
+  'Lance', 'Lasso', 'Longsword',
+  'Mace', 'Maul', 'Minigun', 'Missile', 'Morning Star', 'Musket',
+  'Nuclear Missile', 'Nut',
+  'Pike', 'Polearm', 'Poleaxe',
+  'Quarterstaff',
+  'Rapier', 'Revolver', 'Rocket Launcher', 'Rope',
+  'Sabre', 'Scimitar', 'Scythe', 'Shortsword', 'Shuriken', 'Sickle', 'Sling', 'Spear', 'Staff', 'Stick', 'Sword',
   'Wakizashi', 'Wand', 'Warhammer', 'Whip'
   ];
   
@@ -489,8 +493,8 @@ client.on("message", message => {
       'Absolutely', 'Not at all',
       'It\'s a possibility', 'Nah',
       'Totally', 'No way',
-      'Affirmative', 'Nope',
-      'Yup', 'Not in a million years',
+      'Affirmative', 'Negative',
+      'Yup', 'Nope',
       'Sure', 'Under no circumstances',
       'Likely', 'Unlikely'
       ];
@@ -577,7 +581,7 @@ client.on("message", message => {
       'Capacity of that is definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
       'Around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
       'Exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'Its close to ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'It\'s close to ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
       'I think the capacity of that is less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
       'I think the capacity of that is more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.'
       ];
@@ -847,7 +851,8 @@ client.on("message", message => {
       'I bet your brain feels good as new, seeing that you\'ve never used it.',
       'Do you still love nature, despite what it did to you?',
       'What are you going to do for a face when the baboon wants his butt back?',
-      'Those clothes don\'t make you look stupid. You make you look stupid.'
+      'Those clothes don\'t make you look stupid. You make you look stupid.',
+      'I think you are worse than people who like pineapple pizza.'
       ];
       
       message.channel.send(ReturnRandom(responseList))
@@ -874,8 +879,8 @@ client.on("message", message => {
       'That weigh definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
       'That weigh around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
       'Weigh of that is exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'I think its less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'I think its more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.'
+      'I think it\'s less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'I think it\'s more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.'
       ];
 
       if(Chance(15))
@@ -905,11 +910,11 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'Its definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
-      'Its around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
+      'It\'s definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
+      'It\'s around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
       'That is exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.',
-      'I think its less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.',
-      'I think its more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.'
+      'I think it\'s less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.',
+      'I think it\'s more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.'
       ];
 
       if(Chance(15))
@@ -1924,7 +1929,7 @@ client.on("message", message => {
     //----------who---------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'who':
-      if(Chance(75))
+      if(Chance(85))
         message.channel.send(ReturnRandom(serverPeopleList))
        else
         message.channel.send(ReturnRandom(dictatorsPeopleList))
@@ -2154,7 +2159,7 @@ client.on("message", message => {
       
       responseList = [
       'Because of ' + reason + '.',
-      'Its caused by ' + reason + '.',
+      'It\'s caused by ' + reason + '.',
       'Reason of that is clear -  ' + reason + '.'
       ];
       
@@ -2479,7 +2484,7 @@ client.on("message", message => {
       ];
 
       var secondPart = [
-      'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
+      'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Animal', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
       'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Baron', 'Barrator', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
       'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catcher', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chevalier', 'Chimneysweep', 'Coachman', 'Collector', 'Colossus', 'Construct', 'Courtesan', 'Countess', 'Cultist', 'Convict', 'Courtier', 'Crusader', 'Cyborg',
       'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
