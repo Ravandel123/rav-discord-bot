@@ -309,7 +309,7 @@ client.on("message", message => {
   ];
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  //-----Measurements-------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Measurements------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var measurementLengthList = [
@@ -324,6 +324,163 @@ client.on("message", message => {
   'decagrams', 'grams', 'kilograms', 'ounces', 'pounds', 'tons'
   ]
   
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Names-------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  var NameOneSyllableMale = [
+  'Bron',
+  'Fiur',
+  'Drall', 'Drax',
+  'Gird',
+  'Kalt',
+  'Spint',
+  'Tark', 'Thant', 'Thrall', 'Torr',
+  'Vey', 'Vlad',
+  'Yog'
+  ];
+  
+  var NameFirstSyllable2MaleName = [
+  'A', 'Ag', 'Ais', 'Al', 'An', 'Ar', 'As', 'Ax', 'Ay',
+  'Bi', 'Bid', 'Bra', 'Brog',
+  'Chri', 'Clan', 'Cla', 'Cor', 'Cuth',
+  'Da', 'Dar', 'Dark', 'De', 'Del', 'Des', 'Dra',
+  'Ed',
+  'Faf', 'Fal',
+  'Gal', 'Ge', 'Ger', 'Gret', 'Grin', 'Gun',
+  'Ha', 'Har',
+  'I', 'Il', 'In',
+  'Jar',
+  'Ke', 'Kil', 'Kor',
+  'La', 'Loy',
+  'Ma', 'Mag', 'Mal', 'Man', 'Mer', 'Mul',
+  'Na', 'Nim',
+  'Or',
+  'Ran', 'Rash', 'Ri', 'Ro', 'Ry',
+  'San', 'Sha', 'Shak', 'Sol', 'Stra',
+  'Ta', 'Te', 'Tha', 'Tho', 'Thor',
+  'U',
+  'Vad', 'Vi', 'Vo',
+  'War', 'Wys',
+  'Xar', 'Xe', 'Xy',
+  'Zu', 'Zy'
+  ];
+  
+  var NameSecondSyllable2MaleName = [
+  'art',
+  'bac', 'bert', 'bin', 'bus',
+  'ce', 'chin', 'com', 'con', 'cus', 'cy',
+  'dal', 'dan', 'dar', 'dek', 'den', 'din', 'dro', 'dun',
+  'fax', 'fred',
+  'gal', 'gash', 'gem', 'gham', 'gor', 'grim', 'gus',
+  'hild',
+  'jit',
+  'ka', 'ker', 'kes', 'kial', 'kin', 'kon',
+  'lach', 'land', 'ley', 'lich', 'lin', 'linn', 'lon', 'loo', 'lor', 'lu',
+  'myr',
+  'nar', 'nard', 'nax', 'ne', 'ner', 'nis', 'nos', 'nosh', 'nus', 'nuz',
+  'on',
+  'raih', 'ralt', 'rek', 'rey', 'ric', 'rin', 'rion', 'rius', 'ron', 'rus',
+  'sa', 'sham', 'shnard', 'sis', 'stian', 'storn',
+  'tal', 'tan', 'thran', 'ti',
+  'van', 'vius', 'vor',
+  'wick', 'wulf',
+  'zar', 'zir'
+  ];
+
+  var NameFirstSyllable3MaleName = [
+  'A', 'Ar', 'As',
+  'Bo', 'Bra',
+  'Co',
+  'Da', 'De',
+  'El', 'Er', 'Ez',
+  'Ge', 'Gur',
+  'He',
+  'I', 'In',
+  'Ja', 'Je', 'Jed',
+  'Ka', 'Krel',
+  'Le',
+  'Ma', 'Mar', 'Mi', 'Mo',
+  'Pi',
+  'Ra', 'Ru',
+  'Sa', 'Sar', 'Sco',
+  'Tal', 'Tho', 'To', 'Ty',
+  'U',
+  'Vla',
+  'Zi'
+  ];
+
+  var NameSecondSyllable3MaleName = [
+  'an',
+  'bar', 'bo',
+  'ca', 'chi', 'ci',
+  'da', 'di',
+  'e',
+  'fre',
+  'gna',
+  'hin',
+  'ja',
+  'ken', 'ki',
+  'la', 'le', 'li', 'lis', 'lix',
+  'ma', 'mo',
+  'ne', 'ni', 'nis', 'no',
+  'que',
+  'ra', 'rai', 're', 'ro', 'run', 'rus',
+  'sa', 'san', 'ser',
+  'te', 'tha', 'tid', 'tral',
+  'u',
+  'van', 've',
+  'zi'
+  ];
+
+  var NameThirdSyllable3MaleName = [
+  'al', 'an',
+  'con',
+  'del', 'dor', 'doth', 'dram',
+  'gar', 'gark', 'go', 'gus',
+  'kas', 'kith',
+  'lin',
+  'mar', 'mer', 'mir', 'mon', 'my',
+  'ni', 'niel', 'nius',
+  'on', 'os',
+  'ram', 're', 'ri', 'rim', 'rio', 'ris', 'ro', 'rogg', 'rug',
+  'sar', 'shan', 'shar', 'shi', 'shnar', 'son', 'sos',
+  'tar', 'te', 'tin', 'tius', 'tos',
+  'us',
+  'vald', 'vich',
+  'won',
+  'xi', 'xion', 'xor'
+  ];
+  
+  var NameFirstSyllable4MaleName = [
+  'A', 'Al', 'Am',
+  'E',
+  'The',
+  'Xer'
+  ];
+
+  var NameSecondSyllable4MaleName = [
+  'da',
+  'e',
+  'ham',
+  'li',
+  'mu',
+  'o'
+  ];
+
+  var NameThirdSyllable4MaleName = [
+  'do',
+  'ma',
+  'na',
+  'va'
+  ];
+
+  var NameFourthSyllable4MaleName = [
+  'cius',
+  'e',
+  'in',
+  'ret', 'ro', 'rus'
+  ];
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----People------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1071,7 +1228,7 @@ client.on("message", message => {
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
-    //----------love------------------------------------------------------------
+    //-----love-------------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'love':
       who = RecognizeWhoSimpler(arguments[1], message, command)
@@ -1189,9 +1346,30 @@ client.on("message", message => {
 
       message.channel.send(ReturnRandom(responseList))
       break;
+      
+      
+    //----------------------------------------------------------------------------------------------------------------------------
+    //-----name-------------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'name':
+      if(arguments[2] != 1 &&  arguments[2] != 2 &&  arguments[2] != 3 &&  arguments[2] != 4)
+        arguments[2] = RndNo0(4);
+        
+      if(arguments[3] < 0 || arguments[3] > 1000000)
+        arguments[3] = 1;
+        
+      var i = 0;
+    
+      while(i != arguments[3])
+      {
+        i = i + 1;
+        message.channel.send(GenerateRandomMaleName(arguments[2]))
+      }
+      
+      break;
   
     //---------------------------------------------------------------------------------------------------------------------------
-    //-----peril----------------------------------------------------------
+    //-----peril-----------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------
     case 'peril':
       if (arguments[1] == null)
@@ -2326,6 +2504,48 @@ client.on("message", message => {
   {
     return Math.floor(Math.random() * (maximum + 1));
   }
+  
+  function GenerateRandomMaleName(syllablesNumber)
+  {
+    var generatedRandomMaleName = ''
+
+    switch (syllablesNumber)
+    {
+      case '1':
+        generatedRandomMaleName = ReturnRandom(NameOneSyllableMale)
+      break;
+      
+      case '2':
+        generatedRandomMaleName = ReturnRandom(NameFirstSyllable2MaleName) + ReturnRandom(NameSecondSyllable2MaleName)
+      break;
+      
+      case '3':
+        generatedRandomMaleName = ReturnRandom(NameFirstSyllable3MaleName) + ReturnRandom(NameSecondSyllable3MaleName) + ReturnRandom(NameThirdSyllable3MaleName)
+      break;
+      
+      case '4':
+        generatedRandomMaleName = ReturnRandom(NameFirstSyllable4MaleName) + ReturnRandom(NameSecondSyllable4MaleName) + ReturnRandom(NameThirdSyllable4MaleName) + ReturnRandom(NameFourthSyllable4MaleName)
+      break;
+    }
+    
+    if(generatedRandomMaleName == '')
+      generatedRandomMaleName = GenerateRandomMaleName(RndNo0(4))
+
+    return generatedRandomMaleName;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   function RndNo0(maximum)
   {
