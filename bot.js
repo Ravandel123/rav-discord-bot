@@ -1365,7 +1365,7 @@ client.on("message", message => {
       while(i != arguments[3])
       {
         i = i + 1;
-        finalString = finalString + GenerateRandomMaleName(arguments[2]))
+        finalString = finalString + GenerateRandomMaleName(arguments[2])
         if(i != arguments[3])
           finalString = finalString + ', '
       }
