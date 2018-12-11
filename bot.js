@@ -116,7 +116,7 @@ client.on("message", message => {
   ];
   
   var specialAfflictionsList = [
-  'Aberrant', 'Aggressive', 'Anxious', 
+  'Aberrant', 'Aggressive', 'Alcoholic', 'Anxious', 
   'Barbaric', 'Brainwashed', 
   'Cannibalistic', 'Crazy',
   'Degenerate', 'Delusional', 'Depressive', 'Destructive', 'Deviant', 
@@ -360,7 +360,7 @@ client.on("message", message => {
   'San', 'Sha', 'Shak', 'Sol', 'Stra',
   'Ta', 'Te', 'Tha', 'Tho', 'Thor',
   'U',
-  'Vad', 'Vi', 'Vo',
+  'Vad', 'Var', 'Vi', 'Vo',
   'War', 'Wys',
   'Xar', 'Xe', 'Xy',
   'Zu', 'Zy'
@@ -370,7 +370,7 @@ client.on("message", message => {
   'art',
   'bac', 'bert', 'bin', 'bus',
   'ce', 'chin', 'com', 'con', 'cus', 'cy',
-  'dal', 'dan', 'dar', 'dek', 'den', 'din', 'dro', 'dun',
+  'dal', 'dan', 'dar', 'dek', 'den', 'dgo', 'din', 'dro', 'dun',
   'fax', 'fred',
   'gal', 'gash', 'gem', 'gham', 'gor', 'grim', 'gus',
   'hild',
@@ -630,25 +630,27 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
   var placeMainList = [
-  'Altar',
-  'Basement', 'Brothel',
-  'Cartel', 'Cave', 'City', 'Chamber',
-  'Dojo', 'Dungeon',
-  'Forest', 'Fountain',
+  'Abbey', 'Altar', 'Amphitheater', 'Arena',
+  'Basement', 'Barrens', 'Brothel',
+  'Cartel', 'Cave', 'Citadel', 'City', 'Chamber', 'Cliffs', 'Colosseum', 'Cornfield',
+  'Den', 'Desert', 'Dojo', 'Dungeon',
+  'Encampment',
+  'Field', 'Forest', 'Fort', 'Fortress', 'Fountain',
   'Galaxy', 'Garrison', 'Grove', 'Guild', 'Gym',
-  'Home', 'House',
+  'Home', 'House', 'Hovel', 'Hub',
   'Island',
   'Jail',
-  'Lake',
-  'Mountain', 'Mountains',
-  'Ocean',
-  'Planet', 'Prison',
-  'River', 'Ruins',
-  'School',
-  'Temple', 'Tower', 'Town', 'Treetops',
-  'Sea', 'Space',
+  'Kingdom',
+  'Lake', 'Land', 'Lighthouse',
+  'Marsh', 'Moor', 'Mountain', 'Mountains',
+  'Ocean', 'Outpost',
+  'Plains', 'Planet', 'Prison',
+  'Rainforest', 'Refuge', 'River', 'Ruins',
+  'Sanctum', 'School', 'Sea', 'Sewers', 'Ship', 'Space', 'Stronghold', 'Swamp',
+  'Temple', 'Tomb', 'Tower', 'Town', 'Township, 'Treetops',
   'Village',
-  'Waterfall'
+  'Wastes', 'Waterfall', 'Wilderness', 'Woods',
+  'Ziggurat'
   ]
   
   var placeSinglePartList = [
@@ -2705,18 +2707,22 @@ client.on("message", message => {
     switch (syllablesNumber)
     {
       case '1':
+      case 1:
         generatedRandomFemaleName = ReturnRandom(nameOneSyllableFemale)
       break;
       
       case '2':
+      case 2:
         generatedRandomFemaleName = ReturnRandom(nameFirstSyllable2Female) + ReturnRandom(nameSecondSyllable2Female)
       break;
       
       case '3':
+      case 3:
         generatedRandomFemaleName = ReturnRandom(nameFirstSyllable3Female) + ReturnRandom(nameSecondSyllable3Female) + ReturnRandom(nameThirdSyllable3Female)
       break;
       
       case '4':
+      case 4:
         generatedRandomFemaleName = ReturnRandom(nameFirstSyllable4Female) + ReturnRandom(nameSecondSyllable4Female) + ReturnRandom(nameThirdSyllable4Female) + ReturnRandom(nameFourthSyllable4Female)
       break;
     }
