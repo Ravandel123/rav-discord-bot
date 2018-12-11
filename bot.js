@@ -328,7 +328,7 @@ client.on("message", message => {
   //-----Names-------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
-  var NameOneSyllableMale = [
+  var nameOneSyllableMale = [
   'Bron',
   'Fiur',
   'Drall', 'Drax',
@@ -340,7 +340,7 @@ client.on("message", message => {
   'Yog'
   ];
   
-  var NameFirstSyllable2MaleName = [
+  var nameFirstSyllable2Male = [
   'A', 'Ag', 'Ais', 'Al', 'An', 'Ar', 'As', 'Ax', 'Ay',
   'Bi', 'Bid', 'Bra', 'Brog',
   'Chri', 'Clan', 'Cla', 'Cor', 'Cuth',
@@ -366,7 +366,7 @@ client.on("message", message => {
   'Zu', 'Zy'
   ];
   
-  var NameSecondSyllable2MaleName = [
+  var nameSecondSyllable2Male = [
   'art',
   'bac', 'bert', 'bin', 'bus',
   'ce', 'chin', 'com', 'con', 'cus', 'cy',
@@ -388,7 +388,7 @@ client.on("message", message => {
   'zar', 'zir'
   ];
 
-  var NameFirstSyllable3MaleName = [
+  var nameFirstSyllable3Male = [
   'A', 'Ar', 'As',
   'Bo', 'Bra',
   'Co',
@@ -410,7 +410,7 @@ client.on("message", message => {
   'Zi'
   ];
 
-  var NameSecondSyllable3MaleName = [
+  var nameSecondSyllable3Male = [
   'an',
   'bar', 'bo',
   'ca', 'chi', 'ci',
@@ -433,7 +433,7 @@ client.on("message", message => {
   'zi'
   ];
 
-  var NameThirdSyllable3MaleName = [
+  var nameThirdSyllable3Male = [
   'al', 'an',
   'con',
   'del', 'dor', 'doth', 'dram',
@@ -452,14 +452,14 @@ client.on("message", message => {
   'xi', 'xion', 'xor'
   ];
   
-  var NameFirstSyllable4MaleName = [
+  var nameFirstSyllable4Male = [
   'A', 'Al', 'Am',
   'E',
   'The',
   'Xer'
   ];
 
-  var NameSecondSyllable4MaleName = [
+  var nameSecondSyllable4Male = [
   'da',
   'e',
   'ham',
@@ -468,18 +468,147 @@ client.on("message", message => {
   'o'
   ];
 
-  var NameThirdSyllable4MaleName = [
+  var nameThirdSyllable4Male = [
   'do',
   'ma',
   'na',
   'va'
   ];
 
-  var NameFourthSyllable4MaleName = [
+  var nameFourthSyllable4Male = [
   'cius',
   'e',
   'in',
   'ret', 'ro', 'rus'
+  ];
+  
+  var nameOneSyllableMale = [
+  'Ash',
+  'Gem',
+  'Styg',
+  'Voy',
+  'Xsi'
+  ];
+
+  var nameFirstSyllable2Female = [
+  'A', 'An', 'As',
+  'Bris',
+  'Ca', 'Cai', 'Char', 'Cie', 'Cy',
+  'Fio',
+  'Gret',
+  'Is',
+  'Kyr',
+  'Lu',
+  'Me', 'Mi',
+  'Ny',
+  'O',
+  'Pa', 'Py',
+  'Ris', 'Ro',
+  'San', 'Shi', 'Sor', 'Syl', 'Syn',
+  'Thu', 'Ti', 'Ty',
+  'Ver'
+  ];
+  
+  var nameSecondSyllable2Female = [
+  'ca', 'chin',
+  'dish', 'dra',
+  'le', 'lid',
+  'mus',
+  'na', 'nar', 'nya',
+  'ra', 're', 'riam', 'ris', 'rist',
+  'sa', 'sha', 'sic', 'sis',
+  'tlin', 'tra',
+  'va', 'via',
+  'ya'
+  ];
+
+  var nameFirstSyllable3Female = [
+  'A', 'Ad', 'Ak',
+  'Cas',
+  'Da',
+  'Ga', 'Gun',
+  'I',
+  'Je',
+  'Kin',
+  'La', 'Le', 'Lo',
+  'Me', 'Mir', 'Mu',
+  'Ne',
+  'O',
+  'Se', 'Sep', 'Syl',
+  'Ta',
+  'Va'
+  ];
+
+  var nameSecondSyllable3Female = [
+  'bet',
+  'cta',
+  'de', 'dria', 'du',
+  'e',
+  'gnis',
+  'hin',
+  'i',
+  'ke', 'kro',
+  'lan', 'le', 'les', 'lo',
+  'me', 'mi', 'mo',
+  'na', 'no',
+  'o',
+  'pha',
+  're', 'rien', 'ro',
+  'ta', 'tien',
+  'va'
+  ];
+
+  var nameThirdSyllable3Female = [
+  'bel',
+  'da', 'dia',
+  'ha',
+  'la', 'lei',
+  'ka',
+  'ma', 'myth',
+  'na', 'nas', 'ne',
+  'ra', 're', 'ria','roth',
+  'sa', 'sha',
+  'tra',
+  'va', 'via'
+  ];
+  
+  var nameFirstSyllable4Female = [
+  'A', 'An',
+  'Be',
+  'Ca', 'Cas',
+  'Jo',
+  'Se',
+  'Vi'
+  ];
+
+  var nameSecondSyllable4Female = [
+  'a',
+  'de', 'do',
+  'na',
+  're',
+  'se', 'sio',
+  'the', 'tho'
+  ];
+
+  var nameThirdSyllable4Female = [
+  'fen',
+  'lai',
+  'mi',
+  'ni',
+  'pe','phi',
+  'ri',
+  'tri',
+  'u'
+  ];
+
+  var nameFourthSyllable4Female = [
+  'ce',
+  'de',
+  'ia',
+  'na', 'ne',
+  'sa',
+  'ta',
+  'za'
   ];
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -794,7 +923,7 @@ client.on("message", message => {
       {
         finalString = GenerateRandomClass('count');
         message.channel.send('Number of possible outcomes (approximately): ' + finalString + '.');
-        return ;
+        return;
       }
       
       var basePart = [
@@ -1354,9 +1483,19 @@ client.on("message", message => {
     case 'name':
       var finalString = '';
       
-      if(arguments[2] != 1 && arguments[2] != 2 && arguments[2] != 3 && arguments[2] != 4)
-        arguments[2] = RndNo0(4)
-
+      if(arguments[1] == 'count')
+      {
+        message.channel.send(TotalNamesCount())
+        return;
+      }
+        
+      
+      if(arguments[1] != 'm' && arguments[1] != 'f')
+        if(Chance(50))
+          arguments[1] = 'm'
+        else
+          arguments[1] = 'f'
+      
       if(arguments[3] < 0 || arguments[3] > 1000000 || arguments[3] == null)
         arguments[3] = 1;
 
@@ -1365,7 +1504,12 @@ client.on("message", message => {
       while(i != arguments[3])
       {
         i = i + 1;
-        finalString = finalString + GenerateRandomMaleName(arguments[2])
+        
+        if(arguments[1] == 'm')
+          finalString = finalString + GenerateRandomMaleName(arguments[2])
+        else
+          finalString = finalString + GenerateRandomFemaleName(arguments[2])
+          
         if(i != arguments[3])
           finalString = finalString + ', '
       }
@@ -2432,6 +2576,7 @@ client.on("message", message => {
       '**how**\n'+
       '**invite**\n'+
       '**love [x] : [x] = person**\n'+
+      '**name [x] [y] [z]: [x] = 'm' or 'f', [y] = numbers of syllables, [z] = number of generated names**\n'+
       '**peril [x] : [x] = number**\n'+
       '**rant [x] : [x] = something**\n'+
       '**resolve [x] : [x] = person**\n'+
@@ -2511,48 +2656,71 @@ client.on("message", message => {
     return Math.floor(Math.random() * (maximum + 1));
   }
   
+  function TotalNamesCount()
+  {
+    var namesMaleCount = (nameOneSyllableMale.length) + ((nameFirstSyllable2Male.length) * (nameSecondSyllable2Male.length)) + ((nameFirstSyllable3Male.length) * (nameSecondSyllable3Male.length) * (nameThirdSyllable3Male.length)) + ((nameFirstSyllable4Male.length) * (nameSecondSyllable4Male.length) * (nameThirdSyllable4Male.length) * (nameFourthSyllable4Male.length));
+    var namesFemaleCount = (nameOneSyllableFemale.length) + ((nameFirstSyllable2Female.length) * (nameSecondSyllable2Female.length)) + ((nameFirstSyllable3Female.length) * (nameSecondSyllable3Female.length) * (nameThirdSyllable3Female.length)) + ((nameFirstSyllable4Female.length) * (nameSecondSyllable4Female.length) * (nameThirdSyllable4Female.length) * (nameFourthSyllable4Female.length));
+    return (namesMaleCount + namesFemaleCount);
+  }
+  
   function GenerateRandomMaleName(syllablesNumber)
   {
     var generatedRandomMaleName = ''
+    
+    if(syllablesNumber != 1 && syllablesNumber != 2 && syllablesNumber != 3 && syllablesNumber != 4)
+      syllablesNumber = RndNo0(4)
 
     switch (syllablesNumber)
     {
       case '1':
-        generatedRandomMaleName = ReturnRandom(NameOneSyllableMale)
+        generatedRandomMaleName = ReturnRandom(nameOneSyllableMale)
       break;
       
       case '2':
-        generatedRandomMaleName = ReturnRandom(NameFirstSyllable2MaleName) + ReturnRandom(NameSecondSyllable2MaleName)
+        generatedRandomMaleName = ReturnRandom(nameFirstSyllable2Male) + ReturnRandom(nameSecondSyllable2Male)
       break;
       
       case '3':
-        generatedRandomMaleName = ReturnRandom(NameFirstSyllable3MaleName) + ReturnRandom(NameSecondSyllable3MaleName) + ReturnRandom(NameThirdSyllable3MaleName)
+        generatedRandomMaleName = ReturnRandom(nameFirstSyllable3Male) + ReturnRandom(nameSecondSyllable3Male) + ReturnRandom(nameThirdSyllable3Male)
       break;
       
       case '4':
-        generatedRandomMaleName = ReturnRandom(NameFirstSyllable4MaleName) + ReturnRandom(NameSecondSyllable4MaleName) + ReturnRandom(NameThirdSyllable4MaleName) + ReturnRandom(NameFourthSyllable4MaleName)
+        generatedRandomMaleName = ReturnRandom(nameFirstSyllable4Male) + ReturnRandom(nameSecondSyllable4Male) + ReturnRandom(nameThirdSyllable4Male) + ReturnRandom(nameFourthSyllable4Male)
       break;
-      
-      default:
-        generatedRandomMaleName = ReturnRandom(NameFirstSyllable2MaleName) + ReturnRandom(NameSecondSyllable2MaleName)
     }
 
     return generatedRandomMaleName;
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  function GenerateRandomFemaleName(syllablesNumber)
+  {
+    var generatedRandomFemaleName = ''
+    
+    if(syllablesNumber != 1 && syllablesNumber != 2 && syllablesNumber != 3 && syllablesNumber != 4)
+      syllablesNumber = RndNo0(4)
+
+    switch (syllablesNumber)
+    {
+      case '1':
+        generatedRandomMaleName = ReturnRandom(nameOneSyllableFemale)
+      break;
+      
+      case '2':
+        generatedRandomMaleName = ReturnRandom(nameFirstSyllable2Female) + ReturnRandom(nameSecondSyllable2Female)
+      break;
+      
+      case '3':
+        generatedRandomMaleName = ReturnRandom(nameFirstSyllable3Female) + ReturnRandom(nameSecondSyllable3Female) + ReturnRandom(nameThirdSyllable3Female)
+      break;
+      
+      case '4':
+        generatedRandomMaleName = ReturnRandom(nameFirstSyllable4Female) + ReturnRandom(nameSecondSyllable4Female) + ReturnRandom(nameThirdSyllable4Female) + ReturnRandom(nameFourthSyllable4Female)
+      break;
+    }
+
+    return generatedRandomFemaleName;
+  }
+
   function RndNo0(maximum)
   {
     return Math.floor(Math.random() * maximum) + 1;
