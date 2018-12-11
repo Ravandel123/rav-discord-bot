@@ -647,7 +647,7 @@ client.on("message", message => {
   'Plains', 'Planet', 'Prison',
   'Rainforest', 'Refuge', 'River', 'Ruins',
   'Sanctum', 'School', 'Sea', 'Sewers', 'Ship', 'Space', 'Stronghold', 'Swamp',
-  'Temple', 'Tomb', 'Tower', 'Town', 'Township, 'Treetops',
+  'Temple', 'Tomb', 'Tower', 'Town', 'Township', 'Treetops',
   'Village',
   'Wastes', 'Waterfall', 'Wilderness', 'Woods',
   'Ziggurat'
