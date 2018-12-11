@@ -1488,8 +1488,7 @@ client.on("message", message => {
         message.channel.send(TotalNamesCount())
         return;
       }
-        
-      
+
       if(arguments[1] != 'm' && arguments[1] != 'f')
         if(Chance(50))
           arguments[1] = 'm'
@@ -1500,6 +1499,10 @@ client.on("message", message => {
         arguments[3] = 1;
 
       var i = 0;
+      
+      message.channel.send(arguments[1])
+      message.channel.send(arguments[2])
+      message.channel.send(arguments[3])
     
       while(i != arguments[3])
       {
