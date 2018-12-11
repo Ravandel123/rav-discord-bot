@@ -2576,7 +2576,7 @@ client.on("message", message => {
       '**how**\n'+
       '**invite**\n'+
       '**love [x] : [x] = person**\n'+
-      '**name [x] [y] [z]: [x] = 'm' or 'f', [y] = numbers of syllables, [z] = number of generated names**\n'+
+      '**name [x] [y] [z]: [x] = "m" or "f", [y] = numbers of syllables, [z] = number of generated names**\n'+
       '**peril [x] : [x] = number**\n'+
       '**rant [x] : [x] = something**\n'+
       '**resolve [x] : [x] = person**\n'+
