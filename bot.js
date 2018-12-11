@@ -29,7 +29,7 @@ client.on("message", message => {
   
 
   var serialsList = [
-  'Alladin',
+  'Alladin', 
   'Baywatch', 'Bloodbath in Psycho Town',
   'Cannibal! The Musical', 'Chopper Chicks in Zombietown',
   'Dumb & Dumber',
