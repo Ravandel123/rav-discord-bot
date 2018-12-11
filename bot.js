@@ -2666,28 +2666,28 @@ client.on("message", message => {
   {
     var generatedRandomMaleName = ''
     
-    message.channel.send('Before ' + syllablesNumber)
-    
     if(syllablesNumber != 1 && syllablesNumber != 2 && syllablesNumber != 3 && syllablesNumber != 4)
       syllablesNumber = RndNo0(4)
-      
-      message.channel.send('After ' + syllablesNumber)
 
     switch (syllablesNumber)
     {
       case '1':
+      case 1:
         generatedRandomMaleName = ReturnRandom(nameOneSyllableMale)
       break;
       
       case '2':
+      case 2:
         generatedRandomMaleName = ReturnRandom(nameFirstSyllable2Male) + ReturnRandom(nameSecondSyllable2Male)
       break;
       
       case '3':
+      case 3:
         generatedRandomMaleName = ReturnRandom(nameFirstSyllable3Male) + ReturnRandom(nameSecondSyllable3Male) + ReturnRandom(nameThirdSyllable3Male)
       break;
       
       case '4':
+      case 4:
         generatedRandomMaleName = ReturnRandom(nameFirstSyllable4Male) + ReturnRandom(nameSecondSyllable4Male) + ReturnRandom(nameThirdSyllable4Male) + ReturnRandom(nameFourthSyllable4Male)
       break;
     }
