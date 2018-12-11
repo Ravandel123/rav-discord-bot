@@ -482,7 +482,7 @@ client.on("message", message => {
   'ret', 'ro', 'rus'
   ];
   
-  var nameOneSyllableMale = [
+  var nameOneSyllableFemale = [
   'Ash',
   'Gem',
   'Styg',
@@ -2666,8 +2666,12 @@ client.on("message", message => {
   {
     var generatedRandomMaleName = ''
     
+    message.channel.send('Before ' + syllablesNumber)
+    
     if(syllablesNumber != 1 && syllablesNumber != 2 && syllablesNumber != 3 && syllablesNumber != 4)
       syllablesNumber = RndNo0(4)
+      
+      message.channel.send('After ' + syllablesNumber)
 
     switch (syllablesNumber)
     {
