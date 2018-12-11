@@ -1352,6 +1352,8 @@ client.on("message", message => {
     //-----name-------------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'name':
+      var finalString = '';
+      
       if(arguments[2] != 1 && arguments[2] != 2 && arguments[2] != 3 && arguments[2] != 4)
         arguments[2] = RndNo0(4)
 
@@ -1363,8 +1365,12 @@ client.on("message", message => {
       while(i != arguments[3])
       {
         i = i + 1;
-        message.channel.send(GenerateRandomMaleName(arguments[2]))
+        finalString = finalString + GenerateRandomMaleName(arguments[2]))
+        if(i != arguments[3])
+          finalString = finalString + ', '
       }
+      
+      message.channel.send(finalString)
       
       break;
   
