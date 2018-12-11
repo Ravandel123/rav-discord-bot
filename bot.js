@@ -1352,12 +1352,8 @@ client.on("message", message => {
     //-----name-------------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'name':
-      var x = arguments[2]
-      if(x == null)
-        x = 2
-        
-      if(x != 1 && x != 2 && x != 3 && x != 4)
-        x = 2
+      if(arguments[2] != 1 && arguments[2] != 2 && arguments[2] != 3 && arguments[2] != 4)
+        arguments[2] = RndNo0(4)
 
       if(arguments[3] < 0 || arguments[3] > 1000000 || arguments[3] == null)
         arguments[3] = 1;
@@ -1367,8 +1363,7 @@ client.on("message", message => {
       while(i != arguments[3])
       {
         i = i + 1;
-        message.channel.send(x)
-        message.channel.send(GenerateRandomMaleName(2))
+        message.channel.send(GenerateRandomMaleName(arguments[2]))
       }
       
       break;
