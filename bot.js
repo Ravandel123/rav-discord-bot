@@ -1495,15 +1495,11 @@ client.on("message", message => {
         else
           arguments[1] = 'f'
       
-      if(arguments[3] < 0 || arguments[3] > 1000000 || arguments[3] == null)
+      if(arguments[3] < 0 || arguments[3] > 100 || arguments[3] == null)
         arguments[3] = 1;
 
       var i = 0;
       
-      message.channel.send(arguments[1])
-      message.channel.send(arguments[2])
-      message.channel.send(arguments[3])
-    
       while(i != arguments[3])
       {
         i = i + 1;
@@ -2705,19 +2701,19 @@ client.on("message", message => {
     switch (syllablesNumber)
     {
       case '1':
-        generatedRandomMaleName = ReturnRandom(nameOneSyllableFemale)
+        generatedRandomFemaleName = ReturnRandom(nameOneSyllableFemale)
       break;
       
       case '2':
-        generatedRandomMaleName = ReturnRandom(nameFirstSyllable2Female) + ReturnRandom(nameSecondSyllable2Female)
+        generatedRandomFemaleName = ReturnRandom(nameFirstSyllable2Female) + ReturnRandom(nameSecondSyllable2Female)
       break;
       
       case '3':
-        generatedRandomMaleName = ReturnRandom(nameFirstSyllable3Female) + ReturnRandom(nameSecondSyllable3Female) + ReturnRandom(nameThirdSyllable3Female)
+        generatedRandomFemaleName = ReturnRandom(nameFirstSyllable3Female) + ReturnRandom(nameSecondSyllable3Female) + ReturnRandom(nameThirdSyllable3Female)
       break;
       
       case '4':
-        generatedRandomMaleName = ReturnRandom(nameFirstSyllable4Female) + ReturnRandom(nameSecondSyllable4Female) + ReturnRandom(nameThirdSyllable4Female) + ReturnRandom(nameFourthSyllable4Female)
+        generatedRandomFemaleName = ReturnRandom(nameFirstSyllable4Female) + ReturnRandom(nameSecondSyllable4Female) + ReturnRandom(nameThirdSyllable4Female) + ReturnRandom(nameFourthSyllable4Female)
       break;
     }
 
