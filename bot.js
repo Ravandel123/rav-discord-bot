@@ -1355,7 +1355,7 @@ client.on("message", message => {
       if(arguments[2] != 1 &&  arguments[2] != 2 &&  arguments[2] != 3 &&  arguments[2] != 4)
         arguments[2] = RndNo0(4);
         
-      if(arguments[3] < 0 || arguments[3] > 1000000)
+      if(arguments[3] < 0 || arguments[3] > 1000000 || arguments[3] == null)
         arguments[3] = 1;
         
       var i = 0;
