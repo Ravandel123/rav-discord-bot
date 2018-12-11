@@ -1366,6 +1366,7 @@ client.on("message", message => {
       while(i != arguments[3])
       {
         i = i + 1;
+        message.channel.send(arguments[2])
         message.channel.send(GenerateRandomMaleName(arguments[2]))
       }
       
