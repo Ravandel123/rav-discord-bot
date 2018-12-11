@@ -2531,10 +2531,10 @@ client.on("message", message => {
       case '4':
         generatedRandomMaleName = ReturnRandom(NameFirstSyllable4MaleName) + ReturnRandom(NameSecondSyllable4MaleName) + ReturnRandom(NameThirdSyllable4MaleName) + ReturnRandom(NameFourthSyllable4MaleName)
       break;
+      
+      default:
+        generatedRandomMaleName = ReturnRandom(NameFirstSyllable2MaleName) + ReturnRandom(NameSecondSyllable2MaleName)
     }
-    
-    if(generatedRandomMaleName == '')
-      generatedRandomMaleName = GenerateRandomMaleName(RndNo0(4))
 
     return generatedRandomMaleName;
   }
