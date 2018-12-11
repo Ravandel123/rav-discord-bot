@@ -29,7 +29,7 @@ client.on("message", message => {
   
 
   var serialsList = [
-  'Alladin', 
+  'Alladin',
   'Baywatch', 'Bloodbath in Psycho Town',
   'Cannibal! The Musical', 'Chopper Chicks in Zombietown',
   'Dumb & Dumber',
@@ -1352,16 +1352,12 @@ client.on("message", message => {
     //-----name-------------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'name':
-      if(arguments[2] != 1 &&  arguments[2] != 2 &&  arguments[2] != 3 &&  arguments[2] != 4)
+      if(arguments[2] == null || (arguments[2] != 1 && arguments[2] != 2 && arguments[2] != 3 && arguments[2] != 4))
         arguments[2] = RndNo0(4);
-        
-        message.channel.send(arguments[2])
-        
+
       if(arguments[3] < 0 || arguments[3] > 1000000 || arguments[3] == null)
         arguments[3] = 1;
-        
-        message.channel.send(arguments[3])
-        
+
       var i = 0;
     
       while(i != arguments[3])
