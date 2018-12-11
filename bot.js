@@ -1368,7 +1368,7 @@ client.on("message", message => {
       {
         i = i + 1;
         message.channel.send(x)
-        message.channel.send(GenerateRandomMaleName(arguments[2]))
+        message.channel.send(GenerateRandomMaleName(2))
       }
       
       break;
