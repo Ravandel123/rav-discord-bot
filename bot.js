@@ -784,6 +784,7 @@ client.on("message", message => {
       'Affirmative', 'Negative',
       'Yup', 'Nope',
       'Sure', 'Under no circumstances',
+      'Partially', 'A bit', 'Slightly', 'Somehow'
       'Likely', 'Unlikely'
       ];
 
