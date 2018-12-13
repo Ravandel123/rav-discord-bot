@@ -194,18 +194,23 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var animalsStandardList = [
-  'Alligator', 'Alpaca', 'Armadillo',
-  'Baboon', 'Badger', 'Bear',
-  'Cat', 'Coyote', 'Crocodile',
+  'Alligator', 'Alpaca', 'Ameba', 'Armadillo',
+  'Baboon', 'Badger', 'Bat', 'Bear',
+  'Cat', 'Chameleon', 'Chicken', 'Chimpanzee', 'Coyote', 'Cricket', 'Crocodile',
   'Dog',
-  'Fish', 'Fox',
-  'Lion', 'Lynx',
-  'Monkey',
+  'Ermine',
+  'Ferret', 'Fish', 'Fox',
+  'Gecko', 'Gorilla',
+  'Hedgehog', 'Hippo', 'Hornbill',
+  'Iguana',
+  'Lama','Lion', 'Lizard', 'Lynx',
+  'Macaw', 'Monkey',
   'Orangutan', 'Otter', 'Owl',
-  'Panther',
+  'Panther', 'Parrot', 'Pigeon',
   'Raccoon', 'Rat', 'Raven',
-  'Snake', 'Squirrel',
-  'Tiger',
+  'Skink', 'Sloth', 'Snail', 'Snake', 'Spider', 'Squirrel', 'Swan',
+  'Tiger', 'Toucan',
+  'Vulture',
   'Whale', 'Wolf'
   ]
 
@@ -846,6 +851,7 @@ client.on("message", message => {
       'My calculations show that this will be' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + '.',
       'I think it\'s ' + Rnd(GenerateMultiplier(1000000000)) + '.'
       ];
+      
 
       message.channel.send(ReturnRandom(responseList))
       break;
@@ -857,19 +863,33 @@ client.on("message", message => {
       var who = RecognizeWho(arguments[1], message, command)
       
       var animal1 = ReturnRandom(animalsStandardList)
-      animal1 = AddAnA(animal1) + animal1
+      var animalCorrect1 = AddAnA(animal1) + animal1
+      
+      var animal2 = ReturnRandom(animalsStandardList)
+      while(animal1 == animal2)
+        animal2 = ReturnRandom(animalsStandardList)
+      var animalCorrect2 = AddAnA(animal2) + animal2
       
       var responses = [
-      'I think ' + who + ' looks like ' + animal1 + '.',
-      'I think ' + who + ' would do great as ' + animal1 + '.',
-      'I think ' + who + ' would do well as ' + animal1 + '.',
-      who + ' looks like ' + animal1 + '.',
-      who + ' would do great as ' + animal1 + '.',
-      who + ' would do well as ' + animal1 + '.',
+      'I think ' + who + ' looks like ' + animalCorrect1 + '.',
+      'I think ' + who + ' would do great as ' + animalCorrect1 + '.',
+      'I think ' + who + ' would do well as ' + animalCorrect1 + '.',
+      who + ' looks like ' + animalCorrect1 + '.',
+      who + ' would do great as ' + animalCorrect1 + '.',
+      who + ' would do well as ' + animalCorrect1 + '.',
+      who + ' looks like ' + animalCorrect1 + 'from the ' + GenerateRandomPlace() + '.'
       ];
       
-
-      message.channel.send(ReturnRandom(responses))
+      var specialResponseList = [
+      'I think ' + who + ' looks like a cross between ' + animalCorrect1 + ' and ' + animalCorrect2 + '.',
+      who + ' looks like a something between ' + animalCorrect1 + ' and ' + animalCorrect2 + '.',
+      who + ' reminds me of the some kind of an animal from the ' + GenerateRandomPlace() + '.'
+      ];
+      
+      if(Chance(35)
+        message.channel.send(ReturnRandom(specialResponseList))
+      else
+        message.channel.send(ReturnRandom(responses))
       break;
 
     //----------------------------------------------------------------------------------------------------------------------------
