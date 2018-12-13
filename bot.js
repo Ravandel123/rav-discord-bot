@@ -877,7 +877,7 @@ client.on("message", message => {
       who + ' looks like ' + animalCorrect1 + '.',
       who + ' would do great as ' + animalCorrect1 + '.',
       who + ' would do well as ' + animalCorrect1 + '.',
-      who + ' looks like ' + animalCorrect1 + 'from the ' + GenerateRandomPlace() + '.'
+      who + ' looks like ' + animalCorrect1 + ' from the ' + GenerateRandomPlace() + '.'
       ];
       
       var specialResponseList = [
