@@ -886,7 +886,7 @@ client.on("message", message => {
       who + ' reminds me of the some kind of an animal from the ' + GenerateRandomPlace() + '.'
       ];
       
-      if(Chance(35)
+      if(Chance(35))
         message.channel.send(ReturnRandom(specialResponseList))
       else
         message.channel.send(ReturnRandom(responses))
