@@ -868,7 +868,7 @@ client.on("message", message => {
       who + ' looks like ' + animal1 + '.',
       who + ' would do great as ' + animal1 + '.',
       who + ' would do well as ' + animal1 + '.',
-      who + ' would make an excellent + animal1 + '.'
+      who + ' would make an excellent ' + animal1 + '.'
       ];
       
 
