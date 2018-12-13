@@ -189,6 +189,26 @@ client.on("message", message => {
   
   var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList, specialAfflictionsList, specialVirtuesList)
   var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
+  
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Creatures---------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  var animalsStandardList = [
+  'Alligator', 'Alpaca', 'Armadillo',
+  'Baboon', 'Badger', 'Bear',
+  'Cat', 'Coyote', 'Crocodile',
+  'Dog',
+  'Fish', 'Fox',
+  'Lion', 'Lynx',
+  'Monkey',
+  'Orangutan', 'Otter', 'Owl',
+  'Panther',
+  'Raccoon', 'Rat', 'Raven',
+  'Snake', 'Squirrel',
+  'Tiger',
+  'Whale', 'Wolf'
+  ]
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Darkest Dungeon---------------------------------------------------------------------------------------------------------------------------------------------
@@ -830,6 +850,30 @@ client.on("message", message => {
 
       message.channel.send(ReturnRandom(responseList))
       break;
+      
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------animal------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+      case 'animal':
+      var who = RecognizeWho(arguments[1], message, command)
+      
+      var animal1 = ReturnRandom(animalsStandardList)
+      animal1 = AddAnA(animal1) + animal1
+      
+      var responses = [
+      'I think ' + who + ' looks like ' + animal1 + '.',
+      'I think ' + who + ' would do great as ' + animal1 + '.',
+      'I think ' + who + ' would do well as ' + animal1 + '.',
+      'I think ' + who + ' would make an excellent ' + animal1 + '.',
+      who + ' looks like ' + animal1 + '.',
+      who + ' would do great as ' + animal1 + '.',
+      who + ' would do well as ' + animal1 + '.',
+      who + ' would make an excellent + animal1 + '.'
+      ];
+      
+
+      message.channel.send(ReturnRandom(responses))
+      break;
 
     //----------------------------------------------------------------------------------------------------------------------------
     //----------braindmg----------------------------------------------------------------------------------------------------------
@@ -948,34 +992,60 @@ client.on("message", message => {
         switch(finalString.charAt(0))
         {
           case 'A':
+          case 'a':
           case 'E':
+          case 'e':
           case 'I':
+          case 'i':
           case 'O':
+          case 'o':
           case 'U':
+          case 'u':
           case 'Y':
+          case 'y':
           basicString = basicString + 'an ';
           break;
 
           case 'B':
+          case 'b':
           case 'C':
+          case 'c':
           case 'D':
+          case 'd':
           case 'F':
+          case 'f':
           case 'G':
+          case 'g':
           case 'H':
+          case 'h':
           case 'J':
+          case 'j':
           case 'K':
+          case 'k':
           case 'L':
+          case 'l':
           case 'M':
+          case 'm':
           case 'N':
+          case 'n':
           case 'Q':
+          case 'q':
           case 'P':
+          case 'p':
           case 'R':
+          case 'r':
           case 'S':
+          case 's':
           case 'T':
+          case 't':
           case 'V':
+          case 'v':
           case 'W':
+          case 'w':
           case 'X':
+          case 'x':
           case 'Z':
+          case 'z':
           basicString = basicString + 'a ';
           break;
         }
@@ -2604,6 +2674,30 @@ client.on("message", message => {
   //-------------------------------------------------------------------FUNCTIONS-----------------------------------------------------------------------------------------------------------------
   //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  Function AddAnA(stringToCheck)
+  {
+    switch(stringToCheck.charAt(0))
+    {
+      case 'A':
+      case 'a':
+      case 'E':
+      case 'e':
+      case 'I':
+      case 'i':
+      case 'O':
+      case 'o':
+      case 'U':
+      case 'u':
+      case 'Y':
+      case 'y':
+        return 'an ';
+        break;
+
+      default:
+      return 'a ';
+    }
+  }
   
   function ReturnRandom(listOfElements)
   {
