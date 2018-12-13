@@ -55,33 +55,6 @@ client.on("message", message => {
   'VancouFur'
   ]
   
-  var measurementSize = [
-  'millimeters',
-  'centimeters',
-  'decimeters',
-  'meters',
-  'kilometers',
-  'inches',
-  'feet',
-  'miles'
-  ]
-  
-  var measurementWeigh = [
-  'grams',
-  'decagrams',
-  'kilograms',
-  'tons',
-  'ounces',
-  'pounds'
-  ]
-  
-  var measurementVolume = [
-  'milliliters',
-  'liters',
-  'gallons',
-  'cubics'
-  ]
-  
   var galaxies = [
   'Andromeda',
   'Messier 49',
@@ -173,7 +146,7 @@ client.on("message", message => {
   ];
   
   var adjectivesEndingSinglePartList = [
-  'the Birds', 'the Boobs',
+  'the Birds',
   'the Coconut', 'the Coconuts',
   'the Darkness', 'the Dead', 'Dung',
   'the Hazelnut', 'the Hazelnuts',
@@ -194,24 +167,25 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var animalsStandardList = [
-  'Alligator', 'Alpaca', 'Ameba', 'Armadillo',
-  'Baboon', 'Badger', 'Bat', 'Bear',
-  'Cat', 'Chameleon', 'Chicken', 'Chimpanzee', 'Coyote', 'Cricket', 'Crocodile',
-  'Dog',
-  'Ermine',
+  'Alligator', 'Alpaca', 'Amoeba', 'Armadillo',
+  'Baboon', 'Badger', 'Bat', 'Bear', 'Bee', 'Bug', 'Bumblebee',
+  'Cat', 'Chameleon', 'Cheetah', 'Chicken', 'Chimpanzee', 'Cockroach', 'Coyote', 'Cricket', 'Crocodile',
+  'Dog', 'Dolphin', 'Donkey',
+  'Elephant', 'Ermine',
   'Ferret', 'Fish', 'Fox',
-  'Gecko', 'Gorilla',
-  'Hedgehog', 'Hippo', 'Hornbill',
+  'Gecko', 'Giraffe', 'Goat', 'Gorilla',
+  'Hedgehog', 'Hippo', 'Hornbill', 'Hornet', 'Horse',
   'Iguana',
   'Lama','Lion', 'Lizard', 'Lynx',
-  'Macaw', 'Monkey',
-  'Orangutan', 'Otter', 'Owl',
-  'Panther', 'Parrot', 'Pigeon',
+  'Macaw', 'Monkey', 'Mouse',
+  'Octopus', 'Orangutan', 'Orca', 'Otter', 'Owl',
+  'Panther', 'Parrot', 'Penguin', 'Pigeon',
   'Raccoon', 'Rat', 'Raven',
-  'Skink', 'Sloth', 'Snail', 'Snake', 'Spider', 'Squirrel', 'Swan',
+  'Seal', 'Sheep', 'Skink', 'Sloth', 'Snail', 'Snake', 'Spider', 'Squirrel', 'Swan',
   'Tiger', 'Toucan',
   'Vulture',
-  'Whale', 'Wolf'
+  'Wasp', 'Whale', 'Wolf', 'Worm',
+  'Zebra'
   ]
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -677,19 +651,6 @@ client.on("message", message => {
   'Ziggurat'
   ]
   
-  var placeSinglePartList = [
-  'the Birds',
-  'the Coconut', 'the Coconuts',
-  'the Darkness', 'the Dead',
-  'Insanity',
-  'Madness', 'Masochism',
-  'the Nipples', 'the Nut', 'the Nuts',
-  'Pleasure', 'Pleasures',
-  'Sadism', 'Sorrow',
-  'Tentacles',
-  'the Weed'
-  ]
-  
   placeSinglePartList = placeSinglePartList.concat(peopleAllList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -871,22 +832,27 @@ client.on("message", message => {
       var animalCorrect2 = AddAnA(animal2) + animal2
       
       var responses = [
-      'I think ' + who + ' looks like ' + animalCorrect1 + '.',
-      'I think ' + who + ' would do great as ' + animalCorrect1 + '.',
+      'I think ' + who + ' looks like ' + animalCorrect1 + additionalLol + '.',
+      'I think ' + who + ' would do great as ' + animalCorrect1 + additionalLol + '.',
       'I think ' + who + ' would do well as ' + animalCorrect1 + '.',
-      who + ' looks like ' + animalCorrect1 + '.',
-      who + ' would do great as ' + animalCorrect1 + '.',
-      who + ' would do well as ' + animalCorrect1 + '.',
-      who + ' looks like ' + animalCorrect1 + ' from the ' + GenerateRandomPlace() + '.'
+      'I think ' + who + ' looks like a cross between ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.',
+      who + ' looks like ' + animalCorrect1 + additionalLol + '.',
+      who + ' would do great as ' + animalCorrect1 + additionalLol + '.',
+      who + ' would do well as ' + animalCorrect1 + additionalLol + '.',
+      who + ' looks like ' + animalCorrect1 + ' from the ' + GenerateRandomPlace() + additionalLol + '.',
+      who + ' looks like something between ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.',
+      who + ' looks like something between ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.'
       ];
       
       var specialResponseList = [
-      'I think ' + who + ' looks like a cross between ' + animalCorrect1 + ' and ' + animalCorrect2 + '.',
-      who + ' looks like something between ' + animalCorrect1 + ' and ' + animalCorrect2 + '.',
-      who + ' reminds me of some kind of animal from the ' + GenerateRandomPlace() + '.'
+      'I think ' + who + ' actually resemble more some kind of mushroom than an animal' + additionalLol + '.',
+      'I think ' + who + ' actually resemble more some kind of plant than an animal' + additionalLol + '.',
+      'I think ' + who + ' looks like some kind of unidentified animal' + additionalLol + '.',
+      'I think ' + who + ' is the last of his kind, probably the rest of ' + who + ' race is extinct' + additionalLol + '.',
+      who + ' reminds me of some kind of animal from the ' + GenerateRandomPlace() + additionalLol + '.'
       ];
       
-      if(Chance(35))
+      if(Chance(5))
         message.channel.send(ReturnRandom(specialResponseList))
       else
         message.channel.send(ReturnRandom(responses))
@@ -1354,7 +1320,7 @@ client.on("message", message => {
       var soloList = [
       'Abduction', 'Abomination', 'Acid', 'Art', 'Atomic Bomb',
       'Ballista', 'Bandits', 'Battering Ram', 'Bookmaster Awre',
-      'the Boobs', 'the Booze', 'Brainwashing',
+      'the Booze', 'Brainwashing',
       'C4', 'Catapult', 'Cloning', 'the Coconut', 'Coconuts',
       'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Drugs', 'the Dung', 'Duplication Device',
       'Electroshock Therapy', 'Evil',
@@ -1394,7 +1360,7 @@ client.on("message", message => {
       ]
 
       var dualList2 = [
-      'Bandits', 'Beef', 'Boobs', 'Booze', 'Brothel',
+      'Bandits', 'Beef','Booze', 'Brothel',
       'Cannibal', 'Cannibals','Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Drug', 'Drugs', 'Dung',
       'Fear', 'Fools','Furries', 'Furry', 'Fury',
@@ -2498,7 +2464,7 @@ client.on("message", message => {
     
       var soloList = [
       'Abduction', 'Animal Abuse', 'the Art',
-      'Bookmaster Awre', 'the Boobs', 'the Booze', 'the Brainwashing',
+      'Bookmaster Awre', 'the Booze', 'the Brainwashing',
       'Chloroform', 'the Coconut', 'the Coconuts', 'Communism', 
       'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'Dung', 'Duplication Device',
       'Evil',
@@ -2540,7 +2506,7 @@ client.on("message", message => {
       ]
 
       var dualList2 = [
-      'Boobs', 'Booze', 'Brain', 'Brothel',
+      'Booze', 'Brain', 'Brothel',
       'Cannibal', 'Cannibals','Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
       'Electroshock Therapy',
@@ -2850,7 +2816,12 @@ client.on("message", message => {
   
   function GenerateRandomPlace()
   {
-    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, placeMainList, placeSinglePartList);
+    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, placeMainList, adjectivesEndingSinglePartList);
+  }
+  
+  function GenerateRandomAnimal()
+  {
+    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, animalsStandardList, adjectivesEndingSinglePartList);
   }
   
   function GenerateRandomWeapon()
@@ -3028,7 +2999,7 @@ client.on("message", message => {
 
       var lastPart = [
       'Bookmaster Awre',
-      'the Blazing Sun', 'Blood', 'the Boobs', 'the Booze',
+      'the Blazing Sun', 'Blood','the Booze',
       'the Coconut',
       'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Dung',
       'Evil',
@@ -3073,7 +3044,7 @@ client.on("message", message => {
 
       var lastPart2 = [
       'Absolution',
-      'Beef', 'Boobs', 'Booze', 'Brotherhood', 'Brothel',
+      'Beef', 'Booze', 'Brotherhood', 'Brothel',
       'Cacao-Tree', 'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
       'Fear', 'Food', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
