@@ -117,7 +117,7 @@ client.on("message", message => {
   'Dark', 'Defiant', 'Doomed', 'Drugged',
   'Evil',
   'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Forsworn',
-  'Good', 'Greater',
+  'Good', 'Great',
   'Haunted', 'High', 'Horned', 'Horrible', 'Huge', 
   'Immortal', 
   'Leper', 'Lesser', 'Little', 
