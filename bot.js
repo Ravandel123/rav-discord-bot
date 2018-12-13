@@ -882,8 +882,8 @@ client.on("message", message => {
       
       var specialResponseList = [
       'I think ' + who + ' looks like a cross between ' + animalCorrect1 + ' and ' + animalCorrect2 + '.',
-      who + ' looks like a something between ' + animalCorrect1 + ' and ' + animalCorrect2 + '.',
-      who + ' reminds me of the some kind of an animal from the ' + GenerateRandomPlace() + '.'
+      who + ' looks like something between ' + animalCorrect1 + ' and ' + animalCorrect2 + '.',
+      who + ' reminds me of some kind of animal from the ' + GenerateRandomPlace() + '.'
       ];
       
       if(Chance(35))
@@ -2649,6 +2649,7 @@ client.on("message", message => {
       '**am, are, can, could, did, do, does, is, have, had, has, shall, should, was, were, will, would**\n'+
       '**ambush**\n'+
       '**amount**\n'+
+      '**animal : [x] = person**\n'+
       '**braindmg**\n'+
       '**capacity, volume**\n'+
       '**chance, chances**\n'+
@@ -2665,7 +2666,7 @@ client.on("message", message => {
       '**how**\n'+
       '**invite**\n'+
       '**love [x] : [x] = person**\n'+
-      '**name [x] [y] [z]: [x] = "m" or "f", [y] = numbers of syllables, [z] = number of generated names**\n'+
+      '**name [x] [y] [z] : [x] = "m" or "f", [y] = numbers of syllables, [z] = number of generated names**\n'+
       '**peril [x] : [x] = number**\n'+
       '**rant [x] : [x] = something**\n'+
       '**resolve [x] : [x] = person**\n'+
