@@ -821,12 +821,12 @@ client.on("message", message => {
       case 'animal':
       var who = RecognizeWho(arguments[1], message, command)
       
-      var animal1 = ReturnRandom(animalsStandardList)
+      var animal1 = GenerateRandomAnimal()
       var animalCorrect1 = AddAnA(animal1) + animal1
       
-      var animal2 = ReturnRandom(animalsStandardList)
+      var animal2 = GenerateRandomAnimal()
       while(animal1 == animal2)
-        animal2 = ReturnRandom(animalsStandardList)
+        animal2 = GenerateRandomAnimal()
       var animalCorrect2 = AddAnA(animal2) + animal2
       
       var responses = [
