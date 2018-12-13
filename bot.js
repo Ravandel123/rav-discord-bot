@@ -26,7 +26,6 @@ client.on("message", message => {
   var additionalLol = '';
   if(Chance(25))
     additionalLol = ' lol';
-  
 
   var serialsList = [
   'Alladin',
@@ -864,11 +863,9 @@ client.on("message", message => {
       'I think ' + who + ' looks like ' + animal1 + '.',
       'I think ' + who + ' would do great as ' + animal1 + '.',
       'I think ' + who + ' would do well as ' + animal1 + '.',
-      'I think ' + who + ' would make an excellent ' + animal1 + '.',
       who + ' looks like ' + animal1 + '.',
       who + ' would do great as ' + animal1 + '.',
       who + ' would do well as ' + animal1 + '.',
-      who + ' would make an excellent ' + animal1 + '.'
       ];
       
 
