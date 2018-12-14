@@ -791,9 +791,16 @@ client.on("message", message => {
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
-    //----------amount------------------------------------------------------------------------------------------------------------
+    //----------amount, percent---------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
       case 'amount': 
+      case 'percent':
+      
+      var additionalPercent = '';
+      
+      if(command == 'percent')
+        additionalPercent = '%'
+      
       additionalList = [
       ' more than ',
       ' less than ',
@@ -805,10 +812,10 @@ client.on("message", message => {
       ];
       
       responseList = [
-      Rnd(GenerateMultiplier(1000000000)) + '.',
-      'This is' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + '.',
-      'My calculations show that this will be' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + '.',
-      'I think it\'s ' + Rnd(GenerateMultiplier(1000000000)) + '.'
+      Rnd(GenerateMultiplier(1000000000)) + additionalPercent + '.',
+      'This is' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + additionalPercent + '.',
+      'My calculations show that this will be' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + additionalPercent + '.',
+      'I think it\'s ' + Rnd(GenerateMultiplier(1000000000)) + additionalPercent + '.'
       ];
       
 
@@ -1570,7 +1577,7 @@ client.on("message", message => {
       message.channel.send(finalString)
       
       break;
-  
+    
     //---------------------------------------------------------------------------------------------------------------------------
     //-----peril-----------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------
