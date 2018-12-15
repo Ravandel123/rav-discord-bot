@@ -148,21 +148,25 @@ client.on("message", message => {
   ];
   
   var adjectivesEndingSinglePartList = [
-  'the Birds',
+  'the Birds', 'Blood','the Booze',
   'the Coconut', 'the Coconuts',
-  'the Darkness', 'the Dead', 'Dung',
+  'Darkness', 'the Dead', 'Delight', 'Despair', 'Destruction', 'Doom', 'Dung',
+  'Evil',
+  'Fury',
   'the Hazelnut', 'the Hazelnuts',
-  'Insanity',
-  'Madness', 'Masochism',
+  'Immorality', 'Immortality', 'Insanity',
+  'Madness', 'Magic', 'Masochism', 'the Moon', 'the Murder',
   'the Nipples', 'the Nut', 'the Nuts',
-  'Pleasure', 'Pleasures',
-  'Sadism', 'Sorrow',
+  'Pleasure', 'Pleasures', 'Power',
+  'the Rot',
+  'Sadism', 'Shadows', 'Sorrow', 'the Storm', 'the Sun',
   'Tentacles',
-  'the Weed'
+  'War', 'the Weed'
   ]
   
   var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList, specialAfflictionsList, specialVirtuesList)
   var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
+  var adjectivesEndingAllSingle = adjectivesEndingSinglePartList.concat(peopleAllList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Creatures---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -617,7 +621,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
    var serverPeopleList = [
-  'AceBeef', 'Awre', 'Doctor Pumpkins', 'GoblinKisser', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo'
+  'AceBeef', 'Awre', 'Doctor Pumpkins', 'Glorious AYY FB', 'GoblinKisser', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo'
   ]
   
   var dictatorsPeopleList = [
@@ -2823,17 +2827,17 @@ client.on("message", message => {
   
   function GenerateRandomPlace()
   {
-    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, placeMainList, adjectivesEndingSinglePartList);
+    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, placeMainList, adjectivesEndingAllSingle);
   }
   
   function GenerateRandomAnimal()
   {
-    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, animalsStandardList, adjectivesEndingSinglePartList);
+    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, animalsStandardList, adjectivesEndingAllSingle);
   }
   
   function GenerateRandomWeapon()
   {
-    return GenerateRandomString4(baseAdjectivesList, adjectivesStandardList, itemsWeaponsList, adjectivesEndingSinglePartList);
+    return GenerateRandomString4(baseAdjectivesList, adjectivesStandardList, itemsWeaponsList, adjectivesEndingAllSingle);
   }
   
   function GenerateRandomItem()
