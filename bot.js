@@ -2092,7 +2092,7 @@ client.on("message", message => {
     //----------rate------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'rate':
-      var firstPartArray = ['', 'Hmm. I\'d rate that ', 'I\'d give that a ', 'I\'d say '];
+      var firstPartArray = ['', 'Hmm. I\'d rate that ', 'I\'d give that ', 'I\'d say '];
       var personifiedFirstPartArray = ['', 'Hmm. I\'d rate you ', 'I\'d give you a ', 'I\'d say '];
 
       var specialArray = [
