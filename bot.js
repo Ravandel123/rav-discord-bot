@@ -855,7 +855,7 @@ client.on("message", message => {
       'I think ' + who + ' actually resemble more some kind of plant than an animal' + additionalLol + '.',
       who + ' looks like some kind of unidentified animal' + additionalLol + '.',
       'I think ' + who + ' is the last of his kind, probably the rest of ' + who + ' race is extinct' + additionalLol + '.',
-      who + ' looks like a pet of ' + ReturnRandom(serverPeopleList + additionalLol + '.',
+      who + ' looks like a pet of ' + ReturnRandom(serverPeopleList + additionalLol + '.'
       ];
       
       if(Chance(7))
