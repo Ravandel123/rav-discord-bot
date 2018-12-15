@@ -99,7 +99,7 @@ client.on("message", message => {
   'Maniacal', 'Mindless', 'Mutantic', 
   'Pathethic', 'Perverse', 'Primitive', 'Psychopathic',
   'Ravenous',
-  'Sadistic'
+  'Sadistic', 'Stupid'
   ];
   
   var specialVirtuesList = [
@@ -111,36 +111,38 @@ client.on("message", message => {
   ];
   
   var adjectivesNormalList = [
-  'Aerial', 'Animate', 'Anointed', 'Amateur',
+  'Aerial', 'Animate', 'Anointed', 'Amateur', 'Aquatic',
   'Bloody',
   'Celestial', 'Chittering', 'Cloaked',
   'Dark', 'Defiant', 'Doomed', 'Drugged',
   'Evil',
-  'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Forsworn',
+  'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Fiery', 'Forsworn', 'Fossilized', 'Frozen',
   'Good', 'Great',
-  'Haunted', 'High', 'Horned', 'Horrible', 'Huge', 
+  'Haunted', 'Hideous', 'High', 'Horned', 'Horrible', 'Huge', 
   'Immortal', 
   'Leper', 'Lesser', 'Little', 
   'Pale', 
-  'Sacred', 'Sacrifical', 'Scary', 'Shamanistic', 
+  'Sacred', 'Sacrifical', 'Scary', 'Shamanistic',
+  'Vile',
   'Wild'
   ];
 
   var adjectivesFunnyList = [
-  'Abominable', 'Adorable', 'Awesome', 'Awful',
+  'Abominable', 'Absurd', 'Adorable', 'Amusing', 'Awesome', 'Awful',
   'Brutal',
   'Coconutty', 'Corvid', 'Creepy',
   'Dirty', 'Disgusting', 'Domesticated', 'Drunken', 'Dungy',
   'Foul',
   'Gross',
-  'Hungry',
+  'Hilarious', 'Hungry',
   'Immoral',
   'Lobotomized',
   'Monstrous',
   'Nippled', 'Nutty',
   'Offensive',
   'Pleasurable', 'Provocative',
-  'Screwed', 'Serial', 'Slow', 'Starving',
+  'Ridiculous',
+  'Screwed', 'Serial', 'Slimy', 'Slow', 'Starving',
   'Tamed', 'Tentacled', 'Torturous',
   'Weedy'
   ];
@@ -168,9 +170,9 @@ client.on("message", message => {
   
   var animalsStandardList = [
   'Alligator', 'Alpaca', 'Amoeba', 'Armadillo',
-  'Baboon', 'Badger', 'Bat', 'Bear', 'Bee', 'Bug', 'Bumblebee',
-  'Cat', 'Chameleon', 'Cheetah', 'Chicken', 'Chimpanzee', 'Cockroach', 'Coyote', 'Cricket', 'Crocodile',
-  'Dog', 'Dolphin', 'Donkey',
+  'Baboon', 'Badger', 'Bat', 'Bear', 'Bee', 'Bug', 'Bull', 'Bumblebee',
+  'Cat', 'Chameleon', 'Cheetah', 'Chicken', 'Chimpanzee', 'Cockroach', 'Cow', 'Coyote', 'Cricket', 'Crocodile',
+  'Dog', 'Dolphin', 'Donkey', 'Duck',
   'Elephant', 'Ermine',
   'Ferret', 'Fish', 'Fox',
   'Gecko', 'Giraffe', 'Goat', 'Gorilla',
@@ -180,7 +182,7 @@ client.on("message", message => {
   'Macaw', 'Monkey', 'Mouse',
   'Octopus', 'Orangutan', 'Orca', 'Otter', 'Owl',
   'Panther', 'Parrot', 'Penguin', 'Pigeon',
-  'Raccoon', 'Rat', 'Raven',
+  'Raccoon', 'Rat', 'Raven', 'Rhesus Macaque'
   'Seal', 'Sheep', 'Skink', 'Sloth', 'Snail', 'Snake', 'Spider', 'Squirrel', 'Swan',
   'Tiger', 'Toucan',
   'Vulture',
@@ -354,7 +356,8 @@ client.on("message", message => {
   'Ma', 'Mag', 'Mal', 'Man', 'Mer', 'Mul',
   'Na', 'Nim',
   'Or',
-  'Ran', 'Rash', 'Ri', 'Ro', 'Ry',
+  'Pe',
+  'Ran', 'Rash', 'Ren', 'Ri', 'Ro', 'Ry',
   'San', 'Sha', 'Shak', 'Sol', 'Stra',
   'Ta', 'Te', 'Tha', 'Tho', 'Thor',
   'U',
@@ -370,17 +373,17 @@ client.on("message", message => {
   'ce', 'chin', 'com', 'con', 'cus', 'cy',
   'dal', 'dan', 'dar', 'dek', 'den', 'dgo', 'din', 'dro', 'dun',
   'fax', 'fred',
-  'gal', 'gash', 'gem', 'gham', 'gor', 'grim', 'gus',
+  'gal', 'gar', 'gash', 'gem', 'gham', 'gor', 'grim', 'gus',
   'hild',
   'jit',
   'ka', 'ker', 'kes', 'kial', 'kin', 'kon',
   'lach', 'land', 'ley', 'lich', 'lin', 'linn', 'lon', 'loo', 'lor', 'lu',
-  'myr',
+  'mund', 'myr',
   'nar', 'nard', 'nax', 'ne', 'ner', 'nis', 'nos', 'nosh', 'nus', 'nuz',
   'on',
   'raih', 'ralt', 'rek', 'rey', 'ric', 'rin', 'rion', 'rius', 'ron', 'rus',
   'sa', 'sham', 'shnard', 'sis', 'stian', 'storn',
-  'tal', 'tan', 'thran', 'ti',
+  'tal', 'tan', 'te', 'thran', 'ti',
   'van', 'vius', 'vor',
   'wick', 'wulf',
   'zar', 'zir'
@@ -832,8 +835,6 @@ client.on("message", message => {
       var animalCorrect1 = AddAnA(animal1) + animal1
       
       var animal2 = GenerateRandomAnimal()
-      while(animal1 == animal2)
-        animal2 = GenerateRandomAnimal()
       var animalCorrect2 = AddAnA(animal2) + animal2
       
       var responses = [
@@ -846,18 +847,18 @@ client.on("message", message => {
       who + ' would do well as ' + animalCorrect1 + additionalLol + '.',
       who + ' looks like ' + animalCorrect1 + ' from the ' + GenerateRandomPlace() + additionalLol + '.',
       who + ' looks like something between ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.',
-      who + ' looks like something between ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.'
+      who + ' looks like some kind of mix of ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.'
       ];
       
       var specialResponseList = [
       'I think ' + who + ' actually resemble more some kind of mushroom than an animal' + additionalLol + '.',
       'I think ' + who + ' actually resemble more some kind of plant than an animal' + additionalLol + '.',
-      'I think ' + who + ' looks like some kind of unidentified animal' + additionalLol + '.',
+      who + ' looks like some kind of unidentified animal' + additionalLol + '.',
       'I think ' + who + ' is the last of his kind, probably the rest of ' + who + ' race is extinct' + additionalLol + '.',
-      who + ' reminds me of some kind of animal from the ' + GenerateRandomPlace() + additionalLol + '.'
+      who + ' looks like a pet of ' + ReturnRandom(serverPeopleList + additionalLol + '.',
       ];
       
-      if(Chance(5))
+      if(Chance(7))
         message.channel.send(ReturnRandom(specialResponseList))
       else
         message.channel.send(ReturnRandom(responses))
@@ -2317,7 +2318,7 @@ client.on("message", message => {
     //----------who---------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'who':
-      if(Chance(85))
+      if(Chance(90))
         message.channel.send(ReturnRandom(serverPeopleList))
        else
         message.channel.send(ReturnRandom(dictatorsPeopleList))
