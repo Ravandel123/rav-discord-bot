@@ -182,7 +182,7 @@ client.on("message", message => {
   'Macaw', 'Monkey', 'Mouse',
   'Octopus', 'Orangutan', 'Orca', 'Otter', 'Owl',
   'Panther', 'Parrot', 'Penguin', 'Pigeon',
-  'Raccoon', 'Rat', 'Raven', 'Rhesus Macaque'
+  'Raccoon', 'Rat', 'Raven', 'Rhesus Macaque',
   'Seal', 'Sheep', 'Skink', 'Sloth', 'Snail', 'Snake', 'Spider', 'Squirrel', 'Swan',
   'Tiger', 'Toucan',
   'Vulture',
