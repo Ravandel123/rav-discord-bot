@@ -77,7 +77,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
    var serverPeopleList = [
-  'AceBeef', 'Awre', 'Doctor Pumpkins', 'Glorious AYY FB', 'GoblinKisser', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo'
+  'AceBeef', 'Awre', 'Doctor Pumpkins', 'Glorious AYY FB', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo'
   ]
   
   var dictatorsPeopleList = [
@@ -156,7 +156,7 @@ client.on("message", message => {
   'Offensive',
   'Pleasurable', 'Provocative',
   'Ridiculous',
-  'Screwed', 'Serial', 'Slimy', 'Slow', 'Starving',
+  'Screwed', 'Serial', 'Slimy', 'Slow', 'Starving', 'Suicidal',
   'Tamed', 'Tentacled', 'Torturous',
   'Weedy'
   ];
