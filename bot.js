@@ -105,14 +105,15 @@ client.on("message", message => {
   'Aberrant', 'Aggressive', 'Alcoholic', 'Anxious', 
   'Barbaric', 'Brainwashed', 
   'Cannibalistic', 'Crazy',
-  'Degenerate', 'Delusional', 'Depressive', 'Destructive', 'Deviant', 
+  'Degenerate', 'Delusional', 'Depressive', 'Destructive', 'Deviant', 'Dumb',
   'Feral', 'Furious', 'Furry',
   'Heartless', 'Horny', 
-  'Insane', 
+  'Idiotic', 'Imbecilic', 'Inane', 'Insane', 
   'Lazy', 
-  'Maniacal', 'Mindless', 'Mutantic', 
+  'Maniacal', 'Mindless', 'Mutantic',
+  'Narcissistic',
   'Pathethic', 'Perverse', 'Primitive', 'Psychopathic',
-  'Ravenous',
+  'Racist', 'Ravenous',
   'Sadistic', 'Stupid'
   ];
   
@@ -145,19 +146,20 @@ client.on("message", message => {
   'Abominable', 'Absurd', 'Adorable', 'Amusing', 'Awesome', 'Awful',
   'Brutal',
   'Coconutty', 'Corvid', 'Creepy',
-  'Dirty', 'Disgusting', 'Domesticated', 'Drunken', 'Dungy',
+  'Dirty', 'Disgusting', 'Domesticated', 'Drooly', 'Drunken', 'Dungy',
   'Foul',
   'Gross',
   'Hilarious', 'Hungry',
   'Immoral',
   'Lobotomized',
   'Monstrous',
-  'Nippled', 'Nutty',
+  'Naive', 'Nippled', 'Nutty',
   'Offensive',
-  'Pleasurable', 'Provocative',
+  'Pleasurable', 'Pointless', 'Provocative',
   'Ridiculous',
   'Screwed', 'Serial', 'Slimy', 'Slow', 'Starving', 'Suicidal',
   'Tamed', 'Tentacled', 'Torturous',
+  'Unintelligent',
   'Weedy'
   ];
   
@@ -880,6 +882,7 @@ client.on("message", message => {
       'https://www.youtube.com/watch?v=kffacxfA7G4',
       'https://www.youtube.com/watch?v=qcFybw4mSOk',
       'https://www.youtube.com/watch?v=3fk9Xvh32hM',
+      'https://www.youtube.com/watch?v=nF7lv1gfP1Q',
       'https://www.youtube.com/watch?v=be1EOu7f790'
       ];
       who = RecognizeWho(arguments[1], message, command)
