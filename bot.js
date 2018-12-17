@@ -77,7 +77,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
    var serverPeopleList = [
-  'AceBeef', 'Awre', 'Doctor Pumpkins', 'Glorious AYY FB', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo'
+  'AceBeef', 'Awre', 'Doctor Pumpkins', 'Glorious AYY FB', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'You'
   ]
   
   var dictatorsPeopleList = [
@@ -2995,7 +2995,7 @@ client.on("message", message => {
       'Kamikaze', 'Killer', 'King', 'Knight', 'Knight Errant', 'Kossar',
       'Lamplighter', 'Laner', 'Lay', 'Leper', 'Lich', 'Litigant', 'Lord', 'Lumberjack',
       'Machine', 'Madman', 'Mage', 'Magician', 'Maiden', 'Man-at-Arms', 'Marauder', 'Mariner', 'Marionette', 'Masochist', 'Master', 'Mate', 'Mediator', 'Mentor', 'Mercenary', 'Merchant', 'Messenger', 'Militiaman', 'Miner', 'Minstrel', 'Mohican', 'Monk', 'Monster', 'Muleskinner', 'Musician', 'Mutant', 'Mystic',
-      'Navigator', 'Necromancer', 'Necrodancer', 'Nekomancer', 'Ninja', 'Noble', 'Nomand', 
+      'Navigator', 'Necromancer', 'Necrodancer', 'Nekomancer', 'Ninja', 'Noble', 'Nomad', 
       'Occultist', 'Outlaw', 'Outrider', 
       'Painter', 'Paladin', 'Pamphleteer', 'Peasant', 'Penitent', 'Physician', 'Pilgrim', 'Pistolier', 'Politician', 'Prelate', 'Priest', 'Priestess', 'Prisoner', 'Prophet', 'Protagonist',
       'Queen',
