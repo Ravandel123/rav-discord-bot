@@ -198,7 +198,7 @@ client.on("message", message => {
   'Gecko', 'Giraffe', 'Goat', 'Gorilla',
   'Hedgehog', 'Hippo', 'Hornbill', 'Hornet', 'Horse',
   'Iguana',
-  'Lama','Lion', 'Lizard', 'Lynx',
+  'Llama','Lion', 'Lizard', 'Lynx',
   'Macaw', 'Monkey', 'Mouse',
   'Octopus', 'Orangutan', 'Orca', 'Otter', 'Owl',
   'Panther', 'Parrot', 'Penguin', 'Pigeon',
