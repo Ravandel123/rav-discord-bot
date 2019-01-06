@@ -76,7 +76,7 @@ client.on("message", message => {
   //-----People------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
-   var serverPeopleList = [
+  var serverPeopleList = [
   'AceBeef', 'Awre', 'Doctor Pumpkins', 'Glorious AYY FB', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'You'
   ]
   
@@ -84,7 +84,12 @@ client.on("message", message => {
   'Caligula', 'Fidel Castro', 'Hitler', 'Kim Dzong Un', 'Mao Zedong', 'Obama', 'Putin', 'Stalin'
   ]
   
-  var peopleAllList = serverPeopleList.concat(dictatorsPeopleList)
+  var specialPeopleList = [
+  'Everybody', 'Nobody'
+  ]
+  
+  var peopleStandardServerList = serverPeopleList.concat(specialPeopleList)
+  var peopleAllList = serverPeopleList.concat(dictatorsPeopleList, specialPeopleList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Adjectives--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -839,9 +844,11 @@ client.on("message", message => {
       
       var animal1 = GenerateRandomAnimal()
       var animalCorrect1 = AddAnA(animal1) + animal1
+      animalCorrect1 = MakeStringBold(animalCorrect1)
       
       var animal2 = GenerateRandomAnimal()
       var animalCorrect2 = AddAnA(animal2) + animal2
+      animalCorrect2 = MakeStringBold(animalCorrect2)
       
       var responses = [
       'I think ' + who + ' looks like ' + animalCorrect1 + additionalLol + '.',
@@ -2326,7 +2333,7 @@ client.on("message", message => {
     //----------------------------------------------------------------------------------------------------------------------------
     case 'who':
       if(Chance(90))
-        message.channel.send(ReturnRandom(serverPeopleList))
+        message.channel.send(ReturnRandom(peopleStandardServerList))
        else
         message.channel.send(ReturnRandom(dictatorsPeopleList))
         
@@ -2672,6 +2679,12 @@ client.on("message", message => {
   //-------------------------------------------------------------------FUNCTIONS-----------------------------------------------------------------------------------------------------------------
   //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  function MakeStringBold(stringToMakeBold)
+  {
+    stringToMakeBold = '**' + stringToMakeBold + '**'
+    return stringToMakeBold;
+  }
   
   function AddAnA(stringToCheck)
   {
