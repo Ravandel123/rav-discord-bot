@@ -1510,11 +1510,13 @@ client.on("message", message => {
       ':hugging:',
       '*Hugs ' + who + '*.',
       'https://i.imgur.com/vL0G4rN.png'
+      ]
       
       responseList2 = [
       'Sorry but I am not touching ' + who + '. This is gross' + additionalLol + '.',
       'Nah, let ' + ReturnRandom(serverPeopleList) + ' hugs you.',
       'Nope, no hugs for you' + additionalLol + '.'
+      ]
       
       if(Chance(15))
         message.channel.send(ReturnRandom(responseList2))
