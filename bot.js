@@ -19,6 +19,8 @@ client.on("message", message => {
   var rollValue;
   var response;
   var responseList;
+  var responseList1;
+  var responseList2;
   var specialList;
   var multiplier;
   var multiplierBig;
@@ -966,7 +968,7 @@ client.on("message", message => {
     //----------------------------------------------------------------------------------------------------------------------------
     case 'celebrate':
       
-      var responseList1 = [
+      responseList1 = [
       'https://i.imgur.com/KAxuMuU.png',
       'https://i.imgur.com/mdXZzVb.png',
       'https://i.imgur.com/nY38kvJ.jpg',
