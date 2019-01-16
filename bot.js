@@ -977,7 +977,7 @@ client.on("message", message => {
       'https://i.imgur.com/du6fIsg.jpg',
       ];
       
-      var responseList2 = [
+      responseList2 = [
       'Yay! Celebration time!',
       'Cool! Just remember to not invite ' + ReturnRandom(serverPeopleList) + '.',
       'Awesome! Just remember to invite ' + ReturnRandom(peopleStandardServerList) + '.',
