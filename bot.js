@@ -967,6 +967,8 @@ client.on("message", message => {
     //----------celebrate---------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'celebrate':
+    
+    response = '';
       
       responseList1 = [
       'https://i.imgur.com/KAxuMuU.png',
@@ -983,7 +985,7 @@ client.on("message", message => {
       'Awesome! Just remember to invite ' + ReturnRandom(peopleStandardServerList) + '.',
       'Sorry I am not joining that' +additionalLol + '.',
       'I will prepare party in the **' + GenerateRandomPlace() + '.',
-      'Yeah! Lets bring **' + GenerateRandomWeapon() + '**.',
+      'Yeah! Lets bring **' + GenerateRandomWeapon() + '** to the party' + additionalLol + '!',
       ':tada: :tada: :tada: :tada: :tada:'
       ];
       
@@ -1390,7 +1392,10 @@ client.on("message", message => {
       ];
       
       responseList2 = [
-      'I think you should talk to **' + ReturnRandom(serverPeopleList) + '**.'
+      'I think you should talk to **' + ReturnRandom(serverPeopleList) + '**.',
+      'Go outside for ' + Rnd(70) + ' hours.',
+      'I would advise ' + Rnd(70) + ' hours of sleep.',
+      'You should take a trip to **' + GenerateRandomPlace + '**.'
       ]
       
       if(Chance(10))
