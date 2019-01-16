@@ -2964,7 +2964,7 @@ client.on("message", message => {
   
   function GenerateRandomSize()
   {
-    var size1
+    var size1;
     
     switch(Rnd(2))
     {
@@ -2981,7 +2981,7 @@ client.on("message", message => {
         break;
     }
     
-    return ReturnRandom(properSizeList);
+    return ReturnRandom(size1);
   }
   
   function GenerateMultiplier(maximum)
