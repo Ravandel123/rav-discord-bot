@@ -1394,7 +1394,7 @@ client.on("message", message => {
       'You should take a trip to **' + GenerateRandomPlace + '**.',
       'Watch ' + ReturnRandom(serialsList) + '.',
       'Learn how to use **' + GenerateRandomWeapon() + '**.',
-      'Eat ' + 'GenerateRandomSize() + ' ' + ReturnRandom(itemsMeal) + '.',
+      'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMeal) + '.',
       ReturnRandom(verbsStandardList) + ' ' + GenerateRandomAnimal() + '.'
       ReturnRandom(verbsAllList) + ' ' + ReturnRandom(peopleStandardServerList) + '.'
       ]
@@ -2751,6 +2751,7 @@ client.on("message", message => {
       '**height, length, widtht**\n'+
       '**help**\n'+
       '**how**\n'+
+      '**hug [x] : [x] = person**\n'+
       '**invite**\n'+
       '**love [x] : [x] = person**\n'+
       '**name [x] [y] [z] : [x] = "m" or "f", [y] = numbers of syllables, [z] = number of generated names**\n'+
