@@ -8,7 +8,7 @@ client.on('ready', () => {
 
 const prefix = "h!";
 
-//A B C D E F G H I K L M N O P Q R S T V W X Y Z
+//A B C D E F G H I K L M N O P Q R S T U V W X Y Z
 
 client.on("message", message => {
   if (message.content.indexOf(prefix) !== 0) return;
@@ -17,6 +17,7 @@ client.on("message", message => {
   const command = args.shift().toLowerCase();
   var arguments = message.content.split(' ');
   var rollValue;
+  var response;
   var responseList;
   var specialList;
   var multiplier;
@@ -33,12 +34,14 @@ client.on("message", message => {
   'Cannibal! The Musical', 'Chopper Chicks in Zombietown',
   'Dumb & Dumber',
   'Ferocious Female Freedom Fighters', 'Frozen',
+  'Howard the Duck',
+  'King Kong Lives',
   'Matrix',
   'Nymphoid Barbarian in Dinosaur Hell',
   'Pterodactyl Woman from Beverly Hills',
   'Rambo',
   'Scary Movie', 'Shrek', 'Splatter University', 'Star Wars',
-  'The Toxic Avenger', 'The Toxic Avenger, Part II', 'The Toxic Avenger, Part III: The Last Temptation of Toxie',
+  'The Toxic Avenger', 'The Toxic Avenger, Part II', 'The Toxic Avenger, Part III: The Last Temptation of Toxie', 'Theodore Rex',
   'Zombie Island Massacre'
   ]
   
@@ -132,8 +135,8 @@ client.on("message", message => {
   
   var adjectivesNormalList = [
   'Aerial', 'Animate', 'Anointed', 'Amateur', 'Aquatic',
-  'Bloody',
-  'Celestial', 'Chittering', 'Cloaked',
+  'Bioluminescent', 'Bloody',
+  'Celestial', 'Chittering', 'Cloaked', 'Crystalline',
   'Dark', 'Defiant', 'Doomed', 'Drugged',
   'Evil',
   'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Fiery', 'Forsworn', 'Fossilized', 'Frozen',
@@ -153,7 +156,7 @@ client.on("message", message => {
   'Coconutty', 'Corvid', 'Creepy',
   'Dirty', 'Disgusting', 'Domesticated', 'Drooly', 'Drunken', 'Dungy',
   'Foul',
-  'Gross',
+  'Gelatinous', 'Gross',
   'Hilarious', 'Hungry',
   'Immoral',
   'Lobotomized',
@@ -164,7 +167,7 @@ client.on("message", message => {
   'Ridiculous',
   'Screwed', 'Serial', 'Slimy', 'Slow', 'Starving', 'Suicidal',
   'Tamed', 'Tentacled', 'Torturous',
-  'Unintelligent',
+  'Ugly', 'Unintelligent',
   'Weedy'
   ];
   
@@ -204,9 +207,10 @@ client.on("message", message => {
   'Hedgehog', 'Hippo', 'Hornbill', 'Hornet', 'Horse',
   'Iguana',
   'Llama','Lion', 'Lizard', 'Lynx',
-  'Macaw', 'Monkey', 'Mouse',
+  'Macaw', 'Monkey', 'Moth', 'Mouse',
+  'Nudibranch',
   'Octopus', 'Orangutan', 'Orca', 'Otter', 'Owl',
-  'Panther', 'Parrot', 'Penguin', 'Pigeon',
+  'Pangolin', 'Panther', 'Parrot', 'Penguin', 'Pigeon',
   'Raccoon', 'Rat', 'Raven', 'Rhesus Macaque',
   'Seal', 'Sheep', 'Skink', 'Sloth', 'Snail', 'Snake', 'Spider', 'Squirrel', 'Swan',
   'Tiger', 'Toucan',
@@ -316,7 +320,7 @@ client.on("message", message => {
   var itemsWeaponsList = [
   'Arbalest', 'Atomic Bomb', 'Axe',
   'Bardiche', 'Bazooka', 'Bludgeon', 'Bomb', 'Bow', 'Broadsword',
-  'Chain', 'Chainsaw', 'Claymore', 'Club', 'Coconut', 'Crossbow',
+  'Chain', 'Chainsaw', 'Claymore', 'Club', 'Coconut', 'Crossbow', 'Crowbar',
   'Dagger', 'Disintegrator',
   'Estoc',
   'Falchion', 'Flail', 'Fork',
@@ -329,9 +333,14 @@ client.on("message", message => {
   'Pike', 'Polearm', 'Poleaxe',
   'Quarterstaff',
   'Rapier', 'Revolver', 'Rocket Launcher', 'Rope',
-  'Sabre', 'Scimitar', 'Scythe', 'Shortsword', 'Shuriken', 'Sickle', 'Sling', 'Spear', 'Staff', 'Stick', 'Sword',
+  'Sabre', 'Scimitar', 'Scythe', 'Shortsword', 'Shuriken', 'Sickle', 'Sledgehammer', 'Sling', 'Spear', 'Spoon', 'Staff', 'Stick', 'Sword',
+  'Tesla Coil', 'Tomahawk', 'Tool',
   'Wakizashi', 'Wand', 'Warhammer', 'Whip'
   ];
+  
+  var itemsMeal = [
+  'Breakfast', 'Brunch', 'Dinner', 'Lunch', 'Supper'
+  ]
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Measurements------------------------------------------------------------------------------------------------------------------------------------------------
@@ -707,6 +716,30 @@ client.on("message", message => {
   
   var valuesStandardList = valuesIRLCurrencies.concat(valuesFantasy)
   
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Verbs-------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  var verbsStandardList = [
+  'Buy',
+  'Draw',
+  'Feed',
+  'Observe',
+  'Pet',
+  'Sketch'
+  ]
+  
+  var verbsHumanInteractionsList = [
+  'Apologize',
+  'Applaud',
+  'Compliment',
+  'Ignore',
+  'Pay',
+  ]
+  
+  var verbsAllList = verbsStandardList.concat(verbsHumanInteractionsList)
+  
+ 
   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -927,6 +960,39 @@ client.on("message", message => {
       else
         message.channel.send(ReturnRandom(responseList))
       break;
+      
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------celebrate---------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'celebrate':
+      
+      var responseList1 = [
+      'https://i.imgur.com/KAxuMuU.png',
+      'https://i.imgur.com/mdXZzVb.png',
+      'https://i.imgur.com/nY38kvJ.jpg',
+      'https://i.imgur.com/YUvEpDk.jpg',
+      'https://i.imgur.com/U75V8Qr.jpg',
+      'https://i.imgur.com/du6fIsg.jpg',
+      ];
+      
+      var responseList2 = [
+      'Yay! Celebration time!',
+      'Cool! Just remember to not invite ' + ReturnRandom(serverPeopleList) + '.',
+      'Awesome! Just remember to invite ' + ReturnRandom(peopleStandardServerList) + '.',
+      'Sorry I am not joining that' +additionalLol + '.',
+      'I will prepare party in the **' + GenerateRandomPlace() + '.',
+      'Yeah! Lets bring **' + GenerateRandomWeapon() + '**.',
+      ':tada: :tada: :tada: :tada: :tada:'
+      ];
+      
+      if(Chance(10))
+        response = ReturnRandom(responseList1) + '\n'
+        
+      response = response + ReturnRandom(responseList2)
+      
+      
+      message.channel.send(response)
+      break;
     
     //----------------------------------------------------------------------------------------------------------------------------
     //----------chance, chances---------------------------------------------------------------------------------------------------
@@ -1055,7 +1121,6 @@ client.on("message", message => {
       }
 
       message.channel.send(basicString + '**' + GenerateRandomClass() + '**.')
-
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1289,24 +1354,20 @@ client.on("message", message => {
     //----------help-------------------------------------------------------------------------------------------------------------
     //---------------------------------------------------------------------------------------------------------------------------
     case 'help':
-      responseList = [
+      responseList1 = [
       'I think you should visit a doctor.',
       'Ravandel is the specialist who you want to talk with about your problems.',
       'Electroshock therapy will work wonders for you.',
       'I would advise lobotomy.',
       'Chill and eat something good.',
-      'Go outside for ' + Rnd(100) + ' hours.',
-      'I would advise ' + Rnd(100) + ' hours of sleep.',
       'Get commission from Pumpkins. You will be happy and she will be happpy.',
       'I think you need plastic surgery.',
-      'I suggest whipping session in abbey.',
+      'I suggest whipping session in the abbey.',
       'Don\'t worry, be happy!',
       'Stop wasting your time on h!help command and do something with your miserable life.',
       'Read a book.',
       'Draw something.',
       'Well praying to God might be a good idea in your situation.',
-      'Watch ' + ReturnRandom(serialsList) + '.',
-      'Draw me.',
       'Educate yourself.',
       'Take out the trash, because your home looks like garbage dump lol.',
       'Go into woods and try to find Yeti.',
@@ -1317,9 +1378,7 @@ client.on("message", message => {
       'Get new friends.',
       'Buy a house.',
       'Just let it go.',
-      'Put Coconut Oil in the Pan when Cooking Kale.',
       'If you feel alone, watch a horror movie before going to bed. You won’t feel alone anymore.',
-      'Fed up with boiling water each evening? Heat 340 fl oz (10 liters), and freeze for future use.',
       'No flashlight on your phone? Take a photo of the sun, and use it in the dark.',
       'No ice for drinks? Use frozen vegetables.',
       'It\’s very expensive to eat 3 times a day. Wake up later, miss breakfast, and save money.',
@@ -1328,7 +1387,22 @@ client.on("message", message => {
       'A glove filled with warm water creates the illusion that you\’re not alone.'
       ];
       
-      message.channel.send(ReturnRandom(responseList))
+      responseList2 = [
+      'I think you should talk to **' + ReturnRandom(serverPeopleList) + '**.',
+      'Go outside for ' + Rnd(70) + ' hours.',
+      'I would advise ' + Rnd(70) + ' hours of sleep.',
+      'You should take a trip to **' + GenerateRandomPlace + '**.',
+      'Watch ' + ReturnRandom(serialsList) + '.',
+      'Learn how to use **' + GenerateRandomWeapon() + '**.',
+      'Eat ' + 'GenerateRandomSize() + ' ' + ReturnRandom(itemsMeal) + '.',
+      ReturnRandom(verbsStandardList) + ' ' + GenerateRandomAnimal() + '.'
+      ReturnRandom(verbsAllList) + ' ' + ReturnRandom(peopleStandardServerList) + '.'
+      ]
+      
+      if(Chance(10))
+        message.channel.send(ReturnRandom(responseList1))
+      else
+        message.channel.send(ReturnRandom(responseList2))
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1422,7 +1496,28 @@ client.on("message", message => {
       ];
 
       message.channel.send(ReturnRandom(responseList))
-
+      break;
+      
+    //---------------------------------------------------------------------------------------------------------------------------
+    //-----hug-------------------------------------------------------------------------------------------------------------------
+    //---------------------------------------------------------------------------------------------------------------------------
+    case 'hug':
+      who = RecognizeWhoSimpler(arguments[1], message, command)
+      
+      responseList1 = [
+      ':hugging:',
+      '*Hugs ' + who + '*.',
+      'https://i.imgur.com/vL0G4rN.png'
+      
+      responseList2 = [
+      'Sorry but I am not touching ' + who + '. This is gross' + additionalLol + '.',
+      'Nah, let ' + ReturnRandom(serverPeopleList) + ' hugs you.',
+      'Nope, no hugs for you' + additionalLol + '.'
+      
+      if(Chance(15))
+        message.channel.send(ReturnRandom(responseList2))
+      else
+        message.channel.send(ReturnRandom(responseList1))
       break;
       
     //---------------------------------------------------------------------------------------------------------------------------
@@ -1721,6 +1816,10 @@ client.on("message", message => {
           linkToPic = 'https://i.imgur.com/eLUsk9d.png';
           break;
           
+        case 'doubt':
+          linkToPic = 'https://i.imgur.com/xBFh4Te.png';
+          break;
+          
         case 'goodjob':
           linkToPic = 'https://i.imgur.com/F2n0KMt.png';
           break;
@@ -1964,6 +2063,7 @@ client.on("message", message => {
         default:
           linkToPic = 'Available pics!\n' +
           '**kidding**\n'+
+          '**doubt**\n'+
           '**bait**\n'+
           '**idontgetit**\n'+
           '**jackie**\n'+
@@ -2638,6 +2738,7 @@ client.on("message", message => {
       '**animal : [x] = person**\n'+
       '**braindmg**\n'+
       '**capacity, volume**\n'+
+      '**celebrate**\n'+
       '**chance, chances**\n'+
       '**choose [x]|[y]|[z][...] : [x], [y], [z] = choices**\n'+
       '**class [x] : [x] = person**\n'+
@@ -2859,6 +2960,28 @@ client.on("message", message => {
   function GenerateRandomItem()
   {
     return GenerateRandomWeapon();
+  }
+  
+  function GenerateRandomSize()
+  {
+    var size1
+    
+    switch(Rnd(2))
+    {
+      case 0:
+        size1 = sizeBigList;
+        break;
+        
+      case 1:
+        size1 = sizeSmallList;
+        break;
+      
+      case 2:
+        size1 = sizeAverageList;
+        break;
+    }
+    
+    return ReturnRandom(properSizeList);
   }
   
   function GenerateMultiplier(maximum)
