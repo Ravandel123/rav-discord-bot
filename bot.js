@@ -988,7 +988,7 @@ client.on("message", message => {
       ];
       
       if(Chance(10))
-        response = ReturnRandom(responseList1) + '\n'
+        response = ReturnRandom(responseList1) + ' \n'
         
       response = response + ReturnRandom(responseList2)
       
