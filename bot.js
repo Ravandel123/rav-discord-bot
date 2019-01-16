@@ -1393,7 +1393,7 @@ client.on("message", message => {
       
       responseList2 = [
       
-      'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + '.'
+      'Eat ' + GenerateRandomSize()
       ]
       
       if(Chance(10))
