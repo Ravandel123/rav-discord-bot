@@ -338,7 +338,7 @@ client.on("message", message => {
   'Wakizashi', 'Wand', 'Warhammer', 'Whip'
   ];
   
-  var itemsMeal = [
+  var itemsMealList = [
   'Breakfast', 'Brunch', 'Dinner', 'Lunch', 'Supper'
   ]
   
@@ -1394,8 +1394,8 @@ client.on("message", message => {
       'You should take a trip to **' + GenerateRandomPlace + '**.',
       'Watch ' + ReturnRandom(serialsList) + '.',
       'Learn how to use **' + GenerateRandomWeapon() + '**.',
-      'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMeal) + '.',
-      ReturnRandom(verbsStandardList) + ' ' + GenerateRandomAnimal() + '.'
+      'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + '.',
+      ReturnRandom(verbsStandardList) + ' ' + GenerateRandomAnimal() + '.',
       ReturnRandom(verbsAllList) + ' ' + ReturnRandom(peopleStandardServerList) + '.'
       ]
       
