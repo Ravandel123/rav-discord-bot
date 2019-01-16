@@ -984,7 +984,7 @@ client.on("message", message => {
       'Cool! Just remember to not invite ' + ReturnRandom(serverPeopleList) + '.',
       'Awesome! Just remember to invite ' + ReturnRandom(peopleStandardServerList) + '.',
       'Sorry I am not joining that' +additionalLol + '.',
-      'I will prepare party in the **' + GenerateRandomPlace() + '.',
+      'I will prepare party in the **' + GenerateRandomPlace() + '**.',
       'Yeah! Lets bring **' + GenerateRandomWeapon() + '** to the party' + additionalLol + '!',
       ':tada: :tada: :tada: :tada: :tada:'
       ];
@@ -1395,7 +1395,9 @@ client.on("message", message => {
       'I think you should talk to **' + ReturnRandom(serverPeopleList) + '**.',
       'Go outside for ' + Rnd(70) + ' hours.',
       'I would advise ' + Rnd(70) + ' hours of sleep.',
-      'You should take a trip to **' + GenerateRandomPlace + '**.'
+      'You should take a trip to **' + GenerateRandomPlace() + '**.',
+      'Watch ' + ReturnRandom(serialsList) + '.',
+      'Learn how to use **' + GenerateRandomWeapon() + '**.'
       ]
       
       if(Chance(10))
