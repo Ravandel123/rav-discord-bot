@@ -846,9 +846,15 @@ client.on("message", message => {
       case 'percent':
       
       var additionalPercent = '';
+      var properMultiplier = 0;
       
       if(command == 'percent')
-        additionalPercent = '%'
+      {
+        additionalPercent = '%';
+        properMultiplier = Rnd(GenerateMultiplier(1000));
+      }
+      else
+        properMultiplier = Rnd(GenerateMultiplier(1000000000));
       
       additionalList = [
       ' more than ',
@@ -861,10 +867,10 @@ client.on("message", message => {
       ];
       
       responseList = [
-      Rnd(GenerateMultiplier(1000000000)) + additionalPercent + '.',
-      'This is' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + additionalPercent + '.',
-      'My calculations show that this will be' + ReturnRandom(additionalList) + Rnd(GenerateMultiplier(1000000000)) + additionalPercent + '.',
-      'I think it\'s ' + Rnd(GenerateMultiplier(1000000000)) + additionalPercent + '.'
+      properMultiplier + additionalPercent + '.',
+      'This is' + ReturnRandom(additionalList) + properMultiplier + additionalPercent + '.',
+      'My calculations show that this will be' + ReturnRandom(additionalList) + properMultiplier + additionalPercent + '.',
+      'I think it\'s ' + properMultiplier + additionalPercent + '.'
       ];
       
 
