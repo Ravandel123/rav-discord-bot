@@ -167,7 +167,7 @@ client.on("message", message => {
   'Offensive',
   'Pleasurable', 'Pointless', 'Provocative',
   'Ridiculous',
-  'Screwed', 'Serial', 'Slimy', 'Slow', 'Starving', 'Suicidal',
+  'Screwed', 'Serial', 'Slimy', 'Slow', 'Starving', 'Stinky', 'Suicidal',
   'Tamed', 'Tentacled', 'Torturous',
   'Ugly', 'Unintelligent',
   'Weedy'
@@ -902,7 +902,7 @@ client.on("message", message => {
       'I think ' + who + ' actually resemble more some kind of mushroom than an animal' + additionalLol + '.',
       'I think ' + who + ' actually resemble more some kind of plant than an animal' + additionalLol + '.',
       who + ' looks like some kind of unidentified animal' + additionalLol + '.',
-      'I think ' + who + ' is the last of his kind, probably the rest of ' + who + ' race is extinct' + additionalLol + '.',
+      'I think ' + who + ' is the last of its kind, probably the rest of ' + who + ' race is extinct' + additionalLol + '.',
       who + ' looks like a pet of ' + ReturnRandom(serverPeopleList) + additionalLol + '.'
       ];
       
