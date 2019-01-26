@@ -144,7 +144,7 @@ client.on("message", message => {
   'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Fiery', 'Forsworn', 'Fossilized', 'Frozen',
   'Good', 'Great',
   'Haunted', 'Hideous', 'High', 'Horned', 'Horrible', 'Huge', 
-  'Immortal', 
+  'Immortal', 'Innocent',
   'Leper', 'Lesser', 'Little', 
   'Pale', 
   'Sacred', 'Sacrifical', 'Scary', 'Shamanistic',
