@@ -380,7 +380,7 @@ client.on("message", message => {
   'A', 'Ag', 'Ais', 'Al', 'An', 'Ar', 'As', 'Ax', 'Ay',
   'Bi', 'Bid', 'Bra', 'Brog',
   'Chri', 'Clan', 'Cla', 'Cor', 'Cuth',
-  'Da', 'Dar', 'Dark', 'De', 'Del', 'Des', 'Dra',
+  'Da', 'Dak', 'Dar', 'Dark', 'De', 'Del', 'Des', 'Dra',
   'Ed',
   'Faf', 'Fal',
   'Gal', 'Ge', 'Ger', 'Gret', 'Grin', 'Gun',
