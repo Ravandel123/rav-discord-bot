@@ -330,7 +330,7 @@ client.on("message", message => {
   'Halberd', 'Hammer',
   'Kama', 'Katana', 'Knife',
   'Lance', 'Lasso', 'Longsword',
-  'Mace', 'Maul', 'Minigun', 'Missile', 'Morning Star', 'Musket',
+  'Mace', 'Maul', 'Minigun', 'Missile', 'Missile Launcher', 'Morning Star', 'Musket',
   'Nuclear Missile', 'Nut',
   'Pike', 'Polearm', 'Poleaxe',
   'Quarterstaff',
