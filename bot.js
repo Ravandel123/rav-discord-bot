@@ -190,6 +190,7 @@ client.on("message", message => {
   'War', 'the Weed'
   ]
   
+  var adjectivesAfflictionsVirtuesList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList)
   var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList, specialAfflictionsList, specialVirtuesList)
   var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
   var adjectivesEndingAllSingle = adjectivesEndingSinglePartList.concat(peopleAllList)
@@ -2181,33 +2182,46 @@ client.on("message", message => {
       'I love rants about nothing, at least I don\'t need to listen to you.',
       'How about you write something?'
       ];
-
-      responseList = [
-      ':cry:',
+      
+      responseList1 = [
       'Oh... This is so sad that I am thinking about formatting myself...',
       'And what makes you think it was not deserved?',
       'I am sorry to hear that...',
-      'Don\'t worry, all will be all right.',
-      'https://i.imgur.com/vL0G4rN.png',
-
       'Congratulations! You have been nominated for Drama Queen of the year!',
       'Rotfl, this is fascinating, continue and bring me popcorn.',
       'This is probably more fake than ' + ReturnRandom(fakeList) + '.',
       'Am I supposed to cry or laugh at this?',
-      'Lol, no one cares anyway.',
       'Stop being crybaby.',
       'I think you should write a book about that.',
       'Stop crying for attention like a small girl.',
       'Please cancel my subscription to your issues.',
       'Pleas stop this BS.',
       'I totally understand now why you feel that way. Thank you for letting me know.',
-      'I don\'t remember asking for your opinion.'
+      'I don\'t remember asking for your opinion.',
+      ];
+      
+      responseList2 = [
+      ':cry:',
+      'Don\'t worry, all will be all right.',
+      'Lol, no one cares anyway.',
+      'https://i.imgur.com/vL0G4rN.png',
+      'And you made ' + ReturnRandom(peopleAllList) + ' cry' + additionalLol + '.',
+      Rnd(100) + ' ' + GenerateRandomAnimal() + additionalLol + ' died because of that.',
+      'That information just made me ' + ReturnRandom(baseAdjectivesList) + ' ' + ReturnRandom(adjectivesAfflictionsVirtuesList) + additionalLol + '.',
+      'That information just made me ' + ReturnRandom(adjectivesAfflictionsVirtuesList) + additionalLol + '.',
+      'You need to visit ' + GenerateRandomPlace() + ' in order to get better' + additionalLol + '.',
+      'That problem looks ' + GenerateRandomSize() + additionalLol + '.'
       ];
 
       if(arguments[1] == null)
         message.channel.send(ReturnRandom(emptyList))
       else
-        message.channel.send(ReturnRandom(responseList))
+      {
+        if(Chance(20))
+          message.channel.send(ReturnRandom(responseList1))
+        else
+          message.channel.send(ReturnRandom(responseList2))
+      }
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
