@@ -116,7 +116,7 @@ client.on("message", message => {
   'Barbaric', 'Brainwashed', 
   'Cannibalistic', 'Crazy',
   'Degenerate', 'Delusional', 'Depressive', 'Destructive', 'Deviant', 'Dumb',
-  'Feral', 'Furious', 'Furry',
+  'Feral', 'Foolish', 'Furious', 'Furry',
   'Heartless', 'Horny', 
   'Idiotic', 'Imbecilic', 'Inane', 'Insane', 
   'Lazy', 
