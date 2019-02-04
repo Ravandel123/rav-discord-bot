@@ -82,7 +82,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var serverPeopleList = [
-  'AceBeef', 'Awre', 'Doctor Pumpkins', 'Glorious AYY FB', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'You'
+  'AceBeef', 'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'You'
   ]
   
   var dictatorsPeopleList = [
@@ -1427,7 +1427,7 @@ client.on("message", message => {
       'Ballista', 'Bandits', 'Battering Ram', 'Bookmaster Awre',
       'the Booze', 'Brainwashing',
       'C4', 'Catapult', 'Cloning', 'the Coconut', 'Coconuts',
-      'Darkness', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Drugs', 'the Dung', 'Duplication Device',
+      'Darkness', 'Deciduu', 'Delight', 'Despair', 'Destruction', 'Doctor Pumpkins', 'Doom', 'the Drugs', 'the Dung', 'Duplication Device',
       'Electroshock Therapy', 'Evil',
       'Fury',
       'Gambling', 'Garbage',
