@@ -154,9 +154,9 @@ client.on("message", message => {
 
   var adjectivesFunnyList = [
   'Abominable', 'Absurd', 'Adorable', 'Amusing', 'Awesome', 'Awful',
-  'Brutal',
+  'Banana', 'Brutal',
   'Coconutty', 'Corvid', 'Creepy',
-  'Dirty', 'Disgusting', 'Domesticated', 'Drooly', 'Drunken', 'Dungy',
+  'Delicate', 'Dirty', 'Disgusting', 'Domesticated', 'Drooly', 'Drunken', 'Dungy',
   'Foul',
   'Gelatinous', 'Gross',
   'Hilarious', 'Hungry',
@@ -326,7 +326,7 @@ client.on("message", message => {
   'Chain', 'Chainsaw', 'Claymore', 'Club', 'Coconut', 'Crossbow', 'Crowbar',
   'Dagger', 'Disintegrator',
   'Estoc',
-  'Falchion', 'Flail', 'Fork',
+  'Falchion', 'Flail', 'Flamethrower', 'Fork',
   'Gladius', 'Glaive', 'Greatsword',
   'Halberd', 'Hammer',
   'Kama', 'Katana', 'Knife',
@@ -900,7 +900,7 @@ client.on("message", message => {
       who + ' looks like ' + animalCorrect1 + additionalLol + '.',
       who + ' would do great as ' + animalCorrect1 + additionalLol + '.',
       who + ' would do well as ' + animalCorrect1 + additionalLol + '.',
-      who + ' looks like ' + animalCorrect1 + ' from the ' + GenerateRandomPlace() + additionalLol + '.',
+      who + ' looks like ' + animalCorrect1 + ' from the ' + MakeStringBold(GenerateRandomPlace()) + additionalLol + '.',
       who + ' looks like something between ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.',
       who + ' looks like some kind of mix of ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.'
       ];
@@ -910,7 +910,7 @@ client.on("message", message => {
       'I think ' + who + ' actually resemble more some kind of plant than an animal' + additionalLol + '.',
       who + ' looks like some kind of unidentified animal' + additionalLol + '.',
       'I think ' + who + ' is the last of its kind, probably the rest of ' + who + ' race is extinct' + additionalLol + '.',
-      who + ' looks like a pet of ' + ReturnRandom(serverPeopleList) + additionalLol + '.'
+      who + ' looks like a pet of ' + MakeStringBold(ReturnRandom(serverPeopleList)) + additionalLol + '.'
       ];
       
       if(Chance(7))
@@ -2206,7 +2206,7 @@ client.on("message", message => {
       'Lol, no one cares anyway.',
       'https://i.imgur.com/vL0G4rN.png',
       'And you made ' + ReturnRandom(peopleAllList) + ' cry' + additionalLol + '.',
-      Rnd(100) + ' ' + GenerateRandomAnimal() + additionalLol + ' died because of that.',
+      Rnd(100) + ' ' + GenerateRandomAnimal() + ' died because of that' + additionalLol + '.',
       'That information just made me ' + ReturnRandom(baseAdjectivesList) + ' ' + ReturnRandom(adjectivesAfflictionsVirtuesList) + additionalLol + '.',
       'That information just made me ' + ReturnRandom(adjectivesAfflictionsVirtuesList) + additionalLol + '.',
       'You need to visit ' + GenerateRandomPlace() + ' in order to get better' + additionalLol + '.',
