@@ -1687,7 +1687,7 @@ client.on("message", message => {
     case 'mood':
       var finalString = '';
       
-      finalString = ReturnRandom(verbsStandardContinuousList) + ' ' + ReturnRandom(prepositionsPlaces) + ' ' + GenerateRandomPlace + '.'
+      finalString = ReturnRandom(verbsStandardContinuousList) + ' ' + ReturnRandom(prepositionsPlaces) + ' ' + GenerateRandomPlace() + '.'
 
       message.channel.send(finalString)
       break;
