@@ -3080,7 +3080,7 @@ client.on("message", message => {
     if(Chance(90))
       return ReturnRandom(peopleStandardServerList)
     else
-      return ReturnRandom(ReturnRandom(dictatorsPeopleList)
+      return ReturnRandom(dictatorsPeopleList)
   }
   
   function GenerateRandomString3(firstList, secondList, thirdList)
