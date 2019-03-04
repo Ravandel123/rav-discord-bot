@@ -1710,7 +1710,7 @@ client.on("message", message => {
     case 'mood':
       var array1 = [
       ReturnRandom(verbsStandardContinuousHumanInteractionsList) + ' ' + GenerateRandomPerson() + ' ' + ReturnRandom(prepositionsPlaces) + ' ' + GenerateRandomPlace() + '.',
-      ReturnRandom(verbsStandardContinuousList) + ReturnRandom(prepositionsPlaces) + ' ' + GenerateRandomPlace() + '.'
+      ReturnRandom(verbsStandardContinuousList + ' ' + ReturnRandom(prepositionsPlaces) + ' ' + GenerateRandomPlace() + '.'
       ]
 
       message.channel.send(ReturnRandom(array1))
