@@ -740,16 +740,39 @@ client.on("message", message => {
   ]
   
   var verbsStandardContinuousList = [
-  'Apologizing',
+  'Apologizing', 'Awooing',
   'Beating', 'Buying',
-  'Complimenting',
-  'Dancing', 'Drawing',
+  'Chirping', 'Complimenting',
+  'Dancing', 'Drawing', 'Drinking',
+  'Eating',
   'Feeding',
+  'Gaming',
   'Ignoring',
   'Kicking',
-  'Observe',
-  'Paying', 'Petting',
-  'Sketching',
+  'Observing',
+  'Paying', 'Petting', 'Playing',
+  'Ranting',
+  'Screaming', 'Sketching', 'Sleeping', 'Sulking',
+  'Taking a dump',
+  'Whipping'
+  ]
+
+  var verbsStandardContinuousHumanInteractionsList = [
+  'Apologizing', 'Assaulting', 'Awooing with',
+  'Beating', 'Buying',
+  'Chirping with', 'Complimenting',
+  'Dancing with', 'Drawing', 'Drinking with',
+  'Eating',
+  'Feeding',
+  'Gaming with',
+  'Ignoring',
+  'Kicking',
+  'Observing',
+  'Partying with', 'Paying', 'Petting', 'Playing', 'Playing with',
+  'Ranting',
+  'Screaming at', 'Screaming with', 'Sketching',
+  'Taking a dump with',
+  'Verbally Abusing',
   'Whipping'
   ]
   
@@ -1685,11 +1708,12 @@ client.on("message", message => {
     //-----mood-------------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'mood':
-      var finalString = '';
-      
-      finalString = ReturnRandom(verbsStandardContinuousList) + ' ' + ReturnRandom(prepositionsPlaces) + ' ' + GenerateRandomPlace() + '.'
+      var array1 = [
+      ReturnRandom(verbsStandardContinuousHumanInteractionsList) + ' ' + GenerateRandomPerson() + ' ' + ReturnRandom(prepositionsPlaces) + ' ' + GenerateRandomPlace() + '.',
+      ReturnRandom(verbsStandardContinuousList) + ReturnRandom(prepositionsPlaces) + ' ' + GenerateRandomPlace() + '.'
+      ]
 
-      message.channel.send(finalString)
+      message.channel.send(ReturnRandom(array1))
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -2488,11 +2512,7 @@ client.on("message", message => {
     //----------who---------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'who':
-      if(Chance(90))
-        message.channel.send(ReturnRandom(peopleStandardServerList))
-       else
-        message.channel.send(ReturnRandom(dictatorsPeopleList))
-        
+      message.channel.send(GenerateRandomPerson())
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -3053,6 +3073,14 @@ client.on("message", message => {
     }
     
     return multiplier;
+  }
+  
+  function GenerateRandomPerson()
+  {
+    if(Chance(90))
+      return ReturnRandom(peopleStandardServerList)
+    else
+      return ReturnRandom(ReturnRandom(dictatorsPeopleList)
   }
   
   function GenerateRandomString3(firstList, secondList, thirdList)
