@@ -3021,7 +3021,7 @@ client.on("message", message => {
   
   function GenerateRandomPlace()
   {
-    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, placeMainList, adjectivesEndingAllSingle);
+    return 'the' + GenerateRandomString4(baseAdjectivesList, adjectivesAllList, placeMainList, adjectivesEndingAllSingle);
   }
   
   function GenerateRandomAnimal()
