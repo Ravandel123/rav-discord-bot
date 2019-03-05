@@ -769,7 +769,7 @@ client.on("message", message => {
   'Kicking',
   'Observing',
   'Partying with', 'Paying', 'Petting', 'Playing', 'Playing with',
-  'Ranting',
+  'Ranting at',
   'Screaming at', 'Screaming with', 'Sketching',
   'Taking a dump with',
   'Verbally Abusing',
