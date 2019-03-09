@@ -82,7 +82,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var serverPeopleList = [
-  'AceBeef', 'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'You'
+  'AceBeef', 'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Griffin', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'You'
   ]
   
   var dictatorsPeopleList = [
