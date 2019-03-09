@@ -176,7 +176,7 @@ client.on("message", message => {
   var adjectivesEndingSinglePartList = [
   'the Birds', 'Blood','the Booze',
   'the Coconut', 'the Coconuts',
-  'Darkness', 'the Dead', 'Delight', 'Despair', 'Destruction', 'Doom', 'Dung',
+  'Darkness', 'the Dead', 'Degeneration', 'Delight', 'Despair', 'Destruction', 'Doom', 'Dung',
   'Evil',
   'Fury',
   'the Hazelnut', 'the Hazelnuts',
@@ -943,7 +943,7 @@ client.on("message", message => {
       who + ' looks like ' + animalCorrect1 + additionalLol + '.',
       who + ' would do great as ' + animalCorrect1 + additionalLol + '.',
       who + ' would do well as ' + animalCorrect1 + additionalLol + '.',
-      who + ' looks like ' + animalCorrect1 + ' from the ' + MakeStringBold(GenerateRandomPlace()) + additionalLol + '.',
+      who + ' looks like ' + animalCorrect1 + ' from ' + MakeStringBold(GenerateRandomPlace()) + additionalLol + '.',
       who + ' looks like something between ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.',
       who + ' looks like some kind of mix of ' + animalCorrect1 + ' and ' + animalCorrect2 + additionalLol + '.'
       ];
@@ -1034,7 +1034,7 @@ client.on("message", message => {
       'Cool! Just remember to not invite ' + ReturnRandom(serverPeopleList) + '.',
       'Awesome! Just remember to invite ' + ReturnRandom(peopleStandardServerList) + '.',
       'Sorry I am not joining that' +additionalLol + '.',
-      'I will prepare party in the **' + GenerateRandomPlace() + '**.',
+      'I will prepare party in **' + GenerateRandomPlace() + '**.',
       'Yeah! Lets bring **' + GenerateRandomWeapon() + '** to the party' + additionalLol + '!',
       ':tada: :tada: :tada: :tada: :tada:'
       ];
@@ -2614,10 +2614,10 @@ client.on("message", message => {
         var mainList = [
         'I think I saw ' + who + ' in the ' + GenerateRandomPlace() + '.',
         who + ' looks like my ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList) + '.',
-        who + ' was probably with me in the ' + GenerateRandomPlace() + '.',
+        who + ' was probably with me in ' + GenerateRandomPlace() + '.',
         'I rescued ' + who + ' from ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
         who + ' was that ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
-        'I have definitely seen ' + who + ' in the ' + GenerateRandomPlace() + '.'
+        'I have definitely seen ' + who + ' in ' + GenerateRandomPlace() + '.'
         ];
       }
       else 
@@ -2830,6 +2830,7 @@ client.on("message", message => {
       '**hug [x] : [x] = person**\n'+
       '**invite**\n'+
       '**love [x] : [x] = person**\n'+
+      '**mood**\n'+
       '**name [x] [y] [z] : [x] = "m" or "f", [y] = numbers of syllables, [z] = number of generated names**\n'+
       '**percent**\n'+
       '**peril [x] : [x] = number**\n'+
