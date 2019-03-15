@@ -2252,6 +2252,7 @@ client.on("message", message => {
       'Pleas stop this BS.',
       'I totally understand now why you feel that way. Thank you for letting me know.',
       'I don\'t remember asking for your opinion.',
+      'This is so sad, can we get an OOF?'
       ];
       
       responseList2 = [
