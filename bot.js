@@ -82,7 +82,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var serverPeopleList = [
-  'AceBeef', 'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Griffin', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'You'
+  'AceBeef', 'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Griffin', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'Wolf Scribe', 'You'
   ]
   
   var dictatorsPeopleList = [
@@ -1486,7 +1486,7 @@ client.on("message", message => {
       'Trebuchet', 'Troglodyte',
       'Ugliness', 'Urutaa', 'Uselessness',
       'Vardgo', 'Violence',
-      'War', 'the Weed', 'Whipping in the Abbey'
+      'War', 'the Weed', 'Whipping in the Abbey', 'Wolf Scribe'
       ]
 
       var dualList1 = [
@@ -2549,6 +2549,7 @@ client.on("message", message => {
       'Seda\'s',
       'Izzy\'s',
       'Tyrrikz\'s',
+      'Wolf Scribe\'s',
       'Trump\'s',
       'Stalin\'s',
       'Hitler\'s',
@@ -2678,7 +2679,7 @@ client.on("message", message => {
       'Seda', 'Seismic Activity', 'Shadows', 'Shea', 'Small Brain', 'Stalin', 'Starvation',
       'Ugliness', 'Urutaa', 'Uselessness',
       'Vardgo', 'Violence',
-      'War', 'the Weed', 'Whipping'
+      'War', 'the Weed', 'Whipping', 'Wolf Scribe'
       ]
 
       var dualList1 = [
@@ -3254,7 +3255,7 @@ client.on("message", message => {
       'Tentacles',
       'Urutaa',
       'Vardgo', 'Violence',
-      'War', 'the Weed'
+      'War', 'the Weed', 'Wolf Scribe'
       ]
 
       var lastPart1 = [
