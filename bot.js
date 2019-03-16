@@ -32,9 +32,9 @@ client.on("message", message => {
 
   var serialsList = [
   'Alladin',
-  'Baywatch', 'Bloodbath in Psycho Town',
+  'Baywatch', 'Bloodbath in Psycho Town', 'Byrdemic',
   'Cannibal! The Musical', 'Chopper Chicks in Zombietown',
-  'Dumb & Dumber',
+  'Dumb & Dumber', 'Dumb & Dumber 2',
   'Ferocious Female Freedom Fighters', 'Frozen',
   'Howard the Duck',
   'King Kong Lives',
@@ -104,10 +104,11 @@ client.on("message", message => {
   var virtuesList = ['Courageous', 'Focused', 'Powerful', 'Stalwart', 'Vigorous'];
   
   var baseAdjectivesList = [
-  'Extremely',
+  'Exceptionally', 'Excessively', 'Extremely',
   'Hyper',
   'Mega',
-  'Super',
+  'Overly',
+  'Slightly', 'Super',
   'Ultra'
   ];
   
@@ -372,7 +373,7 @@ client.on("message", message => {
   'Gird',
   'Kalt',
   'Spint',
-  'Tark', 'Thant', 'Thrall', 'Torr',
+  'Tark', 'Thant', 'Thrall', 'Torr', 'Tosch',
   'Vey', 'Vlad',
   'Yog'
   ];
@@ -668,7 +669,7 @@ client.on("message", message => {
   'Lake', 'Land', 'Lighthouse',
   'Marsh', 'Moor', 'Mountain', 'Mountains',
   'Ocean', 'Outpost',
-  'Plains', 'Planet', 'Prison',
+  'Plains', 'Planet', 'Prison', 'Pyramid',
   'Rainforest', 'Refuge', 'River', 'Ruins',
   'Sanctum', 'School', 'Sea', 'Sewers', 'Ship', 'Space', 'Stronghold', 'Swamp',
   'Temple', 'Tomb', 'Tower', 'Town', 'Township', 'Treetops',
@@ -708,9 +709,9 @@ client.on("message", message => {
   
   var valuesIRLCurrencies = [
   'Bucks',
-  'Dollars',
-  'Euros',
-  'Pounds'
+  '$',
+  'â‚¬',
+  'ÂŁ'
   ]
   
   var valuesFantasy = [
@@ -740,19 +741,16 @@ client.on("message", message => {
   ]
   
   var verbsStandardContinuousList = [
-  'Apologizing', 'Awooing',
-  'Beating', 'Buying',
-  'Chirping', 'Complimenting',
+  'Awooing',
+  'Chirping',
   'Dancing', 'Drawing', 'Drinking',
   'Eating',
   'Feeding',
   'Gaming',
-  'Ignoring',
-  'Kicking',
-  'Observing',
-  'Paying', 'Petting', 'Playing',
+  'Looking around',
+  'Paying', 'Playing',
   'Ranting',
-  'Screaming', 'Sketching', 'Sleeping', 'Sulking',
+  'Screaming', 'Sketching', 'Sleeping', 'Sulking', 'Swimming',
   'Taking a dump',
   'Whipping'
   ]
@@ -762,7 +760,7 @@ client.on("message", message => {
   'Beating', 'Buying',
   'Chirping with', 'Complimenting',
   'Dancing with', 'Drawing', 'Drinking with',
-  'Eating',
+  'Eating with',
   'Feeding',
   'Gaming with',
   'Ignoring',
@@ -770,7 +768,7 @@ client.on("message", message => {
   'Observing',
   'Partying with', 'Paying', 'Petting', 'Playing', 'Playing with',
   'Ranting at',
-  'Screaming at', 'Screaming with', 'Sketching',
+  'Screaming at', 'Screaming with', 'Sketching', 'Swimming with',
   'Taking a dump with',
   'Verbally Abusing',
   'Whipping'
@@ -838,6 +836,7 @@ client.on("message", message => {
     case 'were':
     case 'will':
     case 'would':
+    case 'wanna':
     
       specialList = [
       'Why you asking me about that' + additionalLol + '.',
@@ -895,10 +894,12 @@ client.on("message", message => {
       if(command == 'percent')
       {
         additionalPercent = '%';
-        properMultiplier = Rnd(GenerateMultiplier(1000));
+        properMultiplier = Rnd(GenerateMultiplier(2));
       }
       else
-        properMultiplier = Rnd(GenerateMultiplier(1000000000));
+      {
+        properMultiplier = Rnd(GenerateMultiplier(8));
+      }
       
       additionalList = [
       ' more than ',
@@ -999,12 +1000,12 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'Capacity of that is definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'Around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'Exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'It\'s close to ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'I think the capacity of that is less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
-      'I think the capacity of that is more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementVolumeList) + '.'
+      'Capacity of that is definitely ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'Around ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'Exactly ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'It\'s close to ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'I think the capacity of that is less than ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementVolumeList) + '.',
+      'I think the capacity of that is more than ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementVolumeList) + '.'
       ];
 
       if(Chance(15))
@@ -1191,10 +1192,10 @@ client.on("message", message => {
       ]
         
       responseList = [
-      Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.',
-      'That costs ' + Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.',
-      'That is worth ' + Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.',
-      'Price for that is exactly ' + Rnd(GenerateMultiplier(1000000000)) + ' ' + ReturnRandom(valuesStandardList) + '.'
+      Rnd(GenerateMultiplier(8)) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'That costs ' + Rnd(GenerateMultiplier(8)) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'That is worth ' + Rnd(GenerateMultiplier(8)) + ' ' + ReturnRandom(valuesStandardList) + '.',
+      'Price for that is exactly ' + Rnd(GenerateMultiplier(8)) + ' ' + ReturnRandom(valuesStandardList) + '.'
       ];
 
       if(Chance(15))
@@ -1282,7 +1283,7 @@ client.on("message", message => {
       'If laughter is the best medicine, your face must be curing the world.',
       'You\'re so ugly, you scared the crap out of the toilet.',
       'It\'s better to let someone think you are an Idiot than to open your mouth and prove it.',
-      'I\’m jealous of people that don’t know you!',
+      'I\â€™m jealous of people that donâ€™t know you!',
       'If I wanted to kill myself I\'d climb your ego and jump to your IQ.',
       'Brains aren\'t everything. In your case they\'re nothing.',
       'I don\'t know what makes you so stupid, but it really works.',
@@ -1302,7 +1303,7 @@ client.on("message", message => {
       'As an outsider, what do you think of the human race?',
       'Are you always this stupid or is today a special occasion?',
       'I believed in evolution until I met you.',
-      'Mirrors don\’t lie, and lucky for you, they also don\’t laugh.',
+      'Mirrors don\â€™t lie, and lucky for you, they also don\â€™t laugh.',
       'No wonder everyone talks about you behind your back.',
       'Your face makes onions cry.',
       'If you were twice as smart, you\'d still be stupid.',
@@ -1357,11 +1358,11 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'That weigh definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'That weigh around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'Weigh of that is exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'I think it\'s less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.',
-      'I think it\'s more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementWeighList) + '.'
+      'That weigh definitely ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'That weigh around ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'Weigh of that is exactly ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'I think it\'s less than ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementWeighList) + '.',
+      'I think it\'s more than ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementWeighList) + '.'
       ];
 
       if(Chance(15))
@@ -1391,11 +1392,11 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'It\'s definitely ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
-      'It\'s around ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
-      'That is exactly ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.',
-      'I think it\'s less than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.',
-      'I think it\'s more than ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(measurementLengthList) + '.'
+      'It\'s definitely ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
+      'It\'s around ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementLengthList) + ' .',
+      'That is exactly ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementLengthList) + '.',
+      'I think it\'s less than ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementLengthList) + '.',
+      'I think it\'s more than ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(measurementLengthList) + '.'
       ];
 
       if(Chance(15))
@@ -1425,26 +1426,26 @@ client.on("message", message => {
       'Educate yourself.',
       'Take out the trash, because your home looks like garbage dump lol.',
       'Go into woods and try to find Yeti.',
-      'Tell your bullies they\’re hurting you.',
+      'Tell your bullies they\â€™re hurting you.',
       'There are bigger problems than your depression.',
       'Ignore the bullies.',
-      'Don’t trust anyone.',
+      'Donâ€™t trust anyone.',
       'Get new friends.',
       'Buy a house.',
       'Just let it go.',
-      'If you feel alone, watch a horror movie before going to bed. You won’t feel alone anymore.',
+      'If you feel alone, watch a horror movie before going to bed. You wonâ€™t feel alone anymore.',
       'No flashlight on your phone? Take a photo of the sun, and use it in the dark.',
       'No ice for drinks? Use frozen vegetables.',
-      'It\’s very expensive to eat 3 times a day. Wake up later, miss breakfast, and save money.',
-      'Having a bad day? No worries! Wear sunglasses. Now you’re having a bad evening.',
-      'If you can\’t afford virtual reality headsets, you can close your eyes and imagine everything you want.',
-      'A glove filled with warm water creates the illusion that you\’re not alone.'
+      'It\â€™s very expensive to eat 3 times a day. Wake up later, miss breakfast, and save money.',
+      'Having a bad day? No worries! Wear sunglasses. Now youâ€™re having a bad evening.',
+      'If you can\â€™t afford virtual reality headsets, you can close your eyes and imagine everything you want.',
+      'A glove filled with warm water creates the illusion that you\â€™re not alone.'
       ];
       
       responseList2 = [
       'I think you should talk to **' + ReturnRandom(serverPeopleList) + '**.',
-      'Go outside for ' + Rnd(70) + ' hours.',
-      'I would advise ' + Rnd(70) + ' hours of sleep.',
+      'Go outside for ' + Rnd(12) + ' hours.',
+      'I would advise ' + Rnd(12) + ' hours of sleep.',
       'You should take a trip to **' + GenerateRandomPlace() + '**.',
       'Watch ' + ReturnRandom(serialsList) + '.',
       'Learn how to use **' + GenerateRandomWeapon() + '**.',
@@ -1621,8 +1622,8 @@ client.on("message", message => {
       'You make everything better. If people were more like you the world would be perfect.',
       'You\'re not lazy, just that the people around you are way too active.',
       'I love your honesty and sincerity.',
-      'I would hang out with you even if you hadn\’t showered for a couple days.',
-      'I would be really okay with you seeing me without makeup, that\’s how much I like you.',
+      'I would hang out with you even if you hadn\â€™t showered for a couple days.',
+      'I would be really okay with you seeing me without makeup, that\â€™s how much I like you.',
       'You have really good taste in friends (i.e. me).',
       'If you cooked something really gross, I like you enough that I would tell you instead of politely eating it and hating everything.',
       'If you were running for president, I would vote for you.',
@@ -1631,9 +1632,9 @@ client.on("message", message => {
       'You are my favourite weakness.',
       'You look great for your age.',
       'I bet you taste great.',
-      'You\’re hot for whatever race you are.',
+      'You\â€™re hot for whatever race you are.',
       'You look like a sexy sausage.',
-      'You\’re so small and cute. I want to pick you up and put you in my pocket.',
+      'You\â€™re so small and cute. I want to pick you up and put you in my pocket.',
       
       'I love fat people like you!',
       'I love how ugly you are.',
@@ -1674,8 +1675,8 @@ client.on("message", message => {
       who + ' makes everything better. If people were more like ' + who + ' the world would be perfect.',
       who + ' is not lazy, just that the people around ' + who + ' are way too active.',
       'I love ' + who + ' honesty and sincerity.',
-      'I would hang out with ' + who + ' even if you hadn\’t showered for a couple days.',
-      'I would be really okay with ' + who + ' seeing me without makeup, that\’s how much I like ' + who + '.',
+      'I would hang out with ' + who + ' even if you hadn\â€™t showered for a couple days.',
+      'I would be really okay with ' + who + ' seeing me without makeup, that\â€™s how much I like ' + who + '.',
       who + ' has really good taste in friends (i.e. me).',
       'If ' + who + ' cooked something really gross, I like ' + who + ' enough that I would tell ' + who + ' instead of politely eating it and hating everything.',
       'If ' + who + ' was running for president, I would vote for ' + who + '.',
@@ -2489,8 +2490,8 @@ client.on("message", message => {
       ];
       
       responseList = [
-      'In ' + Rnd(GenerateMultiplier(1000)) + ' ' + ReturnRandom(timeList) + '.',
-      'In ' + (Rnd(GenerateMultiplier(1000)) + 2018) + '.',
+      'In ' + Rnd(GenerateMultiplier(2)) + ' ' + ReturnRandom(timeList) + '.',
+      'In ' + (Rnd(GenerateMultiplier(2)) + 2018) + '.',
       'Tomorrow ' + timeHours + ':' + timeMinutes + '.',
       'Day after tomorrow ' + timeHours + ':' + timeMinutes + '.'
       ];
@@ -2614,7 +2615,7 @@ client.on("message", message => {
       if(Chance(30))
       {
         var mainList = [
-        'I think I saw ' + who + ' in the ' + GenerateRandomPlace() + '.',
+        'I think I saw ' + who + ' in ' + GenerateRandomPlace() + '.',
         who + ' looks like my ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList) + '.',
         who + ' was probably with me in ' + GenerateRandomPlace() + '.',
         'I rescued ' + who + ' from ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
@@ -2760,39 +2761,38 @@ client.on("message", message => {
       'No point in stating the obvious.',
       'Who told you to tell me that?',
       'Are you a spy? Who sent you?',
-      'You\’re not the first one to tell me that today.',
+      'You\â€™re not the first one to tell me that today.',
       'After hearing what you just said, I realized that honest people still do exists!',
-      'Oh, really? I think I\’m just ahead of you by one bath.',
-      'True, I couldn\’t agree more.',
-      'Coming from you, that means a lot!',
+      'Oh, really? I think I\â€™m just ahead of you by one bath.',
+      'True, I couldn\â€™t agree more.',
       'Coming from you, that means a lot!',
       'Careful, you might get burned.',
-      'You\’re welcome.',
-      'I\’m warning you, I\’m too hot for you to handle.',
+      'You\â€™re welcome.',
+      'I\â€™m warning you, I\â€™m too hot for you to handle.',
       'You mean great in bed? Thanks!',
       'Why?',
       'I know. Wish I could say the same about you.',
       'Yeah...I wanted to ask you out, but my friend said I\'m now out of your league.',
-      'I\’m glad I made your day brighter.',
+      'I\â€™m glad I made your day brighter.',
       'Well, hanging around the right people really changes you.',
-      'Yeah, I\’m getting tired of being mistaken for Ravandel.',
+      'Yeah, I\â€™m getting tired of being mistaken for Ravandel.',
       'Stop it before I fall in love with you.',
       'I love your honesty and sincerity.',
       'It must be the meds kicking in.',
       'Peace be with you!',
       'Shut up baby.',
       'Excuse me?!',
-      'It\’s extremely rare for me to hear that.',
+      'It\â€™s extremely rare for me to hear that.',
       'Do you really think I care about your opinion lol?',
-      'It\’s tough being such a sex symbol.',
+      'It\â€™s tough being such a sex symbol.',
       'Oh sorry, what? I was too busy thinking about how gorgeous I am.',
-      'Give me a pen and I\’ll give you my autograph.',
+      'Give me a pen and I\â€™ll give you my autograph.',
       'Sorry, you must have mistaken me for someone else.',
       'Thanks, but I prefer to be noticed for my intellectual capacity.',
       'I know.',
       'Yeah, the genie finally granted my wish.',
-      'Look who\’s talking XD.',
-      'Is that the best you\’ve got?',
+      'Look who\â€™s talking XD.',
+      'Is that the best you\â€™ve got?',
       'You must be looking at a mirror.',
       'Shucks, my hair!',
       'I love you too!',
@@ -2810,7 +2810,7 @@ client.on("message", message => {
     case 'commands':
       responseList = 'All commands start from h!\n' +
       '**% [x] [y] : [y]is % [x]**\n'+
-      '**am, are, can, could, did, do, does, is, have, had, has, shall, should, was, were, will, would**\n'+
+      '**am, are, can, could, did, do, does, is, have, had, has, shall, should, wanna, was, were, will, would**\n'+
       '**ambush**\n'+
       '**amount**\n'+
       '**animal : [x] = person**\n'+
@@ -2890,7 +2890,22 @@ client.on("message", message => {
       return 'a ';
     }
   }
+
+  function ReturnLastChar(array)
+  {
+    var x; 
+    x = array.charAt(array.length - 1);
+    return x;
+  }
   
+  function AddEndingApostrophe(stringToCheck)
+  {
+    if(ReturnLastChar(stringToCheck) == 's')
+      return '\''
+    else
+      return '\'s'
+  }
+
   function ReturnRandom(listOfElements)
   {
     return listOfElements[Math.floor(Math.random() * listOfElements.length)];
@@ -3075,7 +3090,7 @@ client.on("message", message => {
         break;
     }
     
-    return multiplier;
+    return multiplier + 1;
   }
   
   function GenerateRandomPerson()
@@ -3110,6 +3125,31 @@ client.on("message", message => {
       thirdWord = ReturnRandom(thirdList);
       finalString = finalString + ' of ' + thirdWord;
     }
+  
+    return finalString;
+  }
+  
+  function GenerateRandomString3Prefix(firstList, secondList, thirdList)
+  {
+    var finalString = '';
+    var firstWord = '';
+    var secondWord = '';
+    var thirdWord = '';
+    
+    if(Chance(70))
+    {
+      if(Chance(30))
+        finalString = ReturnRandom(firstList) + ' ';
+        
+      secondWord = ReturnRandom(secondList);
+      finalString = finalString + secondWord;
+    }
+    
+    thirdWord = ReturnRandom(thirdList);
+    if(secondWord != '')
+      finalString = finalString + ' ' + thirdWord
+    else
+      finalString = thirdWord
   
     return finalString;
   }
@@ -3247,7 +3287,7 @@ client.on("message", message => {
       'Immorality', 'Immortality', 'the Inner Circle',
       'Justice',
       'Lemmy', 'the Light',
-      'Madness', 'the Magic', 'Masks', 'the Meek', 'Mercy', 'the Moon', 'the Murder',
+      'Madness', 'the Magic', 'Malice', 'the Meek', 'Mercy', 'the Moon', 'the Murder',
       'the Nipples',
       'the Nut',
       'Pleasure', 'Power',
@@ -3291,7 +3331,7 @@ client.on("message", message => {
       'Intellect',
       'Justice',
       'Light',
-      'Madness', 'Magic', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Murder', 'Mutant',
+      'Madness', 'Magic', 'Malice', 'Maniac', 'Mask', 'Masochism', 'Mercy', 'Moon', 'Murder', 'Mutant',
       'Nipple', 'Nipples', 'Nut', 'Nuts',
       'Pleasure', 'Pleasures', 'Power', 'Psychopath',
       'Retribution', 'Rocket', 'Rot', 'Ruby',
