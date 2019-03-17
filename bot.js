@@ -102,16 +102,7 @@ client.on("message", message => {
   var afflictionsList = ['Abusive', 'Fearful', 'Hopeless', 'Irrational', 'Masochistic', 'Paranoid', 'Rapturous', 'Selfish'];
   
   var virtuesList = ['Courageous', 'Focused', 'Powerful', 'Stalwart', 'Vigorous'];
-  
-  var baseAdjectivesList = [
-  'Exceptionally', 'Excessively', 'Extremely',
-  'Hyper',
-  'Mega',
-  'Overly',
-  'Slightly', 'Super',
-  'Ultra'
-  ];
-  
+
   var specialAfflictionsList = [
   'Aberrant', 'Aggressive', 'Alcoholic', 'Anxious', 
   'Barbaric', 'Brainwashed', 
@@ -140,7 +131,7 @@ client.on("message", message => {
   'Aerial', 'Animate', 'Anointed', 'Amateur', 'Aquatic',
   'Bioluminescent', 'Bloody',
   'Celestial', 'Chittering', 'Cloaked', 'Crystalline',
-  'Dark', 'Defiant', 'Doomed', 'Drugged',
+  'Dark', 'Deadly', 'Defiant', 'Doomed', 'Drugged',
   'Evil',
   'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Fiery', 'Forsworn', 'Fossilized', 'Frozen',
   'Good', 'Great',
@@ -158,7 +149,7 @@ client.on("message", message => {
   'Banana', 'Brutal',
   'Coconutty', 'Corvid', 'Creepy',
   'Delicate', 'Dirty', 'Disgusting', 'Domesticated', 'Drooly', 'Drunken', 'Dungy',
-  'Foul',
+  'Foul', 'Funny',
   'Gelatinous', 'Gross',
   'Hilarious', 'Hungry',
   'Immoral',
@@ -195,6 +186,35 @@ client.on("message", message => {
   var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList, specialAfflictionsList, specialVirtuesList)
   var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
   var adjectivesEndingAllSingle = adjectivesEndingSinglePartList.concat(peopleAllList)
+  
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----Adverbs-----------------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  var baseAdverbsList = [
+  'Absentmindedly', 'Absolutely', 'Abstractedly', 'Abundantly', 'Adoringly', 'Aggressively', 'Attractively', 'Awkwardly',
+  'Beautifully', 'Briskly', 'Brutally',
+  'Cannibalistically', 'Carefully', 'Cautiously', 'Cheerfully', 'Cheerily', 'Competitively', 'Completely', 'Conservatively', 'Contritely', 'Copiously', 'Correctly',
+  'Deadly',
+  'Eagerly', 'Effectively', 'Effortlessly', 'Entirely', 'Excellently', 'Exceptionally', 'Excessively', 'Extravagantly', 'Extremely',
+  'Famously', 'Fantastically', 'Faultlessly', 'Feebly', 'Foolishly', 'Frantically', 'Furiously',
+  'Gently', 'Gingerly', 'Girlishly', 'Gorgeously', 'Gracefully', 'Graciously', 'Grimly', 'Guardedly',
+  'Half-heartedly', 'Happily', 'Heartlessly', 'Hungrily',
+  'Idiotically', 'Idly', 'Inattentively',
+  'Lazily', 'Lifelessly', 'Loyally',
+  'Magnificently', 'Maniacally', 'Masochistically', 'Mega', 'Mindlessly', 'Mutantically',
+  'Narcissistically', 'Nimbly', 'Not enough',
+  'Overly',
+  'Perfectly', 'Pathetically', 'Pleasantly', 'Plentifully', 'Practically', 'Primitively', 'Profusely', 'Properly', 'Purely',
+  'Quietly', 'Questioningly', 'Quite', 'Quizzically', 
+  'Ravenously', 'Really', 'Recklessly', 'Remorsefully', 'Rightly', 'Ruefully', 'Ruthlessly',
+  'Terribly', 'Thirstily', 'Too much',
+  'Sadistically', 'Savagely ', 'Silently', 'Slightly', 'Sloppily', 'Splendidly', 'Stupidly', 'Stylishly', 'Superbly', 'Sunnily', 'Super',
+  'Terribly', 'Totally',
+  'Ultra', 'Unabashedly', 'Unevenly', 'Urgently', 'Utterly',
+  'Very', 'Viciously',
+  'Warily', 'Weakly', 'Well', 'Wishfully', 'Witlessly', 'Wholly', 'Worriedly'
+  ];
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Creatures---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -367,64 +387,79 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var nameOneSyllableMale = [
-  'Bron',
+  'Ash',
+  'Bohb', 'Bron',
+  'Calh',
+  'Dalt', 'Drall', 'Drax',
   'Fiur',
-  'Drall', 'Drax',
-  'Gird',
-  'Kalt',
-  'Spint',
-  'Tark', 'Thant', 'Thrall', 'Torr', 'Tosch',
-  'Vey', 'Vlad',
-  'Yog'
+  'Gem', 'Gird', 'Grok', 'Grum', 'Gue',
+  'Hexx',
+  'Kalt', 'Kardd', 'Karth', 'Kel',
+  'Nef',
+  'Rab',
+  'Sark','Shyn', 'Sizz', 'Spint', 'Styg',
+  'Tark', 'Thant', 'Tharj', 'Thrall', 'Torr', 'Tosch',
+  'Vey', 'Vix', 'Voy','Vlad',
+  'Wegg',
+  'Xsi',
+  'Yog', 'Yott',
+  'Zanj'
   ];
   
   var nameFirstSyllable2Male = [
-  'A', 'Ag', 'Ais', 'Al', 'An', 'Ar', 'As', 'Ax', 'Ay',
-  'Bi', 'Bid', 'Bra', 'Brog',
-  'Chri', 'Clan', 'Cla', 'Cor', 'Cuth',
-  'Da', 'Dak', 'Dar', 'Dark', 'De', 'Del', 'Des', 'Dra',
-  'Ed',
-  'Faf', 'Fal',
-  'Gal', 'Ge', 'Ger', 'Gret', 'Grin', 'Gun',
-  'Ha', 'Har',
-  'I', 'Il', 'In',
-  'Jar',
-  'Ke', 'Kil', 'Kor',
-  'La', 'Loy',
-  'Ma', 'Mag', 'Mal', 'Man', 'Mer', 'Mul',
-  'Na', 'Nim',
-  'Or',
-  'Pe',
-  'Ran', 'Rash', 'Ren', 'Ri', 'Ro', 'Ry',
-  'San', 'Sha', 'Shak', 'Sol', 'Stra',
-  'Ta', 'Te', 'Tha', 'Tho', 'Thor',
-  'U',
-  'Vad', 'Var', 'Vi', 'Vo',
-  'War', 'Wys',
+  'A', 'Ag', 'Ais', 'Aj', 'Al', 'An', 'Ar', 'As', 'Ax', 'Ay',
+  'Ba', 'Bal', 'Bi', 'Bid', 'Bloom', 'Bof', 'Bra', 'Bro', 'Brog', 'Bu', 'Bun',
+  'Ca', 'Cal', 'Char', 'Chri', 'Clan', 'Cla', 'Cor', 'Cuth',
+  'Da', 'Dal', 'Dar', 'Dark', 'De', 'Del', 'Der', 'Des', 'Dra',
+  'E', 'Ed', 'El', 'En',
+  'Fa', 'Faf', 'Fah', 'Fal', 'Fer', 'Fi', 'Fla',
+  'Ga', 'Gag',  'Gal', 'Gan', 'Gar', 'Ge', 'Ger', 'Gil', 'Gim', 'Gra', 'Gret', 'Grin', 'Gru', 'Gun',
+  'Ha', 'Has', 'Hag', 'Har',
+  'I', 'Ig', 'Il', 'In',
+  'Jar', 'Je', 'Jer', 'Ju',
+  'Kas', 'Ke', 'Kil', 'Khor', 'Ko', 'Kor', 'Krel', 'Kur', 'Kyr',
+  'La', 'Lai', 'Lem', 'Lo', 'Loy',
+  'Ma', 'Mad', 'Mag', 'Mal', 'Man', 'Mer', 'Mon', 'Mul', 'Mun',
+  'Na', 'Ne', 'Nim', 'Nor', 'Ny',
+  'O', 'Or', 'Oys',
+  'Pa', 'Phe', 'Pir',
+  'Qu',
+  'Ra', 'Ran', 'Rash', 'Ri', 'Rit', 'Ro', 'Ru', 'Ry',
+  'San', 'Sha', 'Shak', 'Sip', 'Sol', 'Stra', 'Sy',
+  'Ta', 'Tar', 'Te', 'Ted', 'Tha', 'Tho', 'Thu', 'Thor', 'Tro', 'Ty',
+  'U', 'Ul', 'Uv',
+  'Vad', 'Ver', 'Vi', 'Vir', 'Vo',
+  'War', 'Wer', 'Wol', 'Wor', 'Wy', 'Wys',
   'Xar', 'Xe', 'Xy',
-  'Zu', 'Zy'
+  'Y',
+  'Zam', 'Zu', 'Zy'
   ];
   
   var nameSecondSyllable2Male = [
   'art',
-  'bac', 'bert', 'bin', 'bus',
+  'bac', 'bal', 'bar', 'berg', 'bert', 'bin', 'boz', 'bu', 'bus',
   'ce', 'chin', 'com', 'con', 'cus', 'cy',
-  'dal', 'dan', 'dar', 'dek', 'den', 'dgo', 'din', 'dro', 'dun',
-  'fax', 'fred',
-  'gal', 'gar', 'gash', 'gem', 'gham', 'gor', 'grim', 'gus',
-  'hild',
+  'dal', 'dalf', 'dan', 'dar', 'dek', 'den', 'din', 'dit', 'do', 'dor', 'dox', 'dro', 'dross', 'dun', 'dush',
+  'fax', 'fir', 'fner', 'fred', 'fric', 'fus',
+  'gal', 'gash', 'gem', 'gham', 'gil', 'go', 'gor', 'gos', 'grim', 'guk', 'gus',
+  'ham','hild',
+  'it',
   'jit',
-  'ka', 'ker', 'kes', 'kial', 'kin', 'kon',
-  'lach', 'land', 'ley', 'lich', 'lin', 'linn', 'lon', 'loo', 'lor', 'lu',
-  'mund', 'myr',
-  'nar', 'nard', 'nax', 'ne', 'ner', 'nis', 'nos', 'nosh', 'nus', 'nuz',
-  'on',
-  'raih', 'ralt', 'rek', 'rey', 'ric', 'rin', 'rion', 'rius', 'ron', 'rus',
-  'sa', 'sham', 'shnard', 'sis', 'stian', 'storn',
-  'tal', 'tan', 'te', 'thran', 'ti',
-  'van', 'vius', 'vor',
-  'wick', 'wulf',
-  'zar', 'zir'
+  'ka', 'ker', 'kes', 'kial', 'kin', 'kon', 'krus',
+  'lach', 'land', 'las', 'lem', 'lex', 'ley', 'li', 'lich', 'lid', 'lin', 'linn', 'lion', 'lis', 'lith', 'lon', 'loo', 'lor', 'lu',
+  'mar', 'mer', 'min', 'mog', 'mus', 'myr',
+  'nar', 'nard', 'nax', 'ne', 'ner', 'nis', 'no', 'nor', 'nos', 'nosh', 'nur', 'nus', 'nuz',
+  'od', 'ok', 'on',
+  'par', 'pih',
+  'raih', 'ralt', 'rath', 'rek', 'ren', 'ret', 'rey', 'ric', 'rin', 'rion', 'ris', 'rius', 'rlon', 'rog', 'ron', 'rosh', 'run', 'rus', 'ryk',
+  'sa', 'sham', 'shan', 'shnard', 'sin', 'sis', 'stan', 'stian', 'storn', 'stral',
+  'tal', 'tan', 'thas', 'thran', 'ti', 'tner', 'ton', 'tos', 'tram', 'trim',
+  'ur',
+  'van', 'ven', 'vian', 'vius', 'vis', 'vin', 'von', 'vor',
+  'wall', 'war', 'well', 'wick', 'win', 'wulf',
+  'xon',
+  'ym', 'ymr',
+  'zar', 'zil', 'zir', 'zis', 'zok', 'zuss'
   ];
 
   var nameFirstSyllable3Male = [
@@ -523,6 +558,7 @@ client.on("message", message => {
   
   var nameOneSyllableFemale = [
   'Ash',
+  'Beck',
   'Gem',
   'Styg',
   'Voy',
@@ -592,7 +628,7 @@ client.on("message", message => {
   'na', 'no',
   'o',
   'pha',
-  're', 'rien', 'ro',
+  're', 'rien', 'ro', 'ru',
   'ta', 'tien',
   'va'
   ];
@@ -1212,9 +1248,9 @@ client.on("message", message => {
       who = RecognizeWho(arguments[1], message, command);
 
       if(Chance(67))
-        message.channel.send(who + ' survived!.\n\n**"' + ReturnRandom(ddQuotesWinningBattleList) + '"**')
+        message.channel.send(who + ' survived!.\n\n' + MakeStringBold('"' + ReturnRandom(ddQuotesWinningBattleList) + '"'))
       else
-        message.channel.send('Deathblow, sorry.\n\n**"' + ReturnRandom(ddQuotesDeathblowList) + '"**')
+        message.channel.send(who + ' survived!.\n\n' + MakeStringBold('"' + ReturnRandom(ddQuotesDeathblowList) + '"'))
       break;
     
     //----------------------------------------------------------------------------------------------------------------------------
@@ -1650,7 +1686,7 @@ client.on("message", message => {
       who + ' is probably best person in the world!',
       who + ' = awesome.',
       who + ' is the coolest person I have ever seen!',
-      'I think ' + who + ' is hot, I would rate your look 11/10.',
+      'I think ' + who + ' is hot, I would rate ' + who + ' look 11/10.',
       'Even if ' + who + ' was cloned, ' + who + ' would still be one of a kind. And the better looking one.',
       'I would love to spend every minute of every day with ' + who + ' , but some days I actually have to get stuff done.',
       who + '\'s smile is proof that the best things in life are free.',
@@ -2263,7 +2299,7 @@ client.on("message", message => {
       'https://i.imgur.com/vL0G4rN.png',
       'And you made ' + ReturnRandom(peopleAllList) + ' cry' + additionalLol + '.',
       Rnd(100) + ' ' + GenerateRandomAnimal() + ' died because of that' + additionalLol + '.',
-      'That information just made me ' + ReturnRandom(baseAdjectivesList) + ' ' + ReturnRandom(adjectivesAfflictionsVirtuesList) + additionalLol + '.',
+      'That information just made me ' + ReturnRandom(baseAdverbsList) + ' ' + ReturnRandom(adjectivesAfflictionsVirtuesList) + additionalLol + '.',
       'That information just made me ' + ReturnRandom(adjectivesAfflictionsVirtuesList) + additionalLol + '.',
       'You need to visit ' + GenerateRandomPlace() + ' in order to get better' + additionalLol + '.',
       'That problem looks ' + GenerateRandomSize() + additionalLol + '.'
@@ -2288,7 +2324,7 @@ client.on("message", message => {
       var personifiedFirstPartArray = ['', 'Hmm. I\'d rate you ', 'I\'d give you a ', 'I\'d say '];
 
       var specialArray = [
-      'I think we need negative scale for that.',
+      'I think we need a negative scale for that.',
       'That is completely out of scale!',
       'Better than ' + ReturnRandom(dictatorsPeopleList) + '.',
       ReturnRandom(dictatorsPeopleList) + ' was better.',
@@ -2300,7 +2336,7 @@ client.on("message", message => {
       ];
 
       var personifiedSpecialArray = [
-      'I think we need negative scale to rate you.',
+      'I think we need a negative scale to rate you.',
       'You are completely out of scale!',
       'Better than ' + ReturnRandom(dictatorsPeopleList) + '.',
       ReturnRandom(dictatorsPeopleList) + ' was better than you.',
@@ -2348,7 +2384,7 @@ client.on("message", message => {
       else
         result = ReturnRandom(afflictionsList);
 
-      message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**\n\n**"' + ReturnRandom(quoteList) + '"**')
+      message.channel.send(who + '\'s resolve is tested...\n' + who + ' is **' + result + '**\n\n' + MakeStringBold('"' + ReturnRandom(quoteList) + '"'))
       break;
       
     //---------------------------------------------------------------------------------------------------------------------------
@@ -2445,6 +2481,65 @@ client.on("message", message => {
         message.channel.send(ReturnRandom(specialList))
       else
         message.channel.send(ReturnRandom(responseList))
+      break;
+      
+    //----------------------------------------------------------------------------------------------------------------------------
+    //-----specificname-------------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'specificname':
+      var finalString = '';
+      var i = 0;
+      var choice = 0;
+      
+      if(arguments[2] == null)
+        arguments[2] = ''
+        
+      if(arguments[4] < 0 || arguments[4] > 100 || arguments[4] == null)
+        arguments[4] = 1;
+      
+      if(arguments[1] == 'end')
+      {
+        if(arguments[3] == 'm')
+          choice = 1
+        else
+          choice = 2
+      }
+      else
+      {
+        if(arguments[3] == 'm')
+          choice = 3
+        else
+          choice = 4
+      } 
+
+      while(i != arguments[4])
+      {
+        i = i + 1;
+        
+        switch (choice)
+        {   
+          case 1:
+            finalString = finalString + GenerateRandomEndingMaleName(arguments[2])
+            break
+        
+          case 2:
+            finalString = finalString + GenerateRandomEndingFemaleName(arguments[2])
+            break
+            
+          case 3:
+            finalString = finalString + GenerateRandomStartingMaleName(arguments[2])
+            break
+            
+          case 4:
+            finalString = finalString + GenerateRandomStartingFemaleName(arguments[2])
+            break
+        }
+
+        if(i != arguments[4])
+          finalString = finalString + ', '
+      }
+
+      message.channel.send(finalString)
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
@@ -2840,6 +2935,7 @@ client.on("message", message => {
       '**resolve [x] : [x] = person**\n'+
       '**roll [x]d[y] : [x] = number of rolls, [y] = number of sides, "a" for armello dice**\n'+
       '**size**\n'+
+      '**specificname [x] [y] [z] [n]: [x] = "end" or "start", [y] = syllable, [z] = "m" or "f", [n] = number of generated names**\n'+
       '**weapon**\n'+
       '**weapons**\n'+
       '**when**\n'+
@@ -3031,6 +3127,110 @@ client.on("message", message => {
 
     return generatedRandomFemaleName;
   }
+  
+  function GenerateRandomStartingMaleName(syllable)
+  {
+    var generatedName = ''
+    var syllablesNumber = RndNo0(3)
+
+    switch (syllablesNumber)
+    {   
+      case '1':
+      case 1:
+        generatedName = syllable + ReturnRandom(nameSecondSyllable2Male)
+      break;
+      
+      case '2':
+      case 2:
+        generatedName = syllable + ReturnRandom(nameSecondSyllable3Male) + ReturnRandom(nameThirdSyllable3Male)
+      break;
+      
+      case '3':
+      case 3:
+        generatedName = syllable + ReturnRandom(nameSecondSyllable4Male) + ReturnRandom(nameThirdSyllable4Male) + ReturnRandom(nameFourthSyllable4Male)
+      break;
+    }
+
+    return generatedName;
+  }
+  
+  function GenerateRandomEndingMaleName(syllable)
+  {
+    var generatedName = ''
+    var syllablesNumber = RndNo0(3)
+
+    switch (syllablesNumber)
+    {   
+      case '1':
+      case 1:
+        generatedName = ReturnRandom(nameFirstSyllable2Male) + syllable
+      break;
+      
+      case '2':
+      case 2:
+        generatedName = ReturnRandom(nameFirstSyllable3Male) + ReturnRandom(nameSecondSyllable3Male) + syllable
+      break;
+      
+      case '3':
+      case 3:
+        generatedName = ReturnRandom(nameFirstSyllable4Male) + ReturnRandom(nameSecondSyllable4Male) + ReturnRandom(nameThirdSyllable4Male) + syllable
+      break;
+    }
+
+    return generatedName;
+  }
+  
+  function GenerateRandomStartingFemaleName(syllable)
+  {
+    var generatedName = ''
+    var syllablesNumber = RndNo0(3)
+
+    switch (syllablesNumber)
+    {   
+      case '1':
+      case 1:
+        generatedName = syllable + ReturnRandom(nameSecondSyllable2Female)
+      break;
+      
+      case '2':
+      case 2:
+        generatedName = syllable + ReturnRandom(nameSecondSyllable3Female) + ReturnRandom(nameThirdSyllable3Female)
+      break;
+      
+      case '3':
+      case 3:
+        generatedName = syllable + ReturnRandom(nameSecondSyllable4Female) + ReturnRandom(nameThirdSyllable4Female) + ReturnRandom(nameFourthSyllable4Female)
+      break;
+    }
+
+    return generatedName;
+  }
+  
+  function GenerateRandomEndingFemaleName(syllable)
+  {
+    var generatedName = ''
+    var syllablesNumber = RndNo0(3)
+
+    switch (syllablesNumber)
+    {   
+      case '1':
+      case 1:
+        generatedName = ReturnRandom(nameFirstSyllable2Female) + syllable
+      break;
+      
+      case '2':
+      case 2:
+        generatedName = ReturnRandom(nameFirstSyllable3Female) + ReturnRandom(nameSecondSyllable3Female) + syllable
+      break;
+      
+      case '3':
+      case 3:
+        generatedName = ReturnRandom(nameFirstSyllable4Female) + ReturnRandom(nameSecondSyllable4Female) + ReturnRandom(nameThirdSyllable4Female) + syllable
+      break;
+    }
+
+    return generatedName;
+  }
 
   function RndNo0(maximum)
   {
@@ -3039,17 +3239,22 @@ client.on("message", message => {
   
   function GenerateRandomPlace()
   {
-    return 'the ' + GenerateRandomString4(baseAdjectivesList, adjectivesAllList, placeMainList, adjectivesEndingAllSingle);
+    return 'the ' + GenerateRandomString4(baseAdverbsList, adjectivesAllList, placeMainList, adjectivesEndingAllSingle);
   }
   
   function GenerateRandomAnimal()
   {
-    return GenerateRandomString4(baseAdjectivesList, adjectivesAllList, animalsStandardList, adjectivesEndingAllSingle);
+    return GenerateRandomString4(baseAdverbsList, adjectivesAllList, animalsStandardList, adjectivesEndingAllSingle);
+  }
+  
+  function GenerateRandomRace()
+  {
+    return GenerateRandomString3Prefix(baseAdverbsList, adjectivesAllList, racesList);
   }
   
   function GenerateRandomWeapon()
   {
-    return GenerateRandomString4(baseAdjectivesList, adjectivesStandardList, itemsWeaponsList, adjectivesEndingAllSingle);
+    return GenerateRandomString4(baseAdverbsList, adjectivesStandardList, itemsWeaponsList, adjectivesEndingAllSingle);
   }
   
   function GenerateRandomItem()
@@ -3138,7 +3343,7 @@ client.on("message", message => {
     
     if(Chance(70))
     {
-      if(Chance(30))
+      if(Chance(50))
         finalString = ReturnRandom(firstList) + ' ';
         
       secondWord = ReturnRandom(secondList);
@@ -3164,7 +3369,7 @@ client.on("message", message => {
     
     if(Chance(70))
     {
-      if(Chance(30))
+      if(Chance(50))
         finalString = ReturnRandom(firstList) + ' ';
         
       secondWord = ReturnRandom(secondList);
