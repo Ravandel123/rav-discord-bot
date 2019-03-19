@@ -41,7 +41,7 @@ client.on("message", message => {
   'Matrix',
   'Nymphoid Barbarian in Dinosaur Hell',
   'Pterodactyl Woman from Beverly Hills',
-  'Rambo',
+  'Rambo', 'Rambo 2', 'Rambo 3',
   'Scary Movie', 'Shrek', 'Splatter University', 'Star Wars',
   'The Toxic Avenger', 'The Toxic Avenger, Part II', 'The Toxic Avenger, Part III: The Last Temptation of Toxie', 'Theodore Rex',
   'Zombie Island Massacre'
