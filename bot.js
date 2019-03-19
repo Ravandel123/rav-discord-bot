@@ -2877,7 +2877,7 @@ client.on("message", message => {
       'Peace be with you!',
       'Shut up baby.',
       'Excuse me?!',
-      'It's extremely rare for me to hear that.',
+      'It\'s extremely rare for me to hear that.',
       'Do you really think I care about your opinion lol?',
       'It\'s tough being such a sex symbol.',
       'Oh sorry, what? I was too busy thinking about how gorgeous I am.',
