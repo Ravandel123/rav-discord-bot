@@ -746,8 +746,8 @@ client.on("message", message => {
   var valuesIRLCurrencies = [
   'Bucks',
   '$',
-  'â‚¬',
-  'ÂŁ'
+  '€',
+  '£'
   ]
   
   var valuesFantasy = [
