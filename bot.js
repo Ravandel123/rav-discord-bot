@@ -791,7 +791,7 @@ client.on("message", message => {
   ]
 
   var verbsStandardContinuousHumanInteractionsList = [
-  'Apologizing', 'Assaulting', 'Awooing with',
+  'Apologizing to', 'Assaulting', 'Awooing with',
   'Beating', 'Buying',
   'Chirping with', 'Complimenting',
   'Dancing with', 'Drawing', 'Drinking with',
