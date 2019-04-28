@@ -92,7 +92,7 @@ client.on("message", message => {
   'Voldemort',
   'Malodorous',
   'Palpatine',
-  'Saruman', 'Sauron', 'Shao Kahn', 'Shinnok'
+  'Saruman', 'Sauron'
   ]
   
   var specialPeopleList = [
@@ -100,7 +100,7 @@ client.on("message", message => {
   ]
   
   var peopleStandardServerList = serverPeopleList.concat(specialPeopleList)
-  var peopleAllList = serverPeopleList.concat(dictatorsPeopleList, specialPeopleList)
+  var peopleAllList = serverPeopleList.concat(villainsPeopleList, specialPeopleList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Adjectives--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1317,7 +1317,7 @@ client.on("message", message => {
       'You = noob.',
       'You are probably worst person in the world!',
       'Uninstall discord pls.',
-      ReturnRandom(dictatorsPeopleList) + ' was better than you.',
+      ReturnRandom(villainsPeopleList) + ' was better than you.',
       'Can you just leave this server?',
       'I have calculated your IQ and it is exactly ' + Math.floor(Math.random() * 40) + '.',
       'I don\'t know how is that even possible to suck as much as you.',
@@ -2331,8 +2331,8 @@ client.on("message", message => {
       var specialArray = [
       'I think we need a negative scale for that.',
       'That is completely out of scale!',
-      'Better than ' + ReturnRandom(dictatorsPeopleList) + '.',
-      ReturnRandom(dictatorsPeopleList) + ' was better.',
+      'Better than ' + ReturnRandom(villainsPeopleList) + '.',
+      ReturnRandom(villainsPeopleList) + ' was better.',
       'Amazing!',
       'Incredible!',
       'Why you even wanna rate that?',
@@ -2343,8 +2343,8 @@ client.on("message", message => {
       var personifiedSpecialArray = [
       'I think we need a negative scale to rate you.',
       'You are completely out of scale!',
-      'Better than ' + ReturnRandom(dictatorsPeopleList) + '.',
-      ReturnRandom(dictatorsPeopleList) + ' was better than you.',
+      'Better than ' + ReturnRandom(villainsPeopleList) + '.',
+      ReturnRandom(villainsPeopleList) + ' was better than you.',
       'You are amazing!',
       'You are incredible!',
       'Why you even wanna rate yourself?',
@@ -3300,7 +3300,7 @@ client.on("message", message => {
     if(Chance(90))
       return ReturnRandom(peopleStandardServerList)
     else
-      return ReturnRandom(dictatorsPeopleList)
+      return ReturnRandom(villainsPeopleList)
   }
   
   function GenerateRandomString3(firstList, secondList, thirdList)
