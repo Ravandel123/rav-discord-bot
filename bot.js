@@ -2696,7 +2696,7 @@ client.on("message", message => {
       'Kamikaze', 'Kid', 'Kidnapper', 'Killer',
       'Lich',
       'Machine', 'Madman', 'Marionette', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Mutant',
-      'Necromancer', 'Neo-Nazi',
+      'Necromancer', 'Noob',
       'Pawn', 'Plaything', 'Prisoner', 'Prophet',
       'Robot',
       'Sadist', 'Servant', 'Slaughterer', 'Slave', 'Spy',
