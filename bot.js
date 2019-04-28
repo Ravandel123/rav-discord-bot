@@ -92,7 +92,7 @@ client.on("message", message => {
   'Voldemort',
   'Malodorous',
   'Palpatine',
-  'Saruman', 'Sauron'
+  'Saruman', 'Sauron', 'Shao Kahn', 'Shinnok'
   ]
   
   var specialPeopleList = [
