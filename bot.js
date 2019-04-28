@@ -85,8 +85,14 @@ client.on("message", message => {
   'AceBeef', 'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Griffin', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'Wolf Scribe', 'You'
   ]
   
-  var dictatorsPeopleList = [
-  'Caligula', 'Fidel Castro', 'Hitler', 'Kim Dzong Un', 'Mao Zedong', 'Obama', 'Putin', 'Stalin'
+  var villainsPeopleList = [
+  'Agent Smith',
+  'Darth Maul', 'Darth Vader',
+  'Hannibal Lecter',
+  'Voldemort',
+  'Malodorous',
+  'Palpatine',
+  'Saruman', 'Sauron'
   ]
   
   var specialPeopleList = [
@@ -194,7 +200,7 @@ client.on("message", message => {
   var baseAdverbsList = [
   'Absentmindedly', 'Absolutely', 'Abstractedly', 'Abundantly', 'Adoringly', 'Aggressively', 'Attractively', 'Awkwardly',
   'Beautifully', 'Briskly', 'Brutally',
-  'Cannibalistically', 'Carefully', 'Cautiously', 'Cheerfully', 'Cheerily', 'Competitively', 'Completely', 'Conservatively', 'Contritely', 'Copiously', 'Correctly',
+  'Cannibalistically', 'Carefully', 'Cautiously', 'Cheerfully', 'Cheerily', 'Competitively', 'Completely', 'Conservatively', 'Contritely', 'Copiously', 'Correctly', 'Cosmically',
   'Deadly',
   'Eagerly', 'Effectively', 'Effortlessly', 'Entirely', 'Excellently', 'Exceptionally', 'Excessively', 'Extravagantly', 'Extremely',
   'Famously', 'Fantastically', 'Faultlessly', 'Feebly', 'Foolishly', 'Frantically', 'Furiously',
@@ -2621,13 +2627,13 @@ client.on("message", message => {
       
       var specialList = [
       'nobody',
+      'noob',
       'nobody special',
       'a random person',
       'VIP',
       'someone from TV show',
       'someone from Anime',
       'someone funny',
-      'a Neo-Nazi',
       'a communist',
       'a marxist',
       'a savage'
@@ -2647,18 +2653,10 @@ client.on("message", message => {
       'Tyrrikz\'s',
       'Wolf Scribe\'s',
       'Trump\'s',
-      'Stalin\'s',
-      'Hitler\'s',
-      'Mao Zedong\'s',
       'Obama\'s',
       'Putin\'s',
-      'Kim Dzong Un\'s',
-      'Osama bin Laden\'s',
-      'Saddam Hussein\'s',
-      'Caligula\'s',
       'Bill Gates\'',
       'Albert Einstein\'s',
-      'Lenin\'s',
       'Robin Hood\'s',
       'King Arthur\'s',
       'Pope Francis\'s'
@@ -2763,16 +2761,16 @@ client.on("message", message => {
       'Evil',
       'Famine', 'Food', 'Fun', 'Fury',
       'the Gambling', 'the Garbage', 'Good',
-      'Hitler', 'Honor', 'Hunger',
+      'Honor', 'Hunger',
       'Immorality', 'Immortality',
       'Job', 'Justice',
       'Kidnapping',
       'Lemmy', 'Lobotomy',
-      'Madness', 'Mao Zedong', 'Me', 'Mercy', 'the Money', 'the Music',
+      'Madness', 'Me', 'Mercy', 'the Money', 'the Music',
       'the Nut', 'Nuts',
       'Pleasure', 'Power',
       'Ravandel', 'Retribution', 'the Rot', 'the Rumors',
-      'Seda', 'Seismic Activity', 'Shadows', 'Shea', 'Small Brain', 'Stalin', 'Starvation',
+      'Seda', 'Seismic Activity', 'Shadows', 'Shea', 'Small Brain', 'Starvation',
       'Ugliness', 'Urutaa', 'Uselessness',
       'Vardgo', 'Violence',
       'War', 'the Weed', 'Whipping', 'Wolf Scribe'
