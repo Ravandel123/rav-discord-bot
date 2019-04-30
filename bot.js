@@ -214,7 +214,7 @@ client.on("message", message => {
   'Perfectly', 'Pathetically', 'Pleasantly', 'Plentifully', 'Practically', 'Primitively', 'Profusely', 'Properly', 'Purely',
   'Quietly', 'Questioningly', 'Quite', 'Quizzically', 
   'Ravenously', 'Really', 'Recklessly', 'Remorsefully', 'Rightly', 'Ruefully', 'Ruthlessly',
-  'Sadistically', 'Savagely ', 'Silently', 'Slightly', 'Sloppily', 'Splendidly', 'Stupidly', 'Stylishly', 'Superbly', 'Sunnily', 'Super',
+  'Sadistically', 'Savagely', 'Silently', 'Slightly', 'Sloppily', 'Splendidly', 'Stupidly', 'Stylishly', 'Superbly', 'Sunnily', 'Super',
   'Terribly', 'Thirstily', 'Totally',
   'Ultra', 'Unabashedly', 'Unevenly', 'Urgently', 'Utterly',
   'Very', 'Viciously',
