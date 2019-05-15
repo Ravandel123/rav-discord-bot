@@ -25,6 +25,7 @@ client.on("message", message => {
   var multiplier;
   var multiplierBig;
   var i;
+  var j;
   
   var additionalLol = '';
   if(Chance(25))
