@@ -31,7 +31,6 @@ client.on("message", message => {
   ' lol', ' yes-yes'
   ]
   
-  ReturnRandom(specialList)
   var additionalLol = '';
   if(Chance(25))
     additionalLol = ReturnRandom(additionalWordList1)
