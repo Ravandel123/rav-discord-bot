@@ -28,7 +28,7 @@ client.on("message", message => {
   var j;
   
   var additionalWordList1 = [
-  ' lol', ' yes-yes'
+  ' lol', ', yes-yes'
   ]
   
   var additionalLol = '';
@@ -716,7 +716,7 @@ client.on("message", message => {
   'Lake', 'Land', 'Lighthouse',
   'Marsh', 'Moor', 'Mountain', 'Mountains',
   'Ocean', 'Outpost',
-  'Plains', 'Planet', 'Prison', 'Pyramid',
+  'Palace', 'Plains', 'Planet', 'Prison', 'Pyramid',
   'Rainforest', 'Refuge', 'River', 'Ruins',
   'Sanctum', 'School', 'Sea', 'Sewers', 'Ship', 'Space', 'Stronghold', 'Swamp',
   'Temple', 'Tomb', 'Tower', 'Town', 'Township', 'Treetops',
