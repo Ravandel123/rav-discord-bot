@@ -27,9 +27,15 @@ client.on("message", message => {
   var i;
   var j;
   
+  var additionalWordList1 = [
+  ' lol', ' yes-yes'
+  ]
+  
+  ReturnRandom(specialList)
   var additionalLol = '';
   if(Chance(25))
-    additionalLol = ' lol';
+    additionalLol = ReturnRandom(additionalWordList1)
+    
 
   var serialsList = [
   'Alladin',
@@ -2627,13 +2633,13 @@ client.on("message", message => {
       who = RecognizeWho(arguments[1], message, command);
       
       var specialList = [
-      'nobody',
-      'noob',
+      'a nobody',
+      'a noob',
       'nobody special',
       'a random person',
-      'VIP',
-      'someone from TV show',
-      'someone from Anime',
+      'a VIP',
+      'someone from a TV show',
+      'someone from the Anime',
       'someone funny',
       'a communist',
       'a marxist',
