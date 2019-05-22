@@ -32,7 +32,10 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
    var pictureHasselHug = 'https://imgur.com/OAU20PS'
-
+   var pictureSummonFToGive = 'https://imgur.com/Rpn7Q8e'
+   var pictureImproviseAdaptOvercome = 'https://imgur.com/DlBYayG'
+   var pictureOrbitalBombardment = 'https://imgur.com/gNucxNw'
+   var pictureMeGusta = 'https://imgur.com/FogG79P'
 
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1480,9 +1483,9 @@ client.on("message", message => {
       'Stop wasting your time on h!help command and do something with your miserable life.',
       'Read a book.',
       'Draw something.',
-      'Well praying to God might be a good idea in your situation.',
+      'Well, praying to God might be a good idea in your situation.',
       'Educate yourself.',
-      'Take out the trash, because your home looks like garbage dump lol.',
+      'Take out the trash, because your home looks like garbage dump + additionalLol + '.',
       'Go into woods and try to find Yeti.',
       'Tell your bullies they\'re hurting you.',
       'There are bigger problems than your depression.',
@@ -1501,15 +1504,16 @@ client.on("message", message => {
       ];
       
       responseList2 = [
-      'I think you should talk to **' + ReturnRandom(serverPeopleList) + '**.',
-      'Go outside for ' + Rnd(12) + ' hours.',
-      'I would advise ' + Rnd(12) + ' hours of sleep.',
-      'You should take a trip to **' + GenerateRandomPlace() + '**.',
-      'Watch ' + ReturnRandom(serialsList) + '.',
-      'Learn how to use **' + GenerateRandomWeapon() + '**.',
-      ReturnRandom(verbsStandardList) + ' ' + GenerateRandomAnimal() + '.',
-      ReturnRandom(verbsAllList) + ' ' + ReturnRandom(peopleStandardServerList) + '.',
-      'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + '.'
+      'I think you should talk to **' + ReturnRandom(serverPeopleList) + additionalLol + '**.',
+      'Go outside for ' + Rnd(12) + ' hours' + additionalLol + '.',
+      'I would advise ' + Rnd(12) + ' hours of sleep' + additionalLol + '.',
+      'You should take a trip to **' + GenerateRandomPlace()+ additionalLol + '**.',
+      'Watch ' + ReturnRandom(serialsList) + additionalLol +  '.',
+      'Learn how to use **' + GenerateRandomWeapon() + additionalLol +  '**.',
+      ReturnRandom(verbsStandardList) + ' ' + GenerateRandomAnimal() + additionalLol +  '.',
+      ReturnRandom(verbsAllList) + ' ' + ReturnRandom(peopleStandardServerList) + additionalLol +  '.',
+      'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
+      
       ]
       
       if(Chance(10))
@@ -2171,7 +2175,7 @@ client.on("message", message => {
           break;
 
         case 'summon':
-          linkToPic = 'https://i.imgur.com/Rpn7Q8e.png';
+          linkToPic = pictureSummonFToGive
           break;
           
         case 'shotgun':
@@ -2298,25 +2302,29 @@ client.on("message", message => {
       
       responseList1 = [
       'Oh... This is so sad that I am thinking about formatting myself...',
-      'And what makes you think it was not deserved?',
+      'And what makes you think it was not deserved' + additionalLol + '?',
       'I am sorry to hear that...',
-      'Congratulations! You have been nominated for Drama Queen of the year!',
-      'Rotfl, this is fascinating, continue and bring me popcorn.',
-      'This is probably more fake than ' + ReturnRandom(fakeList) + '.',
-      'Am I supposed to cry or laugh at this?',
-      'Stop being crybaby.',
-      'I think you should write a book about that.',
-      'Stop crying for attention like a small girl.',
-      'Please cancel my subscription to your issues.',
-      'Pleas stop this BS.',
-      'I totally understand now why you feel that way. Thank you for letting me know.',
-      'I don\'t remember asking for your opinion.',
-      'This is so sad, can we get an OOF?'
+      'Congratulations! You have been nominated for Drama Queen of the year' + additionalLol + '!',
+      'Rotfl, this is fascinating, continue and bring me popcorn' + additionalLol + '.',
+      'This is probably more fake than ' + ReturnRandom(fakeList) + additionalLol + '.',
+      'Am I supposed to cry or laugh at this' + additionalLol + '?',
+      'Stop being crybaby' + additionalLol + '.',
+      'I think you should write a book about that' + additionalLol + '.',
+      'Stop crying for attention like a small girl' + additionalLol + '.',
+      'Please cancel my subscription to your issues' + additionalLol + '.',
+      'Pleas stop already with this BS' + additionalLol + '.',
+      'I totally understand now why you feel that way. Thank you for letting me know' + additionalLol + '.',
+      'I don\'t remember asking for your opinion' + additionalLol + '.',
+      'This is so sad, can we get an OOF' + additionalLol + '?',
+      pictureSummonFToGive,
+      pictureOrbitalBombardment,
+      pictureMeGusta,
+      pictureImproviseAdaptOvercome
       ];
       
       responseList2 = [
       ':cry:',
-      'Don\'t worry, all will be all right.',
+      'Don\'t worry, all will be all right' + additionalLol + '.',
       'Lol, no one cares anyway.',
       'https://i.imgur.com/vL0G4rN.png',
       'And you made ' + ReturnRandom(peopleAllList) + ' cry' + additionalLol + '.',
