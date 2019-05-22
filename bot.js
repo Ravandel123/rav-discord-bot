@@ -1485,7 +1485,7 @@ client.on("message", message => {
       'Draw something.',
       'Well, praying to God might be a good idea in your situation.',
       'Educate yourself.',
-      'Take out the trash, because your home looks like garbage dump + additionalLol + '.',
+      'Take out the trash, because your home looks like garbage dump' + additionalLol + '.',
       'Go into woods and try to find Yeti.',
       'Tell your bullies they\'re hurting you.',
       'There are bigger problems than your depression.',
