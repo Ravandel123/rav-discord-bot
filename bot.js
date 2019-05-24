@@ -2651,7 +2651,7 @@ client.on("message", message => {
       who = RecognizeWho(arguments[1], message, command);
       
       var specialList = [
-      'a nobody',
+      'nobody',
       'a noob',
       'nobody special',
       'a random person',
