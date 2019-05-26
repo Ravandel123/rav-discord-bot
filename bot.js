@@ -2875,8 +2875,8 @@ client.on("message", message => {
     //----------test--------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'test':
-      message.channel.send(ReturnRandom(TransformToProperEndingApostrophe(everybody))
-      message.channel.send(ReturnRandom(TransformToProperEndingApostrophe(nobody))
+      message.channel.send(TransformToProperEndingApostrophe(everybody))
+      message.channel.send(TransformToProperEndingApostrophe(nobody))
     break;
       
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
