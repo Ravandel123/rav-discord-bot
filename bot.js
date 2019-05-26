@@ -115,12 +115,24 @@ client.on("message", message => {
   'Saruman', 'Sauron'
   ]
   
+  var protagonistsPeopleList = [
+  'King Arthur',
+  'Neo',
+  'Robin Hood'
+  ]
+  
+  var famousPeopleList = [
+  'Albert Einstein',
+  'Bill Gates',
+  'Pope Francis'
+  ]
+
   var specialPeopleList = [
   'Everybody', 'Nobody'
   ]
   
   var peopleStandardServerList = serverPeopleList.concat(specialPeopleList)
-  var peopleAllList = serverPeopleList.concat(villainsPeopleList, specialPeopleList)
+  var peopleAllList = serverPeopleList.concat(villainsPeopleList, protagonistsPeopleList, specialPeopleList, famousPeopleList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Adjectives--------------------------------------------------------------------------------------------------------------------------------------------------
@@ -253,7 +265,7 @@ client.on("message", message => {
   'Elephant', 'Ermine',
   'Ferret', 'Fish', 'Fox',
   'Gecko', 'Giraffe', 'Goat', 'Gorilla',
-  'Hedgehog', 'Hippo', 'Hornbill', 'Hornet', 'Horse',
+  'Hare', 'Hedgehog', 'Hippo', 'Hornbill', 'Hornet', 'Horse',
   'Iguana',
   'Llama','Lion', 'Lizard', 'Lynx',
   'Macaw', 'Monkey', 'Moth', 'Mouse',
@@ -267,6 +279,55 @@ client.on("message", message => {
   'Wasp', 'Whale', 'Wolf', 'Worm',
   'Zebra'
   ]
+  
+  var classesStandardList = [
+  'Abbot', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant',
+  'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Baron', 'Barrator', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
+  'Cadet', 'Calligrapher', 'Cantor', 'Captain', 'Cartographer', 'Catcher', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chevalier', 'Chimneysweep', 'Coachman', 'Collector','Courtesan', 'Countess', 'Cultist', 'Convict', 'Courtier', 'Crusader', 
+  'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
+  'Elder', 'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
+  'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Fool', 'Foreman', 'Forger', 'Freeholder', 'Friar', 'Frogwive',
+  'Gambler', 'Geomancer', 'Guard', 'Guardian', 'Gunner',
+  'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
+  'Illusionist', 'Initiate', 'Innkeeper', 'Interrogator', 'Inquisitor',
+  'Jailer', 'Jester', 'Journeyman',
+  'Kamikaze', 'Kidnapper', 'Killer', 'King', 'Knight', 'Knight Errant', 'Kossar',
+  'Lamplighter', 'Laner', 'Lay', 'Leper', 'Lich', 'Litigant', 'Lord', 'Lumberjack',
+  'Madman', 'Mage', 'Magician', 'Maiden', 'Man-at-Arms', 'Marauder', 'Mariner', 'Master', 'Mate', 'Mediator', 'Mentor', 'Mercenary', 'Merchant', 'Messenger', 'Militiaman', 'Miner', 'Minstrel', 'Mohican', 'Monk', 'Muleskinner', 'Musician', 'Mystic',
+  'Navigator', 'Necromancer', 'Necrodancer', 'Nekomancer', 'Ninja', 'Noble', 'Nomad', 
+  'Occultist', 'Outlaw', 'Outrider', 
+  'Painter', 'Paladin', 'Pamphleteer', 'Peasant', 'Penitent', 'Physician', 'Pilgrim', 'Pistolier', 'Politician', 'Prelate', 'Priest', 'Priestess', 'Prisoner', 'Prophet', 'Protagonist',
+  'Queen',
+  'Racketeer', 'Raconteur', 'Rapscallion', 'Raider', 'Ranger', 'Rat Catcher', 'Reaver', 'Riverwarden', 'Roadwarden', 'Robber', 'Rogue', 'Ruffian', 'Ruler', 'Runebearer', 'Runesmith',
+  'Sailor','Samurai', 'Scholar', 'Scout', 'Scribe', 'Seaman', 'Seeker', 'Seer', 'Sergeant', 'Servant', 'Shaman', 'Shepherd', 'Shieldbreaker', 'Sister', 'Skald', 'Skimmer', 'Slaughterer', 'Slave', 'Slaver', 'Slayer', 'Smuggler', 'Soldier', 'Sorcerer', 'Spy', 'Squire', 'Stevedore', 'Steward', 'Strider', 'Surgeon', 'Student',
+  'Tamer', 'Targeteer', 'Thief', 'Thug', 'Toll Keeper', 'Torturer', 'Tradesman', 'Trainer', 'Trapper', 
+  'Vagabond', 'Valet', 'Valkyrie', 'Vendor', 'Veteran', 'Viceroy', 'Vigilant',
+  'Walker', 'Wanderer', 'Warden', 'Warleader', 'Warlock', 'Warlord', 'Warrior', 'Watchman', 'Witch', 'Witcher', 'Wizard', 'Whaler', 'Woodsman', 'Wrecker',
+  'Yeoman',
+  'Zaelot'
+  ];
+  
+  var classesFunnyList = [
+  'Abomination', 'Android', 'Animal', 'Automaton', 'Avatar',
+  'Bastard', 'Beast', 
+  'Cannibal', 'Colossus', 'Construct', 'Cyborg',
+  'Device',
+  'Friend', 'Furry',
+  'Garbage',
+  'Idiot',
+  'Kid', 
+  'Machine', 'Masochist', 'Marionette', 'Monster', 'Mutant', 
+  'Noob',
+  'Pawn', 
+  'Primitive',
+  'Robot',
+  'Sadist', 'Savage',
+  'Test Subject', 'Toy', 'Troglodyte', 'Troll',
+  'Zombie'
+  ]
+  
+  var classesFullList = classesStandardList.concat(classesFunnyList)
+  var creaturesFullList = animalsStandardList.concat(classesStandardList, classesFunnyList)
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Darkest Dungeon---------------------------------------------------------------------------------------------------------------------------------------------
@@ -1169,72 +1230,10 @@ client.on("message", message => {
       who + ' would make an excellent '
       ];
 
-      finalString = GenerateRandomClass();
       basicString = ReturnRandom(basePart);
 
       if(basicString != basePart[3] && basicString != basePart[7])
-      {
-        switch(finalString.charAt(0))
-        {
-          case 'A':
-          case 'a':
-          case 'E':
-          case 'e':
-          case 'I':
-          case 'i':
-          case 'O':
-          case 'o':
-          case 'U':
-          case 'u':
-          case 'Y':
-          case 'y':
-          basicString = basicString + 'an ';
-          break;
-
-          case 'B':
-          case 'b':
-          case 'C':
-          case 'c':
-          case 'D':
-          case 'd':
-          case 'F':
-          case 'f':
-          case 'G':
-          case 'g':
-          case 'H':
-          case 'h':
-          case 'J':
-          case 'j':
-          case 'K':
-          case 'k':
-          case 'L':
-          case 'l':
-          case 'M':
-          case 'm':
-          case 'N':
-          case 'n':
-          case 'Q':
-          case 'q':
-          case 'P':
-          case 'p':
-          case 'R':
-          case 'r':
-          case 'S':
-          case 's':
-          case 'T':
-          case 't':
-          case 'V':
-          case 'v':
-          case 'W':
-          case 'w':
-          case 'X':
-          case 'x':
-          case 'Z':
-          case 'z':
-          basicString = basicString + 'a ';
-          break;
-        }
-      }
+        basicString = basicString + AddAnA(basicString)
 
       message.channel.send(basicString + '**' + GenerateRandomClass() + '**.')
       break;
@@ -1507,13 +1506,13 @@ client.on("message", message => {
       'I think you should talk to **' + ReturnRandom(serverPeopleList) + additionalLol + '**.',
       'Go outside for ' + Rnd(12) + ' hours' + additionalLol + '.',
       'I would advise ' + Rnd(12) + ' hours of sleep' + additionalLol + '.',
-      'You should take a trip to **' + GenerateRandomPlace()+ additionalLol + '**.',
+      'You should take a trip to **' + GenerateRandomPlace() + additionalLol + '**.',
       'Watch ' + ReturnRandom(serialsList) + additionalLol +  '.',
       'Learn how to use **' + GenerateRandomWeapon() + additionalLol +  '**.',
       ReturnRandom(verbsStandardList) + ' ' + GenerateRandomAnimal() + additionalLol +  '.',
       ReturnRandom(verbsAllList) + ' ' + ReturnRandom(peopleStandardServerList) + additionalLol +  '.',
+      'Have you tried going to ' + GenerateRandomPlace() + ' and using ' + GenerateRandomWeapon() + additionalLol +  '?',
       'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
-      
       ]
       
       if(Chance(10))
@@ -2326,7 +2325,7 @@ client.on("message", message => {
       ':cry:',
       'Don\'t worry, all will be all right' + additionalLol + '.',
       'Lol, no one cares anyway.',
-      'https://i.imgur.com/vL0G4rN.png',
+      pictureHasselHug,
       'And you made ' + ReturnRandom(peopleAllList) + ' cry' + additionalLol + '.',
       Rnd(100) + ' ' + GenerateRandomAnimal() + ' died because of that' + additionalLol + '.',
       'That information just made me ' + ReturnRandom(baseAdverbsList) + ' ' + ReturnRandom(adjectivesAfflictionsVirtuesList) + additionalLol + '.',
@@ -2648,6 +2647,7 @@ client.on("message", message => {
     case 'whois':
       var finalString = '';
       var mainList;
+      var vPerson;
       who = RecognizeWho(arguments[1], message, command);
       
       var specialList = [
@@ -2662,29 +2662,6 @@ client.on("message", message => {
       'a communist',
       'a marxist',
       'a savage'
-      ];
-      
-      var whoList = [
-      'my',
-      'Doctor Pumpkins\'',
-      'Vardgo\'s',
-      'Ravandel\'s',
-      'Urutaa\'s',
-      'Radian\'s', 'Ruby\'s',
-      'Lemmy\'s',
-      'Shea\'s',
-      'Seda\'s',
-      'Izzy\'s',
-      'Tyrrikz\'s',
-      'Wolf Scribe\'s',
-      'Trump\'s',
-      'Obama\'s',
-      'Putin\'s',
-      'Bill Gates\'',
-      'Albert Einstein\'s',
-      'Robin Hood\'s',
-      'King Arthur\'s',
-      'Pope Francis\'s'
       ];
       
       var firstList = [
@@ -2729,11 +2706,15 @@ client.on("message", message => {
       'Zombie'
       ]
       
+      if(Chance(50))
+        person = TransformToProperEndingApostrophe(ReturnRandom(peopleAllList))
+      else
+        person = 'my'
+      
       if(Chance(30))
       {
         var mainList = [
         'I think I saw ' + who + ' in ' + GenerateRandomPlace() + '.',
-        who + ' looks like my ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList) + '.',
         who + ' was probably with me in ' + GenerateRandomPlace() + '.',
         'I rescued ' + who + ' from ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
         who + ' was that ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
@@ -2747,9 +2728,9 @@ client.on("message", message => {
         else
         {
           if(Chance(50))
-            finalString = ReturnRandom(whoList) + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList);
+            finalString = person + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList);
           else
-            finalString = ReturnRandom(whoList) + ' ' + ReturnRandom(secondList);
+            finalString = person + ' ' + ReturnRandom(secondList);
         }
 
         mainList = [
@@ -2774,7 +2755,7 @@ client.on("message", message => {
       'Because I say so.',
       'Because you are noob lol.',
       'Because those are orders from the Queen.',
-      'You won\'t understand my answer with such a low IQ anyway, so I won\'t even bother explaining it to you.',
+      'You won\'t understand my answer with such a low IQ anyway, so I don\'t even bother explaining it to you.',
       'Your small mind is unable to grasp that.'
       ];
     
@@ -2857,9 +2838,9 @@ client.on("message", message => {
       }
       
       responseList = [
-      'Because of ' + reason + '.',
-      'It\'s caused by ' + reason + '.',
-      'Reason of that is clear -  ' + reason + '.'
+      'Because of ' + reason + additionalLol + '.',
+      'It\'s caused by ' + reason + additionalLol + '.',
+      'Reason of that is clear -  ' + reason + additionalLol + '.',
       ];
       
       message.channel.send(ReturnRandom(responseList))
@@ -3001,23 +2982,45 @@ client.on("message", message => {
       case 'u':
       case 'Y':
       case 'y':
-        return 'an ';
-        break;
+        return 'an '
 
       default:
-      return 'a ';
+        return 'a '
     }
   }
 
   function ReturnLastChar(array)
   {
-    var x; 
-    x = array.charAt(array.length - 1);
-    return x;
+    var x;
+    x = array.charAt(array.length - 1)
+    return x
   }
   
   function AddEndingApostrophe(stringToCheck)
   {
+    if(ReturnLastChar(stringToCheck) == 's')
+      return '\''
+    else
+      return '\'s'
+  }
+  
+  function TransformToProperEndingApostrophe(stringToCheck)
+  {
+    switch (choice)
+    {   
+      case 'my':
+        return stringToCheck
+    
+      case 'nobody':
+        return 'no one\'s'
+        
+      case 'everybody':
+        return 'everyone\'s'
+        
+      default:
+        return stringToCheck + AddEndingApostrophe(stringToCheck)
+    }
+
     if(ReturnLastChar(stringToCheck) == 's')
       return '\''
     else
@@ -3475,33 +3478,6 @@ client.on("message", message => {
       'Troupe'
       ];
 
-      var secondPart = [
-      'Abbot', 'Abomination', 'Admiral', 'Agitator', 'Amazon', 'Ambassador', 'Anchorite', 'Android', 'Animal', 'Antiquarian', 'Apothecary', 'Arbalest', 'Archer', 'Artillerist', 'Artisan', 'Artist', 'Assassin', 'Astrologer', 'Ataman', 'Attendant', 'Automaton', 'Avatar',
-      'Badlander', 'Bailiff', 'Bandit', 'Barbarian', 'Barber', 'Bard', 'Baron', 'Barrator', 'Beast', 'Berserker', 'Boatman', 'Bodyguard', 'Bombardier', 'Bomber','Bondsman', 'Bonepicker', 'Breaker', 'Brigand', 'Brother', 'Burgher', 'Burglar', 'Butcher',
-      'Cadet', 'Calligrapher', 'Cannibal', 'Cantor', 'Captain', 'Cartographer', 'Catcher', 'Catechist', 'Cenobite', 'Champion', 'Chanter', 'Charlatan', 'Chevalier', 'Chimneysweep', 'Coachman', 'Collector', 'Colossus', 'Construct', 'Courtesan', 'Countess', 'Cultist', 'Convict', 'Courtier', 'Crusader', 'Cyborg',
-      'Defender', 'Demagogue', 'Dilettante', 'Doctor', 'Drover', 'Druid', 'Duelist',
-      'Elder', 'Embalmer', 'Enforcer', 'Engineer', 'Entertainer', 'Envoy', 'Exciseman', 'Executioner', 'Exorcist', 'Experiment', 'Explorer',
-      'Farmer', 'Ferryman', 'Fighter', 'Firefighter', 'Fisherman', 'Flagellant', 'Follower', 'Fool', 'Foreman', 'Forger', 'Freeholder', 'Friar', 'Frogwive',
-      'Gambler', 'Geomancer', 'Guard', 'Guardian', 'Gunner',
-      'Hage', 'Hellion', 'Herald', 'Highwayman', 'Hunter',
-      'Illusionist', 'Initiate', 'Innkeeper', 'Interrogator', 'Inquisitor',
-      'Jailer', 'Jester', 'Journeyman',
-      'Kamikaze', 'Killer', 'King', 'Knight', 'Knight Errant', 'Kossar',
-      'Lamplighter', 'Laner', 'Lay', 'Leper', 'Lich', 'Litigant', 'Lord', 'Lumberjack',
-      'Machine', 'Madman', 'Mage', 'Magician', 'Maiden', 'Man-at-Arms', 'Marauder', 'Mariner', 'Marionette', 'Masochist', 'Master', 'Mate', 'Mediator', 'Mentor', 'Mercenary', 'Merchant', 'Messenger', 'Militiaman', 'Miner', 'Minstrel', 'Mohican', 'Monk', 'Monster', 'Muleskinner', 'Musician', 'Mutant', 'Mystic',
-      'Navigator', 'Necromancer', 'Necrodancer', 'Nekomancer', 'Ninja', 'Noble', 'Nomad', 
-      'Occultist', 'Outlaw', 'Outrider', 
-      'Painter', 'Paladin', 'Pamphleteer', 'Peasant', 'Penitent', 'Physician', 'Pilgrim', 'Pistolier', 'Politician', 'Prelate', 'Priest', 'Priestess', 'Prisoner', 'Prophet', 'Protagonist',
-      'Queen',
-      'Racketeer', 'Raconteur', 'Rapscallion', 'Raider', 'Ranger', 'Rat Catcher', 'Reaver', 'Riverwarden', 'Roadwarden', 'Robber', 'Robot', 'Rogue', 'Ruffian', 'Ruler', 'Runebearer', 'Runesmith',
-      'Sadist', 'Sailor','Samurai', 'Scholar', 'Scout', 'Scribe', 'Seaman', 'Seeker', 'Seer', 'Sergeant', 'Servant', 'Shaman', 'Shepherd', 'Shieldbreaker', 'Sister', 'Skald', 'Skimmer', 'Slaughterer', 'Slave', 'Slaver', 'Slayer', 'Smuggler', 'Soldier', 'Sorcerer', 'Spy', 'Squire', 'Stevedore', 'Steward', 'Strider', 'Surgeon', 'Student',
-      'Tamer', 'Targeteer', 'Thief', 'Thug', 'Toll Keeper', 'Torturer', 'Tradesman', 'Trainer', 'Trapper', 'Troglodyte', 'Troll', 
-      'Vagabond', 'Valet', 'Valkyrie', 'Vendor', 'Veteran', 'Viceroy', 'Vigilant',
-      'Walker', 'Wanderer', 'Warden', 'Warleader', 'Warlock', 'Warlord', 'Warrior', 'Watchman', 'Witch', 'Witcher', 'Wizard', 'Whaler', 'Woodsman', 'Wrecker',
-      'Yeoman',
-      'Zaelot'
-      ];
-
       var lastPart = [
       'Bookmaster Awre',
       'the Blazing Sun', 'Blood','the Booze',
@@ -3572,7 +3548,7 @@ client.on("message", message => {
       
       if(typeOfCheck == 'count')
       {
-        return ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * secondPart.length * lastPart1.length * (lastPart2.length / 2));
+        return ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * classesFullList.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * classesFullList.length * lastPart1.length * (lastPart2.length / 2));
       }
       
       if(Math.floor(Math.random() * 10) < 5)
@@ -3594,7 +3570,7 @@ client.on("message", message => {
         finalString = finalString + thirdWord + ' ';
       }
 
-      fourthWord = ReturnRandom(secondPart);
+      fourthWord = ReturnRandom(classesFullList);
       if(thirdWord != '' || fourthWord != secondWord)
         finalString = finalString + fourthWord;
 
