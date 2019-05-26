@@ -76,7 +76,6 @@ client.on("message", message => {
   'Go Go Club', 'Gym',
   'Mephit Furmeet', 'Middle Earth', 'Midwest FurFest',
   'Rainfurrest', 'Rocky Mountain Fur Con',
-  'Tower',
   'VancouFur'
   ]
   
@@ -137,10 +136,19 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Adjectives--------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-  var afflictionsList = ['Abusive', 'Fearful', 'Hopeless', 'Irrational', 'Masochistic', 'Paranoid', 'Rapturous', 'Selfish'];
+  var afflictionsList = ['Abusive', 'Fearful', 'Hopeless', 'Irrational', 'Masochistic', 'Paranoid', 'Rapturous', 'Selfish']
   
-  var virtuesList = ['Courageous', 'Focused', 'Powerful', 'Stalwart', 'Vigorous'];
+  var virtuesList = ['Courageous', 'Focused', 'Powerful', 'Stalwart', 'Vigorous']
 
+  var coloursList = [
+  'Black', 'Blue',
+  'Green', 'Grey',
+  'Pink',
+  'Red',
+  'White',
+  'Yellow'
+  ]
+  
   var specialAfflictionsList = [
   'Aberrant', 'Aggressive', 'Alcoholic', 'Anxious', 
   'Barbaric', 'Brainwashed', 
@@ -155,7 +163,7 @@ client.on("message", message => {
   'Pathethic', 'Perverse', 'Primitive', 'Psychopathic',
   'Racist', 'Ravenous',
   'Sadistic', 'Stupid'
-  ];
+  ]
   
   var specialVirtuesList = [
   'Clever', 
@@ -163,45 +171,44 @@ client.on("message", message => {
   'Mighty', 
   'Relentless', 
   'Undying'
-  ];
+  ]
   
   var adjectivesNormalList = [
-  'Aerial', 'Animate', 'Anointed', 'Amateur', 'Aquatic',
-  'Bioluminescent', 'Bloody',
-  'Celestial', 'Chittering', 'Cloaked', 'Crystalline',
-  'Dark', 'Deadly', 'Defiant', 'Doomed', 'Drugged',
-  'Evil',
-  'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Feisty', 'Fiery', 'Forsworn', 'Fossilized', 'Frozen',
-  'Good', 'Great',
-  'Haunted', 'Hideous', 'High', 'Horned', 'Horrible', 'Huge', 
-  'Immortal', 'Innocent',
-  'Leper', 'Lesser', 'Little', 
-  'Pale', 
-  'Sacred', 'Sacrifical', 'Scary', 'Shamanistic',
-  'Vile',
-  'Wild'
-  ];
+  'Aerial', 'Aeronautic', 'Agile', 'Animate', 'Aquatic',
+  'Clever', 'Cloaked', 'Convinced',
+  'Faceless', 'Faded', 'Faithful', 'Fated', 'Forsworn', 'Frozen',
+  'Great', 'Greater',
+  'High', 'Horned', 'Hypnotic', 
+  'Immortal',
+  'Judicial',  
+  'Lesser', 'Living', 'Lunar',
+  'Pale',
+  'Solar', 'Stormful', 'Strong', 
+  'Winged', 'Wise'
+  ]
 
   var adjectivesFunnyList = [
-  'Abominable', 'Absurd', 'Adorable', 'Amusing', 'Awesome', 'Awful',
-  'Banana', 'Brutal',
-  'Coconutty', 'Corvid', 'Creepy',
-  'Delicate', 'Dirty', 'Disgusting', 'Domesticated', 'Drooly', 'Drunken', 'Dungy',
-  'Foul', 'Funny',
-  'Gelatinous', 'Gross',
-  'Hilarious', 'Hungry',
-  'Immoral',
-  'Lobotomized',
-  'Monstrous',
+  'Abominable', 'Absurd', 'Adorable', 'Amateur', 'Amusing', 'Anointed', 'Awesome', 'Awful',
+  'Banana', 'Bioluminescent', 'Bloody', 'Brutal',
+  'Celestial', 'Coconutty', 'Corvid', 'Creepy', 'Crystalline',
+  'Dark', 'Deadly', 'Defiant', 'Delicate', 'Dirty', 'Disgusting', 'Domesticated', 'Doomed', 'Drooly', 'Drugged', 'Drunken', 'Dungy',
+  'Evil',
+  'Fast', 'Feisty', 'Fiery', 'Forbidden', 'Fossilized', 'Foul', 'Funny',
+  'Gelatinous', 'Good', 'Gross',
+  'Haunted', 'Hideous', 'Hilarious', 'Horrible', 'Huge', 'Hungry',
+  'Immoral', 'Indoctrinated', 'Innocent',
+  'Leper', 'Little', 'Lobotomized',
+  'Magical', 'Monstrous',
   'Naive', 'Nippled', 'Nutty',
   'Offensive',
-  'Pleasurable', 'Pointless', 'Provocative',
-  'Ridiculous',
-  'Screwed', 'Serial', 'Slimy', 'Slow', 'Starving', 'Stinky', 'Suicidal',
+  'Pleasurable', 'Pointless', 'Programmed', 'Provocative',
+  'Ridiculous', 'Robotic',
+  'Sacred', 'Sacrifical', 'Scary','Screwed', 'Serial', 'Shamanistic', 'Slimy', 'Slow', 'Starving', 'Stinky', 'Suicidal',
   'Tamed', 'Tentacled', 'Torturous',
   'Ugly', 'Unintelligent',
-  'Weedy'
-  ];
+  'Verdant', 'Vile',
+  'Weedy', 'Wild'
+  ]
   
   var adjectivesEndingSinglePartList = [
   'the Birds', 'Blood','the Booze',
@@ -222,7 +229,7 @@ client.on("message", message => {
   
   var adjectivesAfflictionsVirtuesList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList)
   var adjectivesStandardList = adjectivesFunnyList.concat(adjectivesNormalList, specialAfflictionsList, specialVirtuesList)
-  var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList)
+  var adjectivesAllList = afflictionsList.concat(virtuesList, specialAfflictionsList, specialVirtuesList, adjectivesNormalList, adjectivesFunnyList, coloursList)
   var adjectivesEndingAllSingle = adjectivesEndingSinglePartList.concat(peopleAllList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -787,12 +794,12 @@ client.on("message", message => {
   'Home', 'House', 'Hovel', 'Hub',
   'Island',
   'Jail',
-  'Kingdom',
+  'Kingdom', 'Kitchen',
   'Lake', 'Land', 'Lighthouse',
-  'Marsh', 'Moor', 'Mountain', 'Mountains',
+  'Marsh', 'Moon', 'Moor', 'Mountain', 'Mountains',
   'Ocean', 'Outpost',
   'Palace', 'Plains', 'Planet', 'Prison', 'Pyramid',
-  'Rainforest', 'Refuge', 'River', 'Ruins',
+  'Rainforest', 'Realm', 'Refuge', 'River', 'Room', 'Ruins',
   'Sanctum', 'School', 'Sea', 'Sewers', 'Ship', 'Space', 'Stronghold', 'Swamp',
   'Temple', 'Tomb', 'Tower', 'Town', 'Township', 'Treetops',
   'Village',
@@ -3009,12 +3016,15 @@ client.on("message", message => {
     switch (choice)
     {   
       case 'my':
+      case 'My':
         return stringToCheck
     
       case 'nobody':
+      case 'Nobody':
         return 'no one\'s'
         
       case 'everybody':
+      case 'Everybody':
         return 'everyone\'s'
         
       default:
@@ -3426,27 +3436,6 @@ client.on("message", message => {
       var fifthWord = '';
       var sixthWord = '';
 
-      var firstPart1 = [
-      'Abominable', 'Adorable', 'Aerial', 'Aeronaut', 'Aggressive', 'Animate', 'Anointed', 'Amateur', 'Apprentice', 'Awesome', 'Awful',
-      'Badlands', 'Barbaric', 'Brainwashed', 'Brutal',
-      'Cannibalistic', 'Celestial', 'Chittering', 'Clever', 'Cloaked', 'Crazy',
-      'Defiant', 'Degenerate', 'Delusional', 'Dirty', 'Domesticated', 'Drunken',
-      'Extremely Slow',
-      'Faceless', 'Faded', 'Faithful', 'Fast', 'Fated', 'Fearsome', 'Feisty', 'Feral', 'Forsworn', 'Furious', 'Furry',
-      'Greater',
-      'Heartless', 'High', 'Horned', 'Horny', 'Horrible', 'Huge', 'Hungry',
-      'Immortal', 'Immortal',
-      'Leper', 'Lesser', 'Little', 'Lobotomized',
-      'Maniacal', 'Masochistic', 'Mighty', 'Mindless', 'Monstrous', 'Mutantic',
-      'Offensive',
-      'Pale', 'Pathethic', 'Primitive', 'Provocative', 'Psychopathic',
-      'Rapturous',
-      'Sacred', 'Sadistic', 'Screwed', 'Serial', 'Shamanistic', 'Slow', 'Starving',
-      'Tamed',
-      'Ultra Fast', 'Undying',
-      'Wild'
-      ];
-
       var firstPart2 = [
       'Absolution', 'Aegis', 'Aerial', 'Animal',
       'Badlands', 'Bandit', 'Barbaric', 'Battle', 'Black', 'Blood', 'Bone', 'Book', 'Border', 'Bounty', 'Brutal',
@@ -3548,12 +3537,12 @@ client.on("message", message => {
       
       if(typeOfCheck == 'count')
       {
-        return ((firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * classesFullList.length * lastPart.length + (firstPart1.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * classesFullList.length * lastPart1.length * (lastPart2.length / 2));
+        return ((adjectivesAllList.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * classesFullList.length * lastPart.length + (adjectivesAllList.length - 1 ) * (firstPart2.length / 2) * firstPart3.length * classesFullList.length * lastPart1.length * (lastPart2.length / 2));
       }
       
       if(Math.floor(Math.random() * 10) < 5)
       {
-        firstWord = ReturnRandom(firstPart1);
+        firstWord = ReturnRandom(adjectivesAllList);
         finalString = finalString + firstWord + ' ';
       }
 
