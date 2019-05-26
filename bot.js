@@ -2681,7 +2681,7 @@ client.on("message", message => {
         var mainList = [
         'I think I saw ' + who + ' in ' + GenerateRandomPlace() + '.',
         who + ' was probably with me in ' + GenerateRandomPlace() + '.',
-        'I rescued ' + who + ' from ' + ReturnRandom(creaturesFullList) + ' in ' + ReturnRandom(serialsList) + '.',
+        'I rescued ' + who + ' from the ' + ReturnRandom(creaturesFullList) + ' in ' + ReturnRandom(serialsList) + '.',
         who + ' was that ' + ReturnRandom(creaturesFullList) + ' in ' + ReturnRandom(serialsList) + '.',
         'I have definitely seen ' + who + ' in ' + GenerateRandomPlace() + '.'
         ];
@@ -2870,6 +2870,14 @@ client.on("message", message => {
       
       message.channel.send(ReturnRandom(responseList))
       break;
+      
+    //----------------------------------------------------------------------------------------------------------------------------
+    //----------test--------------------------------------------------------------------------------------------------------------
+    //----------------------------------------------------------------------------------------------------------------------------
+    case 'test':
+      message.channel.send(ReturnRandom(TransformToProperEndingApostrophe(everybody))
+      message.channel.send(ReturnRandom(TransformToProperEndingApostrophe(nobody))
+    break;
       
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     //----------commands------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
