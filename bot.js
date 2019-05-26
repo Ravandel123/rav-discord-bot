@@ -2983,7 +2983,7 @@ client.on("message", message => {
   
   function TransformToProperEndingApostrophe(stringToCheck)
   {
-    switch (choice)
+    switch(stringToCheck)
     {   
       case 'my':
       case 'My':
@@ -3000,11 +3000,6 @@ client.on("message", message => {
       default:
         return stringToCheck + AddEndingApostrophe(stringToCheck)
     }
-
-    if(ReturnLastChar(stringToCheck) == 's')
-      return '\''
-    else
-      return '\'s'
   }
 
   function ReturnRandom(listOfElements)
