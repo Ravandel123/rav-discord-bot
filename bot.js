@@ -158,7 +158,7 @@ client.on("message", message => {
   'Heartless', 'Horny', 
   'Idiotic', 'Imbecilic', 'Inane', 'Insane', 
   'Lazy', 
-  'Maniacal', 'Mindless', 'Mutantic',
+  'Maniacal', 'Mindless', 'Murderous', 'Mutantic',
   'Narcissistic',
   'Pathethic', 'Perverse', 'Primitive', 'Psychopathic',
   'Racist', 'Ravenous',
@@ -184,32 +184,33 @@ client.on("message", message => {
   'Lesser', 'Living', 'Lunar',
   'Pale',
   'Solar', 'Stormful', 'Strong', 
-  'Winged', 'Wise'
+  'Winged', 'Wise',
+  'Vengeful'
   ]
 
   var adjectivesFunnyList = [
-  'Abominable', 'Absurd', 'Adorable', 'Amateur', 'Amusing', 'Anointed', 'Awesome', 'Awful',
-  'Banana', 'Bioluminescent', 'Bloody', 'Brutal',
-  'Celestial', 'Coconutty', 'Corvid', 'Creepy', 'Crystalline',
+  'Abominable', 'Absurd', 'Adorable', 'Amateur', 'Amazing', 'Amusing', 'Anointed', 'Artistic', 'Awesome', 'Awful',
+  'Banana', 'Best', 'Believable', 'Bioluminescent', 'Bloody', 'Brutal',
+  'Celestial', 'Coconutty', 'Corvid', 'Creepy', 'Crystalline', 'Cute', 'Cutest',
   'Dark', 'Deadly', 'Defiant', 'Delicate', 'Dirty', 'Disgusting', 'Domesticated', 'Doomed', 'Drooly', 'Drugged', 'Drunken', 'Dungy',
   'Evil',
   'Fast', 'Feisty', 'Fiery', 'Forbidden', 'Fossilized', 'Foul', 'Funny',
-  'Gelatinous', 'Good', 'Gross',
+  'Gargantuan', 'Gelatinous', 'Good', 'Gross',
   'Haunted', 'Hideous', 'Hilarious', 'Horrible', 'Huge', 'Hungry',
-  'Immoral', 'Indoctrinated', 'Innocent',
+  'Immoral', 'Indoctrinated', 'Innocent', 'Interesting', 
   'Leper', 'Little', 'Lobotomized',
   'Magical', 'Monstrous',
   'Naive', 'Nippled', 'Nutty',
   'Offensive',
   'Pleasurable', 'Pointless', 'Programmed', 'Provocative',
-  'Ridiculous', 'Robotic',
-  'Sacred', 'Sacrifical', 'Scary','Screwed', 'Serial', 'Shamanistic', 'Slimy', 'Slow', 'Starving', 'Stinky', 'Suicidal',
-  'Tamed', 'Tentacled', 'Torturous',
-  'Ugly', 'Unintelligent',
-  'Verdant', 'Vile',
-  'Weedy', 'Wild'
+  'Ridiculous', 'Robotic', 'Rotten',
+  'Sacred', 'Sacrifical', 'Savage', 'Scary', 'Screwed', 'Secret', 'Serial', 'Shamanistic', 'Silly', 'Slimy', 'Slow', 'Smart', 'Starving', 'Stinky', 'Suicidal',
+  'Tamed', 'Tentacled', 'Torturous', 'Trusted',
+  'Ugly', 'Unintelligent', 'Useful', 'Useless',
+  'Valuable', 'Verdant', 'Vile', 'Violent',
+  'Weedy', 'Wild', 'Worst'
   ]
-  
+
   var adjectivesEndingSinglePartList = [
   'the Birds', 'Blood','the Booze',
   'the Coconut', 'the Coconuts',
@@ -306,7 +307,7 @@ client.on("message", message => {
   'Painter', 'Paladin', 'Pamphleteer', 'Peasant', 'Penitent', 'Physician', 'Pilgrim', 'Pistolier', 'Politician', 'Prelate', 'Priest', 'Priestess', 'Prisoner', 'Prophet', 'Protagonist',
   'Queen',
   'Racketeer', 'Raconteur', 'Rapscallion', 'Raider', 'Ranger', 'Rat Catcher', 'Reaver', 'Riverwarden', 'Roadwarden', 'Robber', 'Rogue', 'Ruffian', 'Ruler', 'Runebearer', 'Runesmith',
-  'Sailor','Samurai', 'Scholar', 'Scout', 'Scribe', 'Seaman', 'Seeker', 'Seer', 'Sergeant', 'Servant', 'Shaman', 'Shepherd', 'Shieldbreaker', 'Sister', 'Skald', 'Skimmer', 'Slaughterer', 'Slave', 'Slaver', 'Slayer', 'Smuggler', 'Soldier', 'Sorcerer', 'Spy', 'Squire', 'Stevedore', 'Steward', 'Strider', 'Surgeon', 'Student',
+  'Sailor','Samurai', 'Scholar', 'Scout', 'Scribe', 'Seaman', 'Seeker', 'Seer', 'Sergeant', 'Servant', 'Shaman', 'Shepherd', 'Shieldbreaker', 'Sister', 'Skald', 'Skimmer', 'Slaughterer', 'Slaver', 'Slayer', 'Smuggler', 'Soldier', 'Sorcerer', 'Spy', 'Squire', 'Stevedore', 'Steward', 'Strider', 'Surgeon', 'Student',
   'Tamer', 'Targeteer', 'Thief', 'Thug', 'Toll Keeper', 'Torturer', 'Tradesman', 'Trainer', 'Trapper', 
   'Vagabond', 'Valet', 'Valkyrie', 'Vendor', 'Veteran', 'Viceroy', 'Vigilant',
   'Walker', 'Wanderer', 'Warden', 'Warleader', 'Warlock', 'Warlord', 'Warrior', 'Watchman', 'Witch', 'Witcher', 'Wizard', 'Whaler', 'Woodsman', 'Wrecker',
@@ -325,10 +326,9 @@ client.on("message", message => {
   'Kid', 
   'Machine', 'Masochist', 'Marionette', 'Monster', 'Mutant', 
   'Noob',
-  'Pawn', 
-  'Primitive',
+  'Pawn', 'Plaything', 'Primitive',
   'Robot',
-  'Sadist', 'Savage',
+  'Sadist', 'Savage', 'Slave',
   'Test Subject', 'Toy', 'Troglodyte', 'Troll',
   'Zombie'
   ]
@@ -2671,48 +2671,6 @@ client.on("message", message => {
       'a savage'
       ];
       
-      var firstList = [
-      'Abominable', 'Adorable', 'Aggressive', 'Amazing', 'Annointed', 'Art', 'Awful',
-      'Barbaric', 'Best', 'Bloody', 'Brainwash', 'Brutal',
-      'Cannibalistic', 'Celestial', 'Crazy', 'Cute', 'Cutest',
-      'Defiant', 'Degenerate', 'Delusional', 'Destructive', 'Dirty', 'Domesticated', 'Drunken',
-      'Evil', 'Extremely Slow',
-      'Faceless', 'Fast', 'Fearsome', 'Feisty', 'Feral', 'Funny', 'Furry',
-      'Gargantuan', 'Good', 'Greater',
-      'Heartless', 'Horny', 'Hungry',
-      'Immoral', 'Interesting', 'Insane',
-      'Lesser', 'Lobotomized', 'Loyal',
-      'Masochistic', 'Mindless', 'Monstrous', 'Murderous', 'Music',
-      'Offensive',
-      'Pathethic', 'Pleasure', 'Primitive', 'Psychopathic',
-      'Rapturous', 'Rotten',
-      'Sacred', 'Sadistic', 'Savage', 'Screwed', 'Secret', 'Serial', 'Silly', 'Slow', 'Small', 'Smart', 'Starving', 'Strong',
-      'Tamed',
-      'Ugly', 'Useful', 'Useless',
-      'Most Valuable', 'Valuable', 'Vengeful', 'Violent',
-      'Well Trusted', 'Worst'
-      ]
-      
-      var secondList = [
-      'Abomination', 'Amazon', 'Android', 'Assassin', 'Automaton', 'Avatar',
-      'Bandit', 'Banker', 'Barbarian', 'Barber', 'Bard', 'Beast', 'Berserker', 'Bodyguard', 'Butcher',
-      'Cannibal', 'Champion', 'Charlatan', 'Colossus', 'Communist', 'Construct', 'Courtesan', 'Cultist','Cyborg',
-      'Device',
-      'Executioner', 'Experiment',
-      'Farmer', 'Flagellant', 'Friend', 'Furry',
-      'Garbage',
-      'Idiot',
-      'Kamikaze', 'Kid', 'Kidnapper', 'Killer',
-      'Lich',
-      'Machine', 'Madman', 'Marionette', 'Masochist', 'Master', 'Mentor', 'Messenger', 'Mohican', 'Monk', 'Monster', 'Mutant',
-      'Necromancer', 'Noob',
-      'Pawn', 'Plaything', 'Prisoner', 'Prophet',
-      'Robot',
-      'Sadist', 'Servant', 'Slaughterer', 'Slave', 'Spy',
-      'Test Subject', 'Torturer', 'Toy', 'Troglodyte', 'Troll',
-      'Zombie'
-      ]
-      
       if(Chance(50))
         person = TransformToProperEndingApostrophe(ReturnRandom(peopleAllList))
       else
@@ -2723,21 +2681,25 @@ client.on("message", message => {
         var mainList = [
         'I think I saw ' + who + ' in ' + GenerateRandomPlace() + '.',
         who + ' was probably with me in ' + GenerateRandomPlace() + '.',
-        'I rescued ' + who + ' from ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
-        who + ' was that ' + ReturnRandom(secondList) + ' in ' + ReturnRandom(serialsList) + '.',
+        'I rescued ' + who + ' from ' + ReturnRandom(creaturesFullList) + ' in ' + ReturnRandom(serialsList) + '.',
+        who + ' was that ' + ReturnRandom(creaturesFullList) + ' in ' + ReturnRandom(serialsList) + '.',
         'I have definitely seen ' + who + ' in ' + GenerateRandomPlace() + '.'
         ];
       }
       else 
       {
-        if(Chance(30))
+        if(Chance(15))
           finalString = ReturnRandom(specialList);
         else
         {
-          if(Chance(50))
-            finalString = person + ' ' + ReturnRandom(firstList) + ' ' + ReturnRandom(secondList);
+          if(Chance(35))
+            finalString = person + ' ' + ReturnRandom(adjectivesAllList) + ' ' + ReturnRandom(classesFunnyList);
+          if(Chance(35))
+            finalString = person + ' ' + ReturnRandom(adjectivesAllList) + ' ' + ReturnRandom(creaturesFullList);
+          if(Chance(35))
+            finalString = person + ' ' + ReturnRandom(adjectivesAllList) + ' ' + ReturnRandom(animalsStandardList);
           else
-            finalString = person + ' ' + ReturnRandom(secondList);
+            finalString = person + ' ' + ReturnRandom(classesFunnyList);
         }
 
         mainList = [
