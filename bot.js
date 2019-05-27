@@ -1218,7 +1218,7 @@ client.on("message", message => {
       var who = RecognizeWho(arguments[1], message, command)
       var basicString = '';
       var finalString = '';
-      var vClass`
+      var vClass
 
       if(arguments[1] == 'count')
       {
