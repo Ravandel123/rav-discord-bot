@@ -1218,6 +1218,7 @@ client.on("message", message => {
       var who = RecognizeWho(arguments[1], message, command)
       var basicString = '';
       var finalString = '';
+      var vClass`
 
       if(arguments[1] == 'count')
       {
@@ -1236,13 +1237,15 @@ client.on("message", message => {
       who + ' would do well as ',
       who + ' would make an excellent '
       ];
+      
+      vClass = GenerateRandomClass()
 
       basicString = ReturnRandom(basePart);
 
       if(basicString != basePart[3] && basicString != basePart[7])
-        basicString = basicString + AddAnA(basicString)
+        basicString = basicString + AddAnA(vClass)
 
-      message.channel.send(basicString + '**' + GenerateRandomClass() + '**.')
+      message.channel.send(basicString + '**' + vClass + '**.')
       break;
       
     //----------------------------------------------------------------------------------------------------------------------------
