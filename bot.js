@@ -115,6 +115,7 @@ client.on("message", message => {
   ]
   
   var protagonistsPeopleList = [
+  'Braveheart',
   'King Arthur',
   'Neo',
   'Robin Hood'
@@ -435,23 +436,25 @@ client.on("message", message => {
   //-----Items-------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   var itemsWeaponsList = [
-  'Arbalest', 'Atomic Bomb', 'Axe',
+  'Arbalest', 'AK-47', 'Atomic Bomb', 'Axe',
   'Bardiche', 'Bazooka', 'Bludgeon', 'Bomb', 'Bow', 'Broadsword',
   'Chain', 'Chainsaw', 'Claymore', 'Club', 'Coconut', 'Crossbow', 'Crowbar',
   'Dagger', 'Disintegrator',
   'Estoc',
-  'Falchion', 'Flail', 'Flamethrower', 'Fork',
+  'Falchion', 'Fist', 'Flail', 'Flamethrower', 'Fork',
   'Gladius', 'Glaive', 'Greatsword',
   'Halberd', 'Hammer',
-  'Kama', 'Katana', 'Knife',
+  'Icicle',
+  'Kama', 'Katana', 'Knife', 'Kukri',
   'Lance', 'Lasso', 'Longsword',
-  'Mace', 'Maul', 'Minigun', 'Missile', 'Missile Launcher', 'Morning Star', 'Musket',
+  'Mace', 'Machine Gun', 'Maul', 'Minigun', 'Missile', 'Missile Launcher', 'Morning Star', 'Musket',
   'Nuclear Missile', 'Nut',
   'Pike', 'Polearm', 'Poleaxe',
   'Quarterstaff',
   'Rapier', 'Revolver', 'Rocket Launcher', 'Rope',
-  'Sabre', 'Scimitar', 'Scythe', 'Shortsword', 'Shuriken', 'Sickle', 'Sledgehammer', 'Sling', 'Spear', 'Spoon', 'Staff', 'Stick', 'Sword',
+  'Sabre', 'Scimitar', 'Scythe', 'Shortsword', 'Shotgun', 'Shuriken', 'Sickle', 'Sledgehammer', 'Sling', 'Spear', 'Spoon', 'Staff', 'Stick', 'Sword',
   'Tesla Coil', 'Tomahawk', 'Tool',
+  'Uzi',
   'Wakizashi', 'Wand', 'Warhammer', 'Whip'
   ];
   
@@ -2991,6 +2994,10 @@ client.on("message", message => {
       case 'my':
       case 'My':
         return stringToCheck
+        
+      case 'me':
+      case 'Me':
+        return 'my'
     
       case 'nobody':
       case 'Nobody':
