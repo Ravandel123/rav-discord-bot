@@ -36,6 +36,7 @@ client.on("message", message => {
    var pictureImproviseAdaptOvercome = 'https://imgur.com/DlBYayG'
    var pictureOrbitalBombardment = 'https://imgur.com/gNucxNw'
    var pictureMeGusta = 'https://imgur.com/FogG79P'
+   var pictureSupremeVictoryDuck = 'https://imgur.com/fr0BMd4'
 
 
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1159,7 +1160,8 @@ client.on("message", message => {
       'https://i.imgur.com/nY38kvJ.jpg',
       'https://i.imgur.com/YUvEpDk.jpg',
       'https://i.imgur.com/U75V8Qr.jpg',
-      'https://i.imgur.com/du6fIsg.jpg'
+      'https://i.imgur.com/du6fIsg.jpg',
+      pictureSupremeVictoryDuck
       ];
       
       responseList2 = [
