@@ -102,7 +102,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var serverPeopleList = [
-  'AceBeef', 'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Griffin', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'Wolf Scribe', 'You'
+  'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'Wolf Scribe', 'You'
   ]
   
   var villainsPeopleList = [
@@ -162,7 +162,7 @@ client.on("message", message => {
   'Lazy', 
   'Maniacal', 'Mindless', 'Murderous', 'Mutantic',
   'Narcissistic',
-  'Pathethic', 'Perverse', 'Primitive', 'Psychopathic',
+  'Pathethic', 'Pathologic', 'Perverse', 'Primitive', 'Psychopathic',
   'Racist', 'Ravenous',
   'Sadistic', 'Stupid'
   ]
