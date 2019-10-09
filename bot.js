@@ -107,6 +107,7 @@ client.on("message", message => {
   
   var villainsPeopleList = [
   'Darth Maul', 'Darth Vader',
+  'Gollum',
   'Hannibal Lecter',
   'Voldemort',
   'Malodorous',
@@ -115,7 +116,7 @@ client.on("message", message => {
   ]
   
   var protagonistsPeopleList = [
-  'Braveheart',
+  'Bella from Twilight', 'Braveheart',
   'King Arthur',
   'Neo',
   'Robin Hood'
