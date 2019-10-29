@@ -53,19 +53,16 @@ client.on("message", message => {
 
   var serialsList = [
   'Alladin',
-  'Baywatch', 'Bloodbath in Psycho Town', 'Birdemic',
-  'Cannibal! The Musical', 'Chopper Chicks in Zombietown',
+  'Baywatch', 'Birdemic',
   'Dumb & Dumber', 'Dumb & Dumber 2',
   'Ferocious Female Freedom Fighters', 'Frozen',
   'Howard the Duck',
   'King Kong Lives',
   'Matrix',
-  'Nymphoid Barbarian in Dinosaur Hell',
   'Pterodactyl Woman from Beverly Hills',
   'Rambo',
-  'Scary Movie', 'Shrek', 'Splatter University', 'Star Wars',
-  'The Toxic Avenger', 'The Toxic Avenger, Part II', 'The Toxic Avenger, Part III: The Last Temptation of Toxie', 'Theodore Rex',
-  'Zombie Island Massacre'
+  'Scary Movie', 'Shrek', 'Star Wars',
+  'Theodore Rex'
   ]
   
   var placesList = [
@@ -118,7 +115,6 @@ client.on("message", message => {
   var protagonistsPeopleList = [
   'Bella from Twilight', 'Braveheart',
   'King Arthur',
-  'Neo',
   'Robin Hood'
   ]
   
