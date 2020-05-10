@@ -1038,7 +1038,8 @@ client.on("message", message => {
       ' below ',
       ' over ',
       ' definitely ',
-      ' probably '
+      ' probably ',
+      ' almost'
       ];
       
       responseList = [
