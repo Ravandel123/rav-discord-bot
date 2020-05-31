@@ -10,6 +10,17 @@ const prefix = "h!";
 
 //A B C D E F G H I K L M N O P Q R S T U V W X Y Z
 
+client.on('ready', () => {
+    client.user.setStatus('available')
+    client.user.setPresence({
+        game: {
+            name: 'Admiring Myself',
+            type: "STREAMING",
+            url: "https://www.google.pl"
+        }
+    });
+});
+
 client.on("message", message => {
   if (message.content.indexOf(prefix) !== 0) return;
 
