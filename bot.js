@@ -76,13 +76,12 @@ client.on("message", message => {
   'Theodore Rex'
   ]
   
-  var placesList = [
+  var furryPlacesList = [
   'Anthro New England', 'Arizona Fur Con', 'Anthrocon',
-  'Baywatch', 'Biggest Little Fur Con',
+  'Biggest Little Fur Con',
   'Califur', 'ConFurence', 'Confurgence', 'Conifur Northwest',
   'Eurofurence',
   'Furry Fiesta', 'Furry Weekend Atlanta', 'Fur the \'More\'',
-  'Go Go Club', 'Gym',
   'Mephit Furmeet', 'Middle Earth', 'Midwest FurFest',
   'Rainfurrest', 'Rocky Mountain Fur Con',
   'VancouFur'
@@ -1537,9 +1536,11 @@ client.on("message", message => {
       ReturnRandom(verbsAllList) + ' ' + ReturnRandom(peopleStandardServerList) + additionalLol +  '.',
       'Have you tried going to ' + GenerateRandomPlace() + ' and using ' + GenerateRandomWeapon() + additionalLol +  '?',
       'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
+      'You shouldn\'t go to ' + ReturnRandom(furryPlacesList) + '.',
+      '*Gives you his hand.*'
       ]
       
-      if(Chance(10))
+      if(Chance(20))
         message.channel.send(ReturnRandom(responseList1))
       else
         message.channel.send(ReturnRandom(responseList2))
