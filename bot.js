@@ -1536,7 +1536,7 @@ client.on("message", message => {
       ReturnRandom(verbsAllList) + ' ' + ReturnRandom(peopleStandardServerList) + additionalLol +  '.',
       'Have you tried going to ' + GenerateRandomPlace() + ' and using ' + GenerateRandomWeapon() + additionalLol +  '?',
       'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
-      'You shouldn\'t go to ' + ReturnRandom(furryPlacesList) + '.',
+      'You shouldn\'t have gone to ' + ReturnRandom(furryPlacesList) + '.',
       '*Gives you his hand.*'
       ]
       
