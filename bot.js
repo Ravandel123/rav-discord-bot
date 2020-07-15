@@ -6,7 +6,8 @@ client.on('ready', () => {
 });
 
 
-const prefix = "h!";
+const prefix = "h!"
+const prefixDocco = "Docco"
 
 //A B C D E F G H I K L M N O P Q R S T U V W X Y Z
 
@@ -21,6 +22,9 @@ client.on('ready', () => {
     });
 });
 
+client.on("message", message => {
+  if (message.content.indexOf(prefixDocco) == 0) message.channel.send('Pumpkins');
+  
 client.on("message", message => {
   if (message.content.indexOf(prefix) !== 0) return;
 
@@ -1680,7 +1684,7 @@ client.on("message", message => {
       'I love you.',
       'I really, really like you. Like REALLY.',
       'You are amazing!',
-      'You are probably the best person in the world!',
+      'You are probably best person in the world!',
       'You = awesome.',
       'You are the coolest person I have ever seen!',
       'I think you are hot, I would rate your look 11/10.',
@@ -1733,7 +1737,7 @@ client.on("message", message => {
       'I love ' + who + '.',
       'I really, really like ' + who + '. Like REALLY.',
       who + ' is amazing!',
-      who + ' is probably the best person in the world!',
+      who + ' is probably best person in the world!',
       who + ' = awesome.',
       who + ' is the coolest person I have ever seen!',
       'I think ' + who + ' is hot, I would rate ' + who + ' look 11/10.',
