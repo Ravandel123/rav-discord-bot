@@ -6,7 +6,8 @@ client.on('ready', () => {
 });
 
 
-const prefix = "h!";
+const prefix = "h!"
+const prefixDocco = "Docco"
 
 //A B C D E F G H I K L M N O P Q R S T U V W X Y Z
 
@@ -22,7 +23,7 @@ client.on('ready', () => {
 });
 
 client.on("message", message => {
-  if (message.content.indexOf(prefix) !== 0) return;
+  if (message.content.indexOf(prefix) !== 0 && message.content.indexOf(prefixDocco) != 0) return;
 
   const args = message.content.slice(prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
@@ -936,6 +937,12 @@ client.on("message", message => {
   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+  if (message.content == prefixDocco)
+  {
+    message.channel.send('Pumpkins')
+    message.react("❤️")
+  }
   
   switch (command) 
   {
