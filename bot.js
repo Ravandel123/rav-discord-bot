@@ -12,6 +12,7 @@ const prefixDocco = "Docco"
 //A B C D E F G H I K L M N O P Q R S T U V W X Y Z
 
 client.on('ready', () => {
+    client.guilds.forEach(guild => console.log(guild.name))
     client.user.setStatus('available')
     client.user.setPresence({
         game: {
