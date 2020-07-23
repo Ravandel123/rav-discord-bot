@@ -2895,6 +2895,20 @@ client.on("message", message => {
       
       message.channel.send(ReturnRandom(responseList))
       break;
+          
+      case 'send':
+      if(arguments[1] != null && arguments[1] != "" && arguments[2] != null && arguments[2] != "")
+      {
+        let channel = client.channels.find('name', arguments[1])
+        
+        if (channel != null)
+        {
+           let msg = message.content.slice(prefix.length + 2 + command.length + arguments[1].length)
+           channel.send(msg)   
+        }
+      }
+        
+     break
       
     //----------------------------------------------------------------------------------------------------------------------------
     //----------test--------------------------------------------------------------------------------------------------------------
