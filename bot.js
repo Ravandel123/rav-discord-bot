@@ -1,27 +1,42 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-client.on('ready', () => {
-    console.log('I am ready!');
-});
-
-
-const prefix = "h!"
-const prefixDocco = "Docco"
+const prefix = 'h!'
+const prefixDocco = 'Docco'
+const doccoID = '275508506617053185'
 
 //A B C D E F G H I K L M N O P Q R S T U V W X Y Z
 
 client.on('ready', () => {
-    client.guilds.forEach(guild => console.log(guild.name))
-    client.user.setStatus('available')
-    client.user.setPresence({
-        game: {
-            name: 'Admiring Myself',
-            type: "STREAMING",
-            url: "https://www.google.pl"
-        }
-    });
-});
+   console.log('I am ready!')
+   client.guilds.forEach(guild => console.log(guild.name))
+   client.user.setStatus('available')
+   client.user.setPresence({
+      game: {
+         name: 'Admiring Myself',
+         type: "STREAMING",
+         url: "https://www.google.pl"
+      }
+   })
+})
+
+client.on('guildMemberAdd', member => {
+   if(member.guild.id == '460442094054670339')
+   {
+      member.guild.channels.find(c => c.name === 'foyer').send(`Well, well, well... Who do we have here? ${member.user.username} looks like someone pretty cool!`)
+      client.users.get(doccoID).send(`My queen, ${member.user.username} arrived in your realm!`)
+   }
+})
+
+client.on('guildMemberRemove', member => {
+   if(member.guild.id == '460442094054670339')
+   {
+      member.guild.channels.find(c => c.name === 'foyer').send(`${member.user.username} left our small community... Too bad I almost started to like ${member.user.username}.`)
+      client.users.get(doccoID).send(`My queen, ${member.user.username} left your realm!`)
+   }
+})
+
+
 
 client.on("message", message => {
   if (message.content.indexOf(prefix) !== 0 && message.content.indexOf(prefixDocco) != 0) return;
@@ -2915,8 +2930,8 @@ client.on("message", message => {
     //----------test--------------------------------------------------------------------------------------------------------------
     //----------------------------------------------------------------------------------------------------------------------------
     case 'test':
-      message.channel.send(TransformToProperEndingApostrophe('everybody'))
-      message.channel.send(TransformToProperEndingApostrophe('nobody'))
+      client.emit("guildMemberAdd", message.member)
+      client.emit("guildMemberRemove", message.member)
     break;
       
     //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
