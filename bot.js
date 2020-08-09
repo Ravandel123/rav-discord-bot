@@ -155,16 +155,19 @@ client.on("message", message => {
   ]
   
   var protagonistsPeopleList = [
-  'Bella from Twilight', 'Braveheart',
-  'King Arthur',
-  'Robin Hood'
+  'Bella from Twilight'
   ]
   
   var famousPeopleList = [
-  'Albert Einstein',
   'Caligula',
   'Bill Gates',
-  'Pope Francis'
+  'Lady Gaga',
+  'Pope Francis',
+  'Shakira',
+  ]
+  
+  var armelloPeopleList = [
+  'Agniya', 'Amber', 'Barnaby', 'Brun', 'Elyssia', 'Fang', 'Ghor', 'Griotte', 'Hargrave', 'Horace', 'Magna', 'Mercurio', 'Nazar', 'Oxana', 'River', 'Sana', 'Sargon', 'Scarlet', 'Sylas', 'Thane', 'Twiss', 'Volodar', 'Yordana', 'Zosha'
   ]
 
   var specialPeopleList = [
@@ -172,7 +175,7 @@ client.on("message", message => {
   ]
   
   var peopleStandardServerList = serverPeopleList.concat(specialPeopleList)
-  var peopleAllList = serverPeopleList.concat(villainsPeopleList, protagonistsPeopleList, specialPeopleList, famousPeopleList)
+  var peopleAllList = serverPeopleList.concat(villainsPeopleList, protagonistsPeopleList, specialPeopleList, famousPeopleList, armelloPeopleList)
   
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   //-----Adjectives--------------------------------------------------------------------------------------------------------------------------------------------------
