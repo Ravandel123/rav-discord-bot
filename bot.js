@@ -46,7 +46,7 @@ client.on("message", message => {
       message.react("❤️")
    }
    
-   let artChannel = GClient.channels.find('name', 'finished-art')
+   let artChannel = client.channels.find('name', 'finished-art')
    if(message.channel == artChannel)
    {
       message.react('❤️')
