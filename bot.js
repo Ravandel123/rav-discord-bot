@@ -53,6 +53,102 @@ client.on("message", message => {
       message.react('💛')
       message.react('💙')
    }
+   
+
+   let msg = message.content.toLowerCase()
+
+   if ((msg.indexOf('sassel') !== -1 || msg.indexOf('hassel') !== -1) && !message.author.bot)
+   {
+      responseList = [
+      'After hearing what you just said, I realized that honest people still do exists!',
+      'Are you a spy? Who sent you?',
+      'Are you hitting on me?',
+      'As they say, you are what you eat!',
+      'Awww... now I want to throw a rainbow at you.',
+      'Careful, you might get burned.',
+      'Coming from you, that means a lot!',
+      'Compliment accepted.',
+      'Do you really think I care about your opinion lol?',
+      'Don\'t tell anyone, but I used to be an ugly duckling.',
+      'Enough of that!',
+      'Excuse me?!',
+      'Finally, I found someone who agrees with my parents.',
+      'Flattery won\'t get you anywhere, fella. Scram!',
+      'Give me a quill and I\'ll give you my autograph.',
+      'I\'d tell you how, but you would have to pay me.',
+      'I\'m being watched. Act normal.',
+      'I\'m glad I made your day brighter.',
+      'I\'m sorry, but you can’t afford it.',
+      'I\'m warning you, I\'m too hot for you to handle.',
+      'I agree, 100%!',
+      'I can see that honesty is still the best policy.',
+      'I get that a lot!',
+      'I know.',
+      'I know, right?',
+      'I know. Wish I could say the same about you.',
+      'I love you too!',
+      'I love your honesty and sincerity.',
+      'I would like return the compliment, but I swore to tell the truth and nothing but the truth.',
+      'If I had a dollar for every compliment I\'ve received so far, I\'d be a billionaire.',
+      'Is that the best you\'ve got?',
+      'It\'s actually the result of me not taking a bath for weeks.',
+      'It\'s extremely rare for me to hear that.',
+      'It\'s my duty to spread beauty in the world.',
+      'It must be the meds kicking in.',
+      'It must be the tapeworm.',
+      'Just today? What about yesterday?',
+      'Look who\'s talking lol.',
+      'Much obliged!',
+      'No point in stating the obvious.',
+      'No takebacks, okay!',
+      'No u.',
+      'No you.',
+      'Not since the accident.',
+      'Not this again... take a number and wait in line.',
+      'Oh, I wish you\'d experience it as well.',
+      'Oh, really? I think I\'m just ahead of you by one bath.',
+      'Oh, sorry, what? I was too busy thinking about how gorgeous I am.',
+      'Oh, stop it, you.',
+      'Oh, such discerning eyes!',
+      'Oh, the wonder of makeup!',
+      'Peace be with you!',
+      'Shucks, my hair!',
+      'Shut up baby.',
+      'So I have been told.',
+      'Sorry, you must have mistaken me for someone else.',
+      'Stop it before I fall in love with you.',
+      'Stop it please!',
+      'Thanks, but I prefer to be noticed for my intellectual capacity.',
+      'Thanks, fan!',
+      'Thanks, I sacrificed many lives for it.',
+      'Thanks, I woke up like this.',
+      'Thank you, so please vote for me in the next elections.',
+      'True, I couldn\'t agree more.',
+      'Well, 11 out 10 people agree!',
+      'Well, hands off the merchandise!',
+      'Well, hanging around the right people really changes you.',
+      'Well, that makes two of us!',
+      'What do you need?',
+      'Who told you to tell me that?',
+      'Why?',
+      'Why are you drooling? Here\'s a handkerchief.',
+      'Woah, that escalated quickly!',
+      'Yeah... I wanted to ask you out, but my friend said I\'m now out of your league.',
+      'Yeah, I\'m getting tired of being mistaken for Ravandel.',
+      'Yeah, it\'s my only redeeming quality.',
+      'Yeah, the genie finally granted my wish.',
+      'You\'ll get there, eventually.',
+      'You\'re not the first one to tell me that today.',
+      'You\'re welcome.',
+      'You know what? I like you.',
+      'You mean great in bed? Thanks!',
+      'You must be looking at a mirror.',
+      'You too.'
+      ]
+      
+      if(Chance(20))
+         message.channel.send(ReturnRandom(responseList))
+   }
   
   if (message.content.indexOf(prefix) !== 0) return;
 
