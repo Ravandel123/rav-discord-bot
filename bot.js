@@ -146,7 +146,7 @@ client.on("message", message => {
       'You too.'
       ]
       
-      if(Chance(35))
+      if(Chance(50))
          message.channel.send(ReturnRandom(responseList))
    }
   
