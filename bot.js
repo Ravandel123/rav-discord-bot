@@ -237,7 +237,7 @@ client.on("message", message => {
   //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
   var serverPeopleList = [
-  'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Horther', 'Izzy', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'Wolf Scribe', 'You'
+  'Awre', 'Deciduu', 'Doctor Pumpkins', 'Glorious AYY FB', 'Horther', 'Izzy', 'LalaLynx', 'Lemmy', 'Me', 'Radian', 'Ravandel', 'Ruby', 'Seda', 'Shea', 'Tyrrikz', 'Urutaa', 'Vardgo', 'Wolf Scribe', 'You'
   ]
   
   var villainsPeopleList = [
