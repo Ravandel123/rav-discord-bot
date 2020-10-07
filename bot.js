@@ -1669,7 +1669,7 @@ client.on("message", message => {
       'Have you tried going to ' + GenerateRandomPlace() + ' and using ' + GenerateRandomWeapon() + additionalLol +  '?',
       'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
       'You shouldn\'t have gone to ' + ReturnRandom(furryPlacesList) + '.',
-      'I think you should take ' + AddAnA(ReturnRandom(adjectivesAllList)) + ' dump. It is very important and ' + ReturnRandom(adjectivesAllList) + ' ' + additionalLol + '!',
+      'I think you should take ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' dump. It is very important and ' + ReturnRandom(adjectivesAllList) + ' ' + additionalLol + '!',
       '*Gives you his hand.*'
       ]
       
@@ -3167,6 +3167,11 @@ client.on("message", message => {
       default:
         return 'a '
     }
+  }
+  
+  function AddAnA2(stringToCheck)
+  {
+    return AddAnA(stringToCheck) + stringToCheck
   }
 
   function ReturnLastChar(array)
