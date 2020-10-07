@@ -1659,7 +1659,7 @@ client.on("message", message => {
       
       responseList2 = [
       'I think you should talk to **' + ReturnRandom(serverPeopleList) + additionalLol + '**.',
-      'Go outside for ' + Rnd(12) + ReturnRandom(adjectivesAllList) + ' hours' + additionalLol + '.',
+      'Go outside for ' + Rnd(12) + ' ' + ReturnRandom(adjectivesAllList) + ' hours' + additionalLol + '.',
       'I would advise ' + Rnd(12) + ' hours of ' + ReturnRandom(adjectivesAllList) + ' sleep' + additionalLol + '.',
       'You should take a trip to **' + GenerateRandomPlace() + additionalLol + '**.',
       'Watch ' + ReturnRandom(serialsList) + additionalLol +  '.',
