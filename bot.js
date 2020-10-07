@@ -1670,7 +1670,6 @@ client.on("message", message => {
       'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
       'You shouldn\'t have gone to ' + ReturnRandom(furryPlacesList) + '.',
       'I think you should take ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' dump. It is very important and ' + ReturnRandom(adjectivesAllList) + ' ' + additionalLol + '!',
-      'You MUST take ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' dump. It will help you with ' + ReturnRandom(verbsStandardContinuousList) + ' ' + additionalLol + '!',
       '*Gives you his hand.*'
       ]
       
