@@ -1659,8 +1659,8 @@ client.on("message", message => {
       
       responseList2 = [
       'I think you should talk to **' + ReturnRandom(serverPeopleList) + additionalLol + '**.',
-      'Go outside for ' + Rnd(12) + ' hours' + additionalLol + '.',
-      'I would advise ' + Rnd(12) + ' hours of sleep' + additionalLol + '.',
+      'Go outside for '  + ReturnRandom(adjectivesAllList) + ' ' + Rnd(12) + ' hours' + additionalLol + '.',
+      'I would advise '  + ReturnRandom(adjectivesAllList) + ' ' + Rnd(12) + ' hours of sleep' + additionalLol + '.',
       'You should take a trip to **' + GenerateRandomPlace() + additionalLol + '**.',
       'Watch ' + ReturnRandom(serialsList) + additionalLol +  '.',
       'Learn how to use **' + GenerateRandomWeapon() + additionalLol +  '**.',
@@ -1669,6 +1669,7 @@ client.on("message", message => {
       'Have you tried going to ' + GenerateRandomPlace() + ' and using ' + GenerateRandomWeapon() + additionalLol +  '?',
       'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
       'You shouldn\'t have gone to ' + ReturnRandom(furryPlacesList) + '.',
+      'I think you should take ' + AddAnA(ReturnRandom(adjectivesAllList)) + ' dump. It is very important and ' + ReturnRandom(adjectivesAllList) + ' ' + additionalLol + '!'
       '*Gives you his hand.*'
       ]
       
