@@ -344,8 +344,8 @@ client.on("message", message => {
   'Offensive',
   'Pleasurable', 'Pointless', 'Programmed', 'Provocative',
   'Ridiculous', 'Robotic', 'Rotten',
-  'Sacred', 'Sacrifical', 'Savage', 'Scary', 'Screwed', 'Secret', 'Serial', 'Shamanistic', 'Silly', 'Slimy', 'Slow', 'Smart', 'Starving', 'Stinky', 'Suicidal',
-  'Tamed', 'Tentacled', 'Torturous', 'Trusted',
+  'Sacred', 'Sacrifical', 'Savage', 'Scary', 'Screwed', 'Secret', 'Serial', 'Shamanistic', 'Silly', 'Slimy', 'Slow', 'Smart', 'Starving', 'Stinky',
+  'Tamed', 'Tasty', 'Tentacled', 'Torturous', 'Trusted',
   'Ugly', 'Unintelligent', 'Useful', 'Useless',
   'Valuable', 'Verdant', 'Vile', 'Violent',
   'Weedy', 'Wild', 'Worst'
@@ -927,7 +927,7 @@ client.on("message", message => {
 
   var placeMainList = [
   'Abbey', 'Altar', 'Amphitheater', 'Arena',
-  'Basement', 'Barrens', 'Brothel',
+  'Basement', 'Barrens',
   'Cartel', 'Cave', 'Citadel', 'City', 'Chamber', 'Cliffs', 'Colosseum', 'Cornfield',
   'Den', 'Desert', 'Dojo', 'Dungeon',
   'Encampment',
@@ -1659,8 +1659,8 @@ client.on("message", message => {
       
       responseList2 = [
       'I think you should talk to **' + ReturnRandom(serverPeopleList) + additionalLol + '**.',
-      'Go outside for '  + ReturnRandom(adjectivesAllList) + ' ' + Rnd(12) + ' hours' + additionalLol + '.',
-      'I would advise ' + Rnd(12) + ' hours of ' + ReturnRandom(adjectivesAllList) + 'sleep' + additionalLol + '.',
+      'Go outside for ' + Rnd(12) + ReturnRandom(adjectivesAllList) + ' hours' + additionalLol + '.',
+      'I would advise ' + Rnd(12) + ' hours of ' + ReturnRandom(adjectivesAllList) + ' sleep' + additionalLol + '.',
       'You should take a trip to **' + GenerateRandomPlace() + additionalLol + '**.',
       'Watch ' + ReturnRandom(serialsList) + additionalLol +  '.',
       'Learn how to use **' + GenerateRandomWeapon() + additionalLol +  '**.',
@@ -1670,14 +1670,15 @@ client.on("message", message => {
       'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
       'You shouldn\'t have gone to ' + ReturnRandom(furryPlacesList) + '.',
       'I think you should take ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' dump. It is very important and ' + ReturnRandom(adjectivesAllList) + ' ' + additionalLol + '!',
+      'You MUST take ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' dump. It will help you with ' + ReturnRandom(verbsStandardContinuousList) + ' ' + additionalLol + '!',
       '*Gives you his hand.*'
       ]
       
-      if(Chance(20))
+      if(Chance(7))
         message.channel.send(ReturnRandom(responseList1))
       else
         message.channel.send(ReturnRandom(responseList2))
-      break;
+      break
       
     //----------------------------------------------------------------------------------------------------------------------------
     //----------how---------------------------------------------------------------------------------------------------------------
@@ -1721,14 +1722,14 @@ client.on("message", message => {
       'Nutty',
       'Primitive', 'Psychopathic',
       'Rotten',
-      'Sacred', 'Sadistic', 'Smart', 'Strong', 'Suicidal',
+      'Sacred', 'Sadistic', 'Smart', 'Strong',
       'Vengeful', 'Violent',
       'Useless',
       'War', 'Weed'
       ]
 
       var dualList2 = [
-      'Bandits', 'Beef','Booze', 'Brothel',
+      'Bandits', 'Beef','Booze',
       'Cannibal', 'Cannibals','Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Drug', 'Drugs', 'Dung',
       'Fear', 'Fools','Furries', 'Furry', 'Fury',
@@ -2916,14 +2917,14 @@ client.on("message", message => {
       'Nutty',
       'Pesimistic', 'Power', 'Primitive', 'Psychopathic',
       'Rotten', 'Ruby',
-      'Sacred', 'Sadistic', 'Strong', 'Suicidal',
+      'Sacred', 'Sadistic', 'Strong',
       'Violent',
       'Useless',
       'War', 'Weed'
       ]
 
       var dualList2 = [
-      'Booze', 'Brain', 'Brothel',
+      'Booze', 'Brain',
       'Cannibal', 'Cannibals','Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
       'Electroshock Therapy',
@@ -3636,7 +3637,7 @@ client.on("message", message => {
       ];
 
       var firstPart3 = [
-      'Brothel', 'Brotherhood',
+      'Brotherhood',
       'Clan', 'Cult',
       'Guild',
       'Pact',
@@ -3683,14 +3684,14 @@ client.on("message", message => {
       'Nutty',
       'Power', 'Primitive', 'Psychopathic',
       'Rocket', 'Rotten', 'Ruby',
-      'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Starving', 'Steel', 'Strong', 'Suicidal',
+      'Sacred', 'Sadistic', 'Shadow', 'Smart', 'Solar', 'Starving', 'Steel', 'Strong',
       'Vengeful', 'Violent',
       'War', 'Weed', 'White'
       ]
 
       var lastPart2 = [
       'Absolution',
-      'Beef', 'Booze', 'Brotherhood', 'Brothel',
+      'Beef', 'Booze', 'Brotherhood',
       'Cacao-Tree', 'Cannibal', 'Cannibals', 'City', 'Clan', 'Coconut', 'Coconuts', 'Cult',
       'Darkness', 'Delight', 'Delusion', 'Destruction', 'Doom', 'Dung',
       'Fear', 'Food', 'Fools', 'Forest', 'Furries', 'Furry', 'Fury',
