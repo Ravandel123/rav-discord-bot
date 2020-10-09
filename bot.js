@@ -194,11 +194,10 @@ client.on("message", message => {
   'Alladin',
   'Baywatch', 'Birdemic',
   'Dumb & Dumber', 'Dumb & Dumber 2',
-  'Ferocious Female Freedom Fighters', 'Frozen',
+  'Frozen',
   'Howard the Duck',
   'King Kong Lives',
   'Matrix',
-  'Pterodactyl Woman from Beverly Hills',
   'Rambo',
   'Scary Movie', 'Shrek', 'Star Wars',
   'Theodore Rex'
@@ -256,10 +255,7 @@ client.on("message", message => {
   
   var famousPeopleList = [
   'Caligula',
-  'Bill Gates',
-  'Lady Gaga',
-  'Pope Francis',
-  'Shakira',
+  'Lady Gaga'
   ]
   
   var armelloPeopleList = [
