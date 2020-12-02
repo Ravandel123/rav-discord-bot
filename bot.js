@@ -1666,7 +1666,7 @@ client.on("message", message => {
       'Eat ' + GenerateRandomSize() + ' ' + ReturnRandom(itemsMealList) + additionalLol + '.',
       'You shouldn\'t have gone to ' + ReturnRandom(furryPlacesList) + '.',
       'I will help you. But it will be ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' and ' + ReturnRandom(adjectivesAllList) + additionalLol + '!',
-      'I think you should take ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' dump. You do not even know how ' + ReturnRandom(adjectivesAllList) ' it will be ' + additionalLol + '!',
+      'I think you should take ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' dump. You do not even know how ' + ReturnRandom(adjectivesAllList) + ' it will be ' + additionalLol + '!',
       '*Gives you his hand.*'
       ]
        
