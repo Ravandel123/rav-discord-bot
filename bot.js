@@ -1623,20 +1623,20 @@ client.on("message", message => {
       responseList1 = [
       'I think you should visit a doctor.',
       'Ravandel is the specialist who you want to talk with about your problems.',
-      'Electroshock therapy will work wonders for you.',
-      'I would advise lobotomy.',
+      'An electroshock therapy will work wonders for you.',
+      'I would advise a lobotomy.',
       'Chill and eat something good.',
-      'Get commission from Pumpkins. You will be happy and she will be happpy.',
-      'I think you need plastic surgery.',
-      'I suggest whipping session in the abbey.',
+      'Get a commission from Pumpkins. You will be happy and she will be happpy.',
+      'I think you need a plastic surgery.',
+      'I suggest a whipping session in the abbey.',
       'Don\'t worry, be happy!',
       'Stop wasting your time on h!help command and do something with your miserable life.',
       'Read a book.',
       'Draw something.',
       'Well, praying to God might be a good idea in your situation.',
       'Educate yourself.',
-      'Take out the trash, because your home looks like garbage dump' + additionalLol + '.',
-      'Go into woods and try to find Yeti.',
+      'Take out the trash, because your home looks like a garbage dump' + additionalLol + '.',
+      'Go into the woods and try to find me ^^. I will be waiting *smirk*',
       'Tell your bullies they\'re hurting you.',
       'There are bigger problems than your depression.',
       'Ignore the bullies.',
@@ -1644,13 +1644,7 @@ client.on("message", message => {
       'Get new friends.',
       'Buy a house.',
       'Just let it go.',
-      'If you feel alone, watch a horror movie before going to bed. You won\'t feel alone anymore.',
-      'No flashlight on your phone? Take a photo of the sun, and use it in the dark.',
-      'No ice for drinks? Use frozen vegetables.',
-      'It\'s very expensive to eat 3 times a day. Wake up later, miss breakfast, and save money.',
-      'Having a bad day? No worries! Wear sunglasses. Now you\'re having a bad evening.',
-      'If you can\'t afford virtual reality headsets, you can close your eyes and imagine everything you want.',
-      'A glove filled with warm water creates the illusion that you\'re not alone.'
+      'If you can\'t afford virtual reality headsets, you can close your eyes and imagine everything you want.'
       ];
       
       responseList2 = [
