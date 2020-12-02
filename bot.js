@@ -1669,7 +1669,7 @@ client.on("message", message => {
       'I think you should take ' + AddAnA2(ReturnRandom(adjectivesAllList)) + ' dump. You do not even know how ' + ReturnRandom(adjectivesAllList) ' it will be ' + additionalLol + '!',
       '*Gives you his hand.*'
       ]
-      
+       
       if(Chance(7))
         message.channel.send(ReturnRandom(responseList1))
       else
